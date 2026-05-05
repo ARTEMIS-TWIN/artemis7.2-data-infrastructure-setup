@@ -1,0 +1,55 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:072684d9-b937-4734-8650-5c23c841e073>
+        a           crm:E35_Title ;
+        rdfs:label  "Temporal Exhibition Reconstruction Service (TERS)" .
+
+<https://artemis-twin.eu/entity/service//temporal-exhibition-reconstruction-service>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Temporal Exhibition Reconstruction Service (TERS)" ;
+        rhdto:HP30_provided_by   <urn:uuid:7c533fb7-a681-4fae-9885-ba0c24c69e64> ;
+        crm:P102_has_title       <urn:uuid:072684d9-b937-4734-8650-5c23c841e073> ;
+        crm:P16i_was_used_for    <urn:uuid:aa079f9c-029b-439e-aaa5-7114848dd297> ;
+        crm:P2_has_type          <urn:uuid:82f2863a-f908-4585-a6fd-c7c95bb60ff4> ;
+        crm:P3_has_note          "Simulation service supporting the temporal reconstruction of past displays and furnishings in historic buildings, allowing users to explore how exhibition arrangements evolved over time." ;
+        aocat:has_functionality  <urn:uuid:95256b94-fb73-4801-93df-d963470df657> , <urn:uuid:82f2863a-f908-4585-a6fd-c7c95bb60ff4> .
+
+<urn:uuid:82f2863a-f908-4585-a6fd-c7c95bb60ff4>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<urn:uuid:aa079f9c-029b-439e-aaa5-7114848dd297>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 13 — Past displays and furnishings in historic buildings" .
+
+<urn:uuid:7c533fb7-a681-4fae-9885-ba0c24c69e64>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "UNIFI" ;
+        aocat:has_name  "UNIFI" .
+
+<urn:uuid:95256b94-fb73-4801-93df-d963470df657>
+        a           aocat:AO_Concept ;
+        rdfs:label  "TemporalExhibitionReconstruction" .

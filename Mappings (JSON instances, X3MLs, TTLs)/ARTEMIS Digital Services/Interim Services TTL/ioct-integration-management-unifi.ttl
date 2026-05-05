@@ -1,0 +1,80 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:c526e726-d155-45a1-b729-0be976a7901a>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MediaHandling" .
+
+<urn:uuid:0acab211-1cc8-4403-a7d1-e95b0dfc257f>
+        a           aocat:AO_Concept ;
+        rdfs:label  "TimeSeriesDataIngestion" .
+
+<https://artemis-twin.eu/entity/service//ioct-integration-management-unifi>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "IoCT Integration & Management of Monitoring Data Service (UNIFI)" ;
+        rhdto:HP30_provided_by        <urn:uuid:96ab2578-be47-418a-9028-7864cadca1fb> ;
+        crm:P102_has_title            <urn:uuid:ad2d21b1-a872-4e19-b5f2-f26a0d6f1576> ;
+        crm:P125_used_object_of_type  "Groundwater Piezometer" , "Potentiometer" , "LVDT" , "Accelerometer" , "Temperature/Humidity Sensor" ;
+        crm:P16i_was_used_for         <urn:uuid:364bfdd7-9f69-4d8d-a6db-d1efdf0643c1> ;
+        crm:P2_has_type               <urn:uuid:bc446e56-d529-44e4-8383-d63e8afde017> ;
+        crm:P3_has_note               "Comprehensive suite of RESTful microservices for managing, querying and visualising IoCT sensor data within Digital Twin environments, developed under ARTEMIS WP9 Task 9.1. Handles historical and experimentally collected data, including monitoring data (accelerometers, potentiometers, temperature/humidity, groundwater piezometer) and derived datasets from structural tests and 3D documentation (crack maps, orthophotos, FEM mesh regions). Core functionalities: Node Presentation & Registration, Data Services (scalar and vector time-series), Decision Rules (threshold triggers), Media Handling, Secure Access & Authentication (MQTT token exchange, REST API)." ;
+        aocat:has_functionality       <urn:uuid:c526e726-d155-45a1-b729-0be976a7901a> , <urn:uuid:3c48eba7-2ce1-4657-9283-09ef0394b29c> , <urn:uuid:a1c7849b-9251-4c70-9162-97d044379ac3> , <urn:uuid:0180b9f7-eb71-440f-aae0-df13d5b4123e> , <urn:uuid:0acab211-1cc8-4403-a7d1-e95b0dfc257f> , <urn:uuid:ae39096b-bd14-4429-826e-9f30e5faff37> , <urn:uuid:bc446e56-d529-44e4-8383-d63e8afde017> , <urn:uuid:7d44e3b2-5cf4-405e-a076-61f23fa4d8ad> .
+
+<urn:uuid:3c48eba7-2ce1-4657-9283-09ef0394b29c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "SecureAuthenticationMQTTTokenExchange" .
+
+<urn:uuid:7d44e3b2-5cf4-405e-a076-61f23fa4d8ad>
+        a           aocat:AO_Concept ;
+        rdfs:label  "CrossSensorCorrelationAnalysis" .
+
+<urn:uuid:ae39096b-bd14-4429-826e-9f30e5faff37>
+        a           aocat:AO_Concept ;
+        rdfs:label  "ThresholdBasedDecisionRules" .
+
+<urn:uuid:96ab2578-be47-418a-9028-7864cadca1fb>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "UNIFI" ;
+        aocat:has_name  "UNIFI" .
+
+<urn:uuid:a1c7849b-9251-4c70-9162-97d044379ac3>
+        a           aocat:AO_Concept ;
+        rdfs:label  "TimeSeriesDataQuerying" .
+
+<urn:uuid:364bfdd7-9f69-4d8d-a6db-d1efdf0643c1>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 15 — Structural monitoring of medieval pulpits (Pulpit of Sant'Andrea)" .
+
+<urn:uuid:ad2d21b1-a872-4e19-b5f2-f26a0d6f1576>
+        a           crm:E35_Title ;
+        rdfs:label  "IoCT Integration & Management of Monitoring Data Service (UNIFI)" .
+
+<urn:uuid:0180b9f7-eb71-440f-aae0-df13d5b4123e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "NodePresentationAndRegistration" .
+
+<urn:uuid:bc446e56-d529-44e4-8383-d63e8afde017>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "IoT Monitoring" .

@@ -1,0 +1,99 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix nont:  <https://dlnarratives.eu/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix base:  <&location;> .
+
+wd:Q762  a                          aocat:AO_Person , crm:E21_Person ;
+        rdfs:label                  "Leonardo da Vinci" ;
+        crm:P3_has_note             "Attributed" ;
+        aocat:has_agent_identifier  "Leonardo da Vinci" ;
+        aocat:has_name              "Leonardo da Vinci" .
+
+aat:300033618  a        aocat:AO_Concept , skos:Concept , crm:E55_Type ;
+        rdfs:label      "paintings (visual works)" ;
+        skos:prefLabel  "paintings (visual works)" .
+
+<urn:uuid:6162d8da-c3bf-42cd-b1cb-a758b18b0891>
+        a                     aocat:AO_Spatial_Region_StdName , crm:E53_Place , aocat:AO_Spatial_Region_Point , aocat:AO_Spatial_Region ;
+        rdfs:label            "Private Collection" ;
+        aocat:has_place_name  "Private Collection" .
+
+<urn:uuid:0faaaa6f-03a0-442f-9e7e-2e03bf033851>
+        a               skos:Concept , aocat:AO_Concept , crm:E57_Material ;
+        rdfs:label      "oil paint" ;
+        skos:prefLabel  "oil paint" .
+
+<urn:uuid:8f92e7b7-8e59-4d8b-a107-9942d3a8ce3c>
+        a                              crm:E42_Identifier ;
+        rdfs:label                     "artemis_he_004" ;
+        crm:P190_has_symbolic_content  "artemis_he_004" .
+
+perio:p06c6g3whf8  a    skos:Concept , aocat:AO_Concept ;
+        rdfs:label      "1501-1507 (High Renaissance)" ;
+        skos:prefLabel  "1501-1507 (High Renaissance)" .
+
+<https://doi.org/10.1016/j.culher.2022.09.022>
+        a           crm:E89_Propositional_Object , aocat:AO_Resource ;
+        rdfs:label  "Convolutional neural network exploiting pixel surroundings to reveal hidden features in artwork NIR reflectograms" .
+
+<urn:uuid:033fd6e7-ae7d-453d-836e-c95aedcd48a4>
+        a                            aocat:AO_Temporal_Region , crm:E52_Time-Span ;
+        rdfs:label                   "1501-1507 (High Renaissance)" ;
+        crm:P79_beginning_is_qualified_by
+                "1501" ;
+        crm:P80_end_is_qualified_by  "1507" ;
+        aocat:from                   "1501" ;
+        aocat:has_period             perio:p06c6g3whf8 ;
+        aocat:until                  "1507" .
+
+wd:Q1214068  a  owl:Thing .
+
+<urn:uuid:743e8d75-de6e-439a-8197-ae0fd28cb5e6>
+        a                             crmhs:HS6_Study_Object , rhdto:HC3_Tangible_Entity , owl:Thing , aocat:AO_Object ;
+        rdfs:label                    "Madonna dei Fusi (Madonna of the Yarnwinder)" ;
+        rhdto:HP11_was_made_by        wd:Q762 ;
+        rhdto:HP12_was_made_within    <urn:uuid:033fd6e7-ae7d-453d-836e-c95aedcd48a4> ;
+        crm:P129i_is_subject_of       <https://doi.org/10.1016/j.culher.2022.09.022> ;
+        crm:P1_is_identified_by       <urn:uuid:8f92e7b7-8e59-4d8b-a107-9942d3a8ce3c> , <urn:uuid:521ab7c4-d06e-4142-bec4-d786dfd004c8> ;
+        crm:P2_has_type               aat:300033618 ;
+        crm:P3_has_note               "Painting on canvas attributed to Leonardo da Vinci, depicting the Madonna of the Yarnwinder. The work is currently held in a private collection. It was one of the two study objects of a CNN-based computational analysis aimed at separating NIR and VIS contributions in reflectograms to reveal hidden features in the painted layers."@en ;
+        crm:P45_consists_of           <urn:uuid:0faaaa6f-03a0-442f-9e7e-2e03bf033851> , <urn:uuid:ec84600a-b8f6-4345-8d9c-0e61766bb5d5> ;
+        crm:P55_has_current_location  <urn:uuid:6162d8da-c3bf-42cd-b1cb-a758b18b0891> ;
+        owl:sameAs                    wd:Q1214068 .
+
+<urn:uuid:521ab7c4-d06e-4142-bec4-d786dfd004c8>
+        a                              crm:E41_Appellation ;
+        rdfs:label                     "Madonna dei Fusi" ;
+        crm:P190_has_symbolic_content  "Madonna dei Fusi" .
+
+<urn:uuid:ec84600a-b8f6-4345-8d9c-0e61766bb5d5>
+        a               skos:Concept , aocat:AO_Concept , crm:E57_Material ;
+        rdfs:label      "canvas (textile material)" ;
+        skos:prefLabel  "canvas (textile material)" .

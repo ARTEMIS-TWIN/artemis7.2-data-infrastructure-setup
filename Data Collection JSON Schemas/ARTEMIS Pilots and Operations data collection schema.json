@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vast-lab.org/artemis/schema/pilots-form",
+  "title": "ARTEMIS Pilots — Digital Operations Data Collection Form",
+  "description": "Data collection schema for the digital operations carried out within the ARTEMIS pilots.",
+  "type": "object",
+
+  "required": [
+    "pilot_id",
+    "pilot_title",
+    "operations"
+  ],
+
+  "properties": {
+    "pilot_id": {
+      "title": "Pilot Identifier",
+      "description": "Unique identifier of the pilot.",
+      "type": "string",
+      "examples": ["pilot_01"]
+    },
+
+    "pilot_title": {
+      "title": "Pilot Title",
+      "description": "Official name or title of the pilot.",
+      "type": "string",
+      "examples": ["Xanthi Evacuation Plan", "Environmental monitoring"]
+    },
+
+    "pilot_description": {
+      "title": "Pilot Description",
+      "description": "Short free-text description of the pilot.",
+      "type": "string"
+    },
+
+    "operations": {
+      "title": "Digital Operations",
+      "description": "List of digital operations performed within this pilot.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "operation_id",
+          "operation_title",
+          "operation_type",
+          "inputs",
+          "outputs"
+        ],
+        "properties": {
+          "operation_id": {
+            "title": "Operation Identifier",
+            "description": "Unique identifier of the operation within the pilot.",
+            "type": "string",
+            "examples": ["op_01", "alignment_01", "simulation_run_03"]
+          },
+
+          "operation_title": {
+            "title": "Operation Title",
+            "description": "A human-readable title for the digital operation.",
+            "type": "string"
+          },
+
+          "operation_type": {
+            "title": "Operation Type",
+            "description": "The typology of the digital operation.",
+            "type": "string",
+            "examples": [
+              "Transformation Operation",
+              "Simulation",
+              "Monitoring",
+              "Analysis Operation"
+            ]
+          },
+
+          "general_purpose": {
+            "title": "General Purpose",
+            "description": "The broader purpose of the operation.",
+            "type": "string"
+          },
+
+          "description": {
+            "title": "Description / Notes",
+            "description": "Free-text description of the operation.",
+            "type": "string"
+          },
+
+          "concerns_heritage_entity": {
+            "title": "Concerned Heritage Entity",
+            "type": "object",
+            "required": ["entity_id"],
+            "properties": {
+              "entity_id": { "type": "string" }
+            }
+          },
+
+          "inputs": {
+            "title": "Input Digital Objects",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["object_label", "object_class"],
+              "properties": {
+                "object_label": {
+                  "title": "Input Object Label",
+                  "type": "string",
+                  "examples": ["Monitoring dataset", "Weather forecasting dataset"]
+                },
+                "object_identifier": { "type": "string" },
+                "object_class": {
+                  "type": "string" 
+                },
+                "access_point": {
+                  "type": "string",
+                  "description": "URL, URI, or other access point for the input object.",
+                  "format": "uri"
+                },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+
+          "outputs": {
+            "title": "Output Digital Objects",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["object_label", "object_class"],
+              "properties": {
+                "object_label": { "type": "string" },
+                "object_identifier": { "type": "string" },
+                "object_class": {
+                  "type": "string"
+                },
+                "access_point": {
+                  "type": "string",
+                  "description": "URL, URI, or other access point for the output object.",
+                  "format": "uri"
+                },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+
+          "used_software": {
+            "title": "Used Software / Firmware",
+            "description": "Software used by the operation.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["software_title"],
+              "properties": {
+                "software_title": { "type": "string" },
+                "software_identifier": { "type": "string" },
+                "version": { "type": "string" },
+                "access_point": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+
+          "implemented_using": {
+            "title": "Implemented Using (Digital Service)",
+            "description": "Digital service(s) used to implement this operation.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["service_identifier"],
+              "properties": {
+                "service_title": { "type": "string" },
+                "service_identifier": { "type": "string" }
+              }
+            }
+          },
+
+          "used_parameters": {
+            "title": "Used Parameter Sets",
+            "description": "Parameter sets used by the operation.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["parameter_set_label"],
+              "properties": {
+                "parameter_set_label": { "type": "string" },
+                "parameter_set_identifier": { "type": "string" },
+                "parameter_type": { "type": "string" },
+                "values": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "number" },
+                    { "type": "array" },
+                    { "type": "object" }
+                  ]
+                },
+                "access_point": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+
+          "used_devices": {
+            "title": "Used Devices",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["device_label"],
+              "properties": {
+                "device_label": { "type": "string" },
+                "device_identifier": { "type": "string" },
+                "device_type": {
+                  "type": "string",
+                  "examples": ["Sensor", "Node", "Digital Camera"]
+                },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+
+          "continued_from": {
+            "title": "Continued From",
+            "description": "The identifier of the preceding operation in the workflow chain.",
+            "type": "string"
+          },
+
+          "time_span": {
+            "title": "Time-span",
+            "description": "Temporal information associated with the execution of the operation.",
+            "type": "object",
+            "properties": {
+              "begin": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "end": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "label": { "type": "string" }
+            }
+          },
+
+          "place": {
+            "title": "Place",
+            "description": "Place associated with the operation, if relevant.",
+            "type": "object",
+            "properties": {
+              "place_name": { "type": "string" },
+              "latitude": { "type": "number" },
+              "longitude": { "type": "number" },
+              "place_identifier": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

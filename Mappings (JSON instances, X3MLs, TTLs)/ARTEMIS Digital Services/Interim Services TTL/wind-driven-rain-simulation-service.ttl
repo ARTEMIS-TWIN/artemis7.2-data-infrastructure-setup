@@ -1,0 +1,59 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://artemis-twin.eu/entity/service//wind-driven-rain-simulation-service>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Wind-Driven Rain (WDR) Simulation Service" ;
+        rhdto:HP30_provided_by   <urn:uuid:c094d43f-048f-44e1-82cd-222b08790323> ;
+        crm:P102_has_title       <urn:uuid:43413e18-d2cf-4e50-b061-04609aafb946> ;
+        crm:P16i_was_used_for    <urn:uuid:67c85e48-e388-451c-9004-c003fe05e3e8> ;
+        crm:P2_has_type          <urn:uuid:65e476fe-f8e8-4d19-aedc-d4966c13bb5e> ;
+        crm:P3_has_note          "Service simulating wind-driven rain loads on building facades for heritage assets, supporting the assessment of moisture ingress and weathering risks as part of the Reactive Heritage Digital Twin infrastructure." ;
+        aocat:has_functionality  <urn:uuid:65e476fe-f8e8-4d19-aedc-d4966c13bb5e> , <urn:uuid:8b4104b8-f5b8-4ad6-961c-692b0ea55033> , <urn:uuid:25170c3b-b5bc-489b-9fc9-609a6e03c473> .
+
+<urn:uuid:c094d43f-048f-44e1-82cd-222b08790323>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "KIK-IRPA" ;
+        aocat:has_name  "KIK-IRPA" .
+
+<urn:uuid:65e476fe-f8e8-4d19-aedc-d4966c13bb5e>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<urn:uuid:43413e18-d2cf-4e50-b061-04609aafb946>
+        a           crm:E35_Title ;
+        rdfs:label  "Wind-Driven Rain (WDR) Simulation Service" .
+
+<urn:uuid:67c85e48-e388-451c-9004-c003fe05e3e8>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 10 — Climate and Condition Monitoring of Built Heritage" .
+
+<urn:uuid:8b4104b8-f5b8-4ad6-961c-692b0ea55033>
+        a           aocat:AO_Concept ;
+        rdfs:label  "WindDrivenRainSimulation" .
+
+<urn:uuid:25170c3b-b5bc-489b-9fc9-609a6e03c473>
+        a           aocat:AO_Concept ;
+        rdfs:label  "FacadeMoistureLoadEstimation" .

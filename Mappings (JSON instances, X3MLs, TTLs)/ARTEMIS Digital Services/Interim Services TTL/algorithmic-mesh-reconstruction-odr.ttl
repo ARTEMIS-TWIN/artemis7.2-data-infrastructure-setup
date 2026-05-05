@@ -1,0 +1,69 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:443ef120-a862-44f9-b1a3-d5fec8ff1572>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MeshSemanticSegmentation" .
+
+<urn:uuid:86cc24d8-8215-4ff6-b301-6ad9f5f8d804>
+        a           aocat:AO_Concept ;
+        rdfs:label  "OffenceDefenceRatioComputation" .
+
+<urn:uuid:18685f3f-fcf9-4374-8513-0b15375d28cd>
+        a           crm:E35_Title ;
+        rdfs:label  "Algorithmic Mesh Reconstruction based on Offence-Defence Ratio" .
+
+<urn:uuid:30d4d1d1-013f-42dd-99cf-750fec2ef6fd>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 27 — Simulation of defense-offense ratio in military architecture" .
+
+<urn:uuid:53d9cd2f-8a9c-4d01-9d82-4a04eee34122>
+        a           aocat:AO_Concept ;
+        rdfs:label  "GeometricFeaturePrecomputation" .
+
+<urn:uuid:d6657645-94a4-4b00-92bb-d27b1af67bd3>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<urn:uuid:7a570ea9-8df2-4402-8516-bed965cd6eb3>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "NUMENA" ;
+        aocat:has_name  "NUMENA" .
+
+<https://artemis-twin.eu/entity/service//algorithmic-mesh-reconstruction-odr>
+        a                         rhdto:HC21_Digital_Service ;
+        rdfs:label                "Algorithmic Mesh Reconstruction based on Offence-Defence Ratio" ;
+        rhdto:HP30_provided_by    <urn:uuid:7a570ea9-8df2-4402-8516-bed965cd6eb3> ;
+        crm:P102_has_title        <urn:uuid:18685f3f-fcf9-4374-8513-0b15375d28cd> ;
+        crm:P16i_was_used_for     <urn:uuid:30d4d1d1-013f-42dd-99cf-750fec2ef6fd> ;
+        crm:P2_has_type           <urn:uuid:d6657645-94a4-4b00-92bb-d27b1af67bd3> ;
+        crm:P3_has_note           "Algorithm generating defence-offence ratios from three data sources: (1) initial 3D mesh dataset following guidelines that expose geometric properties such as openings; (2) user-specified artillery type; (3) landscape and surrounding area data. Data preparation: mesh cleaning/optimisation, semantic segmentation and labelling (walls, openings, parapets, floors, towers), encoding semantics via mesh names, vertex colours, sub-mesh indices and custom JSON metadata aligned with the ARTEMIS ontology. Unity-side ingestion and cloud dispatch via REST API." ;
+        aocat:has_consumed_media  "application/json" ;
+        aocat:has_functionality   <urn:uuid:d7f55195-6e6d-4d45-a84c-14b07af7810d> , <urn:uuid:86cc24d8-8215-4ff6-b301-6ad9f5f8d804> , <urn:uuid:d6657645-94a4-4b00-92bb-d27b1af67bd3> , <urn:uuid:443ef120-a862-44f9-b1a3-d5fec8ff1572> , <urn:uuid:53d9cd2f-8a9c-4d01-9d82-4a04eee34122> ;
+        aocat:has_produced_media  "application/json" .
+
+<urn:uuid:d7f55195-6e6d-4d45-a84c-14b07af7810d>
+        a           aocat:AO_Concept ;
+        rdfs:label  "VRParameterIngestion" .

@@ -1,0 +1,73 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:1752b36c-3f89-48a8-b87c-e3467a4694f6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "NodeRegistration" .
+
+<urn:uuid:cc8c9936-41de-46ee-929c-d46999d0e543>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 19 — Monitoring, modelling and performance simulation of Defensive Wall conservation" .
+
+<urn:uuid:5431b811-e90c-40aa-983d-556e9a80a9e6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "DataPreProcessing" .
+
+<urn:uuid:d75eb299-b8a4-4f94-a0e9-0a28c8d0c92e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "SensorDataTransmission" .
+
+<urn:uuid:0cb35314-e8ef-488d-840b-88239d446541>
+        a           aocat:AO_Concept ;
+        rdfs:label  "RealTimeSensorDataAcquisition" .
+
+<urn:uuid:11911635-ade9-422c-8abc-d21f5c1e7c33>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MQTTPublishSubscribe" .
+
+<urn:uuid:ce94fd39-01a0-4d41-8834-95197dbbc647>
+        a           crm:E35_Title ;
+        rdfs:label  "IoCT Services (LNEC) — DB-HERITAGE Integration" .
+
+<urn:uuid:d630ecb4-f028-4799-96dd-8f7979446012>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "IoT Monitoring" .
+
+<https://artemis-twin.eu/entity/service//ioct-services-lnec>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "IoCT Services (LNEC) — DB-HERITAGE Integration" ;
+        rhdto:HP30_provided_by        <urn:uuid:44961017-1aa2-4be9-9da1-c36ff27ae582> ;
+        crm:P102_has_title            <urn:uuid:ce94fd39-01a0-4d41-8834-95197dbbc647> ;
+        crm:P106_is_composed_of       "PostgreSQL Database" , "Django OAuth Toolkit" , "Django Backend" , "DB-HERITAGE (LNEC's CH data management system)" ;
+        crm:P125_used_object_of_type  "Wind Speed Sensor" , "Crack Meter" , "Meteorological Station" , "Relative Humidity Sensor" , "Resistivity Sensor" , "Temperature Sensor" ;
+        crm:P16i_was_used_for         <urn:uuid:cc8c9936-41de-46ee-929c-d46999d0e543> ;
+        crm:P2_has_type               <urn:uuid:d630ecb4-f028-4799-96dd-8f7979446012> ;
+        crm:P3_has_note               "ARTEMIS IoCT and DB-HERITAGE (LNEC's CH data management system) data microservices enabling real-time collection and automated pre-processing of data from a network of structural, environmental and conservation sensors installed on instrumented sections of a defensive wall. Supports custom-made and off-the-shelf sensors (temperature, humidity, wind speed, crack meter, resistivity sensors) and meteorological stations. ARTEMIS IoCT microservices (Node Presentation & Registration, Sensor Data Transmission) communicate with the LNEC system API via RESTful and MQTT protocols." ;
+        aocat:has_functionality       <urn:uuid:0cb35314-e8ef-488d-840b-88239d446541> , <urn:uuid:d630ecb4-f028-4799-96dd-8f7979446012> , <urn:uuid:11911635-ade9-422c-8abc-d21f5c1e7c33> , <urn:uuid:5431b811-e90c-40aa-983d-556e9a80a9e6> , <urn:uuid:1752b36c-3f89-48a8-b87c-e3467a4694f6> , <urn:uuid:d75eb299-b8a4-4f94-a0e9-0a28c8d0c92e> .
+
+<urn:uuid:44961017-1aa2-4be9-9da1-c36ff27ae582>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "LNEC" ;
+        aocat:has_name  "LNEC" .

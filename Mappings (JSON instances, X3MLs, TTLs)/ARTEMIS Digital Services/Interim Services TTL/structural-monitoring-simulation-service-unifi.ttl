@@ -1,0 +1,67 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:3fac94b3-43a0-4133-b321-442bb5a4dc10>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "UNIFI" ;
+        aocat:has_name  "UNIFI" .
+
+<urn:uuid:96107168-e47e-4006-99bd-25853095a8f4>
+        a           aocat:AO_Concept ;
+        rdfs:label  "StructuralScenarioSimulation" .
+
+<urn:uuid:7383c7bb-df45-4ea1-a9ab-a3a3c6db8642>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 15 — Structural monitoring of medieval pulpits (Pulpit of Sant'Andrea)" .
+
+<urn:uuid:74801347-2fd8-4d39-adbe-819b7ee081e5>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<urn:uuid:dc3ba8dc-edac-4d2c-b139-088679652c78>
+        a           aocat:AO_Concept ;
+        rdfs:label  "SyntheticDataGeneration" .
+
+<urn:uuid:266c1fa7-e285-4360-a146-9c5b6c734419>
+        a           crm:E35_Title ;
+        rdfs:label  "Structural Monitoring Simulation Service (UNIFI)" .
+
+<urn:uuid:3ca6e937-cb1c-4ff6-bc39-dbca6237c6e6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "EOVCorrelationAnalysis" .
+
+<https://artemis-twin.eu/entity/service//structural-monitoring-simulation-service-unifi>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Structural Monitoring Simulation Service (UNIFI)" ;
+        rhdto:HP30_provided_by   <urn:uuid:3fac94b3-43a0-4133-b321-442bb5a4dc10> ;
+        crm:P102_has_title       <urn:uuid:266c1fa7-e285-4360-a146-9c5b6c734419> ;
+        crm:P16i_was_used_for    <urn:uuid:7383c7bb-df45-4ea1-a9ab-a3a3c6db8642> ;
+        crm:P2_has_type          <urn:uuid:74801347-2fd8-4d39-adbe-819b7ee081e5> ;
+        crm:P3_has_note          "Modular microservices (ARTEMIS WP9 Task 9.2) for probabilistic modelling, EOV (Environmental and Operational Variations) correlation, and synthetic data generation. Enables extrapolation of structural and environmental evolutions from historical IoT datasets and experimental monitoring campaigns. Supports correlation analysis between vibration response and environmental conditions for heritage structural assessment." ;
+        aocat:has_functionality  <urn:uuid:fae5cd3d-80aa-423f-8ebb-2c54659410ff> , <urn:uuid:dc3ba8dc-edac-4d2c-b139-088679652c78> , <urn:uuid:3ca6e937-cb1c-4ff6-bc39-dbca6237c6e6> , <urn:uuid:74801347-2fd8-4d39-adbe-819b7ee081e5> , <urn:uuid:96107168-e47e-4006-99bd-25853095a8f4> .
+
+<urn:uuid:fae5cd3d-80aa-423f-8ebb-2c54659410ff>
+        a           aocat:AO_Concept ;
+        rdfs:label  "ProbabilisticModelling" .
