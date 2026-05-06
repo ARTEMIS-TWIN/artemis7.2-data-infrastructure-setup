@@ -1,0 +1,198 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+
+<https://doi.org/10.3390/s21041287>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Synchronized Hardware-Registered VIS-NIR Imaging Spectroscopy and 3D Sensing on a Fresco by Botticelli" ;
+        crm:P2_has_type  <urn:uuid:e4a12d07-70f4-4df1-b40a-e20d8405254e> .
+
+<urn:uuid:3819ad90-3394-4502-b466-a641a31faf57>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Unknown" .
+
+<urn:uuid:72b57d47-8f84-4d1b-a418-1f567808fd44>
+        a           crmhs:HS14_Analysis_Settings ;
+        rdfs:label  "Analysis settings" .
+
+<urn:uuid:b728264c-f887-425c-9946-34b734bd52e4>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Unknown" .
+
+artemis:artemis_he_003
+        a           aocat:AO_Object , rhdto:HC3_Tangible_Entity , crmhs:HS6_Study_Object , crmhs:HS2_Heritage_Science_Object ;
+        rdfs:label  "Sant'Agostino nello studio (Botticelli)" .
+
+<urn:uuid:42edc5b7-0c09-4727-b4ed-4effcef14076>
+        a           crm:E55_Type ;
+        rdfs:label  "Reflectance Imaging Spectroscopy (RIS); 3D Laser Scanning" .
+
+artemis:analysisB1EDE5AD-B2F3-474A-9B49-3A3B6176BB94
+        a                              crmhs:HS3_Analysis ;
+        rdfs:label                     "Synchronized Hardware-Registered VIS-NIR Imaging Spectroscopy and 3D Sensing on a Fresco by Botticelli" ;
+        crmhs:HSP10_used_software      <urn:uuid:8c7beb37-5042-4a40-808e-c0ebb61e99d8> ;
+        crmhs:HSP13_used_settings      <urn:uuid:72b57d47-8f84-4d1b-a418-1f567808fd44> ;
+        crmhs:HSP16_produced_dataset   <https://doi.org/10.3390/s21041287> ;
+        crmhs:HSP1_has_activity_title  <urn:uuid:122a245f-5203-48bb-a799-70ab411c39e0> ;
+        crmhs:HSP2_was_performed_on    artemis:artemis_he_003 ;
+        crmhs:HSP4_analysed            artemis:artemis_he_003 ;
+        crmhs:HSP6_used_method         <urn:uuid:e38db574-42a5-4464-b4a2-5c8295742471> , <urn:uuid:da145e85-a711-4a02-83f1-3e729135c83f> ;
+        crmhs:HSP8_used_device         <urn:uuid:16e4c248-04f3-4eda-a6e5-ca27774285a6> ;
+        crmhs:HSP9_used_component      <urn:uuid:b92084a6-ec04-4611-9b34-2c7d6e267b0e> , <urn:uuid:c6c65c44-eb13-452e-a968-a68c82f43804> , <urn:uuid:3f0f8708-d2ec-4600-8dd8-4b8691c06e2a> , <urn:uuid:64346fac-9865-4baf-bd42-fa8691458049> ;
+        crm:P11_had_participant        <urn:uuid:ef841859-48a7-4d57-b875-c2e2f77c4397> , <urn:uuid:09ae69fa-b9f3-4bf4-93d9-7b33aeeacf2e> , <urn:uuid:524a2cea-0eca-4cfa-a492-e03d38ed182e> , <urn:uuid:31b2833b-262f-449f-bd5d-00749a4341f1> ;
+        crm:P14_carried_out_by         <urn:uuid:5162c4a2-006e-4878-8a1a-8d2c70d2998f> ;
+        crm:P2_has_type                <urn:uuid:42edc5b7-0c09-4727-b4ed-4effcef14076> ;
+        crm:P3_has_note                "Synchronized sensing technique for the analysis of painted surfaces of frescos. The performance of Visible-Near Infrared (VIS-NIR) Reflectance Imaging Spectroscopy (RIS) synchronized with three-dimensional (3D) acquisition is demonstrated in the study of a detached mural painting by Alessandro Botticelli. Synchronized sensing generates georeferenced data for simplified data treatment and interpretation." ;
+        crm:P4_has_time-span           <urn:uuid:142c4a00-b579-466d-9b32-82868e7f54c9> ;
+        crm:P7_took_place_at           geonames:6541890 .
+
+<https://www.ino.cnr.it/>
+        a       xsd:string .
+
+<urn:uuid:da145e85-a711-4a02-83f1-3e729135c83f>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Visible-Near Infrared (VIS-NIR) Reflectance Imaging Spectroscopy (RIS)" ;
+        crm:P3_has_note  "Multispectral/Hyperspectral (MS/HS) reflectance imaging spectroscopy (RIS) exploiting the property of IR radiation to penetrate pictorial layers, revealing properties and composition of the probed matter." .
+
+<urn:uuid:3f0f8708-d2ec-4600-8dd8-4b8691c06e2a>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "3D Triangulation Distance Meter" ;
+        crmhs:HSP22_has_maker  <urn:uuid:b728264c-f887-425c-9946-34b734bd52e4> ;
+        crmhs:HSP23_has_model  <urn:uuid:84bc4bd1-b11f-494a-9220-4b0b99b866d4> .
+
+<urn:uuid:ac1134ac-4ff5-4e9d-ac55-1efdadb68c0a>
+        a           crm:E55_Type ;
+        rdfs:label  "19 Si (380-1000 nm) and 12 InGaAs (1050-2500 nm) photodiodes" .
+
+<urn:uuid:e4a12d07-70f4-4df1-b40a-e20d8405254e>
+        a           crm:E55_Type ;
+        rdfs:label  "Scientific paper" .
+
+<urn:uuid:64346fac-9865-4baf-bd42-fa8691458049>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "XY(Z) Scanning System" ;
+        crmhs:HSP22_has_maker  <urn:uuid:0f6534a8-34ec-4279-b56c-abd5931d6477> ;
+        crmhs:HSP23_has_model  <urn:uuid:ea5a3fce-73c0-4e4a-b225-78558543ebbd> .
+
+<urn:uuid:524a2cea-0eca-4cfa-a492-e03d38ed182e>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Luca Pezzati" .
+
+<urn:uuid:c6c65c44-eb13-452e-a968-a68c82f43804>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "VIS-NIR Photodetectors (Si and InGaAs)" ;
+        crmhs:HSP22_has_maker  <urn:uuid:dd72c583-d556-4e52-8355-14e88ac420df> ;
+        crmhs:HSP23_has_model  <urn:uuid:ac1134ac-4ff5-4e9d-ac55-1efdadb68c0a> .
+
+<urn:uuid:20183c10-90e2-415c-9935-18ff26e651bc>
+        a           crm:E55_Type ;
+        rdfs:label  "Two low-voltage current-stabilized halogen lamps and two narrow-spot white LEDs" .
+
+<urn:uuid:ef841859-48a7-4d57-b875-c2e2f77c4397>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Raffaella Fontana" .
+
+<urn:uuid:b92084a6-ec04-4611-9b34-2c7d6e267b0e>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "Illumination System" ;
+        crmhs:HSP22_has_maker  <urn:uuid:3819ad90-3394-4502-b466-a641a31faf57> ;
+        crmhs:HSP23_has_model  <urn:uuid:20183c10-90e2-415c-9935-18ff26e651bc> .
+
+<urn:uuid:0f6534a8-34ec-4279-b56c-abd5931d6477>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Unknown" .
+
+<urn:uuid:09ae69fa-b9f3-4bf4-93d9-7b33aeeacf2e>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Enrico Pampaloni" .
+
+<urn:uuid:b6d2d847-dd2a-4ce5-b604-73547984a205>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "National Institute of Optics (INO-CNR)" .
+
+geonames:3175395  a  crm:E62_String ;
+        rdfs:label  "https://www.geonames.org/3175395" .
+
+<urn:uuid:c42a40cc-8efc-466d-9cde-c70c9ac2e9d9>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "National Institute of Optics of the National Research Council of Italy (INO-CNR)" .
+
+<urn:uuid:8c7beb37-5042-4a40-808e-c0ebb61e99d8>
+        a                crmdig:D14_Software ;
+        rdfs:label       "Custom-made control software" ;
+        crm:P3_has_note  "Custom software for synchronizing the XY(Z) scanning system, the triangulation distance meter (autofocus), and the acquisition of the spectral reflectance image." .
+
+<urn:uuid:ea5a3fce-73c0-4e4a-b225-78558543ebbd>
+        a           crm:E55_Type ;
+        rdfs:label  "Two orthogonally mounted XY stages (1000 mm run) and one Z stage (100 mm run)" .
+
+<urn:uuid:31b2833b-262f-449f-bd5d-00749a4341f1>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Jana Striova" .
+
+<urn:uuid:142c4a00-b579-466d-9b32-82868e7f54c9>
+        a                            crm:E52_Time-Span ;
+        rdfs:label                   "2014-2020" ;
+        crm:P79_beginning_is_qualified_by
+                "2014" ;
+        crm:P80_end_is_qualified_by  "2020" ;
+        aocat:from                   "2014" ;
+        aocat:until                  "2020" .
+
+<urn:uuid:dd72c583-d556-4e52-8355-14e88ac420df>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Unknown" .
+
+<urn:uuid:5162c4a2-006e-4878-8a1a-8d2c70d2998f>
+        a                           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label                  "National Institute of Optics of the National Research Council of Italy (INO-CNR)" ;
+        aocat:has_agent_identifier  <https://www.ino.cnr.it/> ;
+        aocat:has_name              "National Institute of Optics of the National Research Council of Italy (INO-CNR)" .
+
+<urn:uuid:16e4c248-04f3-4eda-a6e5-ca27774285a6>
+        a                          crmhs:HS11_Scientific_Device ;
+        rdfs:label                 "INO-CNR VIS-NIR Multispectral Scanner with 3D Sensing" ;
+        crmhs:HSP22_has_maker      <urn:uuid:b6d2d847-dd2a-4ce5-b604-73547984a205> ;
+        crmhs:HSP23_has_model      "Custom-built multispectral scanner (32 bands, 380-2500 nm) with synchronized 3D triangulation sensor" ;
+        crm:P52_has_current_owner  <urn:uuid:c42a40cc-8efc-466d-9cde-c70c9ac2e9d9> .
+
+<urn:uuid:e38db574-42a5-4464-b4a2-5c8295742471>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "3D Laser Triangulation" ;
+        crm:P3_has_note  "3D acquisition using a laser distance sensor (triangulation meter) to retrieve the surface topography, synchronized with the VIS-NIR scanning." .
+
+<urn:uuid:84bc4bd1-b11f-494a-9220-4b0b99b866d4>
+        a           crm:E55_Type ;
+        rdfs:label  "High-speed triangulation distance meter" .
+
+<urn:uuid:122a245f-5203-48bb-a799-70ab411c39e0>
+        a           crm:E35_Title ;
+        rdfs:label  "Synchronized Hardware-Registered VIS-NIR Imaging Spectroscopy and 3D Sensing on a Fresco by Botticelli" .
+
+geonames:6541890  a           aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "Opificio delle Pietre Dure, Firenze, Italia" ;
+        aocat:has_country     geonames:3175395 ;
+        aocat:has_place_name  "Opificio delle Pietre Dure, Firenze, Italia" .
