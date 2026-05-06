@@ -1,0 +1,182 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+
+<urn:uuid:bb043965-1b00-462a-aeac-787a62513cce>
+        a                            crm:E52_Time-Span ;
+        rdfs:label                   "2021-2022" ;
+        crm:P79_beginning_is_qualified_by
+                "2021" ;
+        crm:P80_end_is_qualified_by  "2022" ;
+        aocat:from                   "2021" ;
+        aocat:until                  "2022" .
+
+<https://www.utia.cas.cz/>
+        a       xsd:string .
+
+geonames:3077311  a  crm:E62_String ;
+        rdfs:label  "https://www.geonames.org/3077311" .
+
+artemis:artemis_he_004
+        a           aocat:AO_Object , rhdto:HC3_Tangible_Entity , crmhs:HS6_Study_Object , crmhs:HS2_Heritage_Science_Object ;
+        rdfs:label  "Madonna dei Fusi (Madonna of the Yarnwinder)" , "Madonna dei Fusi (Madonna of the Yarnwinder); Still life (Anonymous, 20th c.)" .
+
+<urn:uuid:3be7164f-8f1c-4557-93d2-a1ffc8bb273f>
+        a           crmhs:HS14_Analysis_Settings ;
+        rdfs:label  "Analysis settings" .
+
+<urn:uuid:1cba14d5-8b7e-48bf-a611-6c0212423bc4>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Jana Striová" .
+
+<urn:uuid:aff57438-e470-4be5-a157-ff51c4e7271b>
+        a           crm:E55_Type ;
+        rdfs:label  "Halogen lamps and/or LEDs" .
+
+<urn:uuid:ee6a1193-adac-49f8-9e8f-1f0df3a3f535>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "National Institute of Optics of the National Research Council of Italy (INO-CNR)" .
+
+<urn:uuid:a56de2c1-0398-46d8-b76a-b10b3e22b50c>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Tomáš Karella" .
+
+<urn:uuid:d671edd2-2370-4c9a-80d2-6a028ab62897>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Jan Blažek" .
+
+<urn:uuid:7bd43671-6dab-4310-94de-d6a0296aa926>
+        a                crmdig:D14_Software ;
+        rdfs:label       "Convolutional Neural Network (CNN) Model (Karella et al. 2022)" ;
+        crm:P3_has_note  "Custom CNN model designed to estimate NIR response from VIS spectra pixel surroundings. Architecture: 4 CNN layers, 25 filters each, 3x3 kernel size, sigmoid activation." .
+
+<urn:uuid:b477e148-8577-446e-bce0-c716e6cfe7df>
+        a           crm:E55_Type ;
+        rdfs:label  "Convolutional Neural Network (CNN) signal separation" .
+
+<https://www.ino.cnr.it/>
+        a       xsd:string .
+
+<urn:uuid:1b9416f8-c40d-446c-9878-22c0d3c66ca1>
+        a           crm:E55_Type ;
+        rdfs:label  "16 Si and 16 InGaAs photodiodes" .
+
+geonames:3067696  a           aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "Institute of Information Theory and Automation, Pod Vodárenskou věž 4, Praha, 18000, Czech Republic" ;
+        aocat:has_country     geonames:3077311 ;
+        aocat:has_place_name  "Institute of Information Theory and Automation, Pod Vodárenskou věž 4, Praha, 18000, Czech Republic" .
+
+<urn:uuid:304f3edb-eb84-4cf4-89bf-7add0e29df23>
+        a           crm:E55_Type ;
+        rdfs:label  "Scientific paper" .
+
+<urn:uuid:a477e4b8-90c8-4b98-9dae-4810a244ddc4>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Unknown" .
+
+<urn:uuid:27b4e498-115f-48bc-b5dc-c438e34205ae>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "VIS-NIR Photodetectors (Si and InGaAs)" ;
+        crmhs:HSP22_has_maker  <urn:uuid:dbd3f42e-9af4-4952-a8be-317c0423533a> ;
+        crmhs:HSP23_has_model  <urn:uuid:1b9416f8-c40d-446c-9878-22c0d3c66ca1> .
+
+<https://doi.org/10.1016/j.culher.2022.09.022>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Convolutional neural network exploiting pixel surroundings to reveal hidden features in artwork NIR reflectograms" ;
+        crm:P2_has_type  <urn:uuid:304f3edb-eb84-4cf4-89bf-7add0e29df23> .
+
+geonames:10285627  a          aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "National Institute of Optics (INO-CNR), Largo Enrico Fermi 6, 50125 Firenze, Italy" ;
+        aocat:has_country     geonames:3175395 ;
+        aocat:has_place_name  "National Institute of Optics (INO-CNR), Largo Enrico Fermi 6, 50125 Firenze, Italy" .
+
+geonames:3175395  a  crm:E62_String ;
+        rdfs:label  "https://www.geonames.org/3175395" .
+
+<urn:uuid:e4181d38-d24f-42ba-a01d-d9dd73f8be0d>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Convolutional Neural Network (CNN) signal separation" ;
+        crm:P3_has_note  "A method based on Convolutional Neural Networks (CNN) to estimate the transfer function from visible spectra (VIS) to Near-Infrared (NIR), removing the visible contribution from NIR reflectograms to enhance hidden features." .
+
+<urn:uuid:e02f9488-a676-4d0e-af7a-3ca1f6b4ec26>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "National Institute of Optics (INO-CNR)" .
+
+artemis:analysisC31DE207-67D2-4772-A699-6A11B0624564
+        a                              crmhs:HS3_Analysis ;
+        rdfs:label                     "Convolutional neural network exploiting pixel surroundings to reveal hidden features in artwork NIR reflectograms" ;
+        crmhs:HSP10_used_software      <urn:uuid:7bd43671-6dab-4310-94de-d6a0296aa926> ;
+        crmhs:HSP13_used_settings      <urn:uuid:3be7164f-8f1c-4557-93d2-a1ffc8bb273f> ;
+        crmhs:HSP16_produced_dataset   <https://doi.org/10.1016/j.culher.2022.09.022> ;
+        crmhs:HSP1_has_activity_title  <urn:uuid:8f890fe1-bf0e-407f-8cb7-bce1b5802dae> ;
+        crmhs:HSP2_was_performed_on    artemis:artemis_he_004 ;
+        crmhs:HSP4_analysed            artemis:artemis_he_004 , artemis:artemis_he_005 ;
+        crmhs:HSP6_used_method         <urn:uuid:e4181d38-d24f-42ba-a01d-d9dd73f8be0d> ;
+        crmhs:HSP8_used_device         <urn:uuid:6e5fd77f-0cdf-4244-8704-ccf00a2bac6e> ;
+        crmhs:HSP9_used_component      <urn:uuid:27b4e498-115f-48bc-b5dc-c438e34205ae> , <urn:uuid:70711e4e-1d20-45ae-9971-cc6fae726e28> ;
+        crm:P11_had_participant        <urn:uuid:a56de2c1-0398-46d8-b76a-b10b3e22b50c> , <urn:uuid:1cba14d5-8b7e-48bf-a611-6c0212423bc4> , <urn:uuid:d671edd2-2370-4c9a-80d2-6a028ab62897> ;
+        crm:P14_carried_out_by         <urn:uuid:e541d829-c7d1-4978-8287-5954d1f0e17d> , <urn:uuid:b81df370-8e73-4c50-ae29-44d1ec859625> ;
+        crm:P2_has_type                <urn:uuid:b477e148-8577-446e-bce0-c716e6cfe7df> ;
+        crm:P3_has_note                "A computational analysis method based on Convolutional Neural Networks (CNN) to estimate the transfer function from visible spectra (VIS) to Near-Infrared (NIR), removing the visible contribution from NIR reflectograms to enhance hidden features. This analysis processes pre-existing datasets acquired by a CNR-INO scanner." ;
+        crm:P4_has_time-span           <urn:uuid:bb043965-1b00-462a-aeac-787a62513cce> ;
+        crm:P7_took_place_at           geonames:10285627 , geonames:3067696 .
+
+<urn:uuid:b81df370-8e73-4c50-ae29-44d1ec859625>
+        a                           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label                  "National Institute of Optics of the National Research Council of Italy (INO-CNR)" ;
+        aocat:has_agent_identifier  <https://www.ino.cnr.it/> ;
+        aocat:has_name              "National Institute of Optics of the National Research Council of Italy (INO-CNR)" .
+
+<urn:uuid:8f890fe1-bf0e-407f-8cb7-bce1b5802dae>
+        a           crm:E35_Title ;
+        rdfs:label  "Convolutional neural network exploiting pixel surroundings to reveal hidden features in artwork NIR reflectograms" .
+
+<urn:uuid:70711e4e-1d20-45ae-9971-cc6fae726e28>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "Illumination System" ;
+        crmhs:HSP22_has_maker  <urn:uuid:a477e4b8-90c8-4b98-9dae-4810a244ddc4> ;
+        crmhs:HSP23_has_model  <urn:uuid:aff57438-e470-4be5-a157-ff51c4e7271b> .
+
+<urn:uuid:6e5fd77f-0cdf-4244-8704-ccf00a2bac6e>
+        a                          crmhs:HS11_Scientific_Device ;
+        rdfs:label                 "INO-CNR VIS-NIR Multispectral Scanner" ;
+        crmhs:HSP22_has_maker      <urn:uuid:e02f9488-a676-4d0e-af7a-3ca1f6b4ec26> ;
+        crmhs:HSP23_has_model      "Custom-built multispectral scanner (32 bands, 380-2500 nm)" ;
+        crm:P52_has_current_owner  <urn:uuid:ee6a1193-adac-49f8-9e8f-1f0df3a3f535> .
+
+artemis:artemis_he_005
+        a           crmhs:HS6_Study_Object ;
+        rdfs:label  "Still life (Anonymous, 20th c.)" .
+
+<urn:uuid:dbd3f42e-9af4-4952-a8be-317c0423533a>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Unknown" .
+
+<urn:uuid:e541d829-c7d1-4978-8287-5954d1f0e17d>
+        a                           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label                  "Institute of Information Theory and Automation, Academy of Sciences of the Czech Republic" ;
+        aocat:has_agent_identifier  <https://www.utia.cas.cz/> ;
+        aocat:has_name              "Institute of Information Theory and Automation, Academy of Sciences of the Czech Republic" .
