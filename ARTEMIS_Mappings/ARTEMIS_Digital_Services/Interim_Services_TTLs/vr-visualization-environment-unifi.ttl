@@ -1,0 +1,51 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://artemis-twin.eu/entity/service//vr-visualization-environment-unifi>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "VR Visualization Environment (UNIFI)" ;
+        rhdto:HP30_provided_by   <urn:uuid:1d67a622-99bd-4663-8db0-8a95c0a59afa> ;
+        crm:P102_has_title       <urn:uuid:51e459c8-10a3-4987-967a-dc5592591597> ;
+        crm:P16i_was_used_for    <urn:uuid:c51d5d1b-3147-4a1c-8103-73bfc819d681> ;
+        crm:P2_has_type          <urn:uuid:a4545071-99cc-4684-9573-26c6ff9bc233> ;
+        crm:P3_has_note          "VR visualisation environment for exploring historic interiors and temporally-reconstructed exhibition displays." ;
+        aocat:has_functionality  <urn:uuid:a4545071-99cc-4684-9573-26c6ff9bc233> .
+
+<urn:uuid:c51d5d1b-3147-4a1c-8103-73bfc819d681>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 13 — Past displays and furnishings in historic buildings" .
+
+<urn:uuid:a4545071-99cc-4684-9573-26c6ff9bc233>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "AR/VR Visualisation" .
+
+<urn:uuid:51e459c8-10a3-4987-967a-dc5592591597>
+        a           crm:E35_Title ;
+        rdfs:label  "VR Visualization Environment (UNIFI)" .
+
+<urn:uuid:1d67a622-99bd-4663-8db0-8a95c0a59afa>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "UNIFI" ;
+        aocat:has_name  "UNIFI" .

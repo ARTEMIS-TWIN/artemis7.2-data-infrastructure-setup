@@ -1,0 +1,81 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:731ce23e-b7a4-4655-a73c-a70e7b6d3464>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 34 — Caldana Digital Twin of a Renaissance Village" .
+
+<urn:uuid:4d8d62cf-7644-427b-ab96-a1ed174560c5>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "PIN" ;
+        aocat:has_name  "PIN" .
+
+<urn:uuid:cfb855a2-22a3-40ac-aade-446bb88567b5>
+        a           aocat:AO_Concept ;
+        rdfs:label  "AIConversationalAgentIntegration" .
+
+<urn:uuid:0262f1a1-26aa-41a8-9648-28b514987b84>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MultiUserVRSession" .
+
+<urn:uuid:84f3f513-f268-4e6f-a825-185cdbd5a7f3>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 14 — The Living Past" .
+
+<urn:uuid:5835be9e-129e-490d-9c0e-f6ed43c3c723>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 28 — Silvomuseum Vallombrosa" .
+
+<urn:uuid:89683ef4-946f-4bf3-a2fd-cc226b287898>
+        a           aocat:AO_Concept ;
+        rdfs:label  "AvatarBasedInteraction" .
+
+<urn:uuid:fe1fca86-a3d6-4809-bdbd-190b76d5fc5d>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 32 — CH Assets Condition Assessment and Monitoring" .
+
+<urn:uuid:786a6773-3c30-4d75-967e-3dd5aad44c2f>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "AR/VR Visualisation" .
+
+<https://artemis-twin.eu/entity/service//vr-collaborative-environment-pin>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "VR Collaborative Environment (PIN)" ;
+        rhdto:HP30_provided_by        <urn:uuid:4d8d62cf-7644-427b-ab96-a1ed174560c5> ;
+        crm:P102_has_title            <urn:uuid:704029a7-9fbe-4d13-a3f5-da5cd196d8bd> ;
+        crm:P106_is_composed_of       "Unity Game Engine" , "Unity Netcode (multi-user networking)" ;
+        crm:P125_used_object_of_type  "Meta Quest 3 VR Headset" ;
+        crm:P16i_was_used_for         <urn:uuid:5835be9e-129e-490d-9c0e-f6ed43c3c723> , <urn:uuid:731ce23e-b7a4-4655-a73c-a70e7b6d3464> , <urn:uuid:fe1fca86-a3d6-4809-bdbd-190b76d5fc5d> , <urn:uuid:84f3f513-f268-4e6f-a825-185cdbd5a7f3> ;
+        crm:P2_has_type               <urn:uuid:786a6773-3c30-4d75-967e-3dd5aad44c2f> ;
+        crm:P3_has_note               "Multi-user collaborative VR environment, developed in Unity and accessed via Meta Quest 3 headsets. Supports synchronous multi-user sessions with avatar-based interaction. In the Vallombrosa pilot, extends single-user VR exploration (navigation, sensor placement, AI-assisted querying) with multi-user networking (Netcode). In the Caldana pilot, used to generate input JSON payloads for simulation microservices interactively, enabling collaborative scenario configuration." ;
+        aocat:has_functionality       <urn:uuid:89683ef4-946f-4bf3-a2fd-cc226b287898> , <urn:uuid:0262f1a1-26aa-41a8-9648-28b514987b84> , <urn:uuid:cfb855a2-22a3-40ac-aade-446bb88567b5> , <urn:uuid:262424c3-b7f1-4444-b02c-f0eb6a9cb545> , <urn:uuid:786a6773-3c30-4d75-967e-3dd5aad44c2f> .
+
+<urn:uuid:704029a7-9fbe-4d13-a3f5-da5cd196d8bd>
+        a           crm:E35_Title ;
+        rdfs:label  "VR Collaborative Environment (PIN)" .
+
+<urn:uuid:262424c3-b7f1-4444-b02c-f0eb6a9cb545>
+        a           aocat:AO_Concept ;
+        rdfs:label  "VRScenarioParameterConfiguration" .

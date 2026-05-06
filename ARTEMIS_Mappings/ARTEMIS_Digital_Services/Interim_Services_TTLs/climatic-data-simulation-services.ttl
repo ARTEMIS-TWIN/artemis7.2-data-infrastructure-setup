@@ -1,0 +1,66 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:edfe447b-ddd8-4f64-b55d-53ac0a6adf1f>
+        a           aocat:AO_Concept ;
+        rdfs:label  "CloudBasedScenarioAnalysis" .
+
+<urn:uuid:e68ebc89-6254-4a4c-82da-1589dbf015ca>
+        a           aocat:AO_Concept ;
+        rdfs:label  "SyntheticClimateDataGeneration" .
+
+<urn:uuid:c529531b-937a-4807-adeb-c788556cec31>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<https://artemis-twin.eu/entity/service//climatic-data-simulation-services>
+        a                         rhdto:HC21_Digital_Service ;
+        rdfs:label                "Climatic Data Simulation Services" ;
+        rhdto:HP30_provided_by    <urn:uuid:7ba5083f-f550-46d6-8ba1-f19e86552aa1> ;
+        crm:P102_has_title        <urn:uuid:b41e02d9-5e4e-40f2-8709-97eabcf1e170> ;
+        crm:P106_is_composed_of   <https://artemis-project.eu/services/meteorological-station-simulator> ;
+        crm:P16i_was_used_for     <urn:uuid:bcd66b58-d57d-4b14-a280-0f1c39e70577> ;
+        crm:P2_has_type           <urn:uuid:c529531b-937a-4807-adeb-c788556cec31> ;
+        crm:P3_has_note           "Cloud-based microservices (REST APIs) providing synthetic but scientifically-grounded climate data for scenario analysis within heritage Digital Twins. Core component of the Caldana pilot's simulation infrastructure." ;
+        aocat:has_consumed_media  "application/json" ;
+        aocat:has_functionality   <urn:uuid:c529531b-937a-4807-adeb-c788556cec31> , <urn:uuid:e68ebc89-6254-4a4c-82da-1589dbf015ca> , <urn:uuid:edfe447b-ddd8-4f64-b55d-53ac0a6adf1f> ;
+        aocat:has_produced_media  "application/json" .
+
+<urn:uuid:b41e02d9-5e4e-40f2-8709-97eabcf1e170>
+        a           crm:E35_Title ;
+        rdfs:label  "Climatic Data Simulation Services" .
+
+<https://artemis-project.eu/services/meteorological-station-simulator>
+        a           rhdto:HC21_Digital_Service ;
+        rdfs:label  "Meteorological Station Simulator" .
+
+<urn:uuid:7ba5083f-f550-46d6-8ba1-f19e86552aa1>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "PIN" ;
+        aocat:has_name  "PIN" .
+
+<urn:uuid:bcd66b58-d57d-4b14-a280-0f1c39e70577>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 34 — Caldana Digital Twin of a Renaissance Village" .

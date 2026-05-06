@@ -1,0 +1,124 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:7a75b868-984a-45f8-8972-27809ad14de5>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 20 — Crowd movement simulation in Old Town of Xanthi" .
+
+<urn:uuid:a507085a-4db8-4c68-864d-ba413f90da09>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Semantic Annotation" .
+
+<urn:uuid:da954dcb-5454-417a-a794-6d473003d1f3>
+        a           aocat:AO_Concept ;
+        rdfs:label  "POIAnnotationManagement" .
+
+<urn:uuid:8cec3cce-b868-402f-9508-7fbc0488b178>
+        a           aocat:AO_Concept ;
+        rdfs:label  "AssetLevelAnnotationManagement" .
+
+<urn:uuid:9b22bb5d-f501-43aa-939e-2c9e034a1e2b>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage Documentation Professionals" .
+
+<urn:uuid:5a3fd935-bf73-44b5-b79b-7d8b28faa766>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage Institutions" .
+
+<urn:uuid:072b6e58-4290-4b8a-8e92-8433c4cdd27c>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 21 — Metadata management for crumbling buildings in historic city centre" .
+
+<urn:uuid:cfddc147-5712-4f61-beea-405bd9594406>
+        a           aocat:AO_Concept ;
+        rdfs:label  "ContextualEntityAnnotationManagement" .
+
+<https://artemis-twin.eu/entity/service//artemis-vr-ar-annotation-services>
+        a                          rhdto:HC21_Digital_Service ;
+        rdfs:label                 "ARTEMIS VR/AR Annotation Services" ;
+        rhdto:HP30_provided_by     <urn:uuid:814c666d-a377-4851-a584-cf1bd233ceb1> ;
+        crm:P102_has_title         <urn:uuid:f423f9cd-8b19-47c6-af37-cb79fe262de3> ;
+        crm:P103_was_intended_for  <urn:uuid:9b22bb5d-f501-43aa-939e-2c9e034a1e2b> , <urn:uuid:e66a47c0-1653-49dd-be2f-1b0e0f3c2eab> , <urn:uuid:5a3fd935-bf73-44b5-b79b-7d8b28faa766> ;
+        crm:P106_is_composed_of    "Node.js REST API Server (Express.js v4.18+)" , "Export and Backup Services" , "Validation and Processing Engine" , "Audit and Logging Subsystem" , "MongoDB NoSQL Database (v5.0+)" ;
+        crm:P16i_was_used_for      <urn:uuid:7a75b868-984a-45f8-8972-27809ad14de5> , <urn:uuid:2ffb76d6-0443-408e-bd46-821ee2c3319e> , <urn:uuid:072b6e58-4290-4b8a-8e92-8433c4cdd27c> ;
+        crm:P2_has_type            <urn:uuid:a507085a-4db8-4c68-864d-ba413f90da09> ;
+        crm:P3_has_note            "Microservices architecture providing backend infrastructure for spatial data management and contextual information storage associated with 3D digital heritage assets. Enterprise-grade REST API endpoints supporting full CRUD operations for spatial annotation data, with data persistence, validation engines and real-time synchronization. Endpoints follow the pattern /api/assets/{assetId}/annotations with automatic type-specific validation and geometric calculations, supporting six annotation data schemas: Point-of-Interest, Primitive-based, Lasso-based, Contextual Entity, Asset-level, and Measurement. Annotation Grouping API provided via /api/assets/{assetId}/annotation-groups." ;
+        aocat:has_consumed_media   "application/json" ;
+        aocat:has_functionality    <urn:uuid:8cec3cce-b868-402f-9508-7fbc0488b178> , <urn:uuid:9d239fa7-492b-432b-baf4-2fec3c4dbf3c> , <urn:uuid:da954dcb-5454-417a-a794-6d473003d1f3> , <urn:uuid:42ea4d41-ace2-40ef-a967-2a71f4ad15a6> , <urn:uuid:90b63eb2-6eb2-46d7-950b-d4a781ccf49d> , <urn:uuid:4a21fc52-0e94-4164-909f-080b763d7d2c> , <urn:uuid:a507085a-4db8-4c68-864d-ba413f90da09> , <urn:uuid:2a721e87-60cf-4755-bbc9-db2acc0ffd31> , <urn:uuid:c1140ec1-ce2c-4226-9998-6c0d283d7c6c> , <urn:uuid:cfddc147-5712-4f61-beea-405bd9594406> , <urn:uuid:7aa56e4f-1f89-49b7-86bd-549b38ff506f> , <urn:uuid:b59c41d0-41b8-44c0-9b68-05f3d3ca46a7> , <urn:uuid:e6a772c6-8b37-43db-9531-4e094cba9477> ;
+        aocat:has_produced_media   "application/json" .
+
+<urn:uuid:b59c41d0-41b8-44c0-9b68-05f3d3ca46a7>
+        a           aocat:AO_Concept ;
+        rdfs:label  "AuditLogging" .
+
+<urn:uuid:814c666d-a377-4851-a584-cf1bd233ceb1>
+        a                   aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label          "Athena Research Centre" ;
+        aocat:has_homepage  "https://www.athenarc.gr" ;
+        aocat:has_name      "Athena Research Centre" .
+
+<urn:uuid:90b63eb2-6eb2-46d7-950b-d4a781ccf49d>
+        a           aocat:AO_Concept ;
+        rdfs:label  "AnnotationCRUD" .
+
+<urn:uuid:2ffb76d6-0443-408e-bd46-821ee2c3319e>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 10 — Climate and Condition Monitoring of Built Heritage (KIK-IRPA)" .
+
+<urn:uuid:7aa56e4f-1f89-49b7-86bd-549b38ff506f>
+        a           aocat:AO_Concept ;
+        rdfs:label  "PrimitiveAnnotationManagement" .
+
+<urn:uuid:4a21fc52-0e94-4164-909f-080b763d7d2c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "DataExport" .
+
+<urn:uuid:f423f9cd-8b19-47c6-af37-cb79fe262de3>
+        a           crm:E35_Title ;
+        rdfs:label  "ARTEMIS VR/AR Annotation Services" .
+
+<urn:uuid:2a721e87-60cf-4755-bbc9-db2acc0ffd31>
+        a           aocat:AO_Concept ;
+        rdfs:label  "AnnotationGroupingAndHierarchy" .
+
+<urn:uuid:42ea4d41-ace2-40ef-a967-2a71f4ad15a6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MeasurementAnnotationManagement" .
+
+<urn:uuid:c1140ec1-ce2c-4226-9998-6c0d283d7c6c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "LassoAnnotationManagement" .
+
+<urn:uuid:e66a47c0-1653-49dd-be2f-1b0e0f3c2eab>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT Application Developers" .
+
+<urn:uuid:9d239fa7-492b-432b-baf4-2fec3c4dbf3c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "GeometricCalculations" .
+
+<urn:uuid:e6a772c6-8b37-43db-9531-4e094cba9477>
+        a           aocat:AO_Concept ;
+        rdfs:label  "DataValidation" .

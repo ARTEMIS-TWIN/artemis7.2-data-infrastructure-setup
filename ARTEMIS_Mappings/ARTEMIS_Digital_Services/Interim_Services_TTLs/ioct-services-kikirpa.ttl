@@ -1,0 +1,78 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:4c77c253-8c73-4dcc-bc8f-44146df50c72>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 32 — CH Assets Condition Assessment and Monitoring" .
+
+<urn:uuid:1a93cb3c-1af1-4cca-8ba6-bbb4eb94ab08>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 10 — Climate and Condition Monitoring of Built Heritage" .
+
+<urn:uuid:831d827b-946e-40ea-9a5f-f3f0e8a3ef45>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "KIK-IRPA" ;
+        aocat:has_name  "KIK-IRPA" .
+
+<urn:uuid:a3f9aa89-e8ac-4694-9654-43e8191b24f7>
+        a           aocat:AO_Concept ;
+        rdfs:label  "SensorNodeManagement" .
+
+<urn:uuid:539424dc-e94d-486c-9373-0a4a1d6411b8>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "IoT Monitoring" .
+
+<urn:uuid:08d3bfb4-f58e-41b1-95e9-d8b90ec36525>
+        a           aocat:AO_Concept ;
+        rdfs:label  "TimeSeriesIngestion" .
+
+<urn:uuid:6a5a9305-068b-4838-a093-40daa06d0e52>
+        a           crm:E35_Title ;
+        rdfs:label  "IoCT Services (KIK-IRPA)" .
+
+<urn:uuid:65091709-05b7-4404-9f86-058a0707f37f>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MQTTPublishSubscribe" .
+
+<https://artemis-twin.eu/entity/service//ioct-services-kikirpa>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "IoCT Services (KIK-IRPA)" ;
+        rhdto:HP30_provided_by        <urn:uuid:831d827b-946e-40ea-9a5f-f3f0e8a3ef45> ;
+        crm:P102_has_title            <urn:uuid:6a5a9305-068b-4838-a093-40daa06d0e52> ;
+        crm:P125_used_object_of_type  "Sensirion SCD30 CO2 Sensor" , "Adafruit TSL2591 Light Sensor" , "Sensirion SPS30 Particulate Matter Sensor" , "Arduino Nano RP2040 Connect" , "DHT22 Temperature/Humidity Sensor" , "DFRobot Tipping Bucket Rain Gauge" , "LoRa/LoRaWAN Transceiver (Wio-SX1262, RFM95W)" , "On-site Weather Station" , "Hydreon RG-15 Optical Rain Gauge" , "Seeedstudio Xiao ESP32-S3" ;
+        crm:P16i_was_used_for         <urn:uuid:4c77c253-8c73-4dcc-bc8f-44146df50c72> , <urn:uuid:1a93cb3c-1af1-4cca-8ba6-bbb4eb94ab08> , <urn:uuid:a260f8f4-32c5-4c4f-95d4-e09fa5e42fd9> ;
+        crm:P2_has_type               <urn:uuid:539424dc-e94d-486c-9373-0a4a1d6411b8> ;
+        crm:P3_has_note               "IoT service implementing a hybrid data collection strategy, combining custom-developed sensor platforms and commercial off-the-shelf solutions. Centred on low-power standalone IoT nodes developed by KIK-IRPA for measuring temperature, relative humidity, light, CO2, particulate matter and wind-driven rain on facades. Integrates commercial sensors for temperature/humidity and wall/soil moisture, plus on-site meteorological stations. Data transmission to the ARTEMIS infrastructure via RESTful services (ARTEMIS IoT Microservices) and MQTT protocol." ;
+        aocat:has_consumed_media      "application/json" ;
+        aocat:has_functionality       <urn:uuid:539424dc-e94d-486c-9373-0a4a1d6411b8> , <urn:uuid:08d3bfb4-f58e-41b1-95e9-d8b90ec36525> , <urn:uuid:93f03ce7-220d-489d-a9b2-10bd52245441> , <urn:uuid:65091709-05b7-4404-9f86-058a0707f37f> , <urn:uuid:a3f9aa89-e8ac-4694-9654-43e8191b24f7> ;
+        aocat:has_produced_media      "application/json" .
+
+<urn:uuid:a260f8f4-32c5-4c4f-95d4-e09fa5e42fd9>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 14 — The Living Past" .
+
+<urn:uuid:93f03ce7-220d-489d-a9b2-10bd52245441>
+        a           aocat:AO_Concept ;
+        rdfs:label  "EnvironmentalDataAcquisition" .

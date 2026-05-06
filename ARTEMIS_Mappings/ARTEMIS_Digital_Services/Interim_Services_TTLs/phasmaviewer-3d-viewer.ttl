@@ -1,0 +1,101 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:0ef570c0-6836-4c2c-81bc-12a62db2e9b9>
+        a           aocat:AO_Concept ;
+        rdfs:label  "ServerSideRemoteRendering" .
+
+<urn:uuid:bfacb0f9-d811-47d7-aed5-5c1bc8ad78ea>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "PHASMATIC" ;
+        aocat:has_name  "PHASMATIC" .
+
+<urn:uuid:7b97e247-b632-429e-9f3e-bf8ca7225110>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage Documentation Professionals" .
+
+<urn:uuid:afef47eb-ccd4-4209-b4d6-f038ddf4899c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "MultiUserCollaboration" .
+
+<urn:uuid:fca330bc-ecd9-4dbf-859e-5abc79a1f695>
+        a           aocat:AO_Concept ;
+        rdfs:label  "LevelOfDetailProcessing" .
+
+<urn:uuid:c4a2bc42-d087-4e17-b7cd-6f1213670f66>
+        a           aocat:AO_Concept ;
+        rdfs:label  "ClientSideWebGLRendering" .
+
+<https://artemis-twin.eu/entity/service//phasmaviewer-3d-viewer>
+        a                          rhdto:HC21_Digital_Service ;
+        rdfs:label                 "PhasmaViewer 3D Viewer" ;
+        rhdto:HP30_provided_by     <urn:uuid:bfacb0f9-d811-47d7-aed5-5c1bc8ad78ea> ;
+        crm:P102_has_title         <urn:uuid:4ab5c5f3-d43d-4501-a219-8c1410b50290> ;
+        crm:P103_was_intended_for  <urn:uuid:7b97e247-b632-429e-9f3e-bf8ca7225110> , <urn:uuid:4230fa8c-3bd9-458d-9d17-969238ede8c0> , <urn:uuid:46d1fda7-256a-4844-950e-87c253cbeff7> ;
+        crm:P106_is_composed_of    "PhasmaViewer Client (WebGL 2)" , "Remote Rendering Services (RTX GPU cluster, AUEB-RC)" , "Geometry Services (containerised)" ;
+        crm:P16i_was_used_for      <urn:uuid:14c28868-67d9-40cd-9c65-1c18f7519944> , <urn:uuid:12f86297-cb1f-44f9-a807-083c3dfa7ecf> , <urn:uuid:f8ccb14b-b152-4ede-94fe-5cc271e00124> , <urn:uuid:3fdebf88-4fb0-466c-8ae7-7d3343ebb57c> ;
+        crm:P2_has_type            <urn:uuid:197ed2d7-38e3-4630-b321-b6e29e7a17be> ;
+        crm:P3_has_note            "Browser-based WebGL 2 3D viewer for cultural heritage assets with cataloguing, client-side rendering, and server-side remote rendering for large fragment collections and thin clients. Supports 3D annotations (integrates the ARTEMIS Annotation Service), geometry optimisation via 3D format conversion and Level of Detail (LOD) processing. For large models or thin clients, realistic remote rendering uses NVIDIA RTX-class GPUs with DLSS and OptiX denoiser support." ;
+        aocat:has_functionality    <urn:uuid:ed6d145a-4408-4ee8-b85a-b6bb1ee7435a> , <urn:uuid:197ed2d7-38e3-4630-b321-b6e29e7a17be> , <urn:uuid:16106af0-a4e1-4944-b51b-845cb7b41e78> , <urn:uuid:fca330bc-ecd9-4dbf-859e-5abc79a1f695> , <urn:uuid:c4a2bc42-d087-4e17-b7cd-6f1213670f66> , <urn:uuid:afef47eb-ccd4-4209-b4d6-f038ddf4899c> , <urn:uuid:0ef570c0-6836-4c2c-81bc-12a62db2e9b9> .
+
+<urn:uuid:197ed2d7-38e3-4630-b321-b6e29e7a17be>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "3D Visualisation" .
+
+<urn:uuid:f8ccb14b-b152-4ede-94fe-5cc271e00124>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 1 — 3D Virtual Reassembly and Inspection on the Web" .
+
+<urn:uuid:3fdebf88-4fb0-466c-8ae7-7d3343ebb57c>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 31 — Collaborative Workspace for Data Sharing" .
+
+<urn:uuid:4230fa8c-3bd9-458d-9d17-969238ede8c0>
+        a           crm:E55_Type ;
+        rdfs:label  "3D Reassembly Researchers" .
+
+<urn:uuid:ed6d145a-4408-4ee8-b85a-b6bb1ee7435a>
+        a           aocat:AO_Concept ;
+        rdfs:label  "3DFormatConversion" .
+
+<urn:uuid:4ab5c5f3-d43d-4501-a219-8c1410b50290>
+        a           crm:E35_Title ;
+        rdfs:label  "PhasmaViewer 3D Viewer" .
+
+<urn:uuid:12f86297-cb1f-44f9-a807-083c3dfa7ecf>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 32 — CH Assets Condition Assessment and Monitoring" .
+
+<urn:uuid:16106af0-a4e1-4944-b51b-845cb7b41e78>
+        a           aocat:AO_Concept ;
+        rdfs:label  "3DAnnotationVisualisation" .
+
+<urn:uuid:14c28868-67d9-40cd-9c65-1c18f7519944>
+        a           crm:E7_Activity ;
+        rdfs:label  "Pilot 14 — The Living Past" .
+
+<urn:uuid:46d1fda7-256a-4844-950e-87c253cbeff7>
+        a           crm:E55_Type ;
+        rdfs:label  "Collaborative Heritage Project Teams" .
