@@ -1,0 +1,2194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x3ml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      source_type="xpath"
+      version="1.0"
+      xsi:noNamespaceSchemaLocation="https://isl.ics.forth.gr/x3ml/schema/x3ml.xsd">
+   <info>
+      <title>ARTEMIS Analysis v2 intero</title>
+      <general_description/>
+      <source>
+         <source_info>
+            <source_schema schema_file="ARTEMIS_full_mock_instance_v6.xml"
+                           type="xml"
+                           version="">ARTEMIS_full_mock_instance_v6</source_schema>
+            <namespaces>
+               <namespace prefix="" uri=""/>
+            </namespaces>
+         </source_info>
+      </source>
+      <target>
+         <target_info>
+            <target_schema schema_file="CIDOC_CRM_v7.1.1.rdfs" type="rdfs" version="">CIDOC CRM</target_schema>
+            <namespaces>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+            </namespaces>
+         </target_info>
+         <target_info>
+            <target_schema schema_file="CRMsci_v2.0.rdf" type="rdf" version="">CRMsci</target_schema>
+            <namespaces>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="crmsci" uri="http://www.cidoc-crm.org/extensions/crmsci/"/>
+            </namespaces>
+         </target_info>
+         <target_info>
+            <target_schema schema_file="CRMdig_v5.0.rdf" type="rdf" version="">CRMdig_v5.0</target_schema>
+            <namespaces>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="crmdig" uri="http://www.cidoc-crm.org/extensions/crmdig/"/>
+            </namespaces>
+         </target_info>
+         <target_info>
+            <target_schema schema_file="AO-CAT1.2.2.rdfs" type="rdfs" version="">AO-CAT1.2.2</target_schema>
+            <namespaces>
+               <namespace prefix="aocat"
+                          uri="https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+               <namespace prefix="crmpe" uri="http://parthenos.d4science.org/CRMext/CRMpe/"/>
+               <namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+            </namespaces>
+         </target_info>
+         <target_info>
+            <target_schema schema_file="skos.rdf" type="rdf" version="">skos</target_schema>
+            <namespaces>
+               <namespace prefix="dct" uri="http://purl.org/dc/terms/"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+            </namespaces>
+         </target_info>
+         <target_info>
+            <target_schema schema_file="RHDTO_20-4-2026.rdfs" type="rdfs" version="">RHDTO_20-4-2026</target_schema>
+            <namespaces>
+               <namespace prefix="crmsci" uri="http://www.cidoc-crm.org/extensions/crmsci/"/>
+               <namespace prefix="aocat"
+                          uri="https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+               <namespace prefix="crmdig" uri="http://www.cidoc-crm.org/extensions/crmdig/"/>
+               <namespace prefix="rhdto" uri="http://vast-lab.org/rhdto/"/>
+               <namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+               <namespace prefix="lexvo" uri="http://lexvo.org/id/iso639-2/"/>
+               <namespace prefix="geonames" uri="https://www.geonames.org/"/>
+               <namespace prefix="wd" uri="http://www.wikidata.org/"/>
+               <namespace prefix="aat" uri="http://vocab.getty.edu/aat/"/>
+               <namespace prefix="perio" uri="http://n2t.net/ark:/99152/"/>
+               <namespace prefix="ariadne"
+                          uri="https://ariadne-infrastructure.eu/aocat/Resource/"/>
+               <namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
+               <namespace prefix="viaf" uri="http://viaf.org/viaf/"/>
+               <namespace prefix="artemis" uri="https://artemis-twin.eu/entity/"/>
+            </namespaces>
+         </target_info>
+         <target_info>
+            <target_schema schema_file="CRMhs_Ontology_V1.2.rdfs" type="rdfs" version="">CRMhs_Ontology_V1.2</target_schema>
+            <namespaces>
+               <namespace prefix="crmhs" uri="http://vast-lab.org/crmhs/"/>
+               <namespace prefix="crmsci" uri="http://www.cidoc-crm.org/extensions/crmsci/"/>
+               <namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+               <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+               <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+               <namespace prefix="dcterms" uri="http://purl.org/dc/terms/"/>
+               <namespace prefix="voaf" uri="http://purl.org/vocommons/voaf#"/>
+               <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+               <namespace prefix="vann" uri="http://purl.org/vocab/vann/"/>
+               <namespace prefix="crmdig" uri="http://www.cidoc-crm.org/extensions/crmdig/"/>
+               <namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+            </namespaces>
+         </target_info>
+      </target>
+      <mapping_info>
+         <mapping_created_by_org/>
+         <mapping_created_by_person/>
+         <in_collaboration_with/>
+      </mapping_info>
+      <example_data_info>
+         <example_data_from/>
+         <example_data_contact_person/>
+         <example_data_source_record/>
+         <generator_policy_info/>
+         <example_data_target_record/>
+         <thesaurus_info/>
+      </example_data_info>
+   </info>
+   <namespaces>
+      <namespace prefix="artemis" uri="https://artemis-twin.eu/entity/"/>
+   </namespaces>
+   <mappings>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis</source_node>
+            <target_node>
+               <entity>
+                  <type>crmhs:HS3_Analysis</type>
+                  <instance_generator name="ArtemisURI">
+                     <arg name="id" type="constant">analysis</arg>
+                  </instance_generator>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">analysis_title/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>ANALYSIS</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:27:00" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>analysis_was_performed_on</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP2_was_performed_on</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>analysis_was_performed_on</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS2_Heritage_Science_Object</type>
+                     <type>crmhs:HS6_Study_Object</type>
+                     <type>rhdto:HC3_Tangible_Entity</type>
+                     <type>aocat:AO_Object</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">../heritage_object_artemis_id/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>object_or_area_or_portion_or_sample_analysed/object_area_sample</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Portion">object_area_sample_type</equals>
+                  </if>
+                  <relationship>crmhs:HSP4_analysed</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS7_Study_Object_Portion</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">study_object_portion/portion_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">study_object_portion/portion_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>object_or_area_or_portion_or_sample_analysed/object_area_sample</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Area">object_area_sample_type</equals>
+                  </if>
+                  <relationship>crmhs:HSP4_analysed</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS8_Study_Object_Area</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">study_object_area/area_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">study_object_area/area_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>object_or_area_or_portion_or_sample_analysed/object_area_sample</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Sample">object_area_sample_type</equals>
+                  </if>
+                  <relationship>crmhs:HSP4_analysed</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS9_Study_Object_Sample</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">study_object_sample/sample_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">study_object_sample/sample_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>object_or_area_or_portion_or_sample_analysed/object_area_sample</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <and>
+                        <if>
+                           <not>
+                              <if>
+                                 <equals value="Sample">object_area_sample_type</equals>
+                              </if>
+                           </not>
+                        </if>
+                        <if>
+                           <not>
+                              <if>
+                                 <equals value="Portion">object_area_sample_type</equals>
+                              </if>
+                           </not>
+                        </if>
+                        <if>
+                           <not>
+                              <if>
+                                 <equals value="Area">object_area_sample_type</equals>
+                              </if>
+                           </not>
+                        </if>
+                     </and>
+                  </if>
+                  <relationship>crmhs:HSP4_analysed</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS6_Study_Object</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">object_area_sample_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">object_area_sample_label/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>analysis_type</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P2_has_type</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>analysis_type</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E55_Type</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>analysis_title</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP1_has_activity_title</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>analysis_title</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E35_Title</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>notes</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P3_has_note</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>notes</source_node>
+               <target_node>
+                  <entity>
+                     <type>rdfs:Literal</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>time_span/span</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P4_has_time-span</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>time_span/span</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E52_Time-Span</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">concat(from, '-', until)</arg>
+                     </label_generator>
+                     <additional>
+                        <relationship>crm:P79_beginning_is_qualified_by</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">from/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                     <additional>
+                        <relationship>crm:P80_end_is_qualified_by</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">until/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                     <additional>
+                        <relationship>aocat:from</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">from/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                     <additional>
+                        <relationship>aocat:until</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">until/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>took_place_at/place</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P7_took_place_at</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>took_place_at/place</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E53_Place</type>
+                     <type>aocat:AO_Spatial_Region</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">place_uri/text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>carried_out_by/agent</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Person">agent_type</equals>
+                  </if>
+                  <relationship>crm:P14_carried_out_by</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>carried_out_by/agent</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E21_Person</type>
+                     <type>aocat:AO_Person</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>carried_out_by/agent</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Group">agent_type</equals>
+                  </if>
+                  <relationship>crm:P14_carried_out_by</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>carried_out_by/agent</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Group</type>
+                     <type>crm:E74_Group</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>had_participant/agent</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Group">agent_type</equals>
+                  </if>
+                  <relationship>crm:P11_had_participant</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>had_participant/agent</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Group</type>
+                     <type>crm:E74_Group</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>had_participant/agent</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Person">agent_type</equals>
+                  </if>
+                  <relationship>crm:P11_had_participant</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>had_participant/agent</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Person</type>
+                     <type>crm:E21_Person</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_method/method</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <exists>method_notes[text()]</exists>
+                  </if>
+                  <relationship>crmhs:HSP6_used_method</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_method/method</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS4_Method</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">method_name/text()</arg>
+                     </label_generator>
+                     <additional>
+                        <relationship>crm:P3_has_note</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">method_notes/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_method/method</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <not>
+                        <if>
+                           <exists>method_notes[text()]</exists>
+                        </if>
+                     </not>
+                  </if>
+                  <relationship>crmhs:HSP6_used_method</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_method/method</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS4_Method</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">method_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_protocol</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <exists>protocol_notes[text()]</exists>
+                  </if>
+                  <relationship>crmhs:HSP7_used_protocol</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_protocol</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS5_Protocol</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">protocol_name/text()</arg>
+                     </label_generator>
+                     <additional>
+                        <relationship>crm:P3_has_note</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">protocol_notes/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_protocol/protocol</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <not>
+                        <if>
+                           <exists>protocol_notes[text()]</exists>
+                        </if>
+                     </not>
+                  </if>
+                  <relationship>crmhs:HSP7_used_protocol</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_protocol/protocol</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS5_Protocol</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">protocol_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_device/device</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP8_used_device</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_device/device</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS11_Scientific_Device</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">device_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_components/component</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP9_used_component</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_components/component</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS12_Device_Component</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">component_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_software/software</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP10_used_software</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_software/software</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmdig:D14_Software</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">software_name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_settings</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP13_used_settings</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_settings</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS14_Analysis_Settings</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="constant">Analysis settings</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_dataset/dataset</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP12_used_dataset</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_dataset/dataset</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS13_Scientific_Dataset</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">dataset_url/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">dataset_title/text()</arg>
+                     </label_generator>
+                     <additional>
+                        <relationship>crm:P3_has_note</relationship>
+                        <entity>
+                           <type>rdfs:Literal</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">dataset_type/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>produced_dataset/dataset</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP16_produced_dataset</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>produced_dataset/dataset</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS13_Scientific_Dataset</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">dataset_url/text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>sub_activities/sub_activity</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Analysis">sub_activity_type</equals>
+                  </if>
+                  <relationship>crmhs:HSP3_has_sub-activity</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>sub_activities/sub_activity</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS3_Analysis</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">sub_activity_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">sub_activity_title/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>sub_activities/sub_activity</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Sample Preparation">sub_activity_type</equals>
+                  </if>
+                  <relationship>crmhs:HSP3_has_sub-activity</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>sub_activities/sub_activity</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS10_Sample_Preparation</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">sub_activity_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">sub_activity_title/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>sub_activities/sub_activity</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <and>
+                        <if>
+                           <not>
+                              <if>
+                                 <equals value="Sample Preparation">sub_activity_type</equals>
+                              </if>
+                           </not>
+                        </if>
+                        <if>
+                           <not>
+                              <if>
+                                 <equals value="Analysis">sub_activity_type</equals>
+                              </if>
+                           </not>
+                        </if>
+                     </and>
+                  </if>
+                  <relationship>crmhs:HSP3_has_sub-activity</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>sub_activities/sub_activity</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS1_Scientific_Activity</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">sub_activity_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">sub_activity_title/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/took_place_at/place</source_node>
+            <target_node>
+               <entity>
+                  <type>crm:E53_Place</type>
+                  <type>aocat:AO_Spatial_Region</type>
+                  <instance_generator name="URIorUUID">
+                     <arg name="text" type="xpath">place_uri/text()</arg>
+                  </instance_generator>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">place_name/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>PLACE</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:22:16" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>place_name</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_place_name</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>place_name</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>country</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_country</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>country</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E62_String</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/carried_out_by/agent</source_node>
+            <target_node>
+               <if>
+                  <equals value="Person">agent_type</equals>
+               </if>
+               <entity>
+                  <type>crm:E21_Person</type>
+                  <type>aocat:AO_Person</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">n/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>ANALYSIS CARRIED OUT BY (PERSON)</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:26:06" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>n</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_name</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>n</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>email</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_email</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>email</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>institution</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P107i_is_current_or_former_member_of</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>institution</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Group</type>
+                     <type>crm:E74_Group</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>identifier</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_agent_identifier</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>identifier</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/used_device/device</source_node>
+            <target_node>
+               <entity>
+                  <type>crmhs:HS11_Scientific_Device</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">device_name/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>DEVICE</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:23:03" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>maker</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <exists>identifier[text()]</exists>
+                  </if>
+                  <relationship>crmhs:HSP22_has_maker</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>maker</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E39_Actor</type>
+                     <type>aocat:AO_Agent</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                     <additional>
+                        <relationship>aocat:has_agent_identifier</relationship>
+                        <entity>
+                           <type>xsd:string</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">identifier/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>maker</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <not>
+                        <if>
+                           <exists>identifier[text()]</exists>
+                        </if>
+                     </not>
+                  </if>
+                  <relationship>crmhs:HSP22_has_maker</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>maker</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E39_Actor</type>
+                     <type>aocat:AO_Agent</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>current_owner</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Group">agent_type</equals>
+                  </if>
+                  <relationship>crm:P52_has_current_owner</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>current_owner</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Group</type>
+                     <type>crm:E74_Group</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">n/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>current_owner</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <and>
+                        <if>
+                           <equals value="Person">agent_type</equals>
+                        </if>
+                        <if>
+                           <exists>identifier[text()]</exists>
+                        </if>
+                     </and>
+                  </if>
+                  <relationship>crm:P52_has_current_owner</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>current_owner</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Person</type>
+                     <type>crm:E21_Person</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">name/text()</arg>
+                     </label_generator>
+                     <additional>
+                        <relationship>aocat:has_agent_identifier</relationship>
+                        <entity>
+                           <type>xsd:string</type>
+                           <instance_generator name="Literal">
+                              <arg name="text" type="xpath">identifier/text()</arg>
+                           </instance_generator>
+                        </entity>
+                     </additional>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>current_owner</relation>
+               </source_relation>
+               <target_relation>
+                  <if>
+                     <equals value="Person">agent_type</equals>
+                  </if>
+                  <relationship>crm:P52_has_current_owner</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>current_owner</source_node>
+               <target_node>
+                  <entity>
+                     <type>aocat:AO_Person</type>
+                     <type>crm:E21_Person</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">name/text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>model</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP23_has_model</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>model</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E55_Type</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/used_components/component</source_node>
+            <target_node>
+               <entity>
+                  <type>crmhs:HS12_Device_Component</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">component_name/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>DEVICE COMPONENT HSP22 e 23 richieste qui ma non possibili (domain HS11)</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:23:20" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>model</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP23_has_model</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>model</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E55_Type</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>maker</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP22_has_maker</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>maker</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E39_Actor</type>
+                     <type>aocat:AO_Agent</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/used_software/software</source_node>
+            <target_node>
+               <entity>
+                  <type>crmdig:D14_Software</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">software_name/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>SOFTWARE</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:23:40" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>software_type</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P2_has_type</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>software_type</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E55_Type</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>software_notes</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P3_has_note</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>software_notes</source_node>
+               <target_node>
+                  <entity>
+                     <type>rdfs:Literal</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/produced_dataset/dataset</source_node>
+            <target_node>
+               <entity>
+                  <type>crmhs:HS13_Scientific_Dataset</type>
+                  <instance_generator name="URIorUUID">
+                     <arg name="text" type="xpath">dataset_url/text()</arg>
+                  </instance_generator>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">dataset_title/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>DATASET PRODUCED</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:23:56" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>dataset_type</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P2_has_type</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>dataset_type</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E55_Type</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>created_using_software</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP11_was_created_using_software</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>created_using_software</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmdig:D14_Software</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/used_settings</source_node>
+            <target_node>
+               <entity>
+                  <type>crmhs:HS14_Analysis_Settings</type>
+                  <instance_generator name="UUID"/>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>SETTINGS</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:24:13" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>setting_values/setting_value</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP14_has_settings_values</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>setting_values/setting_value</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E54_Dimension</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>specified_in</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP15_is_specified_in</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>specified_in</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS13_Scientific_Dataset</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/had_participant/agent</source_node>
+            <target_node>
+               <if>
+                  <equals value="Person">agent_type</equals>
+               </if>
+               <entity>
+                  <type>crm:E21_Person</type>
+                  <type>aocat:AO_Person</type>
+                  <instance_generator name="UUID"/>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>PARTICIPANT (person)</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:25:00" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>homepage</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_homepage</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>homepage</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E62_String</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>name</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_name</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>name</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/had_participant/agent</source_node>
+            <target_node>
+               <if>
+                  <equals value="Group">agent_type</equals>
+               </if>
+               <entity>
+                  <type>crm:E74_Group</type>
+                  <type>aocat:AO_Group</type>
+                  <instance_generator name="UUID"/>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>PARTICIPANT (group)</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:25:14" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>name</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_name</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>name</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>homepage</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_homepage</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>homepage</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E62_String</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/carried_out_by/agent</source_node>
+            <target_node>
+               <if>
+                  <equals value="Group">agent_type</equals>
+               </if>
+               <entity>
+                  <type>crm:E74_Group</type>
+                  <type>aocat:AO_Group</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">n/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>ANALYSIS CARRIED OUT BY (GROUP)</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-26 22:26:20" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>n</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_name</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>n</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>email</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_email</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>email</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>identifier</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>aocat:has_agent_identifier</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>identifier</source_node>
+               <target_node>
+                  <entity>
+                     <type>xsd:string</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>institution</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P107i_is_current_or_former_member_of</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>institution</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E74_Group</type>
+                     <type>aocat:AO_Group</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+            <target_node>
+               <if>
+                  <equals value="Portion">object_area_sample_type</equals>
+               </if>
+               <entity>
+                  <type>crmhs:HS7_Study_Object_Portion</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">study_object_portion/portion_uri/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>PORTION</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-27 10:15:24" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>study_object_portion/is_located_within</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP18_is_located_within</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>study_object_portion/is_located_within</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS8_Study_Object_Area</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+            <target_node>
+               <if>
+                  <equals value="Area">object_area_sample_type</equals>
+               </if>
+               <entity>
+                  <type>crmhs:HS8_Study_Object_Area</type>
+                  <instance_generator name="Literal">
+                     <arg name="text" type="xpath">study_object_area/area_uri/text()</arg>
+                  </instance_generator>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">study_object_area/area_name/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>AREA</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-27 10:15:38" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>study_object_area/area_of_interest_on</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP17i_is_area_of_interest_of</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>study_object_area/area_of_interest_on</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS6_Study_Object</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>study_object_area/object_surface_coordinates</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP21_has_object_surface_coordinates</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>study_object_area/object_surface_coordinates</source_node>
+               <target_node>
+                  <entity>
+                     <type>crm:E94_Space_Primitive</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/object_or_area_or_portion_or_sample_analysed/object_area_sample</source_node>
+            <target_node>
+               <if>
+                  <equals value="Sample">object_area_sample_type</equals>
+               </if>
+               <entity>
+                  <type>crmhs:HS9_Study_Object_Sample</type>
+                  <instance_generator name="UUID"/>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>SAMPLE</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-27 10:19:14" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>study_object_sample/taken_from_area</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP20_was_taken_from_area</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>study_object_sample/taken_from_area</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS8_Study_Object_Area</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>study_object_sample/taken_from</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP19_was_taken_from</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>study_object_sample/taken_from</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS6_Study_Object</type>
+                     <instance_generator name="URIorUUID">
+                        <arg name="text" type="xpath">../taken_from_uri/text()</arg>
+                     </instance_generator>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>sample_preparation</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP5i_was_prepared_by</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>sample_preparation</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS10_Sample_Preparation</type>
+                     <instance_generator name="UUID"/>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+      <mapping>
+         <domain>
+            <source_node>/artemis_analysis/analysis/object_or_area_or_portion_or_sample_analysed/object_area_sample/sample_preparation</source_node>
+            <target_node>
+               <entity>
+                  <type>crmhs:HS10_Sample_Preparation</type>
+                  <instance_generator name="UUID"/>
+                  <label_generator name="Literal">
+                     <arg name="text" type="xpath">prepared_sample_name/text()</arg>
+                  </label_generator>
+               </entity>
+            </target_node>
+            <comments>
+               <comment type="">
+                  <rationale>SAMPLE PREP</rationale>
+                  <alternatives/>
+                  <typical_mistakes/>
+                  <local_habits/>
+                  <link_to_cook_book/>
+                  <example>
+                     <example_source/>
+                     <example_target/>
+                  </example>
+                  <comments_last_update date="2026-04-27 10:24:59" person="Laura Tonti"/>
+               </comment>
+            </comments>
+         </domain>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>preparation_notes</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crm:P3_has_note</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>preparation_notes</source_node>
+               <target_node>
+                  <entity>
+                     <type>rdfs:Literal</type>
+                     <instance_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </instance_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_method</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP6_used_method</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_method</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS4_Method</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+         <link>
+            <path>
+               <source_relation>
+                  <relation>used_protocol</relation>
+               </source_relation>
+               <target_relation>
+                  <relationship>crmhs:HSP7_used_protocol</relationship>
+               </target_relation>
+            </path>
+            <range>
+               <source_node>used_protocol</source_node>
+               <target_node>
+                  <entity>
+                     <type>crmhs:HS5_Protocol</type>
+                     <instance_generator name="UUID"/>
+                     <label_generator name="Literal">
+                        <arg name="text" type="xpath">text()</arg>
+                     </label_generator>
+                  </entity>
+               </target_node>
+            </range>
+         </link>
+      </mapping>
+   </mappings>
+</x3ml>

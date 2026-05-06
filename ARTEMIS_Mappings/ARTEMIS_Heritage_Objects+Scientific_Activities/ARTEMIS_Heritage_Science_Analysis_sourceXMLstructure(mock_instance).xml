@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='utf-8'?>
+<artemis_analysis>
+  <analysis>
+    <heritage_object_artemis_id>https://artemis-twin.eu/entity/mock_he_001</heritage_object_artemis_id>
+    <analysis_was_performed_on>The Adoration of the Magi by Giovanni Bellini (Pinacoteca di Brera, Milan)</analysis_was_performed_on>
+    <object_or_area_or_portion_or_sample_analysed>
+      <object_area_sample>
+        <object_area_sample_label>The Adoration of the Magi — full painted surface</object_area_sample_label>
+        <object_area_sample_uri>https://artemis-twin.eu/entity/mock_he_001</object_area_sample_uri>
+        <object_area_sample_type>Heritage Object</object_area_sample_type>
+      </object_area_sample>
+      <object_area_sample>
+        <object_area_sample_label>Gold background — upper register scanned region</object_area_sample_label>
+        <object_area_sample_uri>https://artemis-twin.eu/entity/mock_area_gold_bg</object_area_sample_uri>
+        <object_area_sample_type>Area</object_area_sample_type>
+        <study_object_area>
+          <area_name>Gold background — upper register</area_name>
+          <area_uri>https://artemis-twin.eu/entity/mock_area_gold_bg</area_uri>
+          <area_of_interest_on>The Adoration of the Magi by Giovanni Bellini (Pinacoteca di Brera, Milan)</area_of_interest_on>
+          <area_of_interest_on_uri>https://artemis-twin.eu/entity/mock_he_001</area_of_interest_on_uri>
+          <object_surface_coordinates>x: 0–420 mm, y: 0–180 mm (from top-left corner of the panel)</object_surface_coordinates>
+        </study_object_area>
+      </object_area_sample>
+      <object_area_sample>
+        <object_area_sample_label>Virgin's blue mantle — azurite layer</object_area_sample_label>
+        <object_area_sample_uri>https://artemis-twin.eu/entity/mock_portion_blue_mantle</object_area_sample_uri>
+        <object_area_sample_type>Portion</object_area_sample_type>
+        <study_object_portion>
+          <portion_name>Virgin's blue mantle — azurite layer</portion_name>
+          <portion_uri>https://artemis-twin.eu/entity/mock_portion_blue_mantle</portion_uri>
+          <forms_part_of>The Adoration of the Magi by Giovanni Bellini (Pinacoteca di Brera, Milan)</forms_part_of>
+          <forms_part_of_uri>https://artemis-twin.eu/entity/mock_he_001</forms_part_of_uri>
+          <is_located_within>Central figure group scan area</is_located_within>
+          <is_located_within_uri>https://artemis-twin.eu/entity/mock_area_central_group</is_located_within_uri>
+        </study_object_portion>
+      </object_area_sample>
+      <object_area_sample>
+        <object_area_sample_label>Paint micro-sample MS-Mock-01</object_area_sample_label>
+        <object_area_sample_uri>https://artemis-twin.eu/entity/mock_sample_MS01</object_area_sample_uri>
+        <object_area_sample_type>Sample</object_area_sample_type>
+        <study_object_sample>
+          <sample_name>Paint micro-sample MS-Mock-01</sample_name>
+          <sample_uri>https://artemis-twin.eu/entity/mock_sample_MS01</sample_uri>
+          <taken_from>The Adoration of the Magi by Giovanni Bellini (Pinacoteca di Brera, Milan)</taken_from>
+          <taken_from_uri>https://artemis-twin.eu/entity/mock_he_001</taken_from_uri>
+          <taken_from_area>Lower right corner — red lake pigment sampling point</taken_from_area>
+          <taken_from_area_uri>https://artemis-twin.eu/entity/mock_area_sampling_point_01</taken_from_area_uri>
+        </study_object_sample>
+        <sample_preparation>
+          <preparation_notes>The micro-sample MS-Mock-01 was embedded in polyester resin and polished to expose the cross-section. The prepared section was carbon-coated prior to SEM-EDX analysis. No preparation was required for the MA-XRF campaign, which is non-invasive.</preparation_notes>
+          <prepared_sample_name>Paint micro-sample MS-Mock-01 (mounted cross-section)</prepared_sample_name>
+          <prepared_sample_uri>https://artemis-twin.eu/entity/mock_sample_MS01_prepared</prepared_sample_uri>
+          <used_method>Polyester resin embedding and mechanical polishing</used_method>
+          <used_protocol>Brera standard cross-section preparation protocol v1.0</used_protocol>
+        </sample_preparation>
+      </object_area_sample>
+    </object_or_area_or_portion_or_sample_analysed>
+    <analysis_type>MA-XRF</analysis_type>
+    <analysis_title>MA-XRF mapping of Giovanni Bellini's Adoration of the Magi</analysis_title>
+    <notes>Macro X-ray fluorescence mapping campaign carried out on the Adoration of the Magi by Giovanni Bellini, part of the permanent collection of the Pinacoteca di Brera. The campaign aimed to characterise the pigment palette and painting technique, with particular attention to underdrawing and pentimenti revealed by elemental distribution maps. The analysis was performed during a scheduled conservation assessment at the Laboratorio di Restauro della Pinacoteca di Brera. Several scan sessions were required to achieve full surface coverage.</notes>
+    <time_span>
+      <span>
+        <from>2023-03-15</from>
+        <until>2023-03-18</until>
+      </span>
+    </time_span>
+    <took_place_at>
+      <place>
+        <place_name>Laboratorio di Restauro, Pinacoteca di Brera, Milano, Italia</place_name>
+        <country>https://www.geonames.org/3175395</country>
+        <place_uri>https://www.geonames.org/6536715</place_uri>
+      </place>
+    </took_place_at>
+    <carried_out_by>
+      <agent>
+        <agent_type>Person</agent_type>
+        <n>Maria Rossi</n>
+        <identifier>https://orcid.org/0000-0001-0000-0001</identifier>
+        <email>m.rossi@vast-lab.org</email>
+        <homepage>https://vast-lab.org/people/rossi</homepage>
+        <institution>VAST-Lab, Università degli Studi di Firenze</institution>
+      </agent>
+      <agent>
+        <agent_type>Person</agent_type>
+        <n>James Smith</n>
+        <identifier>https://orcid.org/0000-0002-0000-0002</identifier>
+        <email>j.smith@mock-institution.ac.uk</email>
+        <homepage>https://mock-institution.ac.uk/people/smith</homepage>
+        <institution>Mock Heritage Science Institute, London</institution>
+      </agent>
+    </carried_out_by>
+    <had_participant>
+      <agent>
+        <agent_type>Group</agent_type>
+        <n>Pinacoteca di Brera</n>
+        <identifier>https://www.wikidata.org/wiki/Q200557</identifier>
+        <homepage>https://pinacotecabrera.org</homepage>
+      </agent>
+      <agent>
+        <agent_type>Group</agent_type>
+        <n>Mock Heritage Science Institute</n>
+        <identifier>https://ror.org/00000mock</identifier>
+        <homepage>https://mock-institution.ac.uk</homepage>
+      </agent>
+    </had_participant>
+    <used_method>
+      <method>
+        <method_name>Macro X-ray Fluorescence Scanning (MA-XRF)</method_name>
+        <method_notes>MA-XRF is a non-invasive, non-destructive mapping technique that scans the painted surface with a focused X-ray beam and collects the fluorescence signal pixel by pixel, producing elemental distribution maps across the entire surface. It allows identification of pigments and hidden layers based on their elemental composition.</method_notes>
+      </method>
+    </used_method>
+    <used_protocol>
+      <protocol>
+        <protocol_name>In situ MA-XRF scanning protocol (VAST-Lab)</protocol_name>
+        <protocol_notes>The instrument was operated in situ at the Pinacoteca di Brera conservation laboratory. Scan sessions were planned to ensure full surface coverage with overlapping regions. The sample-to-detector distance was maintained constant via a laser distance sensor. Scan parameters were validated against reference standards prior to each session.</protocol_notes>
+      </protocol>
+    </used_protocol>
+    <used_device>
+      <device>
+        <device_name>VAST-Lab portable MA-XRF scanner</device_name>
+        <model>VAST-Lab MA-XRF v2.1 (custom build)</model>
+        <maker>
+          <agent_type>Group</agent_type>
+          <n>VAST-Lab, Università degli Studi di Firenze</n>
+          <identifier>https://vast-lab.org</identifier>
+        </maker>
+        <current_owner>
+          <agent_type>Group</agent_type>
+          <n>VAST-Lab, Università degli Studi di Firenze</n>
+          <identifier>https://vast-lab.org</identifier>
+        </current_owner>
+      </device>
+    </used_device>
+    <used_components>
+      <component>
+        <component_name>X-ray tube</component_name>
+        <model>Moxtek MAGNUM (50 kV maximum voltage, Mo anode)</model>
+        <maker>Moxtek</maker>
+        <current_owner>VAST-Lab, Università degli Studi di Firenze</current_owner>
+      </component>
+      <component>
+        <component_name>Silicon drift detector</component_name>
+        <model>Amptek XR100 SDD (25 mm² active area, 500 µm thickness)</model>
+        <maker>Amptek</maker>
+        <current_owner>VAST-Lab, Università degli Studi di Firenze</current_owner>
+      </component>
+      <component>
+        <component_name>Laser distance sensor</component_name>
+        <model>Keyence IL-300 (triangulation, ±0.1 mm accuracy)</model>
+        <maker>Keyence</maker>
+        <current_owner>VAST-Lab, Università degli Studi di Firenze</current_owner>
+      </component>
+      <component>
+        <component_name>XY motorised stage</component_name>
+        <model>Physik Instrumente L-402 (300 mm travel range, 1 µm resolution)</model>
+        <maker>Physik Instrumente</maker>
+        <current_owner>VAST-Lab, Università degli Studi di Firenze</current_owner>
+      </component>
+    </used_components>
+    <used_software>
+      <software>
+        <software_name>VAST-Lab MA-XRF acquisition software</software_name>
+        <software_type>Instrument control and data acquisition</software_type>
+        <software_notes>In-house developed software for instrument control, scan planning, and real-time data acquisition. Handles motor control, detector readout, and live elemental preview.</software_notes>
+      </software>
+      <software>
+        <software_name>PyMCA</software_name>
+        <software_type>XRF spectral analysis</software_type>
+        <software_notes>Open-source software for X-ray fluorescence data analysis, used for spectral fitting and generation of elemental distribution maps.</software_notes>
+      </software>
+    </used_software>
+    <used_settings>
+      <settings>
+        <setting_values>
+          <setting_value>X-ray tube anode voltage: 40 kV</setting_value>
+          <setting_value>Filament current: 100 µA</setting_value>
+          <setting_value>Anode material: Mo</setting_value>
+          <setting_value>Collimator diameter: 1 mm</setting_value>
+          <setting_value>Scanning velocity: 8 mm/s</setting_value>
+          <setting_value>Equivalent pixel size: 0.8 mm</setting_value>
+          <setting_value>Sample-to-detector distance: 15 mm</setting_value>
+        </setting_values>
+        <specified_in>https://doi.org/10.0000/mock-settings-doc-001</specified_in>
+      </settings>
+    </used_settings>
+    <used_dataset>
+      <dataset>
+        <dataset_title>VAST-Lab reference XRF spectra library — panel painting pigments</dataset_title>
+        <dataset_url>https://vast-lab.org/data/reference-spectra/panel-pigments</dataset_url>
+        <dataset_type>Reference spectra</dataset_type>
+      </dataset>
+      <dataset>
+        <dataset_title>Mock calibration dataset — detector efficiency curve</dataset_title>
+        <dataset_url>https://vast-lab.org/data/calibration/detector-efficiency-2023</dataset_url>
+        <dataset_type>Calibration data</dataset_type>
+      </dataset>
+    </used_dataset>
+    <sub_activities>
+      <sub_activity>
+        <sub_activity_title>MA-XRF scan — upper register (scan area A)</sub_activity_title>
+        <sub_activity_type>Analysis</sub_activity_type>
+        <sub_activity_uri>https://artemis-twin.eu/entity/mock_scan_A</sub_activity_uri>
+      </sub_activity>
+      <sub_activity>
+        <sub_activity_title>MA-XRF scan — central figure group (scan area B)</sub_activity_title>
+        <sub_activity_type>Analysis</sub_activity_type>
+        <sub_activity_uri>https://artemis-twin.eu/entity/mock_scan_B</sub_activity_uri>
+      </sub_activity>
+      <sub_activity>
+        <sub_activity_title>MA-XRF scan — lower landscape register (scan area C)</sub_activity_title>
+        <sub_activity_type>Analysis</sub_activity_type>
+        <sub_activity_uri>https://artemis-twin.eu/entity/mock_scan_C</sub_activity_uri>
+      </sub_activity>
+      <sub_activity>
+        <sub_activity_title>Cross-section preparation of micro-sample MS-Mock-01</sub_activity_title>
+        <sub_activity_type>Sample Preparation</sub_activity_type>
+        <sub_activity_uri>https://artemis-twin.eu/entity/mock_prep_MS01</sub_activity_uri>
+      </sub_activity>
+    </sub_activities>
+    <produced_dataset>
+      <dataset>
+        <dataset_title>MA-XRF mapping of Giovanni Bellini's Adoration of the Magi — scientific paper</dataset_title>
+        <dataset_url>https://doi.org/10.0000/mock-paper-bellini-maxrf</dataset_url>
+        <dataset_type>Scientific paper</dataset_type>
+        <created_using_software>VAST-Lab MA-XRF acquisition software; PyMCA</created_using_software>
+        <created_using_software_uri>https://artemis-twin.eu/entity/software_vastlab_maxrf</created_using_software_uri>
+      </dataset>
+      <dataset>
+        <dataset_title>MA-XRF elemental distribution maps — Adoration of the Magi (Au, Pb, Cu, Fe, Hg, As)</dataset_title>
+        <dataset_url>https://artemis-twin.eu/data/mock_bellini_maxrf_elemental_maps</dataset_url>
+        <dataset_type>Elemental distribution map</dataset_type>
+        <created_using_software>PyMCA</created_using_software>
+        <created_using_software_uri>https://www.silx.org/doc/PyMca</created_using_software_uri>
+      </dataset>
+      <dataset>
+        <dataset_title>MA-XRF raw scan data — Adoration of the Magi</dataset_title>
+        <dataset_url>https://artemis-twin.eu/data/mock_bellini_maxrf_raw</dataset_url>
+        <dataset_type>Raw data</dataset_type>
+        <created_using_software>VAST-Lab MA-XRF acquisition software</created_using_software>
+        <created_using_software_uri>https://artemis-twin.eu/entity/software_vastlab_maxrf</created_using_software_uri>
+      </dataset>
+    </produced_dataset>
+  </analysis>
+</artemis_analysis>
