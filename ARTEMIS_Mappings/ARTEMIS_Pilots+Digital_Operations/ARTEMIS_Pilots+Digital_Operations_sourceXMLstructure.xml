@@ -1,0 +1,433 @@
+<?xml version="1.0" ?>
+<artemis_pilot>
+  <pilot_id>pilot_01</pilot_id>
+  <pilot_title>Xanthi Evacuation Plan</pilot_title>
+  <pilot_description>Digital pilot for the simulation and monitoring of evacuation procedures in the heritage district of Xanthi, combining sensor networks, GIS data and agent-based simulations.</pilot_description>
+  <operations>
+    <operation>
+      <operation_id>op_01</operation_id>
+      <operation_title>Sensor Data Ingestion</operation_title>
+      <operation_type>Monitoring</operation_type>
+      <general_purpose>Collect raw environmental and crowd-density data from IoT sensors deployed across the heritage district.</general_purpose>
+      <description>Continuous ingestion of temperature, humidity, CO2 and pedestrian-count readings from the sensor network. Data is streamed to the central ARTEMIS data lake every 60 seconds.</description>
+      <concerns_heritage_entity>
+        <entity_id>entity_xanthi_old_town</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Raw sensor stream</object_label>
+          <object_identifier>obj_raw_stream_001</object_identifier>
+          <object_class>Dataset</object_class>
+          <access_point>https://iot.vast-lab.org/streams/xanthi/raw</access_point>
+          <notes>MQTT topics aggregated via Eclipse Mosquitto broker.</notes>
+        </input>
+        <input>
+          <object_label>Sensor calibration table</object_label>
+          <object_identifier>obj_calib_table_001</object_identifier>
+          <object_class>Dataset</object_class>
+          <access_point>https://data.vast-lab.org/calibration/xanthi_sensors_v2.csv</access_point>
+          <notes>Updated quarterly by the field team.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Cleaned sensor dataset</object_label>
+          <object_identifier>obj_clean_sensors_001</object_identifier>
+          <object_class>Dataset</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/clean_sensors.parquet</access_point>
+          <notes>Parquet file partitioned by date and sensor ID.</notes>
+        </output>
+      </outputs>
+      <used_software>
+        <software>
+          <software_title>Eclipse Mosquitto</software_title>
+          <software_identifier>sw_mosquitto</software_identifier>
+          <version>2.0.18</version>
+          <access_point>https://mosquitto.org/</access_point>
+          <notes>MQTT broker running on-premises.</notes>
+        </software>
+        <software>
+          <software_title>Apache Kafka</software_title>
+          <software_identifier>sw_kafka</software_identifier>
+          <version>3.7.0</version>
+          <access_point>https://kafka.apache.org/</access_point>
+          <notes>Used for stream processing and fault-tolerant buffering.</notes>
+        </software>
+      </used_software>
+      <implemented_using>
+        <service>
+          <service_title>ARTEMIS IoT Ingestion Service</service_title>
+          <service_identifier>svc_iot_ingest_01</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Ingestion frequency</parameter_set_label>
+          <parameter_set_identifier>param_ingest_freq</parameter_set_identifier>
+          <parameter_type>Numeric</parameter_type>
+          <values>60</values>
+          <notes>Polling interval in seconds.</notes>
+        </parameter_set>
+        <parameter_set>
+          <parameter_set_label>Sensor whitelist</parameter_set_label>
+          <parameter_set_identifier>param_whitelist</parameter_set_identifier>
+          <parameter_type>Array</parameter_type>
+          <values>
+            <values>SNS-001</values>
+            <values>SNS-002</values>
+            <values>SNS-003</values>
+            <values>SNS-007</values>
+            <values>SNS-012</values>
+          </values>
+          <notes>Only sensors passing QA checks are included.</notes>
+        </parameter_set>
+      </used_parameters>
+      <used_devices>
+        <device>
+          <device_label>Environmental sensor node A</device_label>
+          <device_identifier>dev_sns_001</device_identifier>
+          <device_type>Sensor</device_type>
+          <notes>Measures temperature, humidity and CO2. Installed at Plateia Antika.</notes>
+        </device>
+        <device>
+          <device_label>Crowd-density radar node</device_label>
+          <device_identifier>dev_node_007</device_identifier>
+          <device_type>Node</device_type>
+          <notes>UWB radar node measuring pedestrian density in a 20 m radius.</notes>
+        </device>
+      </used_devices>
+      <continued_from/>
+      <time_span>
+        <begin>2024-03-01T08:00:00Z</begin>
+        <end>2024-08-31T20:00:00Z</end>
+        <label>Spring–Summer 2024 monitoring campaign</label>
+      </time_span>
+      <place>
+        <place_name>Xanthi Old Town</place_name>
+        <latitude>41.1352</latitude>
+        <longitude>24.8883</longitude>
+        <place_identifier>place_xanthi_old_town</place_identifier>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>op_02</operation_id>
+      <operation_title>GIS Data Alignment</operation_title>
+      <operation_type>Transformation Operation</operation_type>
+      <general_purpose>Align heterogeneous geospatial datasets to a common CRS and semantic model for subsequent simulation use.</general_purpose>
+      <description>Reprojection of cadastral shapefiles, OpenStreetMap extracts and heritage-building footprints to EPSG:4326. Attribute harmonisation to the ARTEMIS ontology.</description>
+      <concerns_heritage_entity>
+        <entity_id>entity_xanthi_old_town</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Cadastral shapefile</object_label>
+          <object_identifier>obj_cadastral_shp</object_identifier>
+          <object_class>Geospatial Dataset</object_class>
+          <access_point>https://geodata.gov.gr/dataset/xanthi-cadastral</access_point>
+          <notes>Source CRS: EGSA87 (EPSG:2100).</notes>
+        </input>
+        <input>
+          <object_label>OpenStreetMap extract</object_label>
+          <object_identifier>obj_osm_extract</object_identifier>
+          <object_class>Geospatial Dataset</object_class>
+          <access_point>https://download.geofabrik.de/europe/greece-latest.osm.pbf</access_point>
+          <notes>Clipped to Xanthi municipal boundary.</notes>
+        </input>
+        <input>
+          <object_label>Heritage building inventory</object_label>
+          <object_identifier>obj_heritage_inventory</object_identifier>
+          <object_class>Dataset</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/heritage_inventory_v1.geojson</access_point>
+          <notes>Compiled by the ARTEMIS cultural partner.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Aligned GIS layer package</object_label>
+          <object_identifier>obj_aligned_gis</object_identifier>
+          <object_class>Geospatial Dataset</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/aligned_gis.gpkg</access_point>
+          <notes>GeoPackage containing all harmonised layers.</notes>
+        </output>
+      </outputs>
+      <used_software>
+        <software>
+          <software_title>QGIS</software_title>
+          <software_identifier>sw_qgis</software_identifier>
+          <version>3.36.3</version>
+          <access_point>https://qgis.org/</access_point>
+          <notes>Desktop GIS used for manual validation.</notes>
+        </software>
+        <software>
+          <software_title>GDAL</software_title>
+          <software_identifier>sw_gdal</software_identifier>
+          <version>3.8.4</version>
+          <access_point>https://gdal.org/</access_point>
+          <notes>ogr2ogr used for batch reprojection.</notes>
+        </software>
+      </used_software>
+      <implemented_using>
+        <service>
+          <service_title>ARTEMIS GIS Harmonisation Service</service_title>
+          <service_identifier>svc_gis_harm_01</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Target CRS</parameter_set_label>
+          <parameter_set_identifier>param_target_crs</parameter_set_identifier>
+          <parameter_type>String</parameter_type>
+          <values>EPSG:4326</values>
+          <notes>WGS84 geographic coordinate system.</notes>
+        </parameter_set>
+      </used_parameters>
+      <used_devices/>
+      <continued_from>op_01</continued_from>
+      <time_span>
+        <begin>2024-04-10T09:00:00Z</begin>
+        <end>2024-04-25T17:00:00Z</end>
+        <label>April 2024 alignment sprint</label>
+      </time_span>
+      <place>
+        <place_name>VAST Lab — Remote Processing</place_name>
+        <latitude>41.0041</latitude>
+        <longitude>21.6284</longitude>
+        <place_identifier>place_vast_lab_kozani</place_identifier>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>op_03</operation_id>
+      <operation_title>Evacuation Agent-Based Simulation</operation_title>
+      <operation_type>Simulation</operation_type>
+      <general_purpose>Simulate crowd evacuation dynamics in the Xanthi Old Town under multiple hazard scenarios to identify bottlenecks and optimal exit routes.</general_purpose>
+      <description>GAMA Platform agent-based simulation using aligned GIS layers, sensor-derived crowd densities and weather forecasts as inputs. Three scenarios are executed: baseline, flash-flood and fire.</description>
+      <concerns_heritage_entity>
+        <entity_id>entity_xanthi_old_town</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Aligned GIS layer package</object_label>
+          <object_identifier>obj_aligned_gis</object_identifier>
+          <object_class>Geospatial Dataset</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/aligned_gis.gpkg</access_point>
+          <notes>Output of op_02.</notes>
+        </input>
+        <input>
+          <object_label>Cleaned sensor dataset</object_label>
+          <object_identifier>obj_clean_sensors_001</object_identifier>
+          <object_class>Dataset</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/clean_sensors.parquet</access_point>
+          <notes>Used to initialise agent population density.</notes>
+        </input>
+        <input>
+          <object_label>Weather forecasting dataset</object_label>
+          <object_identifier>obj_weather_forecast</object_identifier>
+          <object_class>Dataset</object_class>
+          <access_point>https://opendata.meteo.gr/api/v2/forecast/xanthi</access_point>
+          <notes>72-hour forecast retrieved daily at 06:00 UTC.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Simulation results — baseline scenario</object_label>
+          <object_identifier>obj_sim_baseline</object_identifier>
+          <object_class>Simulation Output</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/sim_baseline.nc</access_point>
+          <notes>NetCDF file with per-agent trajectories and aggregated statistics.</notes>
+        </output>
+        <output>
+          <object_label>Simulation results — flash-flood scenario</object_label>
+          <object_identifier>obj_sim_flood</object_identifier>
+          <object_class>Simulation Output</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/sim_flood.nc</access_point>
+          <notes/>
+        </output>
+        <output>
+          <object_label>Evacuation bottleneck map</object_label>
+          <object_identifier>obj_bottleneck_map</object_identifier>
+          <object_class>Map</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/bottleneck_map.geojson</access_point>
+          <notes>GeoJSON polygon layer highlighting critical choke-points.</notes>
+        </output>
+      </outputs>
+      <used_software>
+        <software>
+          <software_title>GAMA Platform</software_title>
+          <software_identifier>sw_gama</software_identifier>
+          <version>1.9.3</version>
+          <access_point>https://gama-platform.org/</access_point>
+          <notes>Agent-based simulation environment.</notes>
+        </software>
+        <software>
+          <software_title>Python</software_title>
+          <software_identifier>sw_python</software_identifier>
+          <version>3.11.9</version>
+          <access_point>https://www.python.org/</access_point>
+          <notes>Used for pre/post-processing and scenario configuration.</notes>
+        </software>
+      </used_software>
+      <implemented_using>
+        <service>
+          <service_title>ARTEMIS Simulation Execution Service</service_title>
+          <service_identifier>svc_sim_exec_01</service_identifier>
+        </service>
+        <service>
+          <service_title>HPC Cluster — Aristotle University</service_title>
+          <service_identifier>svc_hpc_auth</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Simulation scenarios</parameter_set_label>
+          <parameter_set_identifier>param_scenarios</parameter_set_identifier>
+          <parameter_type>Object</parameter_type>
+          <values>
+            <baseline>
+              <hazard>none</hazard>
+              <population>4500</population>
+            </baseline>
+            <flash_flood>
+              <hazard>flood</hazard>
+              <population>4500</population>
+              <flood_depth_m>0.3</flood_depth_m>
+            </flash_flood>
+            <fire>
+              <hazard>fire</hazard>
+              <population>4500</population>
+              <ignition_point>SNS-007</ignition_point>
+            </fire>
+          </values>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/scenario_params.json</access_point>
+          <notes>Three scenarios run sequentially on the HPC cluster.</notes>
+        </parameter_set>
+        <parameter_set>
+          <parameter_set_label>Agent speed distribution</parameter_set_label>
+          <parameter_set_identifier>param_agent_speed</parameter_set_identifier>
+          <parameter_type>Numeric</parameter_type>
+          <values>1.34</values>
+          <notes>Mean pedestrian walking speed in m/s (Weidmann 1993).</notes>
+        </parameter_set>
+      </used_parameters>
+      <used_devices>
+        <device>
+          <device_label>GPU compute node</device_label>
+          <device_identifier>dev_gpu_node_01</device_identifier>
+          <device_type>Node</device_type>
+          <notes>NVIDIA A100 node used for parallel scenario execution.</notes>
+        </device>
+      </used_devices>
+      <continued_from>op_02</continued_from>
+      <time_span>
+        <begin>2024-05-06T00:00:00Z</begin>
+        <end>2024-05-08T23:59:59Z</end>
+        <label>Simulation batch run — May 2024</label>
+      </time_span>
+      <place>
+        <place_name>Aristotle University HPC Facility</place_name>
+        <latitude>40.6259</latitude>
+        <longitude>22.9563</longitude>
+        <place_identifier>place_auth_hpc</place_identifier>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>op_04</operation_id>
+      <operation_title>Simulation Results Analysis</operation_title>
+      <operation_type>Analysis Operation</operation_type>
+      <general_purpose>Derive actionable insights and policy recommendations from the simulation outputs.</general_purpose>
+      <description>Statistical analysis of agent trajectories and bottleneck metrics. Generation of thematic maps, summary statistics and a decision-support report for the Xanthi municipality.</description>
+      <concerns_heritage_entity>
+        <entity_id>entity_xanthi_old_town</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Simulation results — baseline scenario</object_label>
+          <object_identifier>obj_sim_baseline</object_identifier>
+          <object_class>Simulation Output</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/sim_baseline.nc</access_point>
+          <notes/>
+        </input>
+        <input>
+          <object_label>Simulation results — flash-flood scenario</object_label>
+          <object_identifier>obj_sim_flood</object_identifier>
+          <object_class>Simulation Output</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/sim_flood.nc</access_point>
+          <notes/>
+        </input>
+        <input>
+          <object_label>Evacuation bottleneck map</object_label>
+          <object_identifier>obj_bottleneck_map</object_identifier>
+          <object_class>Map</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/bottleneck_map.geojson</access_point>
+          <notes/>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Decision-support report</object_label>
+          <object_identifier>obj_dss_report</object_identifier>
+          <object_class>Document</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/dss_report_v1.pdf</access_point>
+          <notes>Delivered to Xanthi municipality on 2024-06-15.</notes>
+        </output>
+        <output>
+          <object_label>Thematic evacuation maps</object_label>
+          <object_identifier>obj_thematic_maps</object_identifier>
+          <object_class>Map</object_class>
+          <access_point>https://data.vast-lab.org/pilots/pilot_01/thematic_maps.zip</access_point>
+          <notes>ZIP archive of PNG and SVG exports.</notes>
+        </output>
+      </outputs>
+      <used_software>
+        <software>
+          <software_title>Jupyter Notebook</software_title>
+          <software_identifier>sw_jupyter</software_identifier>
+          <version>7.1.3</version>
+          <access_point>https://jupyter.org/</access_point>
+          <notes>Interactive analysis environment.</notes>
+        </software>
+        <software>
+          <software_title>GeoPandas</software_title>
+          <software_identifier>sw_geopandas</software_identifier>
+          <version>0.14.4</version>
+          <access_point>https://geopandas.org/</access_point>
+          <notes>Geospatial data analysis library.</notes>
+        </software>
+        <software>
+          <software_title>Matplotlib</software_title>
+          <software_identifier>sw_matplotlib</software_identifier>
+          <version>3.8.4</version>
+          <access_point>https://matplotlib.org/</access_point>
+          <notes>Map and chart rendering.</notes>
+        </software>
+      </used_software>
+      <implemented_using>
+        <service>
+          <service_title>ARTEMIS Analytics Service</service_title>
+          <service_identifier>svc_analytics_01</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Bottleneck threshold</parameter_set_label>
+          <parameter_set_identifier>param_bottleneck_thr</parameter_set_identifier>
+          <parameter_type>Numeric</parameter_type>
+          <values>2.5</values>
+          <notes>Density threshold in persons/m² above which a location is flagged as a bottleneck.</notes>
+        </parameter_set>
+      </used_parameters>
+      <used_devices/>
+      <continued_from>op_03</continued_from>
+      <time_span>
+        <begin>2024-05-09T09:00:00Z</begin>
+        <end>2024-06-14T17:00:00Z</end>
+        <label>Analysis phase — May–June 2024</label>
+      </time_span>
+      <place>
+        <place_name>VAST Lab — Remote Processing</place_name>
+        <latitude>41.0041</latitude>
+        <longitude>21.6284</longitude>
+        <place_identifier>place_vast_lab_kozani</place_identifier>
+      </place>
+    </operation>
+  </operations>
+</artemis_pilot>
