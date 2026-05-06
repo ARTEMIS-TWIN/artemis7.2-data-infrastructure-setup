@@ -1,0 +1,215 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+
+<urn:uuid:11e4710e-fbb7-4b28-82f4-7d0614b4d3f1>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "ArcHeritage" .
+
+geonames:2636812  a           aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "Stonehenge, Amesbury, Wiltshire, United Kingdom" ;
+        aocat:has_country     geonames:2635167 ;
+        aocat:has_place_name  "Stonehenge, Amesbury, Wiltshire, United Kingdom" .
+
+<urn:uuid:811abce2-97d6-4a9d-8916-88f8eea794de>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Mags Felter" .
+
+<urn:uuid:ebd7655e-4d13-4047-978a-a90824036392>
+        a                crmdig:D14_Software ;
+        rdfs:label       "Agisoft PhotoScan" ;
+        crm:P3_has_note  "Convergent photogrammetric solution used to process data from the Leica V-LUX 2." .
+
+<urn:uuid:2ecd74e6-699e-4be7-a1f7-e96069c84708>
+        a                          crmhs:HS11_Scientific_Device ;
+        rdfs:label                 "Dell Precision T5500 Workstation" ;
+        crmhs:HSP22_has_maker      <urn:uuid:10863115-297e-4491-a234-5a8f7765c657> ;
+        crmhs:HSP23_has_model      "Precision T5500" ;
+        crm:P52_has_current_owner  <urn:uuid:11e4710e-fbb7-4b28-82f4-7d0614b4d3f1> .
+
+<urn:uuid:93910a6f-5a9a-4773-8ab4-3a3d8c11f163>
+        a                          crmhs:HS11_Scientific_Device ;
+        rdfs:label                 "Leica V-LUX 2 Camera" ;
+        crmhs:HSP22_has_maker      <urn:uuid:60687c69-312c-4d18-9a06-054a2b1f05f9> ;
+        crmhs:HSP23_has_model      "V-LUX 2" ;
+        crm:P52_has_current_owner  <urn:uuid:a9ab7771-6c07-4bcd-b492-b791e7c31291> .
+
+<urn:uuid:a9ab7771-6c07-4bcd-b492-b791e7c31291>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "ArcHeritage" .
+
+<urn:uuid:bb0ada9b-836c-441b-b2fd-186e8a47b268>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Luminance Lensing" ;
+        crm:P3_has_note  "A custom in-house technique (ArcHeritage) using a custom shader in Cinema 4D to adjust the luminance channel of a material applied to a 3D mesh." .
+
+<urn:uuid:8bd7c94e-b034-4326-9e53-61a29d7203fc>
+        a                crmdig:D14_Software ;
+        rdfs:label       "Pointools" ;
+        crm:P3_has_note  "Software used for point cloud visualization using the 'plane shading' function." .
+
+artemis:analysis30EBE4AB-9E18-43E8-BF98-8F0E3DE63AA9
+        a                              crmhs:HS3_Analysis ;
+        rdfs:label                     "Stonehenge Laser Scan: Archaeological Analysis Report" ;
+        crmhs:HSP10_used_software      <urn:uuid:d58b5383-4c69-49dd-8ce2-cc50f8541860> , <urn:uuid:8bd7c94e-b034-4326-9e53-61a29d7203fc> , <urn:uuid:ebd7655e-4d13-4047-978a-a90824036392> ;
+        crmhs:HSP12_used_dataset       <urn:uuid:fda633bc-f590-4dba-84a3-738dd318c812> ;
+        crmhs:HSP13_used_settings      <urn:uuid:64f8ed9c-5d64-4ca1-8fc4-7770d5675803> ;
+        crmhs:HSP16_produced_dataset   <urn:uuid:02666dae-c127-4b21-bb9b-d8b11b8b27fd> , ariadne:8917580C-09A2-3E9F-A7C7-6F3E7FF83690 ;
+        crmhs:HSP1_has_activity_title  <urn:uuid:4ec235dc-cdd6-432b-96e1-bbaf3b9f0c74> ;
+        crmhs:HSP2_was_performed_on    artemis:artemis_he_001 ;
+        crmhs:HSP4_analysed            artemis:Stonehenge ;
+        crmhs:HSP6_used_method         <urn:uuid:bb0ada9b-836c-441b-b2fd-186e8a47b268> , <urn:uuid:cfd44907-3a1b-4403-b374-067982e42cab> , <urn:uuid:fe0f8b84-70b4-4a9a-b8cd-fdb17600764d> , <urn:uuid:afd80fc7-fdc1-4b3f-bdc9-ff989481b7d1> ;
+        crmhs:HSP8_used_device         <urn:uuid:2ecd74e6-699e-4be7-a1f7-e96069c84708> , <urn:uuid:93910a6f-5a9a-4773-8ab4-3a3d8c11f163> ;
+        crm:P11_had_participant        <urn:uuid:d236d5ad-ed17-4ced-badc-4dcaea671272> , <urn:uuid:811abce2-97d6-4a9d-8916-88f8eea794de> , <urn:uuid:9569568c-2aa3-45dc-b090-71a61fe1e767> , <urn:uuid:be96fee4-42e3-4c8e-bf4a-d140382155bb> , <urn:uuid:a3f880b0-8e3f-4df7-b7b7-c093fb19f370> , <urn:uuid:8887596b-7155-4e18-afe5-27528c3e5685> , <urn:uuid:9b671a07-d784-4a01-a7fd-3f04a2c5dfc1> , <urn:uuid:4dea0717-306d-4e49-b3c7-04a706355534> , <urn:uuid:8891baa2-c95a-4af4-a6f7-a45407abb6ff> ;
+        crm:P14_carried_out_by         <urn:uuid:8857ca9b-99bf-4a51-919d-dd09601e7756> ;
+        crm:P2_has_type                <urn:uuid:257674e1-89c9-49fd-8488-3bfffb3ab21c> ;
+        crm:P3_has_note                "Archaeological analysis of laser-scan and photogrammetric data to provide new information about stone-working, monument construction, and prehistoric carvings." ;
+        crm:P4_has_time-span           <urn:uuid:07907330-db0d-426d-8922-fdb50a43ffb0> ;
+        crm:P7_took_place_at           geonames:2636812 , geonames:2638028 .
+
+<urn:uuid:fe0f8b84-70b4-4a9a-b8cd-fdb17600764d>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Polynomial Texture Mapping (PTM)" ;
+        crm:P3_has_note  "Creation of PTM files from 0.5mm mesh data by synthesizing 280 images with different light sources to interactively re-light the surface." .
+
+geonames:2638028  a           aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "ArcHeritage, Sheffield, UK" ;
+        aocat:has_country     geonames:2635167 ;
+        aocat:has_place_name  "ArcHeritage, Sheffield, UK" .
+
+<urn:uuid:4ec235dc-cdd6-432b-96e1-bbaf3b9f0c74>
+        a           crm:E35_Title ;
+        rdfs:label  "Stonehenge Laser Scan: Archaeological Analysis Report" .
+
+<urn:uuid:257674e1-89c9-49fd-8488-3bfffb3ab21c>
+        a           crm:E55_Type ;
+        rdfs:label  "Archaeological Analysis (3D Laser Scan, PTM, Photogrammetry)" .
+
+artemis:artemis_he_001
+        a           aocat:AO_Object , rhdto:HC3_Tangible_Entity , crmhs:HS6_Study_Object , crmhs:HS2_Heritage_Science_Object ;
+        rdfs:label  "Stonehenge" .
+
+<urn:uuid:02666dae-c127-4b21-bb9b-d8b11b8b27fd>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Stonehenge PTM and Visualization Data (2012)" ;
+        crm:P2_has_type  <urn:uuid:ccae6c54-66a5-41aa-87c1-93e83e216bc3> .
+
+<urn:uuid:d236d5ad-ed17-4ced-badc-4dcaea671272>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Colin Richards" .
+
+<urn:uuid:16a47d75-ab2f-4558-a2e8-eb997eb3c4e9>
+        a           crm:E55_Type ;
+        rdfs:label  "Scientific report" .
+
+<urn:uuid:60687c69-312c-4d18-9a06-054a2b1f05f9>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Leica" .
+
+ariadne:8917580C-09A2-3E9F-A7C7-6F3E7FF83690
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Stonehenge Laser Scan: Archaeological Analysis Report (ARIADNE Resource)" ;
+        crm:P2_has_type  <urn:uuid:16a47d75-ab2f-4558-a2e8-eb997eb3c4e9> .
+
+<urn:uuid:9569568c-2aa3-45dc-b090-71a61fe1e767>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Mike Parker Pearson" .
+
+<urn:uuid:be96fee4-42e3-4c8e-bf4a-d140382155bb>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Rob Ixer" .
+
+<urn:uuid:07907330-db0d-426d-8922-fdb50a43ffb0>
+        a                            crm:E52_Time-Span ;
+        rdfs:label                   "2012-05-01T00:00:00Z-2012-08-31T23:59:59Z" ;
+        crm:P79_beginning_is_qualified_by
+                "2012-05-01T00:00:00Z" ;
+        crm:P80_end_is_qualified_by  "2012-08-31T23:59:59Z" ;
+        aocat:from                   "2012-05-01T00:00:00Z" ;
+        aocat:until                  "2012-08-31T23:59:59Z" .
+
+<urn:uuid:8857ca9b-99bf-4a51-919d-dd09601e7756>
+        a               crm:E74_Group , aocat:AO_Group ;
+        rdfs:label      "ArcHeritage" ;
+        aocat:has_name  "ArcHeritage" .
+
+<urn:uuid:cfd44907-3a1b-4403-b374-067982e42cab>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Convergent Photogrammetry" ;
+        crm:P3_has_note  "Data collection with a Leica V-LUX 2 Camera, processed using Agisoft PhotoScan to create higher-resolution meshes than the scan data." .
+
+<urn:uuid:8891baa2-c95a-4af4-a6f7-a45407abb6ff>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Tudur Davies" .
+
+<urn:uuid:8887596b-7155-4e18-afe5-27528c3e5685>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Marcus Abbott" .
+
+<urn:uuid:fda633bc-f590-4dba-84a3-738dd318c812>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Stonehenge Laser Scan Data (2011)" ;
+        crm:P3_has_note  "laser scanning" .
+
+<urn:uuid:64f8ed9c-5d64-4ca1-8fc4-7770d5675803>
+        a           crmhs:HS14_Analysis_Settings ;
+        rdfs:label  "Analysis settings" .
+
+<urn:uuid:4dea0717-306d-4e49-b3c7-04a706355534>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Dave Aspden" .
+
+<urn:uuid:a3f880b0-8e3f-4df7-b7b7-c093fb19f370>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Hugo Anderson-Whymark" .
+
+<urn:uuid:ccae6c54-66a5-41aa-87c1-93e83e216bc3>
+        a           crm:E55_Type ;
+        rdfs:label  "digital images" .
+
+<urn:uuid:d58b5383-4c69-49dd-8ce2-cc50f8541860>
+        a                crmdig:D14_Software ;
+        rdfs:label       "Cinema 4D R13" ;
+        crm:P3_has_note  "Software used for 3D environment visualization, PTM creation, and Luminance Lensing." .
+
+artemis:Stonehenge  a  crmhs:HS6_Study_Object ;
+        rdfs:label  "Stonehenge - Neolithic henge monument in Amesbury, Wiltshire, England, UK" .
+
+<urn:uuid:10863115-297e-4491-a234-5a8f7765c657>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Dell" .
+
+geonames:2635167  a  crm:E62_String ;
+        rdfs:label  "https://www.geonames.org/2635167" .
+
+<urn:uuid:afd80fc7-fdc1-4b3f-bdc9-ff989481b7d1>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Greyscale 'Plane Shading' Visualization" ;
+        crm:P3_has_note  "Analysis of point cloud data in Pointools using a 'plane shading' function with a 75mm greyscale band moved at 1mm intervals." .
+
+<urn:uuid:9b671a07-d784-4a01-a7fd-3f04a2c5dfc1>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Anna Badcock" .
