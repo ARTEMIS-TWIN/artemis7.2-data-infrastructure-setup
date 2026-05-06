@@ -1,0 +1,157 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix nont:  <https://dlnarratives.eu/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix base:  <&location;> .
+
+perio:p0kh9dsbz2g  a    skos:Concept , aocat:AO_Concept ;
+        rdfs:label      "Neolithic - England" ;
+        skos:prefLabel  "Neolithic - England" .
+
+aat:300006983  a        aocat:AO_Concept , skos:Concept , crm:E55_Type ;
+        rdfs:label      "megalithic monuments" ;
+        skos:prefLabel  "megalithic monuments" .
+
+<urn:uuid:db7d8b81-be6b-4d05-a173-e330c1886e28>
+        a                            crm:E52_Time-Span ;
+        rdfs:label                   "2003 - 2009" ;
+        crm:P79_beginning_is_qualified_by
+                "2003" ;
+        crm:P80_end_is_qualified_by  "2009" .
+
+aat:300011672  a        skos:Concept , aocat:AO_Concept , crm:E57_Material ;
+        rdfs:label      "sarsen" ;
+        skos:prefLabel  "sarsen" .
+
+<urn:uuid:3cada2cf-8911-483d-ad00-dce609a82fb0>
+        a                            aocat:AO_Temporal_Region , crm:E52_Time-Span ;
+        rdfs:label                   "Bronze Age - England" ;
+        crm:P79_beginning_is_qualified_by
+                "-2600" ;
+        crm:P80_end_is_qualified_by  "-700" ;
+        aocat:from                   "-2600" ;
+        aocat:has_period             perio:p0kh9ds7q8m ;
+        aocat:until                  "-700" .
+
+ariadne:14EBE8A4-42D0-3FD2-AD07-4CFC6033E772
+        a           crm:E89_Propositional_Object , aocat:AO_Resource ;
+        rdfs:label  "View of Stonehenge monument" .
+
+<urn:uuid:572ce3b2-122b-4e93-a9cc-69ed665bfc52>
+        a                             aocat:AO_Spatial_Region , crm:E53_Place , aocat:AO_Spatial_Region_Point , aocat:AO_Spatial_Region_StdName ;
+        rdfs:label                    "Stonehenge, Amesbury, Wiltshire, United Kingdom" ;
+        crm:P168_place_is_defined_by  "51.17889, -1.82622" ;
+        aocat:has_country             geonames:2635167 ;
+        aocat:has_latitude            "51.17889" ;
+        aocat:has_longitude           "-1.82622" ;
+        aocat:has_place_IRI           <https://www.geonames.org/2636812/> ;
+        aocat:has_place_name          "Stonehenge, Amesbury, Wiltshire, United Kingdom" .
+
+artemis:artemis_he_001
+        a                             rhdto:HC3_Tangible_Entity , owl:Thing , aocat:AO_Object , crmhs:HS6_Study_Object ;
+        rdfs:label                    "Stonehenge - Neolithic henge monument in Amesbury, Wiltshire, England, UK" ;
+        rhdto:HP11_was_made_by        <urn:uuid:93293675-2c63-497e-8116-01a4df2e34b6> ;
+        rhdto:HP12_was_made_within    <urn:uuid:1a0eb351-f7ce-4a86-af8e-6e1f1ca10079> , <urn:uuid:3cada2cf-8911-483d-ad00-dce609a82fb0> ;
+        rhdto:HP9_has_visual_representation
+                <https://media-assets.wired.it/photos/615dbb93a047de03943a3ba0/master/pass/wired_placeholder_dummy.png> ;
+        crm:P129i_is_subject_of       ariadne:14EBE8A4-42D0-3FD2-AD07-4CFC6033E772 ;
+        crm:P1_is_identified_by       <urn:uuid:3540177a-79f3-49ce-8e72-44dc869960f5> , <urn:uuid:670ddaa8-4a32-437f-84b4-0381f960bba3> ;
+        crm:P2_has_type               aat:300006983 ;
+        crm:P3_has_note               "Stonehenge is one of the most famous prehistoric monuments in the world, consisting of a ring of standing stones."@en ;
+        crm:P45_consists_of           aat:300011672 , aat:300011386 ;
+        crm:P52_has_current_owner     ulan:500214148 ;
+        crm:P55_has_current_location  <urn:uuid:572ce3b2-122b-4e93-a9cc-69ed665bfc52> ;
+        crmsci:O19i_was_object_encountered_through
+                <urn:uuid:a6df9d83-80b0-4c43-9d96-a283162c86a2> ;
+        owl:sameAs                    wd:Q39671 .
+
+viaf:7479619  a                     aocat:AO_Person , crm:E21_Person ;
+        rdfs:label                  "Michael Parker Pearson" ;
+        aocat:has_agent_identifier  "http://viaf.org/viaf/7479619" ;
+        aocat:has_name              "Michael Parker Pearson" .
+
+wd:Q39671  a    owl:Thing .
+
+<urn:uuid:a6df9d83-80b0-4c43-9d96-a283162c86a2>
+        a                       crmsci:S19_Encounter_Event ;
+        rdfs:label              "Stonehenge Riverside Project (2003-2009)" ;
+        crm:P14_carried_out_by  viaf:7479619 ;
+        crm:P4_has_time-span    <urn:uuid:db7d8b81-be6b-4d05-a173-e330c1886e28> .
+
+<urn:uuid:670ddaa8-4a32-437f-84b4-0381f960bba3>
+        a                              crm:E41_Appellation ;
+        rdfs:label                     "Stonehenge" ;
+        crm:P190_has_symbolic_content  "Stonehenge" .
+
+<https://www.geonames.org/2636812/>
+        a               aocat:AO_Concept , skos:Concept ;
+        rdfs:label      "Stonehenge, Amesbury, Wiltshire, United Kingdom" ;
+        skos:prefLabel  "Stonehenge, Amesbury, Wiltshire, United Kingdom" .
+
+<urn:uuid:1a0eb351-f7ce-4a86-af8e-6e1f1ca10079>
+        a                            aocat:AO_Temporal_Region , crm:E52_Time-Span ;
+        rdfs:label                   "Neolithic - England" ;
+        crm:P79_beginning_is_qualified_by
+                "-4000" ;
+        crm:P80_end_is_qualified_by  "-2200" ;
+        aocat:from                   "-4000" ;
+        aocat:has_period             perio:p0kh9dsbz2g ;
+        aocat:until                  "-2200" .
+
+<https://media-assets.wired.it/photos/615dbb93a047de03943a3ba0/master/pass/wired_placeholder_dummy.png>
+        a       rhdto:HC7_Digital_Visual_Object .
+
+aat:300011386  a        skos:Concept , aocat:AO_Concept , crm:E57_Material ;
+        rdfs:label      "bluestone" ;
+        skos:prefLabel  "bluestone" .
+
+<urn:uuid:3540177a-79f3-49ce-8e72-44dc869960f5>
+        a                              crm:E42_Identifier ;
+        rdfs:label                     "artemis_he_001" ;
+        crm:P190_has_symbolic_content  "artemis_he_001" .
+
+perio:p0kh9ds7q8m  a    skos:Concept , aocat:AO_Concept ;
+        rdfs:label      "Bronze Age - England" ;
+        skos:prefLabel  "Bronze Age - England" .
+
+ulan:500214148  a                   aocat:AO_Group , crm:E74_Group ;
+        rdfs:label                  "English Heritage" ;
+        aocat:has_agent_identifier  "https://www.english-heritage.org.uk/" ;
+        aocat:has_homepage          "https://www.english-heritage.org.uk/" ;
+        aocat:has_name              "English Heritage" .
+
+geonames:2635167  a     aocat:AO_Concept , skos:Concept ;
+        rdfs:label      "United Kingdom of Great Britain and Northern Ireland" ;
+        skos:prefLabel  "United Kingdom of Great Britain and Northern Ireland" .
+
+<urn:uuid:93293675-2c63-497e-8116-01a4df2e34b6>
+        a                           aocat:AO_Group , crm:E74_Group ;
+        rdfs:label                  "Anonymous prehistoric culture" ;
+        aocat:has_agent_identifier  "Anonymous prehistoric culture" ;
+        aocat:has_name              "Anonymous prehistoric culture" .
