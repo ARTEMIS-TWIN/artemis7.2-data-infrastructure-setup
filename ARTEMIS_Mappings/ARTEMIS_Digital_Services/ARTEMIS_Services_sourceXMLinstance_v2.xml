@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<service>
+  <service_id>https://vast-lab.org/artemis/services/heritage-kg-query</service_id>
+  <title>ARTEMIS Heritage Knowledge Graph Query Service</title>
+  <service_type>Data Analysis</service_type>
+  <version>2.1.0</version>
+  <description>RESTful query service exposing the ARTEMIS Heritage Knowledge Graph via SPARQL and JSON-LD endpoints. Enables federated querying of cultural heritage assets, conservation events, and provenance chains encoded in CIDOC-CRM. Supports parametric filtering by site, period, object type, and actor, and returns results as RDF/Turtle or JSON-LD. Designed for integration with analytical pipelines and visualisation dashboards within the ARTEMIS platform.</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier>https://ror.org/04390r489</identifier>
+    <name>PIN - Universita di Firenze</name>
+    <email>contact@vast-lab.org</email>
+    <homepage>https://www.vast-lab.org</homepage>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url>https://api.artemis-project.eu/kg/v2/sparql</url>
+      <endpoint_type>SPARQL</endpoint_type>
+      <endpoint_methods>
+        <method>GET</method>
+        <method>POST</method>
+      </endpoint_methods>
+      <notes>SPARQL 1.1 compliant endpoint. GET for short queries; POST recommended for queries exceeding 2 KB.</notes>
+    </access_point>
+    <access_point>
+      <url>https://api.artemis-project.eu/kg/v2/resources</url>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods>
+        <method>GET</method>
+        <method>POST</method>
+        <method>PUT</method>
+      </endpoint_methods>
+      <notes>JSON-LD REST endpoint for CRUD operations on heritage resource records. PUT requires authentication token.</notes>
+    </access_point>
+    <access_point>
+      <url>https://artemis-project.eu/kg/explore</url>
+      <endpoint_type>Web UI</endpoint_type>
+      <endpoint_methods>
+        <method>GET</method>
+      </endpoint_methods>
+      <notes>Browser-based graph explorer with faceted search and visual provenance timeline.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Heritage Data Curators</audience>
+    <audience>Conservation Scientists</audience>
+    <audience>Digital Humanities Researchers</audience>
+    <audience>Archaeological Data Managers</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>WP3 - Semantic enrichment of MA-XRF analytical datasets for the Raphael Portrait of Leo X</activity_label>
+    </activity>
+    <activity>
+      <activity_label>WP5 - Cross-site provenance tracing for Bronze Age artefacts, Aegean pilot</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type>
+    <physical_object>MA-XRF Scanner</physical_object>
+    <physical_object>Environmental Sensor Array</physical_object>
+  </used_physical_object_of_type>
+  <has_functionality>
+    <functionality>SPARQLQuerying</functionality>
+    <functionality>LinkedDataPublication</functionality>
+    <functionality>ProvenanceTracking</functionality>
+    <functionality>FederatedSearch</functionality>
+    <functionality>OntologyMappingCIDOCCRM</functionality>
+  </has_functionality>
+  <composed_of>
+    <sub_service>
+      <sub_service_title>Apache Jena Fuseki (SPARQL triplestore)</sub_service_title>
+      <sub_service_uri>https://vast-lab.org/artemis/services/fuseki-triplestore</sub_service_uri>
+    </sub_service>
+    <sub_service>
+      <sub_service_title>FastAPI REST Wrapper</sub_service_title>
+      <sub_service_uri>https://vast-lab.org/artemis/services/fastapi-wrapper</sub_service_uri>
+    </sub_service>
+    <sub_service>
+      <sub_service_title>CIDOC-CRM Ontology Reasoner</sub_service_title>
+    </sub_service>
+  </composed_of>
+  <supported_language>
+    <language>eng</language>
+    <language>ita</language>
+  </supported_language>
+  <media_type_consumed>
+    <media_type>RDF/Turtle</media_type>
+    <media_type>JSON-LD</media_type>
+    <media_type>SPARQL Query</media_type>
+  </media_type_consumed>
+  <media_type_produced>
+    <media_type>RDF/Turtle</media_type>
+    <media_type>JSON-LD</media_type>
+    <media_type>CSV</media_type>
+  </media_type_produced>
+  <format_consumed>
+    <format>text/turtle</format>
+    <format>application/ld+json</format>
+    <format>application/sparql-query</format>
+  </format_consumed>
+  <format_produced>
+    <format>text/turtle</format>
+    <format>application/ld+json</format>
+    <format>text/csv</format>
+  </format_produced>
+  <support_contact>
+    <support_agent_type>Person</support_agent_type>
+    <support_agent_identifier>https://orcid.org/0000-0002-1234-5678</support_agent_identifier>
+    <support_agent_name>Achille Felicetti</support_agent_name>
+    <support_agent_email>a.felicetti@vast-lab.org</support_agent_email>
+    <support_agent_homepage>https://www.vast-lab.org/team/felicetti</support_agent_homepage>
+    <support_agent_institution>PIN - Universita di Firenze</support_agent_institution>
+  </support_contact>
+  <documentation>
+    <document>
+      <doc_description>ARTEMIS Heritage KG Query Service - Technical Specification v2.1; Felicetti, A.; Niccolucci, F.; 2024</doc_description>
+      <doc_url>https://doi.org/10.5281/zenodo.1234567</doc_url>
+      <doc_type>Technical Specification</doc_type>
+    </document>
+    <document>
+      <doc_description>CIDOC-CRM Implementation Guide for ARTEMIS; Felicetti, A.; 2023</doc_description>
+      <doc_url>https://doi.org/10.5281/zenodo.7654321</doc_url>
+      <doc_type>User Manual</doc_type>
+    </document>
+    <document>
+      <doc_description>Semantic Heritage Data Integration in ARTEMIS; Niccolucci, F.; Felicetti, A.; 2024</doc_description>
+      <doc_url>https://doi.org/10.1234/artemis-semantic-paper</doc_url>
+      <doc_type>Scientific Paper</doc_type>
+    </document>
+  </documentation>
+</service>
