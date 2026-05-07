@@ -1,0 +1,730 @@
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:10d5920d-9d55-480b-ade9-cd363d488e4c>
+        a       crm:E42_Identifier .
+
+<urn:uuid:7f0d21f5-1e64-439f-8849-2e248f874533>
+        a       crm:E62_String .
+
+<urn:uuid:bdce529f-e852-4a50-9208-4190408900b4>
+        a       crm:E62_String .
+
+<urn:uuid:1ead4b07-ccae-4dde-a7a5-ab56458fc0c7>
+        a       crm:E42_Identifier .
+
+<urn:uuid:83db7132-8b0f-4115-9227-dccc4e5cf323>
+        a           crm:E41_Appellation ;
+        rdfs:label  "High-frequency environmental monitoring dataset" .
+
+<urn:uuid:b0334f26-faf7-4a6f-89e5-dbc2976d183d>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor" .
+
+<urn:uuid:8411e7f3-c9e4-42da-b9ab-c634f3154e4a>
+        a       crm:E62_String .
+
+<urn:uuid:c05c5056-c379-4881-9079-c227ea0cb858>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Illuminance sensor" .
+
+<urn:uuid:832c4115-78df-4fe3-b0d4-9b32813f87d3>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservation threshold" .
+
+<urn:uuid:0c0659c9-6dfc-4a88-bc38-29acb102ca68>
+        a       crm:E42_Identifier .
+
+<urn:uuid:9c99227b-963f-4d9d-b7f6-04ca3a163059>
+        a           crm:E55_Type ;
+        rdfs:label  "Log Dataset" .
+
+<urn:uuid:da1bb2d2-e01f-47a7-b5d3-866f3fc48b58>
+        a       crm:E42_Identifier .
+
+<urn:uuid:7376a133-e7b8-487e-bd5c-f088052ad3c1>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time Heritage Digital Twin (RHDT) of the Smart Display Case" .
+
+<urn:uuid:550a75c1-534a-49f6-acc4-14656e17ba43>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Maintenance and intervention logs" .
+
+<urn:uuid:e86eb085-d331-4396-b3e1-d3f3da886ea9>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-Time Digital Twin Synchronisation" .
+
+<urn:uuid:da84157c-11ca-47d2-a894-a2e4f4aa969e>
+        a           crm:E55_Type ;
+        rdfs:label  "Continuous acquisition of environmental and security-related data from the Smart Display Case to support preventive conservation and anomaly detection." .
+
+<https://artemis-twin.eu/entity/pilots/artemis_pilot_04>
+        a                        crm:E7_Activity ;
+        rdfs:label               "Smart display case for CH protection" ;
+        crm:P1_is_identified_by  <urn:uuid:51bb5bf4-d556-4786-8633-d39a60c6c1fb> , <urn:uuid:817b15e8-77ef-4f01-b94d-9704e82d8c3e> ;
+        crm:P3_has_note          "Pilot 4 focuses on the design, development, and validation of a Smart Display Case for the protection and monitoring of highly sensitive cultural heritage artefacts in museum environments. The pilot is led by SEL and deploys IoT sensors and actuators integrated with the ARTEMIS platform, enabling real-time environmental monitoring, alert generation, and Digital Twin synchronisation for preventive conservation." ;
+        crm:P9_consists_of       <https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_03> , <https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_02> , <https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_01> .
+
+<urn:uuid:7ff0cf0f-5468-4e13-8fe5-7b71080975b0>
+        a       crm:E62_String .
+
+<urn:uuid:a784049d-91d2-49a3-a090-8faaab2a4417>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:e1909cb2-f894-4bc6-baa4-cb7d9f43327e> ;
+        crm:P1_is_identified_by      <urn:uuid:022992a7-8dd4-4596-aeac-3652adba1f5b> , <urn:uuid:7376a133-e7b8-487e-bd5c-f088052ad3c1> ;
+        crm:P2_has_type              <urn:uuid:312b251d-8548-4112-839e-256ecae18477> ;
+        crm:P3_has_note              "Output of operation artemis_op_04_02; provides real-time and historical environmental state of the display case." .
+
+<urn:uuid:312b251d-8548-4112-839e-256ecae18477>
+        a           crm:E55_Type ;
+        rdfs:label  "Digital Twin" .
+
+<urn:uuid:48f53e0d-47f4-4659-a585-a22426ac17b9>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:256a533e-c01b-4710-abac-1e3253dce337> ;
+        crm:P1_is_identified_by      <urn:uuid:c702d838-3806-4eda-a90d-7b6f5c4763c4> , <urn:uuid:271e88a4-ecfa-4f46-a113-50dc8317b4ae> ;
+        crm:P2_has_type              <urn:uuid:b2aa3e81-4e36-4583-bd31-1fbd7228d101> ;
+        crm:P3_has_note              "Moisture levels affecting material stability, measured in %RH." .
+
+<urn:uuid:fae1cf3e-c93a-4d03-9891-bc1ec394c904>
+        a       crm:E42_Identifier .
+
+<urn:uuid:6469b36d-2ce0-4f15-9791-ce0f18825e3d>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "Smart display case for CH protection, artemis_op_04_01, parameter Environmental stability thresholds" ;
+        crm:P1_is_identified_by  <urn:uuid:cc9ff65f-67a5-4b3f-a4a0-c4a4d3dab824> , <urn:uuid:7fa59e42-e7ea-4311-b565-b52388fc7c40> ;
+        crm:P2_has_type          <urn:uuid:832c4115-78df-4fe3-b0d4-9b32813f87d3> ;
+        crm:P3_has_note          "Thresholds defined in collaboration with museum curators and aligned with pilot success criteria." .
+
+<urn:uuid:5b67a12a-ad90-4f89-b590-f3dc8e5b1bcc>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Conservation alerts" .
+
+<urn:uuid:b6a1c72f-8c87-4514-9f2d-52e96871502f>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Relative humidity sensor" .
+
+<urn:uuid:7865447c-9d9f-48bf-aac8-a488062c0797>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:e590d817-e899-4db6-9d9d-c71989f56cab> ;
+        crm:P1_is_identified_by      <urn:uuid:666c9227-cf5a-4048-a43b-2cfc1a6ed924> , <urn:uuid:82bce4c0-3c6f-44b8-8813-78a877552703> ;
+        crm:P2_has_type              <urn:uuid:b60582f0-de1d-4227-a03b-8843621962c3> ;
+        crm:P3_has_note              "Final assessment covering system reliability, user satisfaction, conservation impact and recommendations for future scaling and standardisation." .
+
+<urn:uuid:075dfb2a-8dcb-4f27-b861-6303c763751d>
+        a       crm:E42_Identifier .
+
+<urn:uuid:312ad7ee-ad51-458b-93c3-4f142cbad20a>
+        a           crm:E55_Type ;
+        rdfs:label  "Digital Twin" .
+
+<urn:uuid:6f250bd5-aecd-49ba-92e5-f0c6e062a226>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Magnetic/reed switch" .
+
+<urn:uuid:31722e06-41de-4737-9596-db4f77450563>
+        a                        rhdto:HC9_Sensor ;
+        crm:P1_is_identified_by  <urn:uuid:169ca995-872a-4927-b49d-9f49c52181ca> , <urn:uuid:6f250bd5-aecd-49ba-92e5-f0c6e062a226> ;
+        crm:P2_has_type          <urn:uuid:82081cf3-67c5-4801-939a-b803f6fcded2> ;
+        crm:P3_has_note          "Monitors opening and closing status of the display case." .
+
+<urn:uuid:c702d838-3806-4eda-a90d-7b6f5c4763c4>
+        a       crm:E42_Identifier .
+
+<urn:uuid:f7270f9e-3b5c-4801-9316-08fa6cf5d75e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Temperature sensor" .
+
+<urn:uuid:03b5ab6e-a873-4f6c-9a1d-af0273615290>
+        a       crm:E42_Identifier .
+
+<urn:uuid:999b1534-f0b6-40f2-a6d8-e50781ca6b1d>
+        a           crm:E41_Appellation ;
+        rdfs:label  "IoT Environmental and Security Monitoring" .
+
+<urn:uuid:abf834ae-3edd-4374-9fa6-b322fe53e133>
+        a       crm:E62_String .
+
+<urn:uuid:851e8bda-fbf4-4f4b-910a-b9fa8e07db77>
+        a       crm:E62_String .
+
+<urn:uuid:b2f0cb09-11fc-4f02-a4a2-f57528c5edcb>
+        a       crm:E42_Identifier .
+
+<urn:uuid:54c6d568-704d-4997-b8c9-fbd2a123ccf4>
+        a           crm:E41_Appellation ;
+        rdfs:label  "User feedback surveys" .
+
+<urn:uuid:513b5760-1e4f-4b93-bce2-16860e7825a4>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Conservation alerts" .
+
+<urn:uuid:978e381a-4a72-4022-af48-c02a34b586d4>
+        a       crm:E62_String .
+
+<urn:uuid:370aa807-c0e4-4206-93cc-37f722f96639>
+        a           crm:E42_Identifier ;
+        rdfs:label  "artemis_op_04_01" .
+
+<urn:uuid:7939193d-000c-4977-8628-024ff0c7bce1>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_02, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:7ff0cf0f-5468-4e13-8fe5-7b71080975b0> ;
+        crm:P1_is_identified_by      <urn:uuid:075dfb2a-8dcb-4f27-b861-6303c763751d> , <urn:uuid:0f00d3c5-b338-4220-968a-151b4f031f8d> ;
+        crm:P2_has_type              <urn:uuid:3dceb818-94ef-4247-92bf-085e91dde608> ;
+        crm:P3_has_note              "Structured metadata retrieved from the Triple Store: AssetID, AssetName, AssetDescription, ResponsibleInstitution, reference to 3D model, linked IoT Nodes, contextual information." .
+
+<urn:uuid:ed4704c5-5d72-4960-8105-d78ae35b1928>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:694aff3f-f1cc-46aa-b5a8-932a7a7e5cc6> ;
+        crm:P1_is_identified_by      <urn:uuid:03b5ab6e-a873-4f6c-9a1d-af0273615290> , <urn:uuid:f544750c-fa51-4e48-8c1d-5548763e9000> ;
+        crm:P2_has_type              <urn:uuid:fe5bd041-8372-4f10-8817-e4b9048e37a2> ;
+        crm:P3_has_note              "Opening/closing status of the case monitored via magnetic/reed switches." .
+
+<urn:uuid:7bc1b608-e934-4739-a9e3-cba5f909d4c9>
+        a           crm:E41_Appellation ;
+        rdfs:label  "IoT Services" .
+
+<urn:uuid:e1c6a156-b5c7-4f1a-981f-d216817ae2f9>
+        a           crm:E55_Type ;
+        rdfs:label  "Analysis Report" .
+
+<https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_02>
+        a                             rhdto:HC22_Digital_Operation , crm:E7_Activity ;
+        rdfs:label                    "artemis_pilot_04 artemis_op_04_02 Real-Time Digital Twin Synchronisation" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_006 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/artemis_CAW-06> , <https://artemis-twin.eu/entity/services/artemis_BEDP-09> ;
+        crm:P134_continued            <https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_01> ;
+        crm:P1_is_identified_by       <urn:uuid:e86eb085-d331-4396-b3e1-d3f3da886ea9> , <urn:uuid:412d0ec6-7495-425c-a7b6-4ded6790822b> ;
+        crm:P21_had_general_purpose   <urn:uuid:163b1bb5-9ba0-47e9-9f5c-e3870f38229e> ;
+        crm:P2_has_type               <urn:uuid:54cbe3d9-2d92-4e89-83c8-dd03615e080c> ;
+        crm:P3_has_note               "Sensor data collected by the IoT monitoring operation are ingested and propagated to the RHDT of the Smart Display Case. The Digital Twin mirrors the physical state of the case in real time, maintaining a maximum synchronisation lag of 10 seconds. The twin stores historical environmental measurements in the IoT Time-Series NoSQL database and links them semantically to the corresponding IoT Nodes and Activities in the ARTEMIS Triple Store. The operation also handles alert generation when environmental or security thresholds are exceeded." ;
+        crm:P4_has_time-span          <urn:uuid:bf67248b-6e8f-4714-8365-34ce8f4fb19c> ;
+        crmdig:L10_had_input          <urn:uuid:dbaa8f4c-700a-4923-b592-0725ae2d8421> , <urn:uuid:7939193d-000c-4977-8628-024ff0c7bce1> ;
+        crmdig:L11_had_output         <urn:uuid:2531a792-9d97-4f4c-ac85-621f199f306f> , <urn:uuid:e3448e6f-c8ed-4696-bc34-d7e71008806c> , <urn:uuid:c44be481-6aa8-416e-876a-ff8b38aabd2a> .
+
+<urn:uuid:e590d817-e899-4db6-9d9d-c71989f56cab>
+        a       crm:E62_String .
+
+<urn:uuid:23a711f6-2970-4b2e-9eaf-3205048dc98b>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Environmental stability analysis report" .
+
+<urn:uuid:bf67248b-6e8f-4714-8365-34ce8f4fb19c>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:9ab12eb5-4583-46f6-ab7a-7a4e924a362e>
+        a       crm:E42_Identifier .
+
+<urn:uuid:c44be481-6aa8-416e-876a-ff8b38aabd2a>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_02, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:55cec445-6aea-442a-a7db-e6cff790d748> ;
+        crm:P1_is_identified_by      <urn:uuid:fae1cf3e-c93a-4d03-9891-bc1ec394c904> , <urn:uuid:4f514222-1087-46c3-8a9e-0d916d62f3a0> ;
+        crm:P2_has_type              <urn:uuid:312ad7ee-ad51-458b-93c3-4f142cbad20a> ;
+        crm:P3_has_note              "Continuously updated virtual representation of the physical case and its internal environment, with a maximum synchronisation lag of 10 seconds." .
+
+<urn:uuid:c80af2e4-663d-4b4e-9e9d-54c35da04538>
+        a       crm:E62_String .
+
+<urn:uuid:694aff3f-f1cc-46aa-b5a8-932a7a7e5cc6>
+        a       crm:E62_String .
+
+<urn:uuid:ad46b92c-2fb0-4295-80c5-2905816ac11b>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "Smart display case for CH protection, artemis_op_04_01, parameter Sensor sampling interval" ;
+        crm:P1_is_identified_by  <urn:uuid:fba664d6-95b1-406f-bad4-5f28035c86e2> , <urn:uuid:9725dc9f-caba-46ff-ae69-7e2fd37c0e5e> ;
+        crm:P2_has_type          <urn:uuid:8007b75a-f264-4ced-b062-cd9a6635b7a6> ;
+        crm:P3_has_note          "Acquisition frequency to be configured via software in collaboration with museum curators." .
+
+<urn:uuid:234abe31-a9c8-4343-a83f-8a0bdbff29d4>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor Measurement" .
+
+<urn:uuid:305b3b8a-9c82-4a46-8413-4ec8451b783e>
+        a       crm:E62_String .
+
+<urn:uuid:5df687f7-fde8-4773-b985-b7db8a655797>
+        a       crm:E42_Identifier .
+
+<urn:uuid:bb4c4c8e-fa84-4d50-ad25-ca3efe54211e>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:163b1bb5-9ba0-47e9-9f5c-e3870f38229e>
+        a           crm:E55_Type ;
+        rdfs:label  "Maintain a continuously updated digital representation (RHDT) of the Smart Display Case and its internal environment, enabling remote diagnostics and predictive conservation." .
+
+<urn:uuid:f544750c-fa51-4e48-8c1d-5548763e9000>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Access event signals" .
+
+<urn:uuid:51fda027-fa7b-4d48-b635-2de177a49ab2>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Vibration and shock event signals" .
+
+<urn:uuid:e3448e6f-c8ed-4696-bc34-d7e71008806c>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_02, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:c80af2e4-663d-4b4e-9e9d-54c35da04538> ;
+        crm:P1_is_identified_by      <urn:uuid:050d9d06-c47f-46e5-a3fd-bc80ee34a710> , <urn:uuid:5b67a12a-ad90-4f89-b590-f3dc8e5b1bcc> ;
+        crm:P2_has_type              <urn:uuid:6dfaac00-4658-413f-83aa-3215099279d1> ;
+        crm:P3_has_note              "Automated notifications triggered when environmental or security thresholds are exceeded; transmitted to users within 5 seconds of event occurrence." .
+
+<urn:uuid:392ab28b-f1d5-44d4-96de-dd3a84fb6d27>
+        a                        rhdto:HC25_Node ;
+        crm:P1_is_identified_by  <urn:uuid:4ec8c256-c985-41bc-baca-bf700ac42c63> , <urn:uuid:ac8b91e8-77b1-4291-9750-46c30fd49ee6> ;
+        crm:P2_has_type          <urn:uuid:ebd3828e-9712-4fa8-a71f-c84a7dc7ceb0> ;
+        crm:P3_has_note          "ESP32 or Raspberry Pi; buffers data locally during connectivity loss and forwards it upon reestablishment." .
+
+<urn:uuid:4ec8c256-c985-41bc-baca-bf700ac42c63>
+        a       crm:E42_Identifier .
+
+<urn:uuid:9a6348a0-c793-4388-a79b-858207bbadbf>
+        a           crm:E55_Type ;
+        rdfs:label  "Log Dataset" .
+
+<urn:uuid:1c716fdc-d5f7-417d-b794-db4b13e69228>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:abf834ae-3edd-4374-9fa6-b322fe53e133> ;
+        crm:P1_is_identified_by      <urn:uuid:10d5920d-9d55-480b-ade9-cd363d488e4c> , <urn:uuid:51fda027-fa7b-4d48-b635-2de177a49ab2> ;
+        crm:P2_has_type              <urn:uuid:9429c58c-198d-42bb-b4e5-78ca9f4dbf99> ;
+        crm:P3_has_note              "Motion detection data for anti-tampering analysis." .
+
+<urn:uuid:1a4a97ed-3c69-46bb-be1d-49402cabe3d6>
+        a       crm:E42_Identifier .
+
+<urn:uuid:bff30c48-0bdf-4b2a-8ff3-64ec1bba759b>
+        a           crm:E55_Type ;
+        rdfs:label  "Enable museum curators, conservators and technical personnel to monitor environmental conditions, assess degradation risks, and consult historical records through dashboard interfaces and analytical tools." .
+
+<urn:uuid:f5b58201-77ca-4027-a048-7c336493a0b0>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:bd77bf78-e2a8-4542-b9e9-583bae81d84e> ;
+        crm:P1_is_identified_by      <urn:uuid:1a4a97ed-3c69-46bb-be1d-49402cabe3d6> , <urn:uuid:f9b57f5c-e753-471c-bd6e-a0a1406c9100> ;
+        crm:P2_has_type              <urn:uuid:edf5a0c4-6709-463f-9c6f-2804a953cbe0> ;
+        crm:P3_has_note              "Records of detected anomalies (temperature spikes, humidity fluctuations, vibration, unauthorised access) and system responses, with detection accuracy ≥95% and false positive rate <5%." .
+
+<urn:uuid:b60582f0-de1d-4227-a03b-8843621962c3>
+        a           crm:E55_Type ;
+        rdfs:label  "Evaluation Report" .
+
+<urn:uuid:afbf18a4-d019-423a-a7e1-f2fbc7810aaa>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Vibration and shock sensor" .
+
+<urn:uuid:c1f316cc-080e-423a-8803-64211390f04b>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor" .
+
+<urn:uuid:edf5a0c4-6709-463f-9c6f-2804a953cbe0>
+        a           crm:E55_Type ;
+        rdfs:label  "Log Dataset" .
+
+<urn:uuid:25a0513f-1711-4748-8626-233625b1cd9a>
+        a       crm:E42_Identifier .
+
+<urn:uuid:271e88a4-ecfa-4f46-a113-50dc8317b4ae>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Raw relative humidity readings" .
+
+<urn:uuid:7fa59e42-e7ea-4311-b565-b52388fc7c40>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Environmental stability thresholds" .
+
+<urn:uuid:169ca995-872a-4927-b49d-9f49c52181ca>
+        a       crm:E42_Identifier .
+
+<urn:uuid:954873ae-3ffb-466e-bfce-114f91d4d0a1>
+        a       crm:E42_Identifier .
+
+artemis:artemis_he_006
+        a       rhdto:HC3_Tangible_Entity .
+
+<urn:uuid:ebd3828e-9712-4fa8-a71f-c84a7dc7ceb0>
+        a           crm:E55_Type ;
+        rdfs:label  "Node" .
+
+<urn:uuid:dbaa8f4c-700a-4923-b592-0725ae2d8421>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_02, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:bf9351a5-ee81-4670-984b-aa855b0a3452> ;
+        crm:P1_is_identified_by      <urn:uuid:b2f0cb09-11fc-4f02-a4a2-f57528c5edcb> , <urn:uuid:a9f9da46-59a8-4ad1-a26b-8c4045668fae> ;
+        crm:P2_has_type              <urn:uuid:62a3b460-c602-4335-80f4-02a7cd104f09> ;
+        crm:P3_has_note              "Output of operation artemis_op_04_01; time-stamped sensor readings transmitted via MQTT and RESTful APIs." .
+
+<urn:uuid:51bb5bf4-d556-4786-8633-d39a60c6c1fb>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Smart display case for CH protection" .
+
+<urn:uuid:695952c8-e4ab-407a-b0c0-60107b475ec8>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:978e381a-4a72-4022-af48-c02a34b586d4> ;
+        crm:P1_is_identified_by      <urn:uuid:4ce72682-75ac-43a8-9de3-60a3de6ecfc2> , <urn:uuid:89b913ee-9fbf-4002-8445-10baa54530b9> ;
+        crm:P2_has_type              <urn:uuid:a6fc5a99-d840-45f5-a3c2-f3154c247dc3> ;
+        crm:P3_has_note              "Light intensity measured in lux, relevant for photodegradable artefacts." .
+
+<urn:uuid:205f6446-2f68-46c0-ba3d-d3ee531041e1>
+        a           crm:E55_Type ;
+        rdfs:label  "Time-Series Dataset" .
+
+<urn:uuid:9429c58c-198d-42bb-b4e5-78ca9f4dbf99>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor Measurement" .
+
+<urn:uuid:f9b57f5c-e753-471c-bd6e-a0a1406c9100>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Anomaly detection and response log" .
+
+<urn:uuid:a902f18f-32d8-4446-8d66-db2d169971a6>
+        a                        rhdto:HC9_Sensor ;
+        crm:P1_is_identified_by  <urn:uuid:25a0513f-1711-4748-8626-233625b1cd9a> , <urn:uuid:afbf18a4-d019-423a-a7e1-f2fbc7810aaa> ;
+        crm:P2_has_type          <urn:uuid:c1f316cc-080e-423a-8803-64211390f04b> ;
+        crm:P3_has_note          "Detects vibrations and shock events for anti-tampering purposes." .
+
+<urn:uuid:8bb59f53-7548-4144-ac54-e65a144d2239>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor" .
+
+<urn:uuid:4f514222-1087-46c3-8a9e-0d916d62f3a0>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time Heritage Digital Twin (RHDT) of the Smart Display Case" .
+
+<urn:uuid:2531a792-9d97-4f4c-ac85-621f199f306f>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_02, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:8411e7f3-c9e4-42da-b9ab-c634f3154e4a> ;
+        crm:P1_is_identified_by      <urn:uuid:98708180-fa64-45c2-91d6-79dbdb26c6f3> , <urn:uuid:07e15e7e-4d7a-48e2-b57c-d9531cdd4d02> ;
+        crm:P2_has_type              <urn:uuid:c8066db0-3e5e-4d71-94fa-f1c64dea08b5> ;
+        crm:P3_has_note              "Semantically linked historical monitoring data stored in the ARTEMIS NoSQL database and registered in the Triple Store." .
+
+<urn:uuid:8e14a48f-5986-47f5-a92b-f5df41e050d9>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:bdce529f-e852-4a50-9208-4190408900b4> ;
+        crm:P1_is_identified_by      <urn:uuid:1ead4b07-ccae-4dde-a7a5-ab56458fc0c7> , <urn:uuid:be0dd516-b31f-4b12-b844-3f77e1456284> ;
+        crm:P2_has_type              <urn:uuid:234abe31-a9c8-4343-a83f-8a0bdbff29d4> ;
+        crm:P3_has_note              "Internal ambient temperature inside the display case, measured in °C." .
+
+artemis:artemis_BEDP-09
+        a       crm:E42_Identifier .
+
+<urn:uuid:7d9bc363-2e7a-4a55-9390-77b6970be12e>
+        a       crm:E62_String .
+
+<urn:uuid:050d9d06-c47f-46e5-a3fd-bc80ee34a710>
+        a       crm:E42_Identifier .
+
+<urn:uuid:779ef9d6-1ab9-43ff-8bb9-634d42bc18cf>
+        a       crm:E42_Identifier .
+
+<urn:uuid:0cc483d2-6ed6-4161-893c-0afc3117fdd6>
+        a       crm:E62_String .
+
+<urn:uuid:56ca97d1-9e23-4394-b108-a2590cedafa7>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:db3045af-0aa3-446a-906a-aec3ab91d92c> ;
+        crm:P1_is_identified_by      <urn:uuid:da1bb2d2-e01f-47a7-b5d3-866f3fc48b58> , <urn:uuid:3504bf20-a406-49b2-b892-9a4a4ed9711e> ;
+        crm:P2_has_type              <urn:uuid:9c99227b-963f-4d9d-b7f6-04ca3a163059> ;
+        crm:P3_has_note              "Records of system uptime, sensor connectivity and actuator response status." .
+
+<urn:uuid:bc36d2c7-78f6-49e6-bf9c-97e0132885f5>
+        a                        rhdto:HC9_Sensor ;
+        crm:P1_is_identified_by  <urn:uuid:53dc7b6a-a6e3-4ec4-a131-b2a618afc214> , <urn:uuid:b6a1c72f-8c87-4514-9f2d-52e96871502f> ;
+        crm:P2_has_type          <urn:uuid:af4335af-690f-402a-b723-c908bb00c81f> ;
+        crm:P3_has_note          "Measures moisture levels inside the display case." .
+
+<urn:uuid:acb9ff25-6ce9-42cf-a8fc-3c146f845c68>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_01, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:305b3b8a-9c82-4a46-8413-4ec8451b783e> ;
+        crm:P1_is_identified_by      <urn:uuid:779ef9d6-1ab9-43ff-8bb9-634d42bc18cf> , <urn:uuid:83db7132-8b0f-4115-9227-dccc4e5cf323> ;
+        crm:P2_has_type              <urn:uuid:205f6446-2f68-46c0-ba3d-d3ee531041e1> ;
+        crm:P3_has_note              "Time-stamped, structured sensor data stored in the ARTEMIS NoSQL database, indexed by artefact ID, time series and case identifier." .
+
+<https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_03>
+        a                             crm:E7_Activity , rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "artemis_pilot_04 artemis_op_04_03 Conservation Data Analysis and Dashboard Visualisation" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_006 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/artemis_CAW-06> ;
+        crm:P134_continued            <https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_02> ;
+        crm:P1_is_identified_by       <urn:uuid:ec43c4cc-bc21-4e1c-991b-738def5a9f64> , <urn:uuid:40e16f59-3b4b-4a4b-9ab1-7bf21e559b37> ;
+        crm:P21_had_general_purpose   <urn:uuid:bff30c48-0bdf-4b2a-8ff3-64ec1bba759b> ;
+        crm:P2_has_type               <urn:uuid:2e65b317-2ba8-481b-bdcc-292581bfa97e> ;
+        crm:P3_has_note               "Real-time and historical data from the Digital Twin are visualised through the ARTEMIS IoT Viewer dashboard. The operation supports multiple user roles: curators and managers access real-time data and alerts; conservators analyse environmental stability and assess potential degradation risks; technical personnel monitor system performance. The operation correlates current sensor readings with past monitoring campaigns to support predictive conservation analytics. It also ingests the output of test scenarios (environmental fluctuation response, degradation suppression, vandalism detection, Digital Twin synchronisation verification)." ;
+        crm:P4_has_time-span          <urn:uuid:9c055bac-34aa-4586-80b7-5e9db6ec89b3> ;
+        crmdig:L10_had_input          <urn:uuid:a784049d-91d2-49a3-a090-8faaab2a4417> , <urn:uuid:15c730ed-5f6b-44d5-909f-1b6ee6f63715> , <urn:uuid:ac038112-ba4f-4bc8-ae42-2827e6d79b6f> , <urn:uuid:f25424c8-77ea-4dd0-9a65-4fa4116842d4> ;
+        crmdig:L11_had_output         <urn:uuid:7865447c-9d9f-48bf-aac8-a488062c0797> , <urn:uuid:f5b58201-77ca-4027-a048-7c336493a0b0> , <urn:uuid:2622f75a-144e-4bdf-9755-9f96e0f8dd34> .
+
+<urn:uuid:e1909cb2-f894-4bc6-baa4-cb7d9f43327e>
+        a       crm:E62_String .
+
+<urn:uuid:256a533e-c01b-4710-abac-1e3253dce337>
+        a       crm:E62_String .
+
+<urn:uuid:8e664d20-350b-40a5-b317-94b5f5cd620c>
+        a           crm:E55_Type ;
+        rdfs:label  "Survey Dataset" .
+
+<urn:uuid:817b15e8-77ef-4f01-b94d-9704e82d8c3e>
+        a           crm:E42_Identifier ;
+        rdfs:label  "artemis_pilot_04" .
+
+<urn:uuid:54cbe3d9-2d92-4e89-83c8-dd03615e080c>
+        a           crm:E55_Type ;
+        rdfs:label  "Transformation Operation" .
+
+<urn:uuid:cc9ff65f-67a5-4b3f-a4a0-c4a4d3dab824>
+        a       crm:E42_Identifier .
+
+<urn:uuid:c51006df-d0c4-4ad5-819e-2a108488e6c0>
+        a           crm:E41_Appellation ;
+        rdfs:label  "IoT Services" .
+
+<urn:uuid:7fa9fda9-d8ce-4253-9f05-5d9c528ba4d3>
+        a                        rhdto:HC9_Sensor ;
+        crm:P1_is_identified_by  <urn:uuid:9ab12eb5-4583-46f6-ab7a-7a4e924a362e> , <urn:uuid:f7270f9e-3b5c-4801-9316-08fa6cf5d75e> ;
+        crm:P2_has_type          <urn:uuid:8bb59f53-7548-4144-ac54-e65a144d2239> ;
+        crm:P3_has_note          "Measures internal ambient temperature of the display case." .
+
+<urn:uuid:db3045af-0aa3-446a-906a-aec3ab91d92c>
+        a       crm:E62_String .
+
+<urn:uuid:222ea3ee-b56d-43ad-92c7-56bc73774bcb>
+        a           crm:E41_Appellation ;
+        rdfs:label  "ARTEMIS IoT Viewer" .
+
+<urn:uuid:15c730ed-5f6b-44d5-909f-1b6ee6f63715>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:7d9bc363-2e7a-4a55-9390-77b6970be12e> ;
+        crm:P1_is_identified_by      <urn:uuid:5df687f7-fde8-4773-b985-b7db8a655797> , <urn:uuid:550a75c1-534a-49f6-acc4-14656e17ba43> ;
+        crm:P2_has_type              <urn:uuid:9a6348a0-c793-4388-a79b-858207bbadbf> ;
+        crm:P3_has_note              "Operator-generated records documenting observed issues, actions taken and outcomes." .
+
+<urn:uuid:71c7f42f-3792-47d3-b192-b7b24061173d>
+        a           crm:E55_Type ;
+        rdfs:label  "Monitoring" .
+
+<urn:uuid:55cec445-6aea-442a-a7db-e6cff790d748>
+        a       crm:E62_String .
+
+<urn:uuid:412d0ec6-7495-425c-a7b6-4ded6790822b>
+        a           crm:E42_Identifier ;
+        rdfs:label  "artemis_op_04_02" .
+
+<urn:uuid:dc25330c-261a-427c-8701-3735cb53965c>
+        a       crm:E42_Identifier .
+
+<https://artemis-twin.eu/entity/services/artemis_BEDP-09>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "IoT Services" ;
+        crm:P1_is_identified_by  <urn:uuid:7bc1b608-e934-4739-a9e3-cba5f909d4c9> , artemis:artemis_BEDP-09 , <urn:uuid:c51006df-d0c4-4ad5-819e-2a108488e6c0> .
+
+<https://artemis-twin.eu/entity/services/artemis_CAW-06>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "ARTEMIS IoT Viewer" ;
+        crm:P1_is_identified_by  <urn:uuid:e107536e-515d-46b5-9875-0c22afc227d2> , artemis:artemis_CAW-06 , <urn:uuid:222ea3ee-b56d-43ad-92c7-56bc73774bcb> .
+
+<urn:uuid:ac038112-ba4f-4bc8-ae42-2827e6d79b6f>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:851e8bda-fbf4-4f4b-910a-b9fa8e07db77> ;
+        crm:P1_is_identified_by      <urn:uuid:dc25330c-261a-427c-8701-3735cb53965c> , <urn:uuid:513b5760-1e4f-4b93-bce2-16860e7825a4> ;
+        crm:P2_has_type              <urn:uuid:ca7ede05-f04d-4229-8eaf-b4a8d4b04dcd> ;
+        crm:P3_has_note              "Automated alert records generated by the Digital Twin synchronisation operation." .
+
+<urn:uuid:bf9351a5-ee81-4670-984b-aa855b0a3452>
+        a       crm:E62_String .
+
+<urn:uuid:efcc9c87-bcec-47ac-b2f3-e18d20182f1b>
+        a       crm:E42_Identifier .
+
+<urn:uuid:af4335af-690f-402a-b723-c908bb00c81f>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor" .
+
+<urn:uuid:56f8fbbd-c1e8-4dbf-a9b5-6a39a2420b77>
+        a                        rhdto:HC9_Sensor ;
+        crm:P1_is_identified_by  <urn:uuid:efcc9c87-bcec-47ac-b2f3-e18d20182f1b> , <urn:uuid:c05c5056-c379-4881-9079-c227ea0cb858> ;
+        crm:P2_has_type          <urn:uuid:b0334f26-faf7-4a6f-89e5-dbc2976d183d> ;
+        crm:P3_has_note          "Measures light intensity inside the display case." .
+
+<urn:uuid:82bce4c0-3c6f-44b8-8813-78a877552703>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Pilot evaluation report" .
+
+<urn:uuid:ca7ede05-f04d-4229-8eaf-b4a8d4b04dcd>
+        a           crm:E55_Type ;
+        rdfs:label  "Alert Dataset" .
+
+<urn:uuid:89b913ee-9fbf-4002-8445-10baa54530b9>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Raw illuminance readings" .
+
+<urn:uuid:c8066db0-3e5e-4d71-94fa-f1c64dea08b5>
+        a           crm:E55_Type ;
+        rdfs:label  "Time-Series Dataset" .
+
+<urn:uuid:ec43c4cc-bc21-4e1c-991b-738def5a9f64>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Conservation Data Analysis and Dashboard Visualisation" .
+
+<urn:uuid:fe5bd041-8372-4f10-8817-e4b9048e37a2>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor Measurement" .
+
+<urn:uuid:a6fc5a99-d840-45f5-a3c2-f3154c247dc3>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor Measurement" .
+
+<urn:uuid:ac8b91e8-77b1-4291-9750-46c30fd49ee6>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Edge processing unit" .
+
+<urn:uuid:07e15e7e-4d7a-48e2-b57c-d9531cdd4d02>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Historical environmental measurement archive" .
+
+<urn:uuid:40e16f59-3b4b-4a4b-9ab1-7bf21e559b37>
+        a           crm:E42_Identifier ;
+        rdfs:label  "artemis_op_04_03" .
+
+<urn:uuid:3504bf20-a406-49b2-b892-9a4a4ed9711e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "System performance logs" .
+
+<urn:uuid:62a3b460-c602-4335-80f4-02a7cd104f09>
+        a           crm:E55_Type ;
+        rdfs:label  "Time-Series Dataset" .
+
+<urn:uuid:98708180-fa64-45c2-91d6-79dbdb26c6f3>
+        a       crm:E42_Identifier .
+
+<urn:uuid:9725dc9f-caba-46ff-ae69-7e2fd37c0e5e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Sensor sampling interval" .
+
+<urn:uuid:53dc7b6a-a6e3-4ec4-a131-b2a618afc214>
+        a       crm:E42_Identifier .
+
+<urn:uuid:b2aa3e81-4e36-4583-bd31-1fbd7228d101>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor Measurement" .
+
+<https://artemis-twin.eu/entity/artemis_pilot_04/artemis_op_04_01>
+        a                             crm:E7_Activity , rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "artemis_pilot_04 artemis_op_04_01 IoT Environmental and Security Monitoring" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_006 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/artemis_BEDP-09> ;
+        crm:P16_used_specific_object  <urn:uuid:a902f18f-32d8-4446-8d66-db2d169971a6> , <urn:uuid:392ab28b-f1d5-44d4-96de-dd3a84fb6d27> , <urn:uuid:7fa9fda9-d8ce-4253-9f05-5d9c528ba4d3> , <urn:uuid:bc36d2c7-78f6-49e6-bf9c-97e0132885f5> , <urn:uuid:56f8fbbd-c1e8-4dbf-a9b5-6a39a2420b77> , <urn:uuid:31722e06-41de-4737-9596-db4f77450563> ;
+        crm:P1_is_identified_by       <urn:uuid:370aa807-c0e4-4206-93cc-37f722f96639> , <urn:uuid:999b1534-f0b6-40f2-a6d8-e50781ca6b1d> ;
+        crm:P21_had_general_purpose   <urn:uuid:da84157c-11ca-47d2-a894-a2e4f4aa969e> ;
+        crm:P2_has_type               <urn:uuid:71c7f42f-3792-47d3-b192-b7b24061173d> ;
+        crm:P3_has_note               "IoT sensors embedded in the Smart Display Case collect time-stamped readings for temperature, relative humidity, illuminance, vibration/shock events, and access events (opening/closing status). Data are transmitted to the ARTEMIS platform via MQTT and RESTful APIs at intervals between 60 seconds and one reading per hour. An edge processing unit (ESP32 or Raspberry Pi) buffers data locally in case of connectivity loss. The operation runs continuously throughout the pilot period." ;
+        crm:P4_has_time-span          <urn:uuid:bb4c4c8e-fa84-4d50-ad25-ca3efe54211e> ;
+        crmdig:L10_had_input          <urn:uuid:ed4704c5-5d72-4960-8105-d78ae35b1928> , <urn:uuid:8e14a48f-5986-47f5-a92b-f5df41e050d9> , <urn:uuid:695952c8-e4ab-407a-b0c0-60107b475ec8> , <urn:uuid:1c716fdc-d5f7-417d-b794-db4b13e69228> , <urn:uuid:48f53e0d-47f4-4659-a585-a22426ac17b9> ;
+        crmdig:L11_had_output         <urn:uuid:56ca97d1-9e23-4394-b108-a2590cedafa7> , <urn:uuid:acb9ff25-6ce9-42cf-a8fc-3c146f845c68> ;
+        crmdig:L13_used_parameters    <urn:uuid:6469b36d-2ce0-4f15-9791-ce0f18825e3d> , <urn:uuid:ad46b92c-2fb0-4295-80c5-2905816ac11b> .
+
+<urn:uuid:666c9227-cf5a-4048-a43b-2cfc1a6ed924>
+        a       crm:E42_Identifier .
+
+<urn:uuid:9c055bac-34aa-4586-80b7-5e9db6ec89b3>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:4ce72682-75ac-43a8-9de3-60a3de6ecfc2>
+        a       crm:E42_Identifier .
+
+<urn:uuid:f25424c8-77ea-4dd0-9a65-4fa4116842d4>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:7f0d21f5-1e64-439f-8849-2e248f874533> ;
+        crm:P1_is_identified_by      <urn:uuid:954873ae-3ffb-466e-bfce-114f91d4d0a1> , <urn:uuid:54c6d568-704d-4997-b8c9-fbd2a123ccf4> ;
+        crm:P2_has_type              <urn:uuid:8e664d20-350b-40a5-b317-94b5f5cd620c> ;
+        crm:P3_has_note              "Structured feedback collected from curators and technical staff at mid-pilot and post-pilot stages." .
+
+<urn:uuid:2622f75a-144e-4bdf-9755-9f96e0f8dd34>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "Smart display case for CH protection, artemis_op_04_03, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:0cc483d2-6ed6-4161-893c-0afc3117fdd6> ;
+        crm:P1_is_identified_by      <urn:uuid:0c0659c9-6dfc-4a88-bc38-29acb102ca68> , <urn:uuid:23a711f6-2970-4b2e-9eaf-3205048dc98b> ;
+        crm:P2_has_type              <urn:uuid:e1c6a156-b5c7-4f1a-981f-d216817ae2f9> ;
+        crm:P3_has_note              "Documents the percentage of time microclimatic conditions remained within target thresholds (temperature ±1.5°C, humidity ±5%) over the monitoring period." .
+
+<urn:uuid:e107536e-515d-46b5-9875-0c22afc227d2>
+        a           crm:E41_Appellation ;
+        rdfs:label  "ARTEMIS IoT Viewer" .
+
+<urn:uuid:be0dd516-b31f-4b12-b844-3f77e1456284>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Raw temperature readings" .
+
+<urn:uuid:0f00d3c5-b338-4220-968a-151b4f031f8d>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Asset and contextual metadata from ARTEMIS Knowledge Base" .
+
+<urn:uuid:2e65b317-2ba8-481b-bdcc-292581bfa97e>
+        a           crm:E55_Type ;
+        rdfs:label  "Analysis Operation" .
+
+<urn:uuid:fba664d6-95b1-406f-bad4-5f28035c86e2>
+        a       crm:E42_Identifier .
+
+<urn:uuid:022992a7-8dd4-4596-aeac-3652adba1f5b>
+        a       crm:E42_Identifier .
+
+<urn:uuid:6dfaac00-4658-413f-83aa-3215099279d1>
+        a           crm:E55_Type ;
+        rdfs:label  "Alert Dataset" .
+
+<urn:uuid:bd77bf78-e2a8-4542-b9e9-583bae81d84e>
+        a       crm:E62_String .
+
+<urn:uuid:a9f9da46-59a8-4ad1-a26b-8c4045668fae>
+        a           crm:E41_Appellation ;
+        rdfs:label  "High-frequency environmental monitoring dataset" .
+
+<urn:uuid:82081cf3-67c5-4801-939a-b803f6fcded2>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor" .
+
+<urn:uuid:8007b75a-f264-4ced-b062-cd9a6635b7a6>
+        a           crm:E55_Type ;
+        rdfs:label  "Acquisition frequency" .
+
+<urn:uuid:3dceb818-94ef-4247-92bf-085e91dde608>
+        a           crm:E55_Type ;
+        rdfs:label  "Semantic Dataset" .
+
+artemis:artemis_CAW-06
+        a       crm:E42_Identifier .

@@ -1,0 +1,104 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:292fb9f4-bfd1-4da9-9ab2-4e3eac4d89d0>
+        a           aocat:AO_Concept ;
+        rdfs:label  "3D model integration" .
+
+<urn:uuid:9810bb41-7432-4432-a18c-adaff8692df3>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Real-time dashboard visualisation of IoT sensor data" .
+
+<urn:uuid:490e2b68-7838-42fb-8db7-ff399dbbff4b>
+        a           crm:E55_Type ;
+        rdfs:label  "Museum curators" .
+
+<https://artemis-twin.eu/entity/service//artemis_CAW-06>
+        a                            rhdto:HC21_Digital_Service ;
+        rdfs:label                   "ARTEMIS IoT Viewer" ;
+        rhdto:HP30_provided_by       <urn:uuid:b4797d6e-5bc2-4bcd-88a5-afc164b53f80> ;
+        crm:P102_has_title           <urn:uuid:7afb4cea-38c8-4091-b320-c3f5898f3700> ;
+        crm:P103_was_intended_for    <urn:uuid:490e2b68-7838-42fb-8db7-ff399dbbff4b> , <urn:uuid:c9440a5a-e027-4343-a83e-ff89778226c6> , <urn:uuid:4c3e90b6-65ee-4c18-a3a9-d00901dac133> , <urn:uuid:e3196499-72ba-4de0-9a3b-7cb9d8ac602f> ;
+        crm:P16i_was_used_for        <urn:uuid:1bc75a8b-8a00-451c-b1a5-04b92a5c1d0e> , <urn:uuid:a8fdac32-9bf4-4e7e-9735-337c64b4d815> ;
+        crm:P2_has_type              <urn:uuid:66ad9b9f-973a-4d48-85a0-c926301ad4c3> ;
+        crm:P3_has_note              "Browser-based visualisation and analytics service integrated with the ARTEMIS Knowledge Base and the IoT Time-Series NoSQL database. In Pilot 4, it provides curators and managers with real-time dashboard access to sensor readings and alerts, supports conservators in analysing environmental stability and degradation risk, and enables technical personnel to monitor system performance. When an RHDT is loaded in the Viewer, the system queries the Triple Store to retrieve semantic metadata associated with the selected heritage asset (AssetID, AssetName, AssetDescription, ResponsibleInstitution, reference to 3D model, linked IoT Nodes, contextual information). It also correlates current readings with historical monitoring data stored in the NoSQL database." ;
+        aocat:has_consumed_format    "application/json" , "application/ld+json" ;
+        aocat:has_consumed_media     "RDF (semantic metadata from Triple Store)" , "Time-series sensor data" ;
+        aocat:has_functionality      <urn:uuid:9810bb41-7432-4432-a18c-adaff8692df3> , <urn:uuid:123ebbe5-9a9f-4d28-b309-1caf73fc08e1> , <urn:uuid:66ad9b9f-973a-4d48-85a0-c926301ad4c3> , <urn:uuid:70b2bb93-593d-4878-936c-498a1e918df5> , <urn:uuid:e2de3974-947a-45e4-96bc-7a8de66e431c> , <urn:uuid:292fb9f4-bfd1-4da9-9ab2-4e3eac4d89d0> , <urn:uuid:7ece4ee9-cc04-4b41-b6d5-2df5953e991a> ;
+        aocat:has_produced_format    "text/html" ;
+        aocat:has_produced_media     "Web-based dashboard" ;
+        aocat:has_technical_support  <urn:uuid:4b4894ac-d859-4864-b69f-31b16d9299d6> .
+
+<urn:uuid:a8fdac32-9bf4-4e7e-9735-337c64b4d815>
+        a           crm:E7_Activity ;
+        rdfs:label  "Real-Time Digital Twin Synchronisation — Pilot 4 Smart Display Case (artemis_op_04_02)" .
+
+<urn:uuid:123ebbe5-9a9f-4d28-b309-1caf73fc08e1>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Semantic metadata retrieval from ARTEMIS Triple Store" .
+
+<urn:uuid:e2de3974-947a-45e4-96bc-7a8de66e431c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Historical monitoring data retrieval" .
+
+<urn:uuid:7afb4cea-38c8-4091-b320-c3f5898f3700>
+        a           crm:E35_Title ;
+        rdfs:label  "ARTEMIS IoT Viewer" .
+
+<urn:uuid:c9440a5a-e027-4343-a83e-ff89778226c6>
+        a           crm:E55_Type ;
+        rdfs:label  "Exhibition managers" .
+
+<urn:uuid:66ad9b9f-973a-4d48-85a0-c926301ad4c3>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Data Visualization" .
+
+<urn:uuid:4c3e90b6-65ee-4c18-a3a9-d00901dac133>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservators" .
+
+<urn:uuid:70b2bb93-593d-4878-936c-498a1e918df5>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Alert display and notification" .
+
+<urn:uuid:7ece4ee9-cc04-4b41-b6d5-2df5953e991a>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Digital Twin state visualisation" .
+
+<urn:uuid:b4797d6e-5bc2-4bcd-88a5-afc164b53f80>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "SEL" ;
+        aocat:has_name  "SEL" .
+
+<urn:uuid:1bc75a8b-8a00-451c-b1a5-04b92a5c1d0e>
+        a           crm:E7_Activity ;
+        rdfs:label  "Conservation Data Analysis and Dashboard Visualisation — Pilot 4 Smart Display Case (artemis_op_04_03)" .
+
+<urn:uuid:e3196499-72ba-4de0-9a3b-7cb9d8ac602f>
+        a           crm:E55_Type ;
+        rdfs:label  "Technical personnel" .
+
+<urn:uuid:4b4894ac-d859-4864-b69f-31b16d9299d6>
+        a       crm:E39_Actor , aocat:AO_Agent .

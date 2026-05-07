@@ -1,0 +1,94 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix nont:  <https://dlnarratives.eu/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<urn:uuid:068cb466-aa0b-4c05-b9cd-86142a91d65a>
+        a                            aocat:AO_Temporal_Region , crm:E52_Time-Span ;
+        rdfs:label                   "Late Orientalising Period - Southern Italy" ;
+        crm:P79_beginning_is_qualified_by
+                "-700" ;
+        crm:P80_end_is_qualified_by  "-600" ;
+        aocat:has_period             perio:p0qhb669wrm ;
+        aocat:from                   "-700" ;
+        aocat:until                  "-600" .
+
+<urn:uuid:c389953c-e050-4565-b807-3a1701991100>
+        a                           aocat:AO_Group , crm:E74_Group ;
+        rdfs:label                  "Museo Sigismondo Castromediano" ;
+        crm:P3_has_note             "The museum is managed by the Apulia Region. A Cooperation Agreement between the pilot leader SEL and the Apulia Region has been formalised to support the pilot activities." ;
+        aocat:has_agent_identifier  "Museo Sigismondo Castromediano" ;
+        aocat:has_name              "Museo Sigismondo Castromediano" .
+
+artemis:artemis_he_006
+        a                             crmhs:HS6_Study_Object , rhdto:HC3_Tangible_Entity , aocat:AO_Object , owl:Thing ;
+        rdfs:label                    "Bronze Tripod Basin from Oria (Inventory n. 2726, Museo Sigismondo Castromediano, Lecce)" ;
+        rhdto:HP11_was_made_by        <urn:uuid:3c38a0c4-8b69-4177-94fc-8b6c08c826a0> ;
+        rhdto:HP12_was_made_within    <urn:uuid:068cb466-aa0b-4c05-b9cd-86142a91d65a> ;
+        crm:P1_is_identified_by       <urn:uuid:e047305b-4990-444e-ab40-64694bcbb3e5> , <urn:uuid:0bbd54d0-c17d-4619-b365-42c72b265dd5> ;
+        crm:P2_has_type               aat:300045614 ;
+        crm:P3_has_note               "A bronze tripod basin dating to the late 7th century BC, originating from Oria, one of the most important fortified Messapian cities in Southern Italy. The artefact is characterised by a deep hemispherical vessel supported by three elongated legs with distinctive double-loop attachments, a structural feature typical of Etruscan craftsmanship. Stylistic and typological analysis links the basin to productions from the Etruscan city of Vetulonia, suggesting its inclusion in a broader distribution network extending from central-northern Etruria to the southern Adriatic regions. Although the exact context of discovery is uncertain, the excellent state of preservation suggests a possible funerary origin; however, the presence of a nearby sanctuary on Monte Papalucio, dedicated to a female deity comparable to Persephone and associated with votive offerings and sacrificial remains, introduces alternative interpretations related to ritual or sacred use. The basin represents a significant example of cross-cultural interaction between Etruscan and Messapian civilisations, providing valuable insight into trade networks, technological practices and symbolic functions of bronze artefacts in the early Iron Age Mediterranean context. The object shows visible signs of surface corrosion, a common condition for metal artefacts of this age. Bronze objects are particularly sensitive to relative humidity, temperature fluctuations and light exposure, all of which can accelerate oxidation and lead to material degradation. Dimensions: height 31 cm, diameter 22.5 cm."@en ;
+        crm:P45_consists_of           aat:300010957 ;
+        crm:P52_has_current_owner     <urn:uuid:c389953c-e050-4565-b807-3a1701991100> ;
+        crm:P55_has_current_location  <urn:uuid:a52f33c5-4769-467d-856c-4ccadaf51812> .
+
+aat:300010957  a               crm:E57_Material , aocat:AO_Concept , skos:Concept ;
+               rdfs:label      "bronze" ;
+               skos:prefLabel  "bronze" .
+
+aat:300045614  a               crm:E55_Type , aocat:AO_Concept , skos:Concept ;
+               rdfs:label      "basins (vessels)" ;
+               skos:prefLabel  "basins (vessels)" .
+
+<urn:uuid:0bbd54d0-c17d-4619-b365-42c72b265dd5>
+        a                              crm:E41_Appellation ;
+        rdfs:label                     "Bronze Tripod Basin" ;
+        crm:P190_has_symbolic_content  "Bronze Tripod Basin" .
+
+<urn:uuid:3c38a0c4-8b69-4177-94fc-8b6c08c826a0>
+        a                           aocat:AO_Group , crm:E74_Group ;
+        rdfs:label                  "Etruscan craftsmen (attributed, Vetulonia)" ;
+        crm:P3_has_note             "Stylistic and typological analysis links the basin to productions from the Etruscan city of Vetulonia. No individual maker is documented." ;
+        aocat:has_agent_identifier  "Etruscan craftsmen (attributed, Vetulonia)" ;
+        aocat:has_name              "Etruscan craftsmen (attributed, Vetulonia)" .
+
+<urn:uuid:e047305b-4990-444e-ab40-64694bcbb3e5>
+        a                              crm:E42_Identifier ;
+        rdfs:label                     "artemis_he_006" ;
+        crm:P190_has_symbolic_content  "artemis_he_006" .
+
+<urn:uuid:a52f33c5-4769-467d-856c-4ccadaf51812>
+        a                             aocat:AO_Spatial_Region_StdName , crm:E53_Place , aocat:AO_Spatial_Region_Point , aocat:AO_Spatial_Region ;
+        rdfs:label                    "Museo Sigismondo Castromediano, Lecce, Apulia, Italy" ;
+        crm:P168_place_is_defined_by  "40.3516, 18.1719" ;
+        aocat:has_latitude            "40.3516" ;
+        aocat:has_longitude           "18.1719" ;
+        aocat:has_country             geonames:3175395 ;
+        aocat:has_place_IRI           geonames:3171961 ;
+        aocat:has_place_name          "Museo Sigismondo Castromediano, Lecce, Apulia, Italy" .

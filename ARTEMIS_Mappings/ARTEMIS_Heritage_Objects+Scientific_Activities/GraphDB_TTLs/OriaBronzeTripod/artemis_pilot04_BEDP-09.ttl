@@ -1,0 +1,101 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:a518ba17-73dc-45f3-aaec-e917a8c430d1>
+        a           crm:E7_Activity ;
+        rdfs:label  "IoT Environmental and Security Monitoring — Pilot 4 Smart Display Case (artemis_op_04_01)" .
+
+<urn:uuid:661956c7-3140-4f03-b333-ecbe1c82bcad>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:6387cdcb-40b9-4100-a9c1-7bad6d62a66d>
+        a           crm:E35_Title ;
+        rdfs:label  "IoT Services" .
+
+<urn:uuid:49f34090-e2a4-45e0-b0fe-ebced5685bd6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Actuator-based protective response" .
+
+<urn:uuid:dee624e3-7c4e-4c25-85d1-3fba6f2a2795>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Anti-tampering event detection" .
+
+<urn:uuid:a5d1ca87-7c9f-4dc3-8a09-8466cee27c57>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Environmental anomaly detection" .
+
+<urn:uuid:e6624989-42ba-4be4-9733-673d3dd2521f>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservators" .
+
+<urn:uuid:d90fb439-3427-4ffa-8da1-96cd93fd42d6>
+        a           crm:E55_Type ;
+        rdfs:label  "Technical personnel" .
+
+<urn:uuid:8d73f2f7-cf6e-449e-83be-45e0170a9364>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Data transmission via MQTT and RESTful APIs" .
+
+<urn:uuid:85a86080-f889-4d66-8d3f-f77f4b8be902>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Edge data buffering" .
+
+<urn:uuid:215c2bb1-89bd-4097-a838-b18355af29b3>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Environmental Monitoring" .
+
+<urn:uuid:e3e53927-dced-4c77-a000-7af5db277846>
+        a           crm:E55_Type ;
+        rdfs:label  "Museum curators" .
+
+<urn:uuid:be688cce-6dcf-43f3-8cf8-9a85b16041ca>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "SEL" ;
+        aocat:has_name  "SEL" .
+
+<https://artemis-twin.eu/entity/service//artemis_BEDP-09>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "IoT Services" ;
+        rhdto:HP30_provided_by        <urn:uuid:be688cce-6dcf-43f3-8cf8-9a85b16041ca> ;
+        crm:P102_has_title            <urn:uuid:6387cdcb-40b9-4100-a9c1-7bad6d62a66d> ;
+        crm:P103_was_intended_for     <urn:uuid:e6624989-42ba-4be4-9733-673d3dd2521f> , <urn:uuid:d90fb439-3427-4ffa-8da1-96cd93fd42d6> , <urn:uuid:e3e53927-dced-4c77-a000-7af5db277846> ;
+        crm:P125_used_object_of_type  "Actuator (light modulation)" , "Vibration and shock sensor" , "Relative humidity sensor" , "Magnetic/reed switch" , "Actuator (ventilation damper)" , "Edge processing unit (ESP32 or Raspberry Pi)" , "Temperature sensor" , "Illuminance sensor" ;
+        crm:P16i_was_used_for         <urn:uuid:1c7191b9-8227-4e16-803a-e140dbf03c75> , <urn:uuid:a518ba17-73dc-45f3-aaec-e917a8c430d1> ;
+        crm:P2_has_type               <urn:uuid:215c2bb1-89bd-4097-a838-b18355af29b3> ;
+        crm:P3_has_note               "IoT-based service providing sensing and actuation capabilities for the ARTEMIS platform. In Pilot 4, it manages the continuous acquisition and transmission of environmental and security-related data from the Smart Display Case (temperature, relative humidity, illuminance, vibration, access events) via MQTT and RESTful APIs. It also governs actuator-based responses to threshold violations (e.g. light modulation, ventilation dampers) and supports edge buffering through embedded processing units (ESP32 or Raspberry Pi)." ;
+        aocat:has_consumed_format     "application/json" ;
+        aocat:has_consumed_media      "MQTT message" , "REST payload" ;
+        aocat:has_functionality       <urn:uuid:dee624e3-7c4e-4c25-85d1-3fba6f2a2795> , <urn:uuid:49f34090-e2a4-45e0-b0fe-ebced5685bd6> , <urn:uuid:215c2bb1-89bd-4097-a838-b18355af29b3> , <urn:uuid:8d73f2f7-cf6e-449e-83be-45e0170a9364> , <urn:uuid:85a86080-f889-4d66-8d3f-f77f4b8be902> , <urn:uuid:a5d1ca87-7c9f-4dc3-8a09-8466cee27c57> , <urn:uuid:7619bd01-8a24-4439-9ac3-0210c4b06d0d> ;
+        aocat:has_produced_format     "application/json" ;
+        aocat:has_produced_media      "Time-series sensor data" , "Alert events" , "System performance logs" ;
+        aocat:has_technical_support   <urn:uuid:661956c7-3140-4f03-b333-ecbe1c82bcad> .
+
+<urn:uuid:1c7191b9-8227-4e16-803a-e140dbf03c75>
+        a           crm:E7_Activity ;
+        rdfs:label  "Real-Time Digital Twin Synchronisation — Pilot 4 Smart Display Case (artemis_op_04_02)" .
+
+<urn:uuid:7619bd01-8a24-4439-9ac3-0210c4b06d0d>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Real-time IoT data acquisition" .

@@ -1,0 +1,113 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:acbc95df-4161-4ad8-8b16-22384ac1d101>
+        a           crm:E35_Title ;
+        rdfs:label  "Smart Display Case" .
+
+<urn:uuid:b9366a94-5225-4c99-809e-b4d86dbeb18e>
+        a           crm:E7_Activity ;
+        rdfs:label  "Real-Time Digital Twin Synchronisation — Pilot 4 Smart Display Case (artemis_op_04_02)" .
+
+<urn:uuid:4f297cb6-f4a3-4331-8f8c-60aced28603b>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Anti-tampering and unauthorised access detection" .
+
+<urn:uuid:d17a1738-cdfb-4779-af10-0fe4704429d8>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Environmental Monitoring" .
+
+<urn:uuid:c9af8991-e2d8-4520-ac91-6b85b162e13d>
+        a           crm:E55_Type ;
+        rdfs:label  "Technical personnel" .
+
+<urn:uuid:be3d0edb-97e4-4842-b11d-61cf719a239f>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Real-time data transmission to ARTEMIS platform" .
+
+<urn:uuid:da77c3cf-67c6-48b6-99b2-91c0bce64728>
+        a           crm:E7_Activity ;
+        rdfs:label  "IoT Environmental and Security Monitoring — Pilot 4 Smart Display Case (artemis_op_04_01)" .
+
+<urn:uuid:a54846c8-5bb8-4bd3-9e5d-0686a5ff68c5>
+        a           crm:E55_Type ;
+        rdfs:label  "Museum curators" .
+
+<urn:uuid:9c1acc26-16fd-49de-af8a-0435837f8f04>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "SEL" ;
+        aocat:has_name  "SEL" .
+
+<urn:uuid:509d1637-8241-4a0c-8fd0-7facf41b1148>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:dd6428a8-6c75-4f41-818d-1c473ea83cb2>
+        a                crm:E31_Document ;
+        rdfs:label       "ARTEMIS Project Deliverable D11.1 — Pilot 4: Smart Display Case for CH Protection, Section 5.4" ;
+        crm:P2_has_type  "Technical Specification" .
+
+<urn:uuid:1de6b043-4650-483d-a44a-e3da60686241>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Digital Twin integration" .
+
+<urn:uuid:ce45b50f-f114-4861-91f1-862f256c8071>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Edge data buffering" .
+
+<urn:uuid:39984b83-d975-47ee-bdaa-08042e414980>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservators" .
+
+<urn:uuid:65bc99e0-0fcd-4eba-8470-5ffd46c519a5>
+        a           crm:E55_Type ;
+        rdfs:label  "Exhibition managers" .
+
+<urn:uuid:1fb5a556-040d-48eb-818e-e423a38941ba>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Actuator-based protective response" .
+
+<urn:uuid:c818737a-ceb1-4a51-a952-e3104459de0e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Environmental condition monitoring and regulation" .
+
+<https://artemis-twin.eu/entity/service//artemis_SAI-01>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "Smart Display Case" ;
+        rhdto:HP30_provided_by        <urn:uuid:9c1acc26-16fd-49de-af8a-0435837f8f04> ;
+        crm:P102_has_title            <urn:uuid:acbc95df-4161-4ad8-8b16-22384ac1d101> ;
+        crm:P103_was_intended_for     <urn:uuid:a54846c8-5bb8-4bd3-9e5d-0686a5ff68c5> , <urn:uuid:c9af8991-e2d8-4520-ac91-6b85b162e13d> , <urn:uuid:39984b83-d975-47ee-bdaa-08042e414980> , <urn:uuid:65bc99e0-0fcd-4eba-8470-5ffd46c519a5> ;
+        crm:P125_used_object_of_type  "Magnetic/reed switch" , "Edge processing unit (ESP32 or Raspberry Pi)" , "Actuator (ventilation damper)" , "Vibration and shock sensor" , "Illuminance sensor" , "Actuator (light modulation)" , "Relative humidity sensor" , "Temperature sensor" ;
+        crm:P16i_was_used_for         <urn:uuid:b9366a94-5225-4c99-809e-b4d86dbeb18e> , <urn:uuid:da77c3cf-67c6-48b6-99b2-91c0bce64728> , <urn:uuid:807f3a3b-03bc-4bf7-bef9-f03cc6d76996> ;
+        crm:P2_has_type               <urn:uuid:d17a1738-cdfb-4779-af10-0fe4704429d8> ;
+        crm:P3_has_note               "Advanced museum-grade protective display system developed within Pilot 4. It integrates IoT sensors for humidity, temperature and lighting control alongside vandalism detection sensors to monitor shocks, unauthorised access and tampering attempts. Actuator-based protection mechanisms safeguard the displayed artefact. The case is fully integrated into the ARTEMIS platform via exposed REST services, enabling real-time monitoring, automated response and centralised management. The physical system is complemented by a Digital Twin (RHDT) that continuously mirrors the state of the case and its environment, enabling predictive maintenance, remote diagnostics and dynamic interaction with conservation experts, curators and AI-driven analytics. Dimensions: 82×65×200 cm overall; glass display area 70×50×50 cm." ;
+        crm:P70i_is_documented_in     <urn:uuid:dd6428a8-6c75-4f41-818d-1c473ea83cb2> ;
+        aocat:has_functionality       <urn:uuid:c818737a-ceb1-4a51-a952-e3104459de0e> , <urn:uuid:4f297cb6-f4a3-4331-8f8c-60aced28603b> , <urn:uuid:be3d0edb-97e4-4842-b11d-61cf719a239f> , <urn:uuid:1de6b043-4650-483d-a44a-e3da60686241> , <urn:uuid:ce45b50f-f114-4861-91f1-862f256c8071> , <urn:uuid:1fb5a556-040d-48eb-818e-e423a38941ba> , <urn:uuid:d17a1738-cdfb-4779-af10-0fe4704429d8> ;
+        aocat:has_produced_format     "application/json" ;
+        aocat:has_produced_media      "Time-series sensor data" , "System performance logs" , "Access event logs" ;
+        aocat:has_technical_support   <urn:uuid:509d1637-8241-4a0c-8fd0-7facf41b1148> .
+
+<urn:uuid:807f3a3b-03bc-4bf7-bef9-f03cc6d76996>
+        a           crm:E7_Activity ;
+        rdfs:label  "Conservation Data Analysis and Dashboard Visualisation — Pilot 4 Smart Display Case (artemis_op_04_03)" .
