@@ -1,0 +1,58 @@
+{
+  "service_id": "BESS-13",
+  "title": "Illumination Simulation Services",
+  "service_type": "Physically-based Lighting Simulation",
+  "description": "A microservices architecture providing backend infrastructure for the estimation of physically-based lighting computed on virtual sensors placed in an RHDT 3D environment. Depends on the Remote Rendering Services (RRS) for illumination calculation, scene management and illumination environment definition (sky luminance, luminaires, etc.). Capabilities include: interactive estimation of physically-based directional luminance and illuminance using state-of-the-art global illumination methods; support for multiple sensor types (point, disk, quadrilateral); easy-to-interpret photometric measurement readout compatible with physical sensor output. Implemented using hardware-based ray tracing via the NVIDIA OptiX framework. Requires an NVIDIA RTX GPU (recommended: RTX 5090 on Intel i9 with at least 32GB RAM). RRS and illumination simulation node provided by AUEB-RC as external to the main ARTEMIS infrastructure. REST API based on Node.js (v16+) with Express.js (v4.18+).",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "PHASMATIC"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "endpoint_methods": [
+        "GET",
+        "POST"
+      ],
+      "notes": "Node.js-based (v16+) HTTP/HTTPS web server with Express.js (v4.18+). JSON payload. Standardised endpoint routing."
+    }
+  ],
+  "intended_for": [
+    "Conservation scientists and heritage managers requiring quantitative assessment of light exposure on heritage materials",
+    "RHDT users needing virtual experimentation and 'what-if' scenario validation for lighting systems and exhibit placement"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_03 — Historical and Predictive Illumination Simulation: computing cumulative light dose on specific surfaces of the Japanese Tower using historical solar path data and the 3D model, and simulating the impact of future climate scenarios or environmental control interventions"
+    },
+    {
+      "activity_label": "operation_04 — Risk Assessment and Alerting: providing cumulative light exposure heatmaps as one of the three input data streams processed by the Risk Assessment Service"
+    }
+  ],
+  "used_physical_object_of_type": [
+    "Server with NVIDIA RTX GPU (recommended: RTX 5090) with hardware-based ray tracing via NVIDIA OptiX framework — provided by AUEB-RC",
+    "Intel i9 processor with at least 32GB RAM"
+  ],
+  "has_functionality": [
+    "Physically-based directional luminance and illuminance estimation using global illumination methods",
+    "Hardware-accelerated ray tracing via NVIDIA OptiX",
+    "Support for multiple virtual sensor types (point, disk, quadrilateral)",
+    "Photometric measurement readout compatible with physical sensor output",
+    "Scene management and illumination environment definition (sky luminance, luminaires)",
+    "Virtual experimentation and 'what-if' scenario analysis for lighting and exhibit placement"
+  ],
+  "composed_of": [
+    {
+      "sub_service_title": "Remote Rendering Service (AUEB-RC external RRS node)"
+    }
+  ],
+  "format_consumed": [
+    "model/gltf-binary",
+    "model/obj",
+    "application/json"
+  ],
+  "format_produced": [
+    "image/tiff",
+    "application/json"
+  ]
+}

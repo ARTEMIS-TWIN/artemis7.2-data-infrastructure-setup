@@ -1,0 +1,136 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:eb383d8d-73f4-4489-ac61-d9d77d7533f8>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of airborne particulate matter" .
+
+<urn:uuid:8deff163-5e18-435d-9637-d256633382b8>
+        a       rdfs:Literal .
+
+<urn:uuid:c8d6e10b-7641-4669-b45b-6d800d7f98f3>
+        a           crm:E55_Type ;
+        rdfs:label  "Other" .
+
+<urn:uuid:1a16598e-6e6c-4640-ba4e-e7d21bdd9a6d>
+        a           crm:E55_Type ;
+        rdfs:label  "REST API" .
+
+<urn:uuid:843ed76b-f1a3-4dab-8d84-295ec2d520dd>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of moisture content in exterior walls and surrounding soil" .
+
+<urn:uuid:52db7dbb-a5e8-435c-a068-8a35935e4709>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:1a16598e-6e6c-4640-ba4e-e7d21bdd9a6d> ;
+        crm:P3_has_note  "Artemis IoT Microservices RESTful endpoints for data transmission to the cloud-based platform." .
+
+<urn:uuid:769dcf56-db95-46ba-b5b5-160eed690f53>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Environmental Monitoring and IoT Data Collection" .
+
+<urn:uuid:db89d1a0-cde4-4d6f-a664-829d4f51b41e>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT systems requiring a continuous, multi-variable environmental data stream as input for predictive and simulation services" .
+
+<urn:uuid:7c3bf510-e711-457d-97a4-e4bfae77fc18>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of indoor air temperature and surface temperatures" .
+
+<urn:uuid:c1bd658f-afb5-4baa-b774-050e74ce458e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of wind-driven rain (WDR) on facades" .
+
+<urn:uuid:5e30cbd6-11b2-439d-b327-c7d67bb054ab>
+        a           crm:E35_Title ;
+        rdfs:label  "IoCT Services" .
+
+<urn:uuid:22d0679b-9322-4850-b534-4e76df9e96a6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Cloud data transmission via RESTful API and MQTT" .
+
+<urn:uuid:35a2a3f2-97e3-4494-a17d-ffd17073f960>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Local on-board data backup via flash memory" .
+
+<urn:uuid:b5ccc378-dc5b-48ba-9c7a-0b0d050a249a>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of relative humidity (RH)" .
+
+<urn:uuid:560d02b6-a176-4d04-ae55-cf4b9bfe0aad>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<https://artemis-twin.eu/entity/service//BEDP-07>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "IoCT Services" ;
+        rhdto:HP30_provided_by        <urn:uuid:c6614d89-6580-49cc-aa5d-72565e240a7a> ;
+        crm:P102_has_title            <urn:uuid:5e30cbd6-11b2-439d-b327-c7d67bb054ab> ;
+        crm:P103_was_intended_for     <urn:uuid:655a1c07-0592-484f-9e49-e16f7bfad193> , <urn:uuid:db89d1a0-cde4-4d6f-a664-829d4f51b41e> ;
+        crm:P125_used_object_of_type  "DHT22 temperature and humidity sensor" , "On-site meteorological weather station" , "LiPo battery" , "Adafruit TSL2591 light sensor" , "Commercial sensors for moisture content in exterior walls and surrounding soil" , "Sensirion SPS30 particulate matter sensor" , "DFRobot tipping bucket rain gauge" , "DFRobot Solar Power Manager" , "Commercial off-the-shelf temperature and humidity sensors" , "Custom KIK-IRPA IoT nodes (Seeedstudio Xiao ESP32-S3 and Arduino Nano RP2040 Connect)" , "Sensirion SCD30 CO2 sensor" , "Hydreon RG-15 optical rain gauge" , "LoRa/LoRaWAN transceiver (Wio-SX1262 or RFM95W)" ;
+        crm:P16i_was_used_for         <urn:uuid:d40a5ba9-cc45-45a6-9a2f-8a7a477b082f> ;
+        crm:P2_has_type               <urn:uuid:769dcf56-db95-46ba-b5b5-160eed690f53> ;
+        crm:P3_has_note               "A hybrid IoT data collection service combining custom-developed low-power sensor nodes (developed by KIK-IRPA) with commercial off-the-shelf solutions. Custom nodes are based on the Seeedstudio Xiao ESP32-S3 and Arduino Nano RP2040 Connect platforms, integrated with sensors including DHT22 (temperature, humidity), Adafruit TSL2591 (light), Sensirion SCD30 (CO2), Sensirion SPS30 (particulate matter) and various rain gauges (DFRobot tipping bucket, Hydreon RG-15 optical). Nodes are powered by LiPo batteries with DFRobot Solar Power Manager and include on-board flash memory for local data backup. Wireless communication uses built-in WiFi/Bluetooth expanded with LoRa/LoRaWAN transceivers (Wio-SX1262 or RFM95W). Also integrates commercial sensors for temperature, humidity and moisture content in exterior walls and surrounding soil, and standard on-site meteorological weather stations. All data streams transmitted to a cloud-based platform via RESTful services (Artemis IoT Microservices) and MQTT protocol. Firmware developed in Arduino IDE by KIK-IRPA." ;
+        aocat:has_consumed_format     "application/json" ;
+        aocat:has_functionality       <urn:uuid:88d20717-de96-4d58-9740-42cf2a39be94> , <urn:uuid:b5ccc378-dc5b-48ba-9c7a-0b0d050a249a> , <urn:uuid:769dcf56-db95-46ba-b5b5-160eed690f53> , <urn:uuid:843ed76b-f1a3-4dab-8d84-295ec2d520dd> , <urn:uuid:c1bd658f-afb5-4baa-b774-050e74ce458e> , <urn:uuid:ad77e9f9-d8e5-4f41-94c7-46e9ed88a2cb> , <urn:uuid:22d0679b-9322-4850-b534-4e76df9e96a6> , <urn:uuid:8156b893-0d86-4a21-9ea0-cee01e09cfb6> , <urn:uuid:7c3bf510-e711-457d-97a4-e4bfae77fc18> , <urn:uuid:11674eab-85d0-475d-82b8-046366fb1dd6> , <urn:uuid:eb383d8d-73f4-4489-ac61-d9d77d7533f8> , <urn:uuid:35a2a3f2-97e3-4494-a17d-ffd17073f960> ;
+        aocat:has_produced_format     "text/csv" , "application/json" ;
+        aocat:has_technical_support   <urn:uuid:560d02b6-a176-4d04-ae55-cf4b9bfe0aad> ;
+        aocat:is_accessible_at        <urn:uuid:8deff163-5e18-435d-9637-d256633382b8> , <urn:uuid:f430d537-890e-41b4-8714-10e85751c92c> .
+
+<urn:uuid:655a1c07-0592-484f-9e49-e16f7bfad193>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage building managers and conservation scientists requiring real-time, high-fidelity environmental monitoring of heritage assets" .
+
+<urn:uuid:8156b893-0d86-4a21-9ea0-cee01e09cfb6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of light levels (visual, infrared, ultraviolet)" .
+
+<urn:uuid:d40a5ba9-cc45-45a6-9a2f-8a7a477b082f>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_01 — Real-time IoT Environmental Monitoring: continuously acquiring indoor environmental data (temperature, RH, light levels, dust particles, CO2) and outdoor meteorological data from the Japanese Tower" .
+
+<urn:uuid:ad77e9f9-d8e5-4f41-94c7-46e9ed88a2cb>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Low-power wireless data transmission via LoRa/LoRaWAN" .
+
+<urn:uuid:29ffebf1-911e-4287-9715-9ee092354e72>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:c8d6e10b-7641-4669-b45b-6d800d7f98f3> ;
+        crm:P3_has_note  "MQTT protocol for efficient, low-latency publish-subscribe communication across all data sources." .
+
+<urn:uuid:11674eab-85d0-475d-82b8-046366fb1dd6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Standard meteorological data acquisition (temperature, RH, rainfall, wind direction, wind speed, solar radiation)" .
+
+<urn:uuid:88d20717-de96-4d58-9740-42cf2a39be94>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Measurement of CO2 concentrations" .
+
+<urn:uuid:c6614d89-6580-49cc-aa5d-72565e240a7a>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "Royal Institute for Cultural Heritage (KIK-IRPA)" ;
+        aocat:has_name  "Royal Institute for Cultural Heritage (KIK-IRPA)" .
+
+<urn:uuid:f430d537-890e-41b4-8714-10e85751c92c>
+        a       rdfs:Literal .

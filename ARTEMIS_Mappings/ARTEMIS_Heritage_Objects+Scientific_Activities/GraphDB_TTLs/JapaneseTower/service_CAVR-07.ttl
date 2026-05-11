@@ -1,0 +1,128 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:dc374632-d59e-4b80-adc2-8a3caad81cbe>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Interactive collaborative selection of simulation parameters and spatial/temporal contexts" .
+
+<https://artemis-twin.eu/entity/service//CAVR-07>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "VR Collaborative Environment" ;
+        rhdto:HP30_provided_by        <urn:uuid:cfcb4024-41eb-4c46-aa25-5df36fc2fec0> ;
+        crm:P102_has_title            <urn:uuid:7d7e98f7-bc43-48c4-95f5-3dcd6159c443> ;
+        crm:P103_was_intended_for     <urn:uuid:4619b260-3c67-40ec-990a-de9bf8843e13> , <urn:uuid:c7c722ce-6b59-4b5a-9899-b99cab7d5bb7> , <urn:uuid:409c375d-4fe1-434c-a979-39d963e94b7c> , <urn:uuid:32eb0ff2-0b41-4ea7-bb53-694686d4b437> ;
+        crm:P125_used_object_of_type  "Standard workstation or laptop with reliable internet connectivity" , "Secure project cloud infrastructure for hosting REST API simulation microservices, 3D models and simulation outputs" , "Meta Quest 3 VR headset (standalone or tethered mode)" ;
+        crm:P16i_was_used_for         <urn:uuid:509477ca-4566-4e05-8928-ce219d11f471> ;
+        crm:P2_has_type               <urn:uuid:a8e72c89-78b9-4bdf-a7aa-f795628cfc42> ;
+        crm:P3_has_note               "A collaborative VR environment developed in Unity and accessed via Meta Quest 3 headsets, in which all input JSON payloads for ARTEMIS simulation microservices are generated interactively. Allows expert trainers and learners (e.g. university students, professionals in training) to jointly select simulation parameters, define spatial and temporal contexts and visualise simulation outputs in real time. Supports immersive exploration of the RHDT, interactive scenario simulation, and collaborative annotation and discussion of 3D environments and data layers. Compatible with .glb 3D models. Hosted on a secure project cloud environment. No third-party commercial licences required for the simulation microservices." ;
+        aocat:has_consumed_format     "application/json" , "model/gltf-binary" ;
+        aocat:has_functionality       <urn:uuid:c757e8b4-7eef-45b6-9b25-bcde090b4136> , <urn:uuid:dc374632-d59e-4b80-adc2-8a3caad81cbe> , <urn:uuid:39f0c362-31ac-4d05-8911-694821996bb9> , <urn:uuid:d4803033-4d13-48d7-a65e-83365ef9c29e> , <urn:uuid:a8e72c89-78b9-4bdf-a7aa-f795628cfc42> , <urn:uuid:566164a6-7bd0-4f43-8c70-4c539ff1a754> , <urn:uuid:064a22ee-fb66-4d98-824a-ac0c1b2822e8> , <urn:uuid:112fa7b6-e5a0-4789-9b98-126323ccd8cb> ;
+        aocat:has_produced_format     "application/json" ;
+        aocat:has_technical_support   <urn:uuid:0a460a0d-cd4a-43a7-aae0-962968327174> ;
+        aocat:is_accessible_at        <urn:uuid:b505ab40-5bba-4df4-8eb1-28108a831912> , <urn:uuid:681e0ade-3978-4bce-ac37-6e3ae43ecf9d> .
+
+<urn:uuid:cfcb4024-41eb-4c46-aa25-5df36fc2fec0>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "Pixelated Realities" ;
+        aocat:has_name  "Pixelated Realities" .
+
+<urn:uuid:681e0ade-3978-4bce-ac37-6e3ae43ecf9d>
+        a       rdfs:Literal .
+
+<urn:uuid:566164a6-7bd0-4f43-8c70-4c539ff1a754>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Multi-user collaborative sessions with simultaneous visualisation and annotation" .
+
+<urn:uuid:409c375d-4fe1-434c-a979-39d963e94b7c>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservation scientists and heritage researchers requiring immersive collaborative review of 3D heritage models and multi-layer environmental data" .
+
+<urn:uuid:0a460a0d-cd4a-43a7-aae0-962968327174>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:c757e8b4-7eef-45b6-9b25-bcde090b4136>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Virtual testing and validation of adaptation strategies using realistic climate data" .
+
+<urn:uuid:4619b260-3c67-40ec-990a-de9bf8843e13>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage managers presenting evidence-based conservation cases to non-expert audiences" .
+
+<urn:uuid:064a22ee-fb66-4d98-824a-ac0c1b2822e8>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Real-time visualisation of simulation outputs within the VR environment" .
+
+<urn:uuid:52c452d1-3bd3-48b6-a32c-d9590917eff6>
+        a           crm:E55_Type ;
+        rdfs:label  "REST API" .
+
+<urn:uuid:d4803033-4d13-48d7-a65e-83365ef9c29e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Support for repeatable, controlled data streams for professional training and demonstration" .
+
+<urn:uuid:509477ca-4566-4e05-8928-ce219d11f471>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: enabling collaborative multi-user VR sessions where users simultaneously visualise and annotate multiple data layers on the 3D model of the Japanese Tower; supporting narrative-driven public disclosure and expert scenario prototyping" .
+
+<urn:uuid:b505ab40-5bba-4df4-8eb1-28108a831912>
+        a       rdfs:Literal .
+
+<urn:uuid:b920c4b0-e0be-46c5-b00f-3128d06196d0>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:52c452d1-3bd3-48b6-a32c-d9590917eff6> ;
+        crm:P3_has_note  "Integration with REST API-based simulation microservices hosted on secure project cloud infrastructure. Also accessible from standard workstations/PCs for 3D model interaction, dashboard access and simulation control." .
+
+<urn:uuid:32eb0ff2-0b41-4ea7-bb53-694686d4b437>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservation engineers and architects using the VR environment as a virtual sandbox for prototyping environmental interventions" .
+
+<urn:uuid:c7c722ce-6b59-4b5a-9899-b99cab7d5bb7>
+        a           crm:E55_Type ;
+        rdfs:label  "General public accessing immersive narrative experiences of the Japanese Tower" .
+
+<urn:uuid:7d7e98f7-bc43-48c4-95f5-3dcd6159c443>
+        a           crm:E35_Title ;
+        rdfs:label  "VR Collaborative Environment" .
+
+<urn:uuid:39f0c362-31ac-4d05-8911-694821996bb9>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Guided narrative discovery for general public" .
+
+<urn:uuid:112fa7b6-e5a0-4789-9b98-126323ccd8cb>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Immersive VR exploration of RHDT 3D environments via Meta Quest 3" .
+
+<urn:uuid:b28dd59c-3fd5-4e7a-9879-15c41648f829>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:4b34c438-9095-4a9b-9db0-d179bcf22a5a> ;
+        crm:P3_has_note  "Accessed via Meta Quest 3 VR headsets (standalone or tethered mode)." .
+
+<urn:uuid:4b34c438-9095-4a9b-9db0-d179bcf22a5a>
+        a           crm:E55_Type ;
+        rdfs:label  "Other" .
+
+<urn:uuid:a8e72c89-78b9-4bdf-a7aa-f795628cfc42>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Immersive Collaborative Visualisation" .

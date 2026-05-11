@@ -1,0 +1,46 @@
+{
+  "service_id": "BEDP-03",
+  "title": "Annotation Service",
+  "service_type": "Collaborative Annotation",
+  "description": "A service enabling users to add persistent, structured or free-text annotations to information entities such as digital assets, documents or metadata records. Annotations can include comments, tags or references and are stored in a format supporting reuse and semantic integration. The service supports collaborative work, allowing multiple users to annotate the same entity simultaneously. Hosted as a RESTful API on a Docker-compatible web server with a database backend (e.g. PostgreSQL) and optional OAuth2 authentication.",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "HOF"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "endpoint_methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "notes": "RESTful API on a standard Docker-compatible web server. Database backend (e.g. PostgreSQL). Optional OAuth2 authentication."
+    }
+  ],
+  "intended_for": [
+    "Conservation scientists, heritage professionals and researchers requiring collaborative knowledge capture on digital content",
+    "RHDT pilot users performing structured annotation of 3D models, documents and datasets"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: enabling expert users to create persistent annotations on the 3D model of the Japanese Tower, linking heritage documentation and analytical evidence to specific spatial locations"
+    }
+  ],
+  "has_functionality": [
+    "Addition of persistent structured or free-text annotations to digital assets, documents and metadata",
+    "Support for comments, tags and references as annotation types",
+    "Collaborative multi-user annotation of the same entity",
+    "Semantic storage format supporting reuse and knowledge graph integration",
+    "Transparency, traceability and long-term knowledge preservation",
+    "Cross-pilot knowledge sharing"
+  ],
+  "format_consumed": [
+    "application/json"
+  ],
+  "format_produced": [
+    "application/json",
+    "application/ld+json"
+  ]
+}

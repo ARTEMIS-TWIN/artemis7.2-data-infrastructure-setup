@@ -1,0 +1,261 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+
+<urn:uuid:657160e5-a1a2-466c-8a2a-b2fa4f312b35>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Fourier Transform Infrared Spectroscopy (FTIR)" ;
+        crm:P3_has_note  "Used for identification of organic binders and lacquer components." .
+
+<urn:uuid:1e465c8d-4b19-44a8-985f-c32e584bb9ad>
+        a           crmhs:HS8_Study_Object_Area ;
+        rdfs:label  "Carved columns, second floor" ;
+        crmhs:HSP17i_is_area_of_interest_of
+                "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+artemis:artemis_he_007
+        a           aocat:AO_Object , rhdto:HC3_Tangible_Entity , crmhs:HS6_Study_Object , crmhs:HS2_Heritage_Science_Object ;
+        rdfs:label  "Interior decorations of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:ac48d4f5-2271-44ec-9a0d-1d6f13a4d208>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Françoise Urban" ;
+        aocat:has_name  "Françoise Urban" .
+
+<urn:uuid:35200215-25eb-468c-95a5-ffc899d8789b>
+        a           crm:E55_Type ;
+        rdfs:label  "Scientific paper" .
+
+<urn:uuid:b6157c50-3188-407b-95ad-941b34eb60f5>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Scanning Electron Microscopy with Energy Dispersive X-ray Analysis (SEM-EDX)" ;
+        crm:P3_has_note  "Used for elemental characterisation of pigments and metallic components in the lacquer layers." .
+
+<urn:uuid:1004a6f2-6e62-4821-b418-bc59adefabd2>
+        a                aocat:AO_Person , crm:E21_Person ;
+        rdfs:label       "Delphine Mesmaeker" ;
+        crm:P107i_is_current_or_former_member_of
+                "Asian Lacquer and Polychrome Sculpture, Saintes, Belgium" ;
+        aocat:has_email  "delphinemesmaeker@gmail.com" ;
+        aocat:has_name   "Delphine Mesmaeker" .
+
+<urn:uuid:38ae6a1f-a1c1-4114-a3e7-10f1dcb28fc8>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Rapport d'analyse: Etude des materiaux et techniques des couches picturales (Sanyova, J., 2013, KIK-IRPA, unpublished)" ;
+        crm:P2_has_type  <urn:uuid:8a9d8221-3d0b-45c3-89b4-8dfbe3d9fb0f> .
+
+<urn:uuid:12184209-703a-44b9-891f-6deed587150c>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Ann Verdonck" ;
+        crm:P107i_is_current_or_former_member_of
+                "Fenikx bvba" ;
+        aocat:has_name  "Ann Verdonck" .
+
+<urn:uuid:a54555bb-6550-465a-b026-9ca1272a815b>
+        a           crmhs:HS8_Study_Object_Area ;
+        rdfs:label  "Upper floors (floors 1–5), Japanese Tower, Royal Castle Domain, Laeken" ;
+        crmhs:HSP17i_is_area_of_interest_of
+                "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:adce831e-4d88-4453-9eba-31aa1e1ed85b>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Jana Sanyova" ;
+        crm:P107i_is_current_or_former_member_of
+                "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium" ;
+        aocat:has_name  "Jana Sanyova" .
+
+<urn:uuid:acfb919e-9113-4901-b60a-0928fa65f37f>
+        a           crm:E35_Title ;
+        rdfs:label  "The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium" .
+
+<urn:uuid:58c1aa33-a0c2-499d-bc4b-3fdc063b570c>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "Belgian Buildings Agency (Regie der Gebouwen)" .
+
+<urn:uuid:d11b6cce-30a4-488b-9b9b-8fd69147ca6d>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Rosemie Cheroutre" ;
+        aocat:has_name  "Rosemie Cheroutre" .
+
+<urn:uuid:d25e2cc6-479e-4eb2-a063-e910fd137a57>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Laeken Japanse toren materiaaltechnisch onderzoek (unpublished technical report)" ;
+        crm:P2_has_type  <urn:uuid:4aeab15e-535e-4335-aeb7-6a3848dee9b7> .
+
+<urn:uuid:4aeab15e-535e-4335-aeb7-6a3848dee9b7>
+        a           crm:E55_Type ;
+        rdfs:label  "Unpublished technical report" .
+
+<https://www.wikidata.org/wiki/Q816280>
+        a                     aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium" ;
+        aocat:has_country     geonames:2802361 ;
+        aocat:has_place_name  "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium" .
+
+<urn:uuid:93230734-6fd6-4a60-b9f3-e33b32224e8d>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Optical microscopy" ;
+        crm:P3_has_note  "Used for visual examination of decorative layers and identification of lacquer techniques." .
+
+<urn:uuid:6805b389-e178-4b25-bb1c-df64bde45971>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "High-Performance Liquid Chromatography with Diode-Array Detection (HPLC-DAD)" ;
+        crm:P3_has_note  "Used for identification of organic colorants and dyes in the lacquer layers." .
+
+<urn:uuid:d4c9683c-9dc6-4f59-b5b3-fb6b4d2497bc>
+        a           crmhs:HS8_Study_Object_Area ;
+        rdfs:label  "Sliding door frames, multiple floors" ;
+        crmhs:HSP17i_is_area_of_interest_of
+                "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<https://doi.org/10.1080/00393630.2016.1227053>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium" ;
+        crm:P2_has_type  <urn:uuid:35200215-25eb-468c-95a5-ffc899d8789b> .
+
+<urn:uuid:08655aca-ba0f-4d33-b8bb-39b7b3f022c3>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Marjolein Deceuninck" ;
+        crm:P107i_is_current_or_former_member_of
+                "Fenikx bvba" ;
+        aocat:has_name  "Marjolein Deceuninck" .
+
+<urn:uuid:f1c7d716-b698-4e35-947e-23c046d536b0>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Marc Vermeulen" ;
+        crm:P107i_is_current_or_former_member_of
+                "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium" ;
+        aocat:has_name  "Marc Vermeulen" .
+
+<urn:uuid:c79808ca-3e8f-413a-836e-6e0be490c517>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "William Coaldrake" .
+
+<urn:uuid:8a9d8221-3d0b-45c3-89b4-8dfbe3d9fb0f>
+        a           crm:E55_Type ;
+        rdfs:label  "Unpublished technical report" .
+
+<urn:uuid:808edbf6-e537-4894-b475-237a43e1226c>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Sophie Robyns" ;
+        aocat:has_name  "Sophie Robyns" .
+
+<urn:uuid:329e3f30-7838-4c44-873a-7ba1565a3290>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Shigeru Kubodera" .
+
+<urn:uuid:3e35c53b-4144-4c5e-bfec-ec6c6ece6a28>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Archival research" ;
+        crm:P3_has_note  "Comparison between archival sources (Royal Palace Archives Brussels, documentary collection no. 586) and in situ observations to establish the history and construction of the tower's decoration." .
+
+geonames:2802361  a  crm:E62_String ;
+        rdfs:label  "https://www.geonames.org/2802361" .
+
+<urn:uuid:de70cd0d-b120-44ab-9599-9c3d9cbb93f1>
+        a           crmhs:HS8_Study_Object_Area ;
+        rdfs:label  "Large wall panels, second floor" ;
+        crmhs:HSP17i_is_area_of_interest_of
+                "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:dfb471af-c9e4-4395-9935-2e069669ceff>
+        a                            crm:E52_Time-Span ;
+        rdfs:label                   "2010-09-2013-11" ;
+        crm:P79_beginning_is_qualified_by
+                "2010-09" ;
+        crm:P80_end_is_qualified_by  "2013-11" ;
+        aocat:from                   "2010-09" ;
+        aocat:until                  "2013-11" .
+
+<urn:uuid:f1b9ac51-d912-4bb0-8c45-acc2793ef069>
+        a           crmhs:HS8_Study_Object_Area ;
+        rdfs:label  "Doors, pillars and large panels, multiple floors" ;
+        crmhs:HSP17i_is_area_of_interest_of
+                "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:97132143-fc6e-4a24-a81e-b76c1ca09971>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "In situ architectural and material survey" ;
+        crm:P3_has_note  "Systematic in situ examination of decorative elements floor by floor, leading to technique identification, mapping, and damage recording." .
+
+<urn:uuid:ac5637f4-7ce2-4792-af2b-102d4eed289f>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Marianne Decroly" ;
+        aocat:has_name  "Marianne Decroly" .
+
+<urn:uuid:c4847350-93c1-4dc8-a043-8046a669d823>
+        a           crm:E21_Person , aocat:AO_Person ;
+        rdfs:label  "Yoshihiko Yamashita" .
+
+<urn:uuid:e5439e5f-7f6d-4117-b312-e5dd28eae97d>
+        a                   crm:E74_Group , aocat:AO_Group ;
+        rdfs:label          "Royal Institute for Cultural Heritage (KIK-IRPA)" ;
+        aocat:has_homepage  "https://www.kikirpa.be" .
+
+<urn:uuid:9d01cf85-21f7-4803-8613-74fed90f689c>
+        a                     aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" ;
+        aocat:has_country     geonames:2802361 ;
+        aocat:has_place_name  "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:5c87d139-1fa6-4ffa-ab0e-bfaadb70d419>
+        a           crmhs:HS8_Study_Object_Area ;
+        rdfs:label  "Carved columns, third floor" ;
+        crmhs:HSP17i_is_area_of_interest_of
+                "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:cdfe1a2e-fdc7-454e-bbfb-155a53c1479b>
+        a           crm:E55_Type ;
+        rdfs:label  "Multi-technique (optical microscopy, SEM-EDX, FTIR, HPLC-DAD, Py-GC-MS); archival research; in situ material and architectural survey" .
+
+artemis:analysis1786EA53-F4F2-430D-B3A8-D088D262D541
+        a                              crmhs:HS3_Analysis ;
+        rdfs:label                     "The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium" ;
+        crmhs:HSP16_produced_dataset   <urn:uuid:d25e2cc6-479e-4eb2-a063-e910fd137a57> , <https://doi.org/10.1080/00393630.2016.1227053> , <urn:uuid:38ae6a1f-a1c1-4114-a3e7-10f1dcb28fc8> ;
+        crmhs:HSP1_has_activity_title  <urn:uuid:acfb919e-9113-4901-b60a-0928fa65f37f> ;
+        crmhs:HSP2_was_performed_on    artemis:artemis_he_007 ;
+        crmhs:HSP4_analysed            <urn:uuid:a54555bb-6550-465a-b026-9ca1272a815b> , <urn:uuid:d4c9683c-9dc6-4f59-b5b3-fb6b4d2497bc> , <urn:uuid:de70cd0d-b120-44ab-9599-9c3d9cbb93f1> , <urn:uuid:f1b9ac51-d912-4bb0-8c45-acc2793ef069> , <urn:uuid:1e465c8d-4b19-44a8-985f-c32e584bb9ad> , <urn:uuid:5c87d139-1fa6-4ffa-ab0e-bfaadb70d419> ;
+        crmhs:HSP6_used_method         <urn:uuid:93230734-6fd6-4a60-b9f3-e33b32224e8d> , <urn:uuid:24e76a6c-e42a-49de-8f0d-6902e01a409c> , <urn:uuid:97132143-fc6e-4a24-a81e-b76c1ca09971> , <urn:uuid:b6157c50-3188-407b-95ad-941b34eb60f5> , <urn:uuid:6805b389-e178-4b25-bb1c-df64bde45971> , <urn:uuid:3e35c53b-4144-4c5e-bfec-ec6c6ece6a28> , <urn:uuid:657160e5-a1a2-466c-8a2a-b2fa4f312b35> ;
+        crm:P11_had_participant        <urn:uuid:58c1aa33-a0c2-499d-bc4b-3fdc063b570c> , <urn:uuid:c4847350-93c1-4dc8-a043-8046a669d823> , <urn:uuid:c79808ca-3e8f-413a-836e-6e0be490c517> , <urn:uuid:329e3f30-7838-4c44-873a-7ba1565a3290> , <urn:uuid:e5439e5f-7f6d-4117-b312-e5dd28eae97d> , <urn:uuid:d6b51bc2-4681-4245-bc48-f73f4f71563c> ;
+        crm:P14_carried_out_by         <urn:uuid:ac5637f4-7ce2-4792-af2b-102d4eed289f> , <urn:uuid:f1c7d716-b698-4e35-947e-23c046d536b0> , <urn:uuid:adce831e-4d88-4453-9eba-31aa1e1ed85b> , <urn:uuid:1004a6f2-6e62-4821-b418-bc59adefabd2> , <urn:uuid:08655aca-ba0f-4d33-b8bb-39b7b3f022c3> , <urn:uuid:ac48d4f5-2271-44ec-9a0d-1d6f13a4d208> , <urn:uuid:12184209-703a-44b9-891f-6deed587150c> , <urn:uuid:d11b6cce-30a4-488b-9b9b-8fd69147ca6d> , <urn:uuid:808edbf6-e537-4894-b475-237a43e1226c> , <urn:uuid:8c06bb61-dca0-4316-a1da-9d3ec675131f> ;
+        crm:P2_has_type                <urn:uuid:cdfe1a2e-fdc7-454e-bbfb-155a53c1479b> ;
+        crm:P3_has_note                "Multidisciplinary study of the upper floors (1–5) of the Japanese Tower at the Royal Castle Domain in Laeken, Brussels, carried out by Fenikx bvba between September 2010 and November 2013, at the request of the Belgian Buildings Agency. The research combined archival research, in situ architectural and material survey, and scientific analysis. It led to the identification of decorative techniques and materials used in each decorative element, which were mapped for future conservation reference, and to the compilation of a detailed damage record. A significant variety of Japanese lacquer techniques was identified: monochrome lacquer (black, red, green, yellow), nashiji, maki-e, takamaki-e, and the architectural technique ikkei saishiki. Scientific analysis identified urushi lacquer (with additives including plant juice and perilla oil) in the upper coloured layers, and a mixture of proteinaceous binder with urushi in the ground layers. Red lacquer layers were pigmented with mercury sulphide (HgS); green seishitsu urushi on the second floor was pigmented with a mixture of Prussian blue and artificial orpiment (as confirmed by Vermeulen et al. 2015). Nashiji decoration on the third floor revealed tin flakes sprinkled on a layer of red lacquer. International experts (Prof. William Coaldrake, Shigeru Kubodera, Yoshihiko Yamashita) were consulted in 2011–2012. The study also informed the development of a preservation plan for the interior decoration." ;
+        crm:P4_has_time-span           <urn:uuid:dfb471af-c9e4-4395-9935-2e069669ceff> ;
+        crm:P7_took_place_at           <urn:uuid:9d01cf85-21f7-4803-8613-74fed90f689c> , <https://www.wikidata.org/wiki/Q816280> .
+
+<urn:uuid:8c06bb61-dca0-4316-a1da-9d3ec675131f>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Etienne Costa" ;
+        aocat:has_name  "Etienne Costa" .
+
+<urn:uuid:d6b51bc2-4681-4245-bc48-f73f4f71563c>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "Fenikx bvba" .
+
+<urn:uuid:24e76a6c-e42a-49de-8f0d-6902e01a409c>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Pyrolysis Gas Chromatography-Mass Spectrometry (Py-GC-MS)" ;
+        crm:P3_has_note  "Used for identification of organic binders including urushi, plant juice, perilla oil, and proteinaceous materials. Samples pyrolyzed at 550°C for 12 sec with TMAH 2.5% in MeOH." .

@@ -1,0 +1,121 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:3d4cb801-5e2b-4076-972a-3385ceaf3d79>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: rendering the 3D models of the Japanese Tower ('as-is' and 'as-built') within the RHDT platform and overlaying environmental data layers" .
+
+<urn:uuid:76b04ef1-2f13-4d34-8dce-5fa5f145aebf>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "3D Visualisation and Collaboration" .
+
+<urn:uuid:fa4be445-df46-4275-b1cf-277a73d2f76d>
+        a           crm:E55_Type ;
+        rdfs:label  "Expert users requiring remote, real-time collaborative work on 3D representations of heritage assets" .
+
+<urn:uuid:aa8ab43e-93cf-412f-9634-0b3249a92bdc>
+        a           aocat:AO_Concept ;
+        rdfs:label  "RHDT project resolution into entity instances (3D models, annotations, actors)" .
+
+<urn:uuid:9d295fa7-bf14-408b-812b-5303e1f9ead5>
+        a       rdfs:Literal .
+
+<urn:uuid:fa516a66-590d-4944-8a30-11f2db7bbeb4>
+        a           aocat:AO_Concept ;
+        rdfs:label  "3D annotations (highlighting, sticky notes, comments) via ARTEMIS Annotation Services BEAS-01" .
+
+<urn:uuid:67007483-7556-4fe8-a979-9a77f9560120>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Realistic visualisation and illumination of 3D results" .
+
+<urn:uuid:a119fa91-6413-412a-bd64-89a18d9af829>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:8626c670-c5b1-4045-bed1-530718cfc1f5> ;
+        crm:P3_has_note  "Integration with ARTEMIS cloud data and services including authentication and data management." .
+
+<urn:uuid:bc52b05f-f90d-4360-8bc8-a5124ecf5139>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:d4f6b1ed-0775-441d-9bbe-cf83712dd22f> ;
+        crm:P3_has_note  "Browser-based WebGL 2 rendering interface. Compatible GPU with WebGL 2 support required on the client side." .
+
+<urn:uuid:054f7836-501f-4aa4-a913-48d414d6295a>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage scientists and conservators engaged in collaborative 3D model inspection and annotation" .
+
+<urn:uuid:f0bad61f-9fcd-44ce-b0a9-d2c92f21deea>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "PHASMATIC" ;
+        aocat:has_name  "PHASMATIC" .
+
+<urn:uuid:6059f065-95d5-44c7-8c94-c3c19e396fee>
+        a           crm:E55_Type ;
+        rdfs:label  "Users of RHDT pilots requiring 3D visualisation with multi-user access" .
+
+<urn:uuid:e85825cb-efae-4bc9-83ee-ccf25dee5408>
+        a           aocat:AO_Concept ;
+        rdfs:label  "3D format conversion and Level of Detail (LOD) processing for geometry optimisation" .
+
+<urn:uuid:909838a2-0112-4111-b80b-3483210db0e2>
+        a       rdfs:Literal .
+
+<urn:uuid:40eb9080-041a-4e83-8a84-59d5223e664a>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Server-side remote rendering for large fragment collections and thin clients" .
+
+<urn:uuid:bd8418bd-ec31-418c-a140-5b82965c5e49>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Client-side WebGL 2 rendering of 3D models" .
+
+<https://artemis-twin.eu/entity/service//CAW-01>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "Phasma3D Viewer" ;
+        rhdto:HP30_provided_by        <urn:uuid:f0bad61f-9fcd-44ce-b0a9-d2c92f21deea> ;
+        crm:P102_has_title            <urn:uuid:84f135c2-fcb3-4029-ae7a-31afa20a4b14> ;
+        crm:P103_was_intended_for     <urn:uuid:6059f065-95d5-44c7-8c94-c3c19e396fee> , <urn:uuid:054f7836-501f-4aa4-a913-48d414d6295a> , <urn:uuid:fa4be445-df46-4275-b1cf-277a73d2f76d> ;
+        crm:P106_is_composed_of       "Remote Rendering Service (AUEB-RC external RRS node)" , "Annotation Service (BEAS-01 / BEDP-03)" ;
+        crm:P125_used_object_of_type  "Desktop or laptop computer with modern GPU supporting WebGL 2" , "Server with min. 8 CPU cores (Intel i7/i9), min. 32GB RAM, min. 500GB storage for remote rendering" , "Server with NVIDIA RTX class GPU (min. 12GB VRAM, DLSS and OptiX denoiser support; indicative: RTX4090, RTX5090) for remote rendering — provided by AUEB-RC" ;
+        crm:P16i_was_used_for         <urn:uuid:3d4cb801-5e2b-4076-972a-3385ceaf3d79> ;
+        crm:P2_has_type               <urn:uuid:76b04ef1-2f13-4d34-8dce-5fa5f145aebf> ;
+        crm:P3_has_note               "A collaborative 3D visualisation environment that resolves an RHDT project into its constituent entity instances (3D models, annotations, actor information) and renders them in a browser-based interface. Supports both client-side rendering via WebGL for mid-/high-tier devices and server-side remote rendering for large fragment collections and thin clients, enabling realistic illumination of results compatible with physical inspection. Includes 3D annotation tools (via ARTEMIS Annotation Services BEAS-01), geometry optimisation with Level of Detail (LOD) processing for 3D format conversion, and collaborative multi-user interaction. Server-side rendering is provided by AUEB-RC as an external Remote Rendering Server node." ;
+        aocat:has_consumed_format     "model/gltf-binary" , "application/json" ;
+        aocat:has_functionality       <urn:uuid:bd8418bd-ec31-418c-a140-5b82965c5e49> , <urn:uuid:40eb9080-041a-4e83-8a84-59d5223e664a> , <urn:uuid:76b04ef1-2f13-4d34-8dce-5fa5f145aebf> , <urn:uuid:aa8ab43e-93cf-412f-9634-0b3249a92bdc> , <urn:uuid:fa516a66-590d-4944-8a30-11f2db7bbeb4> , <urn:uuid:67007483-7556-4fe8-a979-9a77f9560120> , <urn:uuid:e85825cb-efae-4bc9-83ee-ccf25dee5408> ;
+        aocat:has_produced_format     "image/png" , "application/json" ;
+        aocat:has_technical_support   <urn:uuid:b2f5ba8e-6135-40bc-87ca-5f95a1e51e56> ;
+        aocat:is_accessible_at        <urn:uuid:909838a2-0112-4111-b80b-3483210db0e2> , <urn:uuid:9d295fa7-bf14-408b-812b-5303e1f9ead5> .
+
+<urn:uuid:84f135c2-fcb3-4029-ae7a-31afa20a4b14>
+        a           crm:E35_Title ;
+        rdfs:label  "Phasma3D Viewer" .
+
+<urn:uuid:8626c670-c5b1-4045-bed1-530718cfc1f5>
+        a           crm:E55_Type ;
+        rdfs:label  "REST API" .
+
+<urn:uuid:d4f6b1ed-0775-441d-9bbe-cf83712dd22f>
+        a           crm:E55_Type ;
+        rdfs:label  "Web UI" .
+
+<urn:uuid:b2f5ba8e-6135-40bc-87ca-5f95a1e51e56>
+        a       crm:E39_Actor , aocat:AO_Agent .

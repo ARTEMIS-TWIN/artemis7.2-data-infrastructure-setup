@@ -1,0 +1,110 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:a3eb65c1-37d4-43f8-b9ab-877dad47f355>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Physically-based directional luminance and illuminance estimation using global illumination methods" .
+
+<urn:uuid:25b9e304-a9e7-4f89-99e0-7ec951ceb740>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservation scientists and heritage managers requiring quantitative assessment of light exposure on heritage materials" .
+
+<urn:uuid:0172af53-6162-49ab-8b8a-3084b6b09eaf>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Hardware-accelerated ray tracing via NVIDIA OptiX" .
+
+<urn:uuid:d0ef9ee2-78c8-435a-aff7-7c800a0ca9e0>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:94ff09c8-6980-4225-9ab7-812e5237890c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Support for multiple virtual sensor types (point, disk, quadrilateral)" .
+
+<urn:uuid:1c513833-1d11-46ef-bd65-e524d37d2053>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_04 — Risk Assessment and Alerting: providing cumulative light exposure heatmaps as one of the three input data streams processed by the Risk Assessment Service" .
+
+<urn:uuid:92c60d78-1d96-4fa7-ba52-7367f59a2d7b>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "PHASMATIC" ;
+        aocat:has_name  "PHASMATIC" .
+
+<urn:uuid:9981a6e3-f912-42b7-b21a-cd8618df7cd4>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Photometric measurement readout compatible with physical sensor output" .
+
+<urn:uuid:30fe684b-a382-412c-9684-680782124b30>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:84d55299-e3d9-4510-9705-d797a02d38f3> ;
+        crm:P3_has_note  "Node.js-based (v16+) HTTP/HTTPS web server with Express.js (v4.18+). JSON payload. Standardised endpoint routing." .
+
+<urn:uuid:ce95f05b-6902-4c0c-893f-052756d9d916>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT users needing virtual experimentation and 'what-if' scenario validation for lighting systems and exhibit placement" .
+
+<urn:uuid:fab10dd0-0132-4525-8068-6052244b7b1b>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Physically-based Lighting Simulation" .
+
+<urn:uuid:0c7206bf-87ab-4fb2-b241-bf9c8b73745f>
+        a       rdfs:Literal .
+
+<urn:uuid:84d55299-e3d9-4510-9705-d797a02d38f3>
+        a                crm:E55_Type ;
+        rdfs:label       "REST API" ;
+        crm:P3_has_note  "GET" .
+
+<urn:uuid:6bb7760a-5530-446f-bbac-9bc3d3630cdb>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_03 — Historical and Predictive Illumination Simulation: computing cumulative light dose on specific surfaces of the Japanese Tower using historical solar path data and the 3D model, and simulating the impact of future climate scenarios or environmental control interventions" .
+
+<urn:uuid:d793213e-5fdf-4fbc-87a2-e2879cef9e85>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Scene management and illumination environment definition (sky luminance, luminaires)" .
+
+<urn:uuid:af7a38b6-91c0-47d7-97c1-9c0481775f3e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Virtual experimentation and 'what-if' scenario analysis for lighting and exhibit placement" .
+
+<https://artemis-twin.eu/entity/service//BESS-13>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "Illumination Simulation Services" ;
+        rhdto:HP30_provided_by        <urn:uuid:92c60d78-1d96-4fa7-ba52-7367f59a2d7b> ;
+        crm:P102_has_title            <urn:uuid:71b9cd25-0995-40de-9340-9a2bfe892bc6> ;
+        crm:P103_was_intended_for     <urn:uuid:ce95f05b-6902-4c0c-893f-052756d9d916> , <urn:uuid:25b9e304-a9e7-4f89-99e0-7ec951ceb740> ;
+        crm:P106_is_composed_of       "Remote Rendering Service (AUEB-RC external RRS node)" ;
+        crm:P125_used_object_of_type  "Intel i9 processor with at least 32GB RAM" , "Server with NVIDIA RTX GPU (recommended: RTX 5090) with hardware-based ray tracing via NVIDIA OptiX framework — provided by AUEB-RC" ;
+        crm:P16i_was_used_for         <urn:uuid:6bb7760a-5530-446f-bbac-9bc3d3630cdb> , <urn:uuid:1c513833-1d11-46ef-bd65-e524d37d2053> ;
+        crm:P2_has_type               <urn:uuid:fab10dd0-0132-4525-8068-6052244b7b1b> ;
+        crm:P3_has_note               "A microservices architecture providing backend infrastructure for the estimation of physically-based lighting computed on virtual sensors placed in an RHDT 3D environment. Depends on the Remote Rendering Services (RRS) for illumination calculation, scene management and illumination environment definition (sky luminance, luminaires, etc.). Capabilities include: interactive estimation of physically-based directional luminance and illuminance using state-of-the-art global illumination methods; support for multiple sensor types (point, disk, quadrilateral); easy-to-interpret photometric measurement readout compatible with physical sensor output. Implemented using hardware-based ray tracing via the NVIDIA OptiX framework. Requires an NVIDIA RTX GPU (recommended: RTX 5090 on Intel i9 with at least 32GB RAM). RRS and illumination simulation node provided by AUEB-RC as external to the main ARTEMIS infrastructure. REST API based on Node.js (v16+) with Express.js (v4.18+)." ;
+        aocat:has_consumed_format     "model/obj" , "application/json" , "model/gltf-binary" ;
+        aocat:has_functionality       <urn:uuid:af7a38b6-91c0-47d7-97c1-9c0481775f3e> , <urn:uuid:d793213e-5fdf-4fbc-87a2-e2879cef9e85> , <urn:uuid:fab10dd0-0132-4525-8068-6052244b7b1b> , <urn:uuid:9981a6e3-f912-42b7-b21a-cd8618df7cd4> , <urn:uuid:a3eb65c1-37d4-43f8-b9ab-877dad47f355> , <urn:uuid:94ff09c8-6980-4225-9ab7-812e5237890c> , <urn:uuid:0172af53-6162-49ab-8b8a-3084b6b09eaf> ;
+        aocat:has_produced_format     "application/json" , "image/tiff" ;
+        aocat:has_technical_support   <urn:uuid:d0ef9ee2-78c8-435a-aff7-7c800a0ca9e0> ;
+        aocat:is_accessible_at        <urn:uuid:0c7206bf-87ab-4fb2-b241-bf9c8b73745f> .
+
+<urn:uuid:71b9cd25-0995-40de-9340-9a2bfe892bc6>
+        a           crm:E35_Title ;
+        rdfs:label  "Illumination Simulation Services" .

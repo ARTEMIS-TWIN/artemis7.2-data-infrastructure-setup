@@ -1,0 +1,45 @@
+{
+  "service_id": "BEDP-02",
+  "title": "Navigational Hypertext Service",
+  "service_type": "Knowledge Linking and Navigation",
+  "description": "A service for the creation and management of links between information entities within the ARTEMIS infrastructure. Unlike traditional binary hyperlinks, the service supports links of arbitrary arity, allowing complex relationships involving multiple entities (e.g. asset A and annotation B are related to metadata C in context D). All links are represented in machine-readable format suitable for integration into knowledge graphs. Links may be directional, supporting semantic navigation between entities. Hosted as a RESTful API on a Docker-compatible web server with a database backend (e.g. PostgreSQL) and optional OAuth2 authentication.",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "HOF"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "endpoint_methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "notes": "Hosted on a Docker-compatible standard web server. Database backend (e.g. PostgreSQL). Optional OAuth2 authentication."
+    }
+  ],
+  "intended_for": [
+    "Heritage professionals and researchers who need to express and navigate relationships between heterogeneous information entities",
+    "RHDT pilot users requiring structured contextual links between assets, annotations and metadata"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: linking unstructured heritage documentation and structured database entries to specific geometric locations on the 3D model of the Japanese Tower"
+    }
+  ],
+  "has_functionality": [
+    "Creation and management of multi-ary links between information entities",
+    "Machine-readable link representation for knowledge graph integration",
+    "Directional link support for semantic navigation",
+    "Structured context provision for user workflow and information discovery",
+    "Cross-pilot data interoperability support"
+  ],
+  "format_consumed": [
+    "application/json"
+  ],
+  "format_produced": [
+    "application/json",
+    "application/ld+json"
+  ]
+}

@@ -1,0 +1,103 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:9856eb31-40da-4ae2-ba48-0984f2b91507>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Context-specific suggestions based on a pilot-specific KB" .
+
+<urn:uuid:cc1b2a05-b059-43db-98a6-fd4178fe02dc>
+        a           crm:E35_Title ;
+        rdfs:label  "Hypertext Knowledge Base Service" .
+
+<urn:uuid:3b6682a1-61a0-460c-b2ac-0ac73408f380>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:670d519c-b961-49fa-9069-7951830f5429> ;
+        crm:P3_has_note  "Backend service accessible via REST API. Integration with a knowledge graph (e.g. graph database). Access to pilot datasets or endpoints for context generation." .
+
+<urn:uuid:e466b036-d83d-4bc6-8a00-1988d2c9051d>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "HOF" ;
+        aocat:has_name  "HOF" .
+
+<urn:uuid:fbf86aec-8243-4059-a19e-f99f7584862d>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Cross-pilot asset and information visibility" .
+
+<urn:uuid:a08bf062-98e7-4201-a894-16db974d5c43>
+        a       rdfs:Literal .
+
+<urn:uuid:4396d165-8e41-4b91-af28-a8acfcc7f692>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Related content or concept surfacing given a defined context (selected asset, keyword, annotation)" .
+
+<urn:uuid:0edc94da-b069-4810-880b-1fc7fce02e4c>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Support for user exploration, enrichment and research" .
+
+<urn:uuid:7ebe33f1-2f31-42cb-889b-57ec0ebb732e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Expert-driven KB evolution and expansion over time" .
+
+<urn:uuid:930f52ac-2b26-40ce-bc8a-6a87dd0bf115>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: surfacing related heritage content and concepts to support expert users in building evidence-based conservation strategies and contextualising the Japanese Tower's materials and history within the RHDT knowledge base" .
+
+<urn:uuid:e7b1fb9d-2a03-4054-8381-0e79582869c4>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT pilot users seeking non-obvious connections between assets, annotations and knowledge entities" .
+
+<urn:uuid:6a5f399f-4e36-4343-909e-2d31fc2aeb3a>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage professionals, researchers and curators requiring contextual discovery and exploration of related heritage information" .
+
+<urn:uuid:7ea8a5f9-aadb-4423-baed-1c9cc981bc60>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Knowledge Discovery and Contextualisation" .
+
+<https://artemis-twin.eu/entity/service//BEDP-05>
+        a                            rhdto:HC21_Digital_Service ;
+        rdfs:label                   "Hypertext Knowledge Base Service" ;
+        rhdto:HP30_provided_by       <urn:uuid:e466b036-d83d-4bc6-8a00-1988d2c9051d> ;
+        crm:P102_has_title           <urn:uuid:cc1b2a05-b059-43db-98a6-fd4178fe02dc> ;
+        crm:P103_was_intended_for    <urn:uuid:e7b1fb9d-2a03-4054-8381-0e79582869c4> , <urn:uuid:6a5f399f-4e36-4343-909e-2d31fc2aeb3a> ;
+        crm:P16i_was_used_for        <urn:uuid:930f52ac-2b26-40ce-bc8a-6a87dd0bf115> ;
+        crm:P2_has_type              <urn:uuid:7ea8a5f9-aadb-4423-baed-1c9cc981bc60> ;
+        crm:P3_has_note              "A service providing context-specific suggestions based on a pilot-specific Knowledge Base (KB). The KB is constructed from pilot-specific datasets and can evolve through expert input, allowing users to contribute to and expand the knowledge over time. Given a defined context (e.g. a selected asset, keyword or annotation), the service offers related content or concepts to support user exploration, enrichment and research. The scope and quality of the KB depends directly on the availability, accessibility and semantic richness of the incorporated datasets. Accessible via a backend REST API integrated with a knowledge graph (e.g. graph database)." ;
+        aocat:has_consumed_format    "application/json" ;
+        aocat:has_functionality      <urn:uuid:0edc94da-b069-4810-880b-1fc7fce02e4c> , <urn:uuid:7ea8a5f9-aadb-4423-baed-1c9cc981bc60> , <urn:uuid:7ebe33f1-2f31-42cb-889b-57ec0ebb732e> , <urn:uuid:fbf86aec-8243-4059-a19e-f99f7584862d> , <urn:uuid:9856eb31-40da-4ae2-ba48-0984f2b91507> , <urn:uuid:4396d165-8e41-4b91-af28-a8acfcc7f692> , <urn:uuid:ea0874e7-34bc-445c-9694-de8d873b4f13> ;
+        aocat:has_produced_format    "application/json" , "application/ld+json" ;
+        aocat:has_technical_support  <urn:uuid:a9397aaa-c439-4902-8f4c-dfa54efc9f83> ;
+        aocat:is_accessible_at       <urn:uuid:a08bf062-98e7-4201-a894-16db974d5c43> .
+
+<urn:uuid:670d519c-b961-49fa-9069-7951830f5429>
+        a           crm:E55_Type ;
+        rdfs:label  "REST API" .
+
+<urn:uuid:a9397aaa-c439-4902-8f4c-dfa54efc9f83>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:ea0874e7-34bc-445c-9694-de8d873b4f13>
+        a           aocat:AO_Concept ;
+        rdfs:label  "KB construction from pilot-specific datasets" .

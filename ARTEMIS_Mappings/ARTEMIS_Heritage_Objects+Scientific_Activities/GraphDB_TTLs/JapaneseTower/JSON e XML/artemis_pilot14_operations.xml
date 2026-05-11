@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artemis_pilot>
+  <pilot_id>pilot_14</pilot_id>
+  <pilot_title>The Living Past: A Digital Twin for Environmental Storytelling and Conservation</pilot_title>
+  <pilot_description>This pilot creates a Heritage Digital Twin of the Japanese Tower in Laeken (Brussels) that reconstructs its historical interior and exterior and simulates the long-term environmental impact of natural light, temperature and humidity on its decorations. When operational, the system continuously acquires IoT sensor data, generates indoor climate forecasts, runs illumination simulations, assesses conservation risks and visualises all data layers on high-fidelity 3D/VR/AR models of the Tower. Pilot leader: KIK-IRPA. Partners: HOF, Pixelated Realities, PHASMATIC, PIN.</pilot_description>
+  <operations>
+    <operation>
+      <operation_id>operation_01</operation_id>
+      <operation_title>Real-time IoT Environmental Monitoring</operation_title>
+      <operation_type>Monitoring</operation_type>
+      <general_purpose>Continuously acquire indoor and outdoor environmental data from the IoCT sensor network deployed in the Japanese Tower and register the data in the ARTEMIS Knowledge Base.</general_purpose>
+      <description>The IoCT sensor network continuously monitors indoor parameters (air temperature, surface temperatures, relative humidity, light levels in visual/infrared/ultraviolet, airborne dust particles, CO2 concentrations) and outdoor meteorological parameters (temperature, RH, rainfall, wind direction, wind speed, solar radiation) via an on-site weather station. Data is logged automatically at 10–15 minute intervals, stored locally in .csv or .txt and transmitted to the RHDT platform via MQTT. Each sensor node is registered as a unique asset in the ARTEMIS KB (NodeID, SensorID, LocationDesc, SensorType, DataTypes, DataUnits, DeploymentDate, Status, Interval, DatasetURL). System uptime target: &gt;=90%. Data completeness target: &gt;=95% of expected readings per day. Data transmission latency target: &lt;5 seconds.</description>
+      <concerns_heritage_entity>
+        <entity_id>artemis_he_007</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Raw indoor environmental sensor readings</object_label>
+          <object_identifier/>
+          <object_class>HC12_Signal</object_class>
+          <access_point/>
+          <notes>Signals from indoor HC9 Sensor instances monitoring temperature, RH, light levels (visual, IR, UV), dust particles and CO2. Transmitted via MQTT.</notes>
+        </input>
+        <input>
+          <object_label>Raw outdoor meteorological sensor readings</object_label>
+          <object_identifier/>
+          <object_class>HC12_Signal</object_class>
+          <access_point/>
+          <notes>Signals from the on-site weather station monitoring temperature, RH, rainfall, wind direction, wind speed and solar radiation. Transmitted via MQTT.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Real-time indoor and outdoor environmental time-series dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Continuous multi-variable time-series data stream. Format: .csv / .txt locally; accessible via REST API (JSON or CSV). Logging interval: 10–15 minutes. Used as input to operation_02 and operation_04.</notes>
+        </output>
+      </outputs>
+      <used_software/>
+      <implemented_using>
+        <service>
+          <service_title>IoCT Services</service_title>
+          <service_identifier>BEDP-07</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>IoT data acquisition configuration</parameter_set_label>
+          <parameter_set_identifier/>
+          <parameter_type>Data acquisition configuration</parameter_type>
+          <values>
+            <logging_interval>10–15 minutes</logging_interval>
+            <transmission_protocol>MQTT</transmission_protocol>
+            <data_format>CSV / JSON</data_format>
+            <system_uptime_target>&gt;=90%</system_uptime_target>
+            <data_completeness_target>&gt;=95% expected readings per day</data_completeness_target>
+            <data_transmission_latency_target>&lt;5 seconds</data_transmission_latency_target>
+          </values>
+          <notes/>
+        </parameter_set>
+      </used_parameters>
+      <used_devices>
+        <device>
+          <device_label>Indoor IoCT sensor nodes (temperature, RH, light, dust, CO2)</device_label>
+          <device_identifier/>
+          <device_type>Node</device_type>
+          <notes>HC25 Node grouping multiple HC9 Sensor instances. Commercial off-the-shelf and custom-built sensors.</notes>
+        </device>
+        <device>
+          <device_label>On-site outdoor weather station</device_label>
+          <device_identifier/>
+          <device_type>Sensor</device_type>
+          <notes>HC9 Sensor monitoring outdoor meteorological parameters.</notes>
+        </device>
+      </used_devices>
+      <continued_from/>
+      <time_span>
+        <begin/>
+        <end/>
+        <label/>
+      </time_span>
+      <place>
+        <place_name>Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium</place_name>
+        <latitude>50.892928</latitude>
+        <longitude>4.361589</longitude>
+        <place_identifier>https://www.geonames.org/3174953</place_identifier>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>operation_02</operation_id>
+      <operation_title>Predictive Indoor Climate Forecasting</operation_title>
+      <operation_type>Simulation</operation_type>
+      <general_purpose>Generate short-term forecasts of indoor temperature and relative humidity using the trained Predictive Indoor Climate AI model, fed with real-time IoT data and external weather forecast data.</general_purpose>
+      <description>The Predictive Indoor Climate AI Service (HC15 AI Component) uses the building-specific hygrothermal model — trained on at least one year of real IoT sensor data from the Japanese Tower — to generate 24-hour indoor climate forecasts. The model receives real-time IoT data from operation_01 and external weather forecast data as inputs. Each forecast run is registered in the ARTEMIS KB as a structured record (ForecastID, AssetID, ModelID, ForecastHorizon, InputClimateSource, InputDataURL, ForecastOutputURL, Curator, ForecastTimestamp). Forecast generation time target: &lt;5 minutes. Accuracy targets: within ±1°C for temperature and ±5% RH.</description>
+      <concerns_heritage_entity>
+        <entity_id>artemis_he_007</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Real-time indoor and outdoor environmental time-series dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_01. Used as real-time input to drive the AI forecasting model.</notes>
+        </input>
+        <input>
+          <object_label>External weather forecast data</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Retrieved from an external weather API (e.g. open-meteo.com). Specifies future outdoor climate conditions used as boundary conditions for the indoor forecast.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>24-hour indoor climate forecast dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Forecasted indoor temperature and RH time-series for the next 24 hours. Registered in the ARTEMIS KB as a forecast record. Accessible via REST API (JSON/CSV). Used as input to operation_04.</notes>
+        </output>
+      </outputs>
+      <used_software/>
+      <implemented_using>
+        <service>
+          <service_title>Predictive Indoor Climate AI Service</service_title>
+          <service_identifier>BESS-07</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Indoor climate forecasting parameters</parameter_set_label>
+          <parameter_set_identifier/>
+          <parameter_type>AI model configuration</parameter_type>
+          <values>
+            <forecast_horizon>24 hours</forecast_horizon>
+            <temperature_accuracy_target>within ±1°C</temperature_accuracy_target>
+            <rh_accuracy_target>within ±5% RH</rh_accuracy_target>
+            <forecast_generation_time_target>&lt;5 minutes</forecast_generation_time_target>
+          </values>
+          <notes/>
+        </parameter_set>
+      </used_parameters>
+      <used_devices/>
+      <continued_from>operation_01</continued_from>
+      <time_span>
+        <begin/>
+        <end/>
+        <label/>
+      </time_span>
+      <place>
+        <place_name/>
+        <latitude/>
+        <longitude/>
+        <place_identifier/>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>operation_03</operation_id>
+      <operation_title>Historical and Predictive Illumination Simulation</operation_title>
+      <operation_type>Simulation</operation_type>
+      <general_purpose>Model historical solar paths and climate conditions to calculate the cumulative light dose on specific surfaces of the Japanese Tower, and simulate the impact of future climate scenarios or environmental control interventions.</general_purpose>
+      <description>The Illumination Simulation Service computes the cumulative light exposure on accurately mapped material surfaces within the 3D model of the Japanese Tower, using historical outdoor climate data (available back to 1905) and solar path modelling. The simulation produces spatial raster outputs (heatmaps) in GeoTIFF or NetCDF format, visualising where and how much light each surface has received over time. The same engine is used to model future climate scenarios and to simulate the impact of proposed environmental control interventions (e.g. window shading, UV-filtering films) before any physical implementation. The 3D model used as spatial input requires clean watertight mesh geometry. This operation runs independently of the real-time IoT stream (operation_01) but its outputs feed into operation_04 and operation_05.</description>
+      <concerns_heritage_entity>
+        <entity_id>artemis_he_007</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Historical outdoor climate data (1905–present)</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Available with varying levels of detail from 1905 onwards. Used as boundary conditions for the historical illumination simulation.</notes>
+        </input>
+        <input>
+          <object_label>3D model of the Japanese Tower ('as-built' and 'as-is' states)</object_label>
+          <object_identifier/>
+          <object_class>HC8_3D_Model</object_class>
+          <access_point/>
+          <notes>Clean watertight mesh geometry (.obj or .glb) with accurately mapped material surfaces. Serves as the spatial input for computing light dose per surface.</notes>
+        </input>
+        <input>
+          <object_label>Future climate projection data or intervention parameters</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Used for future scenario simulations or virtual prototyping of environmental control interventions (e.g. shading solutions). May be provided as external climate projections or as user-defined HC23 Parameter Set instances.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Cumulative light exposure heatmaps (historical and scenario-based)</object_label>
+          <object_identifier/>
+          <object_class>HC7_Digital_Visual_Object</object_class>
+          <access_point/>
+          <notes>Spatial raster outputs showing cumulative light dose per surface. Format: GeoTIFF or NetCDF. Used as input to operation_04 and operation_05.</notes>
+        </output>
+      </outputs>
+      <used_software/>
+      <implemented_using>
+        <service>
+          <service_title>Illumination Simulation Services</service_title>
+          <service_identifier>BESS-13</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Illumination simulation configuration</parameter_set_label>
+          <parameter_set_identifier/>
+          <parameter_type>Simulation parameters</parameter_type>
+          <values>
+            <historical_data_start>1905</historical_data_start>
+            <output_format>GeoTIFF or NetCDF</output_format>
+            <simulation_to_reality_correlation_target>&gt;80% visual correlation with observed fading patterns on control panels</simulation_to_reality_correlation_target>
+          </values>
+          <notes/>
+        </parameter_set>
+      </used_parameters>
+      <used_devices/>
+      <continued_from/>
+      <time_span>
+        <begin/>
+        <end/>
+        <label/>
+      </time_span>
+      <place>
+        <place_name/>
+        <latitude/>
+        <longitude/>
+        <place_identifier/>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>operation_04</operation_id>
+      <operation_title>Risk Assessment and Alerting</operation_title>
+      <operation_type>Analysis Operation</operation_type>
+      <general_purpose>Analyse all integrated data streams — real-time IoT measurements, indoor climate forecasts and illumination simulation outputs — to detect conservation risks, generate alerts when user-defined thresholds are breached and log risk events in the ARTEMIS KB.</general_purpose>
+      <description>The Risk Assessment Service continuously processes three categories of input: (1) real-time IoT measurements from operation_01, (2) 24-hour indoor climate forecasts from operation_02, and (3) illumination simulation heatmaps from operation_03. When any data source indicates that a condition will breach a user-defined threshold (e.g. RH &gt;70%, excessive light dose), the service generates a Risk Event record logged in the ARTEMIS KB (EventID, AssetID, LocationDesc, RiskType, RiskLevel, RiskBasis, RiskMetrics, EventTimestamp, CreationTimestamp, TriggeringSource, NotificationLog) and issues notifications to relevant personnel. Risk assessment latency target: &lt;1 second. KB synchronisation target: within 1 hour of the event.</description>
+      <concerns_heritage_entity>
+        <entity_id>artemis_he_007</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Real-time indoor and outdoor environmental time-series dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_01. Provides real-time measurements as one of the three data sources for risk detection.</notes>
+        </input>
+        <input>
+          <object_label>24-hour indoor climate forecast dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_02. Provides short-term predicted conditions as input to risk assessment.</notes>
+        </input>
+        <input>
+          <object_label>Cumulative light exposure heatmaps</object_label>
+          <object_identifier/>
+          <object_class>HC7_Digital_Visual_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_03. Also feeds into risk assessment as a third data source. continued_from operation_03 is the other upstream dependency alongside operation_02.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Risk event log (ARTEMIS KB records)</object_label>
+          <object_identifier/>
+          <object_class>HC6_Digital_Heritage_Document</object_class>
+          <access_point/>
+          <notes>Structured KB records for each detected risk event: EventID, AssetID, LocationDesc, RiskType, RiskLevel, RiskBasis, RiskMetrics, EventTimestamp, CreationTimestamp, TriggeringSource, NotificationLog.</notes>
+        </output>
+        <output>
+          <object_label>Risk alert notifications</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Timely alerts issued to heritage managers and conservators via email, SMS or other channels when thresholds are breached.</notes>
+        </output>
+      </outputs>
+      <used_software/>
+      <implemented_using>
+        <service>
+          <service_title>Risk Assessment Service</service_title>
+          <service_identifier>BESS-08</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Risk assessment thresholds and performance targets</parameter_set_label>
+          <parameter_set_identifier/>
+          <parameter_type>Risk configuration</parameter_type>
+          <values>
+            <risk_assessment_latency_target>&lt;1 second</risk_assessment_latency_target>
+            <kb_sync_latency_target>&lt;1 hour after event</kb_sync_latency_target>
+            <example_threshold_rh>RH &gt;70% triggers mold growth risk alert</example_threshold_rh>
+          </values>
+          <notes/>
+        </parameter_set>
+      </used_parameters>
+      <used_devices/>
+      <continued_from>operation_02</continued_from>
+      <time_span>
+        <begin/>
+        <end/>
+        <label/>
+      </time_span>
+      <place>
+        <place_name>Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium</place_name>
+        <latitude>50.892928</latitude>
+        <longitude>4.361589</longitude>
+        <place_identifier>https://www.geonames.org/3174953</place_identifier>
+      </place>
+    </operation>
+    <operation>
+      <operation_id>operation_05</operation_id>
+      <operation_title>Spatiotemporal Data Visualisation and VR/AR Experience</operation_title>
+      <operation_type>Transformation Operation</operation_type>
+      <general_purpose>Integrate and visualise all data layers — real-time IoT data, climate forecasts, illumination heatmaps, risk events and historical reconstructions — on the 3D model of the Japanese Tower within an interactive web-based, VR and AR environment for expert analysis and public storytelling.</general_purpose>
+      <description>The RHDT visualisation layer fuses all upstream data streams onto the high-fidelity 3D models of the Japanese Tower, enabling users to navigate between the 'as-built' 1905 state and the current 'as-is' state, activate environmental simulation animations (historical sunlight time-lapses, fading visualisation) and query quantitative data on light exposure per surface. Expert users access a feature-rich desktop interface for in-depth analysis, creation of annotations and evidence-based conservation strategy development. The general public accesses a narrative-driven VR/AR experience via museum kiosk, on-site AR on mobile or web-based 3D viewer. Collaborative multi-user VR sessions support at least 2 simultaneous users with simultaneous visualisation and annotation of multiple data layers. The conservation engineer use case supports virtual prototyping of environmental interventions (e.g. shading solutions) by re-running operation_03 with modified parameters and comparing outputs. VR rendering performance target: &gt;=72 FPS on Meta Quest 3. User interaction responsiveness target: &lt;0.5 seconds. Scene loading time target: &lt;10 seconds. API response time target: &lt;2 seconds.</description>
+      <concerns_heritage_entity>
+        <entity_id>artemis_he_007</entity_id>
+      </concerns_heritage_entity>
+      <inputs>
+        <input>
+          <object_label>Risk event log and alert data</object_label>
+          <object_identifier/>
+          <object_class>HC6_Digital_Heritage_Document</object_class>
+          <access_point/>
+          <notes>Output of operation_04. Displayed as overlays and dashboard indicators within the RHDT platform.</notes>
+        </input>
+        <input>
+          <object_label>Real-time indoor and outdoor environmental time-series dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_01. Visualised as live data overlays on the 3D model.</notes>
+        </input>
+        <input>
+          <object_label>24-hour indoor climate forecast dataset</object_label>
+          <object_identifier/>
+          <object_class>HC24_Digital_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_02. Displayed as predictive overlays and temporal trend visualisations.</notes>
+        </input>
+        <input>
+          <object_label>Cumulative light exposure heatmaps</object_label>
+          <object_identifier/>
+          <object_class>HC7_Digital_Visual_Object</object_class>
+          <access_point/>
+          <notes>Output of operation_03. Overlaid on the 3D model surfaces to show historical and scenario-based light dose distribution. Also continued_from operation_03 as a parallel upstream dependency alongside operation_04.</notes>
+        </input>
+        <input>
+          <object_label>3D models — 'as-is' and 'as-built' states</object_label>
+          <object_identifier/>
+          <object_class>HC8_3D_Model</object_class>
+          <access_point/>
+          <notes>Polygon-optimised .glb models. Geometric canvas of the RHDT visualisation and VR/AR experience.</notes>
+        </input>
+      </inputs>
+      <outputs>
+        <output>
+          <object_label>Interactive RHDT web-based platform with integrated data layers</object_label>
+          <object_identifier/>
+          <object_class>HC5_Digital_Representation</object_class>
+          <access_point/>
+          <notes>Browser-accessible platform with live IoT overlays, simulation heatmaps, risk dashboards (colour-coded), temporal navigation between historical states and annotation tools. API response time: &lt;2 seconds. Scene loading: &lt;10 seconds.</notes>
+        </output>
+        <output>
+          <object_label>Narrative-driven VR/AR immersive experience</object_label>
+          <object_identifier/>
+          <object_class>HC7_Digital_Visual_Object</object_class>
+          <access_point/>
+          <notes>Immersive application for public and expert use. Supports collaborative multi-user VR (&gt;=2 simultaneous users), museum kiosk, on-site AR (mobile) and web-based 3D viewer modes. Rendering: &gt;=72 FPS on Meta Quest 3. Interaction latency: &lt;0.5 seconds.</notes>
+        </output>
+      </outputs>
+      <used_software/>
+      <implemented_using>
+        <service>
+          <service_title>Phasma3D Viewer</service_title>
+          <service_identifier>CAW-01</service_identifier>
+        </service>
+        <service>
+          <service_title>Navigational Hypertext Service</service_title>
+          <service_identifier>BEDP-02</service_identifier>
+        </service>
+        <service>
+          <service_title>Annotation Service</service_title>
+          <service_identifier>BEDP-03</service_identifier>
+        </service>
+        <service>
+          <service_title>Hypertext Knowledge Base Service</service_title>
+          <service_identifier>BEDP-05</service_identifier>
+        </service>
+        <service>
+          <service_title>VR collaborative environment</service_title>
+          <service_identifier>CAVR-07</service_identifier>
+        </service>
+      </implemented_using>
+      <used_parameters>
+        <parameter_set>
+          <parameter_set_label>Visualisation and VR/AR performance targets</parameter_set_label>
+          <parameter_set_identifier/>
+          <parameter_type>Rendering and usability configuration</parameter_type>
+          <values>
+            <vr_frame_rate_target>&gt;=72 FPS on Meta Quest 3</vr_frame_rate_target>
+            <user_interaction_latency_target>&lt;0.5 seconds</user_interaction_latency_target>
+            <scene_loading_time_target>&lt;10 seconds</scene_loading_time_target>
+            <api_response_time_target>&lt;2 seconds</api_response_time_target>
+            <min_concurrent_vr_users>2</min_concurrent_vr_users>
+            <visual_clarity_target>&gt;=90% of participants rate data readability as clear or very clear</visual_clarity_target>
+          </values>
+          <notes/>
+        </parameter_set>
+      </used_parameters>
+      <used_devices/>
+      <continued_from>operation_04</continued_from>
+      <time_span>
+        <begin/>
+        <end/>
+        <label/>
+      </time_span>
+      <place>
+        <place_name/>
+        <latitude/>
+        <longitude/>
+        <place_identifier/>
+      </place>
+    </operation>
+  </operations>
+</artemis_pilot>

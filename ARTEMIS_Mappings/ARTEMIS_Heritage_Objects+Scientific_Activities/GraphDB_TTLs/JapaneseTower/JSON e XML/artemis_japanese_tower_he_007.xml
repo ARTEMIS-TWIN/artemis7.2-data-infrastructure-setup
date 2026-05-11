@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artemis_cultural_object>
+  <object_id>artemis_he_007</object_id>
+  <object_label>Japanese Tower, Laeken</object_label>
+  <object_name>Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium</object_name>
+  <object_description>The Japanese Tower at the Royal Castle Domain in Laeken (Brussels) is a well-known landmark for Brussels and Belgium. It was commissioned by King Leopold II and officially opened in 1904. The Tower looks very Japanese in appearance, but is a monumental expression of how Japanese art overwhelmed Europe during the Fin de Siècle, a rare place where the best aesthetics of two worlds merge. The construction of the timberwork started in 1902. Even though Belgian craftsmen built the main part, the 35-metre high building was initially assembled without nails in accordance with traditional Japanese techniques. Inspired by the temples of Nikko, the architect Alexandre Marcel adapted the interior decoration by mixing Japanese and European techniques. This five-floored royal jewel was lavishly decorated with a variety of mixed materials, including polychromies, metal, paint, wallpaper, stained glass, linoleum, textile and — most prominently — exquisite Japanese lacquer panels. The lacquers of the Tower represent a broad selection of provenances, styles and colours, and include elements from the late Edo and Meiji periods. The building was officially inaugurated on 6 May 1905. On 26 March 1909, King Leopold II donated the tower to the Belgian state. It was closed in 1947 due to financial constraints. A first restoration campaign was undertaken in the early 1990s, focused on the entry hall and main staircase. The tower is currently closed to the public due to accessibility issues. Structurally, the building remains largely unaltered since its construction and even its original interior heating system has not been changed, making it an invaluable 'time capsule'. The Japanese Tower is a protected monument under the legislation of the Brussels-Capital Region. Its primary conservation challenge lies in the complex and fragile state of its unique interior and exterior decorations: after more than 100 years, most floors are still conserved untouched, but their conservation condition is very worrisome. A significant issue is the fading of the original vibrant colours due to cumulative light exposure. To mitigate further weather-induced damage, the exterior decorative panels have been carefully dismantled and are currently stored inside the tower's first floor, while the interior panels remain in situ.</object_description>
+  <object_external_uri>https://www.wikidata.org/wiki/Q56214383</object_external_uri>
+  <object_types>
+    <type>
+      <type_label>towers (buildings)</type_label>
+      <type_uri>http://vocab.getty.edu/page/aat/300004829</type_uri>
+    </type>
+    <type>
+      <type_label>pagodas</type_label>
+      <type_uri>http://vocab.getty.edu/page/aat/300005768</type_uri>
+    </type>
+  </object_types>
+  <object_materials/>
+  <object_images>
+    <image>
+      <image_url>https://commons.wikimedia.org/wiki/File:La_tour_japonaise_%C3%A0_Laeken.jpg</image_url>
+      <image_caption>La tour japonaise à Laeken</image_caption>
+    </image>
+  </object_images>
+  <object_current_owners>
+    <owner>
+      <owner_name>Belgian Federal State / Belgian Buildings Agency (Regie der Gebouwen / Régie des Bâtiments)</owner_name>
+      <owner_type>Group</owner_type>
+      <owner_uri/>
+      <owner_email/>
+      <owner_homepage/>
+      <owner_note>Property manager of the Belgian Federal State. The Japanese Tower is property of the Belgian Federal State and managed by the Belgian Buildings Agency. It is also considered part of the collection of the Royal Museum of Art and History (a Federal Scientific Institute), which occupies the building. Some historic furniture elements are stored in the RMAH collection.</owner_note>
+    </owner>
+    <owner>
+      <owner_name>Royal Trust (Koninklijke Schenking / Donation Royale)</owner_name>
+      <owner_type>Group</owner_type>
+      <owner_uri>https://www.wikidata.org/wiki/Q2563491</owner_uri>
+      <owner_email/>
+      <owner_homepage/>
+      <owner_note>The tower is located within the Royal Castle Domain of Laeken, which is subject to stringent security requirements.</owner_note>
+    </owner>
+  </object_current_owners>
+  <object_makers>
+    <maker>
+      <maker_name>Alexandre Marcel</maker_name>
+      <maker_type>Person</maker_type>
+      <maker_uri>http://vocab.getty.edu/page/ulan/500085111</maker_uri>
+      <maker_email/>
+      <maker_homepage/>
+      <maker_note>French architect commissioned by King Leopold II to design the Japanese Tower. Also has a sameAs relation to https://www.wikidata.org/wiki/Q723010</maker_note>
+    </maker>
+    <maker>
+      <maker_name>Maison Reynaud, Yokohama</maker_name>
+      <maker_type>Group</maker_type>
+      <maker_uri/>
+      <maker_email/>
+      <maker_homepage/>
+      <maker_note>Art dealer that delivered much of the interior and exterior décor, including carved wooden doors and panels, gilded metallic plates, the first- and third-floor ceilings, furniture, silk and tatami mats.</maker_note>
+    </maker>
+    <maker>
+      <maker_name>Japanese craftsmen (Edo and Meiji period)</maker_name>
+      <maker_type>Group</maker_type>
+      <maker_uri/>
+      <maker_email/>
+      <maker_homepage/>
+      <maker_note>Decorative components imported from Japan, including elements reused from disassembled temples, installed in 1904. Interior elements from the late Edo and Meiji periods.</maker_note>
+    </maker>
+    <maker>
+      <maker_name>Belgian craftsmen</maker_name>
+      <maker_type>Group</maker_type>
+      <maker_uri/>
+      <maker_email/>
+      <maker_homepage/>
+      <maker_note>Built the main part of the 35-metre high building. Also responsible for some decorative elements created in Europe.</maker_note>
+    </maker>
+  </object_makers>
+  <object_production_periods>
+    <period>
+      <period_label>Fin de Siècle / Belle Époque</period_label>
+      <period_start_year>1902</period_start_year>
+      <period_end_year>1905</period_end_year>
+      <period_o_uri/>
+    </period>
+    <period>
+      <period_label>Meiji period (Japan)</period_label>
+      <period_start_year>1868</period_start_year>
+      <period_end_year>1912</period_end_year>
+      <period_o_uri/>
+    </period>
+    <period>
+      <period_label>Edo period (Japan) — reused elements</period_label>
+      <period_start_year>1603</period_start_year>
+      <period_end_year>1868</period_end_year>
+      <period_o_uri/>
+    </period>
+  </object_production_periods>
+  <object_current_location>
+    <location_name>Royal Castle Domain, Laeken, Brussels, Belgium</location_name>
+    <location_id>https://www.geonames.org/3174953</location_id>
+    <location_country_name>Belgium</location_country_name>
+    <location_country_uri>https://www.geonames.org/2802361</location_country_uri>
+    <location_latitude>50.892928</location_latitude>
+    <location_longitude>4.361589</location_longitude>
+  </object_current_location>
+  <object_provenance>
+    <provenance_event>
+      <provenance_label>Preliminary study of the upper floors of the Japanese Tower — Fenikx bvba (2010–2013)</provenance_label>
+      <provenance_type>conservation and material study</provenance_type>
+      <provenance_start_year>2010</provenance_start_year>
+      <provenance_end_year>2013</provenance_end_year>
+      <provenance_actors>
+        <actor>
+          <provenance_actor_name>Fenikx bvba</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage/>
+          <provenance_actor_note/>
+        </actor>
+        <actor>
+          <provenance_actor_name>Royal Institute for Cultural Heritage (KIK-IRPA)</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage>https://www.kikirpa.be</provenance_actor_homepage>
+          <provenance_actor_note/>
+        </actor>
+      </provenance_actors>
+    </provenance_event>
+    <provenance_event>
+      <provenance_label>ARTEMIS Pilot 14 — The Living Past: A Digital Twin for Environmental Storytelling and Conservation</provenance_label>
+      <provenance_type>digital twin and environmental monitoring project</provenance_type>
+      <provenance_start_year>2025</provenance_start_year>
+      <provenance_end_year/>
+      <provenance_actors>
+        <actor>
+          <provenance_actor_name>Royal Institute for Cultural Heritage (KIK-IRPA) — Pilot Leader</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage>https://www.kikirpa.be</provenance_actor_homepage>
+          <provenance_actor_note/>
+        </actor>
+        <actor>
+          <provenance_actor_name>HOF</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage/>
+          <provenance_actor_note/>
+        </actor>
+        <actor>
+          <provenance_actor_name>Pixelated Realities</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage/>
+          <provenance_actor_note/>
+        </actor>
+        <actor>
+          <provenance_actor_name>PHASMATIC</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage/>
+          <provenance_actor_note/>
+        </actor>
+        <actor>
+          <provenance_actor_name>PIN</provenance_actor_name>
+          <provenance_actor_type>Group</provenance_actor_type>
+          <provenance_actor_uri/>
+          <provenance_actor_email/>
+          <provenance_actor_homepage/>
+          <provenance_actor_note/>
+        </actor>
+      </provenance_actors>
+    </provenance_event>
+    <provenance_event>
+      <provenance_label>First restoration campaign — entry hall and main staircase</provenance_label>
+      <provenance_type>restoration</provenance_type>
+      <provenance_start_year>1990</provenance_start_year>
+      <provenance_end_year>1995</provenance_end_year>
+      <provenance_actors/>
+    </provenance_event>
+  </object_provenance>
+  <object_datasets>
+    <dataset>
+      <dataset_uri>https://doi.org/10.1186/s40494-015-0040-7</dataset_uri>
+      <dataset_label>Vermeulen et al. (2015) — Identification of artificial orpiment in the interior decorations of the Japanese Tower in Laeken, Brussels, Belgium. Heritage Science, 3:9.</dataset_label>
+    </dataset>
+    <dataset>
+      <dataset_uri>https://doi.org/10.1080/00393630.2016.1227053</dataset_uri>
+      <dataset_label>Mesmaeker (2016) — The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium. Studies in Conservation, 61(sup3), 109-116.</dataset_label>
+    </dataset>
+  </object_datasets>
+</artemis_cultural_object>

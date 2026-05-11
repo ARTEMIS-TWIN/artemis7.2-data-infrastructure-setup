@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>BEDP-03</service_id>
+  <title>Annotation Service</title>
+  <service_type>Collaborative Annotation</service_type>
+  <version/>
+  <description>A service enabling users to add persistent, structured or free-text annotations to information entities such as digital assets, documents or metadata records. Annotations can include comments, tags or references and are stored in a format supporting reuse and semantic integration. The service supports collaborative work, allowing multiple users to annotate the same entity simultaneously. Hosted as a RESTful API on a Docker-compatible web server with a database backend (e.g. PostgreSQL) and optional OAuth2 authentication.</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>HOF</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods>
+        <method>GET</method>
+        <method>POST</method>
+        <method>PUT</method>
+        <method>DELETE</method>
+      </endpoint_methods>
+      <notes>RESTful API on a standard Docker-compatible web server. Database backend (e.g. PostgreSQL). Optional OAuth2 authentication.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Conservation scientists, heritage professionals and researchers requiring collaborative knowledge capture on digital content</audience>
+    <audience>RHDT pilot users performing structured annotation of 3D models, documents and datasets</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: enabling expert users to create persistent annotations on the 3D model of the Japanese Tower, linking heritage documentation and analytical evidence to specific spatial locations</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type/>
+  <has_functionality>
+    <functionality>Addition of persistent structured or free-text annotations to digital assets, documents and metadata</functionality>
+    <functionality>Support for comments, tags and references as annotation types</functionality>
+    <functionality>Collaborative multi-user annotation of the same entity</functionality>
+    <functionality>Semantic storage format supporting reuse and knowledge graph integration</functionality>
+    <functionality>Transparency, traceability and long-term knowledge preservation</functionality>
+    <functionality>Cross-pilot knowledge sharing</functionality>
+  </has_functionality>
+  <composed_of/>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>application/json</format>
+    <format>application/ld+json</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

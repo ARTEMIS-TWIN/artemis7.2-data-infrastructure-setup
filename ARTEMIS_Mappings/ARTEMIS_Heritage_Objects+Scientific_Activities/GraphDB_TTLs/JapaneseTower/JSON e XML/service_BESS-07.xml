@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>BESS-07</service_id>
+  <title>Predictive Indoor Climate AI Service</title>
+  <service_type>Predictive Simulation / AI Forecasting</service_type>
+  <version/>
+  <description>An intelligent microservice providing backend infrastructure for forecasting future indoor climate conditions (temperature and relative humidity) of a specific heritage building or room. Operates in two stages: (1) Offline Model Training — a historical dataset correlating indoor IoCT time-series data with outdoor weather station data is used to train and validate a building-specific time-series forecasting model (e.g. LSTM networks, Gradient Boosting Machines or other regression models), producing a highly-tuned predictive model capturing the unique thermal inertia, air permeability and moisture buffering capacity of the asset; (2) Online Prediction (Inference) — once deployed, the service takes a future weather forecast (e.g. for the next 24–72 hours) as primary input, feeds it into the trained model and returns a time-series forecast of indoor climate for the same period. Called by the RHDT on a regular schedule via standardised REST endpoints. Training performed on a high-performance workstation or cloud instance with powerful CPU and preferably high-VRAM GPU. Inference deployed as a lightweight Python microservice (Flask or FastAPI) on a standard cloud CPU VM (8–16 GB RAM).</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>Royal Institute for Cultural Heritage (KIK-IRPA)</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods/>
+      <notes>Python-based (Flask or FastAPI) or Node.js-based HTTP/HTTPS web server with JSON payload. Called by the RHDT on a regular schedule.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Heritage building managers requiring proactive early-warning climate management</audience>
+    <audience>Conservation scientists needing evidence-based forecasts of environmental risk for sensitive collections</audience>
+    <audience>RHDT systems requiring predicted indoor climate data as input to the Risk Assessment Service</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_02 — Predictive Indoor Climate Forecasting: generating 24-hour indoor temperature and RH forecasts for the Japanese Tower using real-time IoT data and external weather forecast data as inputs</activity_label>
+    </activity>
+    <activity>
+      <activity_label>operation_04 — Risk Assessment and Alerting: providing short-term indoor climate forecasts as one of the three input data streams processed by the Risk Assessment Service</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type>
+    <object_type>High-performance workstation or cloud instance with powerful CPU and high-VRAM GPU (e.g. NVIDIA RTX series) for offline model training</object_type>
+    <object_type>Standard cloud-based CPU virtual machine or container with 8–16 GB RAM for online inference deployment</object_type>
+  </used_physical_object_of_type>
+  <has_functionality>
+    <functionality>Offline training of a building-specific time-series forecasting model (LSTM, Gradient Boosting Machines or other regression models)</functionality>
+    <functionality>Online 24–72 hour indoor climate forecasting (temperature and RH)</functionality>
+    <functionality>REST API-based forecast delivery to the RHDT on a regular schedule</functionality>
+    <functionality>Support for early warning triggering and automated environmental control</functionality>
+    <functionality>Virtual 'what-if' testing of climate control strategies without endangering the real asset</functionality>
+  </has_functionality>
+  <composed_of/>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>application/json</format>
+    <format>text/csv</format>
+  </format_consumed>
+  <format_produced>
+    <format>application/json</format>
+    <format>text/csv</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

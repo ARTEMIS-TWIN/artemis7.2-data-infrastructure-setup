@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>CAW-01</service_id>
+  <title>Phasma3D Viewer</title>
+  <service_type>3D Visualisation and Collaboration</service_type>
+  <version/>
+  <description>A collaborative 3D visualisation environment that resolves an RHDT project into its constituent entity instances (3D models, annotations, actor information) and renders them in a browser-based interface. Supports both client-side rendering via WebGL for mid-/high-tier devices and server-side remote rendering for large fragment collections and thin clients, enabling realistic illumination of results compatible with physical inspection. Includes 3D annotation tools (via ARTEMIS Annotation Services BEAS-01), geometry optimisation with Level of Detail (LOD) processing for 3D format conversion, and collaborative multi-user interaction. Server-side rendering is provided by AUEB-RC as an external Remote Rendering Server node.</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>PHASMATIC</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>Web UI</endpoint_type>
+      <endpoint_methods/>
+      <notes>Browser-based WebGL 2 rendering interface. Compatible GPU with WebGL 2 support required on the client side.</notes>
+    </access_point>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods/>
+      <notes>Integration with ARTEMIS cloud data and services including authentication and data management.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Heritage scientists and conservators engaged in collaborative 3D model inspection and annotation</audience>
+    <audience>Expert users requiring remote, real-time collaborative work on 3D representations of heritage assets</audience>
+    <audience>Users of RHDT pilots requiring 3D visualisation with multi-user access</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: rendering the 3D models of the Japanese Tower ('as-is' and 'as-built') within the RHDT platform and overlaying environmental data layers</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type>
+    <object_type>Desktop or laptop computer with modern GPU supporting WebGL 2</object_type>
+    <object_type>Server with NVIDIA RTX class GPU (min. 12GB VRAM, DLSS and OptiX denoiser support; indicative: RTX4090, RTX5090) for remote rendering — provided by AUEB-RC</object_type>
+    <object_type>Server with min. 8 CPU cores (Intel i7/i9), min. 32GB RAM, min. 500GB storage for remote rendering</object_type>
+  </used_physical_object_of_type>
+  <has_functionality>
+    <functionality>RHDT project resolution into entity instances (3D models, annotations, actors)</functionality>
+    <functionality>Client-side WebGL 2 rendering of 3D models</functionality>
+    <functionality>Server-side remote rendering for large fragment collections and thin clients</functionality>
+    <functionality>Realistic visualisation and illumination of 3D results</functionality>
+    <functionality>3D annotations (highlighting, sticky notes, comments) via ARTEMIS Annotation Services BEAS-01</functionality>
+    <functionality>3D format conversion and Level of Detail (LOD) processing for geometry optimisation</functionality>
+  </has_functionality>
+  <composed_of>
+    <sub_service>
+      <sub_service_title>Annotation Service (BEAS-01 / BEDP-03)</sub_service_title>
+    </sub_service>
+    <sub_service>
+      <sub_service_title>Remote Rendering Service (AUEB-RC external RRS node)</sub_service_title>
+    </sub_service>
+  </composed_of>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>model/gltf-binary</format>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>application/json</format>
+    <format>image/png</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

@@ -1,0 +1,320 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+
+<urn:uuid:82639961-ea59-4ef4-9d94-6ad3919d33cb>
+        a           crm:E55_Type ;
+        rdfs:label  "Multi-technique (SEM-EDX, Micro-Raman Spectroscopy, Polarized Light Microscopy)" .
+
+<urn:uuid:2919fbb4-3578-4a13-a390-6995ec9d8268>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "Pentafet Si(Li) X-ray detector" ;
+        crmhs:HSP22_has_maker  <urn:uuid:5bc0d5b8-7645-47ec-a883-6821667082de> .
+
+artemis:artemis_he_007
+        a           aocat:AO_Object , rhdto:HC3_Tangible_Entity , crmhs:HS6_Study_Object , crmhs:HS2_Heritage_Science_Object ;
+        rdfs:label  "Decorative panels of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<urn:uuid:0f178ba7-2471-413a-a54b-107cca8c97ca>
+        a           crmhs:HS4_Method ;
+        rdfs:label  "Mechanical cross-section preparation (acrylic resin embedding and polishing); gold sputter-coating for SEM-EDX; Canada balsam mounting for PLM" .
+
+<urn:uuid:af171db3-b7df-4b2b-91cb-82838f7d69b4>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Renishaw" .
+
+<urn:uuid:bb5ecb2f-3335-4b80-a2f4-556c77d9299f>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Natural orpiment reference material — Kremer Pigmente GmbH & Co, Aichstetten, Germany" ;
+        crm:P3_has_note  "Reference material / reference spectra" .
+
+<urn:uuid:91e4ceaa-9a0d-43fb-98d5-f577cf930f32>
+        a                       crmhs:HS10_Sample_Preparation ;
+        rdfs:label              "C90.058 (cross-section) / P210.011 (loose, Canada balsam mount)" ;
+        crmhs:HSP6_used_method  <urn:uuid:5792d328-e0c7-4ac7-aedf-4657b250884f> ;
+        crm:P3_has_note         "The bulk sample was fixed to a 1 cm3 poly(methyl methacrylate) cube using white PVA glue, after which acrylic copolymer resin (Spofacryl, Spofa Dental CZ-10031, Prague) was poured on the sample and a second cube placed on top. The cross-section was left to dry, then polished with water until nearly exposed, and subsequently polished using Micro Mesh polishing cloths in a sequence of grits (2400, 4000, 6000 and 8000 mesh) to a mirror-like surface. The cross-section was gold-coated for SEM-EDX analysis. For PLM, a fraction of the remaining loose sample was dispersed and mounted in Canada balsam (n = 1.55)." .
+
+<urn:uuid:89ec7ba4-30da-4d12-93ef-303311758367>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Laboratory-prepared arsenic sulfide glass (g-AsxSx) — synthesized from arsenic trioxide and sulfur (1:1), Bunsen burner method after Rotter" ;
+        crm:P3_has_note  "Reference material / reference spectra" .
+
+<urn:uuid:5e79d8bf-5d0b-4006-8da2-331d53f54b12>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Polarized Light Microscopy (PLM)" ;
+        crm:P3_has_note  "Investigation of particle shapes, interference colors and optical properties (isotropy/anisotropy) in Canada balsam mounts under slightly polarized and cross-polarized light, to distinguish arsenic sulfide glass from natural orpiment and to infer starting materials." .
+
+<urn:uuid:00b13185-a57f-477d-b1a3-4525aeea0383>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Interdisciplinary technical study of the Japanese Tower at the Royal Castle Domain in Laeken (unpublished report, KIK-IRPA archive no. 2010.10826)" ;
+        crm:P2_has_type  <urn:uuid:6854768c-7ba8-43e8-8d8e-1bbe598b4ca2> .
+
+artemis:analysis170CF402-6D13-4C43-8F9E-0C4C0123350E
+        a                              crmhs:HS3_Analysis ;
+        rdfs:label                     "Identification of artificial orpiment in the interior decorations of the Japanese Tower in Laeken, Brussels, Belgium" ;
+        crmhs:HSP10_used_software      <urn:uuid:d3bddd54-00b9-4d3c-a068-7d3c84fca234> , <urn:uuid:b5d9b865-540f-4bfb-9d15-bacd674dde82> ;
+        crmhs:HSP12_used_dataset       <urn:uuid:bb5ecb2f-3335-4b80-a2f4-556c77d9299f> , <urn:uuid:89ec7ba4-30da-4d12-93ef-303311758367> ;
+        crmhs:HSP13_used_settings      <urn:uuid:520efea0-d1e5-49a2-b591-c3ab64f5fb89> ;
+        crmhs:HSP16_produced_dataset   <urn:uuid:00b13185-a57f-477d-b1a3-4525aeea0383> , <https://doi.org/10.1186/s40494-015-0040-7> ;
+        crmhs:HSP1_has_activity_title  <urn:uuid:db24fdd0-9b62-4e37-b434-30475a3bd6dc> ;
+        crmhs:HSP2_was_performed_on    artemis:artemis_he_007 ;
+        crmhs:HSP4_analysed            <urn:uuid:e91c383a-3b85-48af-8c33-30c66a634f74> , <urn:uuid:0ad22382-1249-41cc-bcb5-f0219674ea73> , <urn:uuid:a1a1dc10-d9fb-47c5-b3e6-41b7e604e3f0> ;
+        crmhs:HSP6_used_method         <urn:uuid:89462ac3-97e5-4d7a-a909-e346b18c4fe4> , <urn:uuid:5e79d8bf-5d0b-4006-8da2-331d53f54b12> , <urn:uuid:5e5cf398-c2b3-4115-881e-9b65a284b27d> ;
+        crmhs:HSP8_used_device         <urn:uuid:9fb704b5-ba10-4901-8867-53d08f02ea74> , <urn:uuid:18d3437e-f1d4-441f-85ed-d0a667d6c7f5> , <urn:uuid:99d503d6-59db-4764-9627-107f72348ef1> , <urn:uuid:e90f3644-4bc7-438b-96e9-c865916b8397> , <urn:uuid:8da2cadf-6d67-499f-b737-430398a7f122> ;
+        crmhs:HSP9_used_component      <urn:uuid:f0925b51-1c73-4a85-9af7-df55ac046f91> , <urn:uuid:d0f2d33e-cb09-4d1f-bff0-b74cd8e992e0> , <urn:uuid:4912f0b1-6cc4-451b-8731-82fbe6e00e18> , <urn:uuid:2919fbb4-3578-4a13-a390-6995ec9d8268> , <urn:uuid:cde443fe-7780-419a-9227-299e04160a6d> ;
+        crm:P11_had_participant        <urn:uuid:7e3b9ffd-b152-4fbc-afbf-46a53064f5ab> , <urn:uuid:380ae6ea-c7d8-47cd-9efa-f354653f7b5b> ;
+        crm:P14_carried_out_by         <urn:uuid:a5249249-190c-4e3b-9772-cd89bf29bb3f> , <urn:uuid:c30f179d-60a4-4fcf-bc31-720d4da6674c> , <urn:uuid:7027c7da-9a49-4cae-9968-8014351c7adc> ;
+        crm:P2_has_type                <urn:uuid:82639961-ea59-4ef4-9d94-6ad3919d33cb> ;
+        crm:P3_has_note                "Multi-technique analytical study aimed at identifying the arsenic sulfide pigment used in the decorative panels of the Japanese Tower at the Royal Castle Domain in Laeken, Brussels, Belgium. The study was motivated by the unusually good conservation state of the arsenic sulfide pigment despite its known tendency to fade upon light exposure. The pigment was found applied with different painting techniques: bound with oil and urushi in lacquer layers, and with an aqueous (protein-based) binder in mat relief panels, where it is always applied as an underlayer mixed with ultramarine blue. Among 165 samples taken from the tower for a complete technical study, 24 samples containing arsenic sulfide pigment sampled on different floors were selected. Three representative cross-sections were discussed in detail: C90.058/P210.011, C90.094/P209.066, and C90.101/P209.074. The arsenic sulfide was identified as amorphous arsenic sulfide glass (g-AsxSx), synthesized from arsenic trioxide and sulfur via a dry process. The presence of As4S4 monomer units at different ratios across samples suggests manufacture in different batches and at different quenching temperatures. The unpublished full technical report is archived at KIK-IRPA under number 2010.10826." ;
+        crm:P7_took_place_at           <https://www.wikidata.org/wiki/Q816280> .
+
+<urn:uuid:a1a1dc10-d9fb-47c5-b3e6-41b7e604e3f0>
+        a                            crmhs:HS9_Study_Object_Sample ;
+        rdfs:label                   "C90.058 / P210.011" ;
+        crmhs:HSP19_was_taken_from   artemis:artemis_he_007 ;
+        crmhs:HSP5i_was_prepared_by  <urn:uuid:91e4ceaa-9a0d-43fb-98d5-f577cf930f32> .
+
+<urn:uuid:7027c7da-9a49-4cae-9968-8014351c7adc>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Koen Janssens" ;
+        crm:P107i_is_current_or_former_member_of
+                "AXES Research Group, Department of Chemistry, University of Antwerp, Groenenborgerlaan 171, 2020 Antwerp, Belgium" ;
+        aocat:has_name  "Koen Janssens" .
+
+<urn:uuid:e90f3644-4bc7-438b-96e9-c865916b8397>
+        a                      crmhs:HS11_Scientific_Device ;
+        rdfs:label             "JEOL Cross Section Polisher IB-09010CP (reference sample preparation only)" ;
+        crmhs:HSP22_has_maker  <urn:uuid:adb7a175-9e21-4129-b69a-9b14d6ded684> ;
+        crmhs:HSP23_has_model  "IB-09010CP" .
+
+<urn:uuid:0ad22382-1249-41cc-bcb5-f0219674ea73>
+        a                            crmhs:HS9_Study_Object_Sample ;
+        rdfs:label                   "C90.101 / P209.074" ;
+        crmhs:HSP19_was_taken_from   artemis:artemis_he_007 ;
+        crmhs:HSP5i_was_prepared_by  <urn:uuid:15815bea-6f44-4368-8c4d-c25c8bc59e5e> .
+
+<urn:uuid:89462ac3-97e5-4d7a-a909-e346b18c4fe4>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Scanning Electron Microscopy with Energy Dispersive X-ray Detection (SEM-EDX)" ;
+        crm:P3_has_note  "Backscattered electron imaging, elemental mapping and semi-quantitative point analyses on gold-coated cross-sections to identify elemental composition and morphology of pigment particles." .
+
+<urn:uuid:15815bea-6f44-4368-8c4d-c25c8bc59e5e>
+        a                       crmhs:HS10_Sample_Preparation ;
+        rdfs:label              "C90.101 (cross-section) / P209.074 (loose, Canada balsam mount)" ;
+        crmhs:HSP6_used_method  <urn:uuid:0f178ba7-2471-413a-a54b-107cca8c97ca> ;
+        crm:P3_has_note         "The bulk sample was fixed to a 1 cm3 poly(methyl methacrylate) cube using white PVA glue, after which acrylic copolymer resin (Spofacryl, Spofa Dental CZ-10031, Prague) was poured on the sample and a second cube placed on top. The cross-section was left to dry, then polished with water until nearly exposed, and subsequently polished using Micro Mesh polishing cloths in a sequence of grits (2400, 4000, 6000 and 8000 mesh) to a mirror-like surface. The cross-section was gold-coated for SEM-EDX analysis. For PLM, a fraction of the remaining loose sample was dispersed and mounted in Canada balsam (n = 1.55)." .
+
+<https://www.wikidata.org/wiki/Q816280>
+        a                     aocat:AO_Spatial_Region , crm:E53_Place ;
+        rdfs:label            "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage (KIK-IRPA), Parc du Cinquantenaire 1, B-1000 Brussels, Belgium" ;
+        aocat:has_country     geonames:2802361 ;
+        aocat:has_place_name  "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage (KIK-IRPA), Parc du Cinquantenaire 1, B-1000 Brussels, Belgium" .
+
+<urn:uuid:f0925b51-1c73-4a85-9af7-df55ac046f91>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "BSE (Tetra Link) backscattered electron detector" ;
+        crmhs:HSP22_has_maker  <urn:uuid:fa88ac74-8901-4793-af13-88cdf617b26a> .
+
+<urn:uuid:dee724f9-b213-4dce-b7a1-b2cec4bf13be>
+        a           crm:E55_Type ;
+        rdfs:label  "576 x 384 pixels, cooled to 203 K" .
+
+<urn:uuid:adb7a175-9e21-4129-b69a-9b14d6ded684>
+        a                           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label                  "JEOL" ;
+        aocat:has_agent_identifier  "https://www.wikidata.org/wiki/Q1423607" .
+
+<urn:uuid:b5d9b865-540f-4bfb-9d15-bacd674dde82>
+        a                crmdig:D14_Software ;
+        rdfs:label       "INCA" ;
+        crm:P2_has_type  <urn:uuid:9eb4446e-3716-4b6d-a294-db3b8a8c979e> ;
+        crm:P3_has_note  "Version 4.06, Oxford Instruments. Used for EDX data collection and semi-quantitative elemental analysis on SEM cross-sections." .
+
+<urn:uuid:a5249249-190c-4e3b-9772-cd89bf29bb3f>
+        a                aocat:AO_Person , crm:E21_Person ;
+        rdfs:label       "Marc Vermeulen" ;
+        crm:P107i_is_current_or_former_member_of
+                "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage, Parc du Cinquantenaire 1, B-1000 Brussels, Belgium" ;
+        aocat:has_email  "marc.vermeulen@kikirpa.be" ;
+        aocat:has_name   "Marc Vermeulen" .
+
+<urn:uuid:c30f179d-60a4-4fcf-bc31-720d4da6674c>
+        a               aocat:AO_Person , crm:E21_Person ;
+        rdfs:label      "Jana Sanyova" ;
+        crm:P107i_is_current_or_former_member_of
+                "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage, Parc du Cinquantenaire 1, B-1000 Brussels, Belgium" ;
+        aocat:has_name  "Jana Sanyova" .
+
+<urn:uuid:18d3437e-f1d4-441f-85ed-d0a667d6c7f5>
+        a                      crmhs:HS11_Scientific_Device ;
+        rdfs:label             "SPI-MODULE Sputter Coater (gold coating of cross-sections)" ;
+        crmhs:HSP22_has_maker  <urn:uuid:1f6d7b24-0461-46bc-a24a-bcdd49d251ee> .
+
+<urn:uuid:99d503d6-59db-4764-9627-107f72348ef1>
+        a                      crmhs:HS11_Scientific_Device ;
+        rdfs:label             "JEOL JSM6300 scanning electron microscope" ;
+        crmhs:HSP22_has_maker  <urn:uuid:611482dd-edb8-4521-8b6a-c0891feb7e2b> ;
+        crmhs:HSP23_has_model  "JSM6300" .
+
+<urn:uuid:5bc0d5b8-7645-47ec-a883-6821667082de>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Oxford Instruments" .
+
+<urn:uuid:4912f0b1-6cc4-451b-8731-82fbe6e00e18>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "Diffraction grating" ;
+        crmhs:HSP23_has_model  <urn:uuid:b14c665e-35e3-4161-b61a-ebdbe1444610> .
+
+<urn:uuid:1520c92b-3f37-4e66-8304-212717e5dff5>
+        a           crmhs:HS4_Method ;
+        rdfs:label  "Mechanical cross-section preparation (acrylic resin embedding and polishing); gold sputter-coating for SEM-EDX; Canada balsam mounting for PLM" .
+
+<urn:uuid:6854768c-7ba8-43e8-8d8e-1bbe598b4ca2>
+        a           crm:E55_Type ;
+        rdfs:label  "Unpublished technical report" .
+
+geonames:2802361  a  crm:E62_String ;
+        rdfs:label  "https://www.geonames.org/2802361" .
+
+<urn:uuid:e91c383a-3b85-48af-8c33-30c66a634f74>
+        a                            crmhs:HS9_Study_Object_Sample ;
+        rdfs:label                   "C90.094 / P209.066" ;
+        crmhs:HSP19_was_taken_from   artemis:artemis_he_007 ;
+        crmhs:HSP5i_was_prepared_by  <urn:uuid:8b2f152e-02e2-4c54-8b61-ace7b59a8725> .
+
+<urn:uuid:8da2cadf-6d67-499f-b737-430398a7f122>
+        a                      crmhs:HS11_Scientific_Device ;
+        rdfs:label             "Renishaw inVia multiple laser dispersive Raman spectrometer" ;
+        crmhs:HSP22_has_maker  <urn:uuid:af171db3-b7df-4b2b-91cb-82838f7d69b4> ;
+        crmhs:HSP23_has_model  "inVia" .
+
+<urn:uuid:d3bddd54-00b9-4d3c-a068-7d3c84fca234>
+        a                crmdig:D14_Software ;
+        rdfs:label       "Wire 2" ;
+        crm:P2_has_type  <urn:uuid:38044c66-cf62-4698-bc35-0379298c1968> ;
+        crm:P3_has_note  "Renishaw Wire 2 software used for Raman spectra acquisition. Spectra were subsequently baseline corrected when necessary." .
+
+<urn:uuid:91a3d39b-21a7-4e1d-aefb-8e36faedd9fb>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Toptica Photonics, Graefelfing (Munich), Germany" .
+
+<urn:uuid:1f6d7b24-0461-46bc-a24a-bcdd49d251ee>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "SPI, West Chester, PA, USA" .
+
+<urn:uuid:7e3b9ffd-b152-4fbc-afbf-46a53064f5ab>
+        a                   crm:E74_Group , aocat:AO_Group ;
+        rdfs:label          "Royal Institute for Cultural Heritage (KIK-IRPA)" ;
+        aocat:has_homepage  "https://www.kikirpa.be" .
+
+<urn:uuid:d0f2d33e-cb09-4d1f-bff0-b74cd8e992e0>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "High-power diode laser" ;
+        crmhs:HSP22_has_maker  <urn:uuid:91a3d39b-21a7-4e1d-aefb-8e36faedd9fb> ;
+        crmhs:HSP23_has_model  <urn:uuid:61ac41c3-f22b-4ca2-bbd3-39861734df50> .
+
+<urn:uuid:29819a27-524c-4647-a0d2-ca51fe352f52>
+        a           crm:E55_Type ;
+        rdfs:label  "Scientific paper" .
+
+<urn:uuid:9eb4446e-3716-4b6d-a294-db3b8a8c979e>
+        a           crm:E55_Type ;
+        rdfs:label  "EDX data collection and analysis" .
+
+<urn:uuid:df5bb697-030f-4ac5-86b8-1ca365484f7d>
+        a           crmdig:D14_Software ;
+        rdfs:label  "INCA v4.06; Wire 2" .
+
+<urn:uuid:db24fdd0-9b62-4e37-b434-30475a3bd6dc>
+        a           crm:E35_Title ;
+        rdfs:label  "Identification of artificial orpiment in the interior decorations of the Japanese Tower in Laeken, Brussels, Belgium" .
+
+<urn:uuid:38044c66-cf62-4698-bc35-0379298c1968>
+        a           crm:E55_Type ;
+        rdfs:label  "Raman data acquisition" .
+
+<urn:uuid:b14c665e-35e3-4161-b61a-ebdbe1444610>
+        a           crm:E55_Type ;
+        rdfs:label  "1200 l/mm" .
+
+<urn:uuid:61ac41c3-f22b-4ca2-bbd3-39861734df50>
+        a           crm:E55_Type ;
+        rdfs:label  "Toptica Photonics XTRA, 785 nm" .
+
+<https://doi.org/10.1186/s40494-015-0040-7>
+        a                crmhs:HS13_Scientific_Dataset ;
+        rdfs:label       "Identification of artificial orpiment in the interior decorations of the Japanese tower in Laeken, Brussels, Belgium" ;
+        crmhs:HSP11_was_created_using_software
+                <urn:uuid:df5bb697-030f-4ac5-86b8-1ca365484f7d> ;
+        crm:P2_has_type  <urn:uuid:29819a27-524c-4647-a0d2-ca51fe352f52> .
+
+<urn:uuid:5e5cf398-c2b3-4115-881e-9b65a284b27d>
+        a                crmhs:HS4_Method ;
+        rdfs:label       "Micro-Raman Spectrometry (MRS)" ;
+        crm:P3_has_note  "Raman spectroscopy used to identify the type of arsenic sulfide present based on wavenumber profile and band ratios, and to detect sulfur remainders from dry-process synthesis." .
+
+<urn:uuid:37b8ca4e-88bc-460c-a28e-cde3820c2710>
+        a                           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label                  "Carl Zeiss" ;
+        aocat:has_agent_identifier  "https://www.wikidata.org/wiki/Q627111" .
+
+<urn:uuid:fa88ac74-8901-4793-af13-88cdf617b26a>
+        a           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label  "Oxford Instruments" .
+
+<urn:uuid:9fb704b5-ba10-4901-8867-53d08f02ea74>
+        a                      crmhs:HS11_Scientific_Device ;
+        rdfs:label             "Zeiss Axio Imager 2 optical microscope (PLM and photomicrography)" ;
+        crmhs:HSP22_has_maker  <urn:uuid:37b8ca4e-88bc-460c-a28e-cde3820c2710> ;
+        crmhs:HSP23_has_model  "Axio Imager 2" .
+
+<urn:uuid:5792d328-e0c7-4ac7-aedf-4657b250884f>
+        a           crmhs:HS4_Method ;
+        rdfs:label  "Mechanical cross-section preparation (acrylic resin embedding and polishing); gold sputter-coating for SEM-EDX; Canada balsam mounting for PLM" .
+
+<urn:uuid:520efea0-d1e5-49a2-b591-c3ab64f5fb89>
+        a           crmhs:HS14_Analysis_Settings ;
+        rdfs:label  "Analysis settings" .
+
+<urn:uuid:8b2f152e-02e2-4c54-8b61-ace7b59a8725>
+        a                       crmhs:HS10_Sample_Preparation ;
+        rdfs:label              "C90.094 (cross-section) / P209.066 (loose, Canada balsam mount)" ;
+        crmhs:HSP6_used_method  <urn:uuid:1520c92b-3f37-4e66-8304-212717e5dff5> ;
+        crm:P3_has_note         "The bulk sample was fixed to a 1 cm3 poly(methyl methacrylate) cube using white PVA glue, after which acrylic copolymer resin (Spofacryl, Spofa Dental CZ-10031, Prague) was poured on the sample and a second cube placed on top. The cross-section was left to dry, then polished with water until nearly exposed, and subsequently polished using Micro Mesh polishing cloths in a sequence of grits (2400, 4000, 6000 and 8000 mesh) to a mirror-like surface. The cross-section was gold-coated for SEM-EDX analysis. For PLM, a fraction of the remaining loose sample was dispersed and mounted in Canada balsam (n = 1.55)." .
+
+<urn:uuid:380ae6ea-c7d8-47cd-9efa-f354653f7b5b>
+        a           crm:E74_Group , aocat:AO_Group ;
+        rdfs:label  "AXES Research Group, University of Antwerp" .
+
+<urn:uuid:cde443fe-7780-419a-9227-299e04160a6d>
+        a                      crmhs:HS12_Device_Component ;
+        rdfs:label             "Peltier-cooled near-infrared enhanced deep-depletion CCD detector" ;
+        crmhs:HSP23_has_model  <urn:uuid:dee724f9-b213-4dce-b7a1-b2cec4bf13be> .
+
+<urn:uuid:611482dd-edb8-4521-8b6a-c0891feb7e2b>
+        a                           aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label                  "JEOL" ;
+        aocat:has_agent_identifier  "https://www.wikidata.org/wiki/Q1423607" .

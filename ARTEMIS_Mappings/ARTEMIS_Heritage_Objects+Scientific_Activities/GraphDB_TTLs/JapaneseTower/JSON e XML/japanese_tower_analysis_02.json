@@ -1,0 +1,215 @@
+{
+  "analysis": {
+    "heritage_object_artemis_id": "https://artemis-twin.eu/entity/artemis_he_007",
+
+    "analysis_was_performed_on": "Interior decorations of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+
+    "object/or/area/or/portion/or/sample_analysed": [
+      {
+        "object/area/sample_label": "Upper floors decorative elements — general survey (bas-relief, framework, sliding doors, ceilings, French windows, carved columns, porticos)",
+        "object/area/sample_type": "Area",
+        "study_object_area": {
+          "area_name": "Upper floors (floors 1–5), Japanese Tower, Royal Castle Domain, Laeken",
+          "area_of_interest_on": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "area_of_interest_on_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        }
+      },
+      {
+        "object/area/sample_label": "Carved columns — second floor (seishitsu urushi / green lacquer)",
+        "object/area/sample_type": "Area",
+        "study_object_area": {
+          "area_name": "Carved columns, second floor",
+          "area_of_interest_on": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "area_of_interest_on_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        }
+      },
+      {
+        "object/area/sample_label": "Carved columns — third floor (red lacquer, HgS pigmentation)",
+        "object/area/sample_type": "Area",
+        "study_object_area": {
+          "area_name": "Carved columns, third floor",
+          "area_of_interest_on": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "area_of_interest_on_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        }
+      },
+      {
+        "object/area/sample_label": "Frames of sliding doors — multiple floors (red, black, transparent lacquer, nashiji decoration)",
+        "object/area/sample_type": "Area",
+        "study_object_area": {
+          "area_name": "Sliding door frames, multiple floors",
+          "area_of_interest_on": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "area_of_interest_on_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        }
+      },
+      {
+        "object/area/sample_label": "Large wall panels — second floor (aventurine / nashiji decoration, seishitsu urushi)",
+        "object/area/sample_type": "Area",
+        "study_object_area": {
+          "area_name": "Large wall panels, second floor",
+          "area_of_interest_on": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "area_of_interest_on_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        }
+      },
+      {
+        "object/area/sample_label": "Doors, pillars and large panels — multiple floors (ikkei saishiki technique)",
+        "object/area/sample_type": "Area",
+        "study_object_area": {
+          "area_name": "Doors, pillars and large panels, multiple floors",
+          "area_of_interest_on": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "area_of_interest_on_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        }
+      }
+    ],
+
+    "analysis_type": "Multi-technique (optical microscopy, SEM-EDX, FTIR, HPLC-DAD, Py-GC-MS); archival research; in situ material and architectural survey",
+    "analysis_title": "The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium",
+
+    "notes": "Multidisciplinary study of the upper floors (1–5) of the Japanese Tower at the Royal Castle Domain in Laeken, Brussels, carried out by Fenikx bvba between September 2010 and November 2013, at the request of the Belgian Buildings Agency. The research combined archival research, in situ architectural and material survey, and scientific analysis. It led to the identification of decorative techniques and materials used in each decorative element, which were mapped for future conservation reference, and to the compilation of a detailed damage record. A significant variety of Japanese lacquer techniques was identified: monochrome lacquer (black, red, green, yellow), nashiji, maki-e, takamaki-e, and the architectural technique ikkei saishiki. Scientific analysis identified urushi lacquer (with additives including plant juice and perilla oil) in the upper coloured layers, and a mixture of proteinaceous binder with urushi in the ground layers. Red lacquer layers were pigmented with mercury sulphide (HgS); green seishitsu urushi on the second floor was pigmented with a mixture of Prussian blue and artificial orpiment (as confirmed by Vermeulen et al. 2015). Nashiji decoration on the third floor revealed tin flakes sprinkled on a layer of red lacquer. International experts (Prof. William Coaldrake, Shigeru Kubodera, Yoshihiko Yamashita) were consulted in 2011–2012. The study also informed the development of a preservation plan for the interior decoration.",
+
+    "time_span": [
+      {
+        "from": "2010-09",
+        "until": "2013-11"
+      }
+    ],
+
+    "took_place_at": [
+      {
+        "place_name": "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+        "country": "https://www.geonames.org/2802361"
+      },
+      {
+        "place_name": "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium",
+        "country": "https://www.geonames.org/2802361",
+        "place_uri": "https://www.wikidata.org/wiki/Q816280"
+      }
+    ],
+
+    "carried_out_by": [
+      {
+        "agent_type": "Person",
+        "name": "Delphine Mesmaeker",
+        "email": "delphinemesmaeker@gmail.com",
+        "institution": "Asian Lacquer and Polychrome Sculpture, Saintes, Belgium"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Marjolein Deceuninck",
+        "institution": "Fenikx bvba"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Ann Verdonck",
+        "institution": "Fenikx bvba"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Jana Sanyova",
+        "institution": "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Rosemie Cheroutre"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Etienne Costa"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Marianne Decroly"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Sophie Robyns"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Françoise Urban"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Marc Vermeulen",
+        "institution": "Royal Institute for Cultural Heritage (KIK-IRPA), Brussels, Belgium"
+      }
+    ],
+
+    "had_participant": [
+      {
+        "agent_type": "Group",
+        "name": "Fenikx bvba"
+      },
+      {
+        "agent_type": "Group",
+        "name": "Royal Institute for Cultural Heritage (KIK-IRPA)",
+        "homepage": "https://www.kikirpa.be"
+      },
+      {
+        "agent_type": "Group",
+        "name": "Belgian Buildings Agency (Regie der Gebouwen)"
+      },
+      {
+        "agent_type": "Person",
+        "name": "William Coaldrake",
+        "institution": "University of Melbourne (international expert consultant)"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Shigeru Kubodera",
+        "institution": "International expert consultant"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Yoshihiko Yamashita",
+        "institution": "International expert consultant, lacquer conservation"
+      }
+    ],
+
+    "used_method": [
+      {
+        "method_name": "Optical microscopy",
+        "method_notes": "Used for visual examination of decorative layers and identification of lacquer techniques."
+      },
+      {
+        "method_name": "Scanning Electron Microscopy with Energy Dispersive X-ray Analysis (SEM-EDX)",
+        "method_notes": "Used for elemental characterisation of pigments and metallic components in the lacquer layers."
+      },
+      {
+        "method_name": "Fourier Transform Infrared Spectroscopy (FTIR)",
+        "method_notes": "Used for identification of organic binders and lacquer components."
+      },
+      {
+        "method_name": "High-Performance Liquid Chromatography with Diode-Array Detection (HPLC-DAD)",
+        "method_notes": "Used for identification of organic colorants and dyes in the lacquer layers."
+      },
+      {
+        "method_name": "Pyrolysis Gas Chromatography-Mass Spectrometry (Py-GC-MS)",
+        "method_notes": "Used for identification of organic binders including urushi, plant juice, perilla oil, and proteinaceous materials. Samples pyrolyzed at 550°C for 12 sec with TMAH 2.5% in MeOH."
+      },
+      {
+        "method_name": "Archival research",
+        "method_notes": "Comparison between archival sources (Royal Palace Archives Brussels, documentary collection no. 586) and in situ observations to establish the history and construction of the tower's decoration."
+      },
+      {
+        "method_name": "In situ architectural and material survey",
+        "method_notes": "Systematic in situ examination of decorative elements floor by floor, leading to technique identification, mapping, and damage recording."
+      }
+    ],
+
+    "produced_dataset": [
+      {
+        "dataset_title": "The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium",
+        "dataset_url": "https://doi.org/10.1080/00393630.2016.1227053",
+        "dataset_type": "Scientific paper"
+      },
+      {
+        "dataset_title": "Laeken Japanse toren materiaaltechnisch onderzoek (unpublished technical report)",
+        "dataset_type": "Unpublished technical report"
+      },
+      {
+        "dataset_title": "Rapport d'analyse: Etude des materiaux et techniques des couches picturales (Sanyova, J., 2013, KIK-IRPA, unpublished)",
+        "dataset_type": "Unpublished technical report"
+      }
+    ]
+  }
+}

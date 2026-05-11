@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>CAVR-07</service_id>
+  <title>VR Collaborative Environment</title>
+  <service_type>Immersive Collaborative Visualisation</service_type>
+  <version/>
+  <description>A collaborative VR environment developed in Unity and accessed via Meta Quest 3 headsets, in which all input JSON payloads for ARTEMIS simulation microservices are generated interactively. Allows expert trainers and learners (e.g. university students, professionals in training) to jointly select simulation parameters, define spatial and temporal contexts and visualise simulation outputs in real time. Supports immersive exploration of the RHDT, interactive scenario simulation, and collaborative annotation and discussion of 3D environments and data layers. Compatible with .glb 3D models. Hosted on a secure project cloud environment. No third-party commercial licences required for the simulation microservices.</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>Pixelated Realities</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>Other</endpoint_type>
+      <endpoint_methods/>
+      <notes>Accessed via Meta Quest 3 VR headsets (standalone or tethered mode).</notes>
+    </access_point>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods/>
+      <notes>Integration with REST API-based simulation microservices hosted on secure project cloud infrastructure. Also accessible from standard workstations/PCs for 3D model interaction, dashboard access and simulation control.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Conservation scientists and heritage researchers requiring immersive collaborative review of 3D heritage models and multi-layer environmental data</audience>
+    <audience>Conservation engineers and architects using the VR environment as a virtual sandbox for prototyping environmental interventions</audience>
+    <audience>Heritage managers presenting evidence-based conservation cases to non-expert audiences</audience>
+    <audience>General public accessing immersive narrative experiences of the Japanese Tower</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: enabling collaborative multi-user VR sessions where users simultaneously visualise and annotate multiple data layers on the 3D model of the Japanese Tower; supporting narrative-driven public disclosure and expert scenario prototyping</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type>
+    <object_type>Meta Quest 3 VR headset (standalone or tethered mode)</object_type>
+    <object_type>Standard workstation or laptop with reliable internet connectivity</object_type>
+    <object_type>Secure project cloud infrastructure for hosting REST API simulation microservices, 3D models and simulation outputs</object_type>
+  </used_physical_object_of_type>
+  <has_functionality>
+    <functionality>Immersive VR exploration of RHDT 3D environments via Meta Quest 3</functionality>
+    <functionality>Interactive collaborative selection of simulation parameters and spatial/temporal contexts</functionality>
+    <functionality>Real-time visualisation of simulation outputs within the VR environment</functionality>
+    <functionality>Multi-user collaborative sessions with simultaneous visualisation and annotation</functionality>
+    <functionality>Support for repeatable, controlled data streams for professional training and demonstration</functionality>
+    <functionality>Virtual testing and validation of adaptation strategies using realistic climate data</functionality>
+    <functionality>Guided narrative discovery for general public</functionality>
+  </has_functionality>
+  <composed_of/>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>model/gltf-binary</format>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>application/json</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

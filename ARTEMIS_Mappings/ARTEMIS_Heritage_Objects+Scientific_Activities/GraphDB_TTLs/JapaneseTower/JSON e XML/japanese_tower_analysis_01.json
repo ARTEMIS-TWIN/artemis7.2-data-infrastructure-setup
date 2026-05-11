@@ -1,0 +1,225 @@
+{
+  "analysis": {
+    "heritage_object_artemis_id": "https://artemis-twin.eu/entity/artemis_he_007",
+    "analysis_was_performed_on": "Decorative panels of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+    "object/or/area/or/portion/or/sample_analysed": [
+      {
+        "object/area/sample_label": "Paint micro-sample C90.058 / P210.011 — arsenic sulfide mixed with ultramarine blue, protein-based medium, underlayer",
+        "object/area/sample_type": "Sample",
+        "study_object_sample": {
+          "sample_name": "C90.058 / P210.011",
+          "taken_from": "Decorative panels of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "taken_from_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        },
+        "sample_preparation": {
+          "preparation_notes": "The bulk sample was fixed to a 1 cm3 poly(methyl methacrylate) cube using white PVA glue, after which acrylic copolymer resin (Spofacryl, Spofa Dental CZ-10031, Prague) was poured on the sample and a second cube placed on top. The cross-section was left to dry, then polished with water until nearly exposed, and subsequently polished using Micro Mesh polishing cloths in a sequence of grits (2400, 4000, 6000 and 8000 mesh) to a mirror-like surface. The cross-section was gold-coated for SEM-EDX analysis. For PLM, a fraction of the remaining loose sample was dispersed and mounted in Canada balsam (n = 1.55).",
+          "prepared_sample_name": "C90.058 (cross-section) / P210.011 (loose, Canada balsam mount)",
+          "used_method": "Mechanical cross-section preparation (acrylic resin embedding and polishing); gold sputter-coating for SEM-EDX; Canada balsam mounting for PLM"
+        }
+      },
+      {
+        "object/area/sample_label": "Paint micro-sample C90.094 / P209.066 — arsenic sulfide mixed with Prussian blue, urushi-containing oil medium, finishing layer",
+        "object/area/sample_type": "Sample",
+        "study_object_sample": {
+          "sample_name": "C90.094 / P209.066",
+          "taken_from": "Decorative panels of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "taken_from_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        },
+        "sample_preparation": {
+          "preparation_notes": "The bulk sample was fixed to a 1 cm3 poly(methyl methacrylate) cube using white PVA glue, after which acrylic copolymer resin (Spofacryl, Spofa Dental CZ-10031, Prague) was poured on the sample and a second cube placed on top. The cross-section was left to dry, then polished with water until nearly exposed, and subsequently polished using Micro Mesh polishing cloths in a sequence of grits (2400, 4000, 6000 and 8000 mesh) to a mirror-like surface. The cross-section was gold-coated for SEM-EDX analysis. For PLM, a fraction of the remaining loose sample was dispersed and mounted in Canada balsam (n = 1.55).",
+          "prepared_sample_name": "C90.094 (cross-section) / P209.066 (loose, Canada balsam mount)",
+          "used_method": "Mechanical cross-section preparation (acrylic resin embedding and polishing); gold sputter-coating for SEM-EDX; Canada balsam mounting for PLM"
+        }
+      },
+      {
+        "object/area/sample_label": "Paint micro-sample C90.101 / P209.074 — unmixed arsenic sulfide, urushi-containing finishing layer",
+        "object/area/sample_type": "Sample",
+        "study_object_sample": {
+          "sample_name": "C90.101 / P209.074",
+          "taken_from": "Decorative panels of the Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium",
+          "taken_from_uri": "https://artemis-twin.eu/entity/artemis_he_007"
+        },
+        "sample_preparation": {
+          "preparation_notes": "The bulk sample was fixed to a 1 cm3 poly(methyl methacrylate) cube using white PVA glue, after which acrylic copolymer resin (Spofacryl, Spofa Dental CZ-10031, Prague) was poured on the sample and a second cube placed on top. The cross-section was left to dry, then polished with water until nearly exposed, and subsequently polished using Micro Mesh polishing cloths in a sequence of grits (2400, 4000, 6000 and 8000 mesh) to a mirror-like surface. The cross-section was gold-coated for SEM-EDX analysis. For PLM, a fraction of the remaining loose sample was dispersed and mounted in Canada balsam (n = 1.55).",
+          "prepared_sample_name": "C90.101 (cross-section) / P209.074 (loose, Canada balsam mount)",
+          "used_method": "Mechanical cross-section preparation (acrylic resin embedding and polishing); gold sputter-coating for SEM-EDX; Canada balsam mounting for PLM"
+        }
+      }
+    ],
+    "analysis_type": "Multi-technique (SEM-EDX, Micro-Raman Spectroscopy, Polarized Light Microscopy)",
+    "analysis_title": "Identification of artificial orpiment in the interior decorations of the Japanese Tower in Laeken, Brussels, Belgium",
+    "notes": "Multi-technique analytical study aimed at identifying the arsenic sulfide pigment used in the decorative panels of the Japanese Tower at the Royal Castle Domain in Laeken, Brussels, Belgium. The study was motivated by the unusually good conservation state of the arsenic sulfide pigment despite its known tendency to fade upon light exposure. The pigment was found applied with different painting techniques: bound with oil and urushi in lacquer layers, and with an aqueous (protein-based) binder in mat relief panels, where it is always applied as an underlayer mixed with ultramarine blue. Among 165 samples taken from the tower for a complete technical study, 24 samples containing arsenic sulfide pigment sampled on different floors were selected. Three representative cross-sections were discussed in detail: C90.058/P210.011, C90.094/P209.066, and C90.101/P209.074. The arsenic sulfide was identified as amorphous arsenic sulfide glass (g-AsxSx), synthesized from arsenic trioxide and sulfur via a dry process. The presence of As4S4 monomer units at different ratios across samples suggests manufacture in different batches and at different quenching temperatures. The unpublished full technical report is archived at KIK-IRPA under number 2010.10826.",
+    "took_place_at": [
+      {
+        "place_name": "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage (KIK-IRPA), Parc du Cinquantenaire 1, B-1000 Brussels, Belgium",
+        "country": "https://www.geonames.org/2802361",
+        "place_uri": "https://www.wikidata.org/wiki/Q816280"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "agent_type": "Person",
+        "name": "Marc Vermeulen",
+        "email": "marc.vermeulen@kikirpa.be",
+        "institution": "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage, Parc du Cinquantenaire 1, B-1000 Brussels, Belgium"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Jana Sanyova",
+        "institution": "Laboratory of polychrome artifacts, Royal Institute for Cultural Heritage, Parc du Cinquantenaire 1, B-1000 Brussels, Belgium"
+      },
+      {
+        "agent_type": "Person",
+        "name": "Koen Janssens",
+        "institution": "AXES Research Group, Department of Chemistry, University of Antwerp, Groenenborgerlaan 171, 2020 Antwerp, Belgium"
+      }
+    ],
+    "had_participant": [
+      {
+        "agent_type": "Group",
+        "name": "Royal Institute for Cultural Heritage (KIK-IRPA)",
+        "homepage": "https://www.kikirpa.be"
+      },
+      {
+        "agent_type": "Group",
+        "name": "AXES Research Group, University of Antwerp"
+      }
+    ],
+    "used_method": [
+      {
+        "method_name": "Scanning Electron Microscopy with Energy Dispersive X-ray Detection (SEM-EDX)",
+        "method_notes": "Backscattered electron imaging, elemental mapping and semi-quantitative point analyses on gold-coated cross-sections to identify elemental composition and morphology of pigment particles."
+      },
+      {
+        "method_name": "Micro-Raman Spectrometry (MRS)",
+        "method_notes": "Raman spectroscopy used to identify the type of arsenic sulfide present based on wavenumber profile and band ratios, and to detect sulfur remainders from dry-process synthesis."
+      },
+      {
+        "method_name": "Polarized Light Microscopy (PLM)",
+        "method_notes": "Investigation of particle shapes, interference colors and optical properties (isotropy/anisotropy) in Canada balsam mounts under slightly polarized and cross-polarized light, to distinguish arsenic sulfide glass from natural orpiment and to infer starting materials."
+      }
+    ],
+    "used_device": [
+      {
+        "device_name": "JEOL JSM6300 scanning electron microscope",
+        "model": "JSM6300",
+        "maker": {
+          "agent_type": "Group",
+          "name": "JEOL",
+          "identifier": "https://www.wikidata.org/wiki/Q1423607"
+        }
+      },
+      {
+        "device_name": "Renishaw inVia multiple laser dispersive Raman spectrometer",
+        "model": "inVia",
+        "maker": {
+          "agent_type": "Group",
+          "name": "Renishaw"
+        }
+      },
+      {
+        "device_name": "Zeiss Axio Imager 2 optical microscope (PLM and photomicrography)",
+        "model": "Axio Imager 2",
+        "maker": {
+          "agent_type": "Group",
+          "name": "Carl Zeiss",
+          "identifier": "https://www.wikidata.org/wiki/Q627111"
+        }
+      },
+      {
+        "device_name": "JEOL Cross Section Polisher IB-09010CP (reference sample preparation only)",
+        "model": "IB-09010CP",
+        "maker": {
+          "agent_type": "Group",
+          "name": "JEOL",
+          "identifier": "https://www.wikidata.org/wiki/Q1423607"
+        }
+      },
+      {
+        "device_name": "SPI-MODULE Sputter Coater (gold coating of cross-sections)",
+        "maker": {
+          "agent_type": "Group",
+          "name": "SPI, West Chester, PA, USA"
+        }
+      }
+    ],
+    "used_components": [
+      {
+        "component_name": "Pentafet Si(Li) X-ray detector",
+        "maker": "Oxford Instruments"
+      },
+      {
+        "component_name": "BSE (Tetra Link) backscattered electron detector",
+        "maker": "Oxford Instruments"
+      },
+      {
+        "component_name": "Peltier-cooled near-infrared enhanced deep-depletion CCD detector",
+        "model": "576 x 384 pixels, cooled to 203 K"
+      },
+      {
+        "component_name": "High-power diode laser",
+        "model": "Toptica Photonics XTRA, 785 nm",
+        "maker": "Toptica Photonics, Graefelfing (Munich), Germany"
+      },
+      {
+        "component_name": "Diffraction grating",
+        "model": "1200 l/mm"
+      }
+    ],
+    "used_software": [
+      {
+        "software_name": "INCA",
+        "software_type": "EDX data collection and analysis",
+        "software_notes": "Version 4.06, Oxford Instruments. Used for EDX data collection and semi-quantitative elemental analysis on SEM cross-sections."
+      },
+      {
+        "software_name": "Wire 2",
+        "software_type": "Raman data acquisition",
+        "software_notes": "Renishaw Wire 2 software used for Raman spectra acquisition. Spectra were subsequently baseline corrected when necessary."
+      }
+    ],
+    "used_settings": [
+      {
+        "setting_values": [
+          "SEM-EDX acceleration voltage: 15 kV",
+          "SEM-EDX working distance: 15 mm",
+          "Raman laser wavelength: 785 nm",
+          "Raman grating: 1200 l/mm",
+          "Raman detector temperature: 203 K",
+          "Raman power on sample: 1 mW (reduced with neutral density filters)",
+          "Raman integration time: 30 seconds",
+          "Raman accumulations: 5",
+          "PLM mounting medium: Canada balsam (n = 1.55)",
+          "PLM objectives: 50x or 100x",
+          "Optical microscope UV excitation bandpass filter: 390-420 nm",
+          "Optical microscope magnification: up to 500x",
+          "Cross Section Polisher accelerating voltage (reference samples only): 4.0 kV",
+          "Cross Section Polisher argon gas flow (reference samples only): 4.4",
+          "Cross Section Polisher duration (reference samples only): 12 hours"
+        ]
+      }
+    ],
+    "used_dataset": [
+      {
+        "dataset_title": "Natural orpiment reference material — Kremer Pigmente GmbH & Co, Aichstetten, Germany",
+        "dataset_type": "Reference material / reference spectra"
+      },
+      {
+        "dataset_title": "Laboratory-prepared arsenic sulfide glass (g-AsxSx) — synthesized from arsenic trioxide and sulfur (1:1), Bunsen burner method after Rotter",
+        "dataset_type": "Reference material / reference spectra"
+      }
+    ],
+    "produced_dataset": [
+      {
+        "dataset_title": "Identification of artificial orpiment in the interior decorations of the Japanese tower in Laeken, Brussels, Belgium",
+        "dataset_url": "https://doi.org/10.1186/s40494-015-0040-7",
+        "dataset_type": "Scientific paper",
+        "created_using_software": "INCA v4.06; Wire 2"
+      },
+      {
+        "dataset_title": "Interdisciplinary technical study of the Japanese Tower at the Royal Castle Domain in Laeken (unpublished report, KIK-IRPA archive no. 2010.10826)",
+        "dataset_type": "Unpublished technical report"
+      }
+    ]
+  }
+}

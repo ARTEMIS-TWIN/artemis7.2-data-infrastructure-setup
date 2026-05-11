@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>BEDP-02</service_id>
+  <title>Navigational Hypertext Service</title>
+  <service_type>Knowledge Linking and Navigation</service_type>
+  <version/>
+  <description>A service for the creation and management of links between information entities within the ARTEMIS infrastructure. Unlike traditional binary hyperlinks, the service supports links of arbitrary arity, allowing complex relationships involving multiple entities (e.g. asset A and annotation B are related to metadata C in context D). All links are represented in machine-readable format suitable for integration into knowledge graphs. Links may be directional, supporting semantic navigation between entities. Hosted as a RESTful API on a Docker-compatible web server with a database backend (e.g. PostgreSQL) and optional OAuth2 authentication.</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>HOF</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods>
+        <method>GET</method>
+        <method>POST</method>
+        <method>PUT</method>
+        <method>DELETE</method>
+      </endpoint_methods>
+      <notes>Hosted on a Docker-compatible standard web server. Database backend (e.g. PostgreSQL). Optional OAuth2 authentication.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Heritage professionals and researchers who need to express and navigate relationships between heterogeneous information entities</audience>
+    <audience>RHDT pilot users requiring structured contextual links between assets, annotations and metadata</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: linking unstructured heritage documentation and structured database entries to specific geometric locations on the 3D model of the Japanese Tower</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type/>
+  <has_functionality>
+    <functionality>Creation and management of multi-ary links between information entities</functionality>
+    <functionality>Machine-readable link representation for knowledge graph integration</functionality>
+    <functionality>Directional link support for semantic navigation</functionality>
+    <functionality>Structured context provision for user workflow and information discovery</functionality>
+    <functionality>Cross-pilot data interoperability support</functionality>
+  </has_functionality>
+  <composed_of/>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>application/json</format>
+    <format>application/ld+json</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

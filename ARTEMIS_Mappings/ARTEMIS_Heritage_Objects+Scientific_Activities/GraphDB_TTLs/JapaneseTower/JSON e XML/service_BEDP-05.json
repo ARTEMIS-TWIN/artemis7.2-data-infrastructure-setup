@@ -1,0 +1,40 @@
+{
+  "service_id": "BEDP-05",
+  "title": "Hypertext Knowledge Base Service",
+  "service_type": "Knowledge Discovery and Contextualisation",
+  "description": "A service providing context-specific suggestions based on a pilot-specific Knowledge Base (KB). The KB is constructed from pilot-specific datasets and can evolve through expert input, allowing users to contribute to and expand the knowledge over time. Given a defined context (e.g. a selected asset, keyword or annotation), the service offers related content or concepts to support user exploration, enrichment and research. The scope and quality of the KB depends directly on the availability, accessibility and semantic richness of the incorporated datasets. Accessible via a backend REST API integrated with a knowledge graph (e.g. graph database).",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "HOF"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "notes": "Backend service accessible via REST API. Integration with a knowledge graph (e.g. graph database). Access to pilot datasets or endpoints for context generation."
+    }
+  ],
+  "intended_for": [
+    "Heritage professionals, researchers and curators requiring contextual discovery and exploration of related heritage information",
+    "RHDT pilot users seeking non-obvious connections between assets, annotations and knowledge entities"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: surfacing related heritage content and concepts to support expert users in building evidence-based conservation strategies and contextualising the Japanese Tower's materials and history within the RHDT knowledge base"
+    }
+  ],
+  "has_functionality": [
+    "Context-specific suggestions based on a pilot-specific KB",
+    "KB construction from pilot-specific datasets",
+    "Expert-driven KB evolution and expansion over time",
+    "Related content or concept surfacing given a defined context (selected asset, keyword, annotation)",
+    "Support for user exploration, enrichment and research",
+    "Cross-pilot asset and information visibility"
+  ],
+  "format_consumed": [
+    "application/json"
+  ],
+  "format_produced": [
+    "application/json",
+    "application/ld+json"
+  ]
+}

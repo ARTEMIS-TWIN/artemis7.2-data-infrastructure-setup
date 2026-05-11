@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>BESS-13</service_id>
+  <title>Illumination Simulation Services</title>
+  <service_type>Physically-based Lighting Simulation</service_type>
+  <version/>
+  <description>A microservices architecture providing backend infrastructure for the estimation of physically-based lighting computed on virtual sensors placed in an RHDT 3D environment. Depends on the Remote Rendering Services (RRS) for illumination calculation, scene management and illumination environment definition (sky luminance, luminaires, etc.). Capabilities include: interactive estimation of physically-based directional luminance and illuminance using state-of-the-art global illumination methods; support for multiple sensor types (point, disk, quadrilateral); easy-to-interpret photometric measurement readout compatible with physical sensor output. Implemented using hardware-based ray tracing via the NVIDIA OptiX framework. Requires an NVIDIA RTX GPU (recommended: RTX 5090 on Intel i9 with at least 32GB RAM). RRS and illumination simulation node provided by AUEB-RC as external to the main ARTEMIS infrastructure. REST API based on Node.js (v16+) with Express.js (v4.18+).</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>PHASMATIC</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods>
+        <method>GET</method>
+        <method>POST</method>
+      </endpoint_methods>
+      <notes>Node.js-based (v16+) HTTP/HTTPS web server with Express.js (v4.18+). JSON payload. Standardised endpoint routing.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Conservation scientists and heritage managers requiring quantitative assessment of light exposure on heritage materials</audience>
+    <audience>RHDT users needing virtual experimentation and 'what-if' scenario validation for lighting systems and exhibit placement</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_03 — Historical and Predictive Illumination Simulation: computing cumulative light dose on specific surfaces of the Japanese Tower using historical solar path data and the 3D model, and simulating the impact of future climate scenarios or environmental control interventions</activity_label>
+    </activity>
+    <activity>
+      <activity_label>operation_04 — Risk Assessment and Alerting: providing cumulative light exposure heatmaps as one of the three input data streams processed by the Risk Assessment Service</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type>
+    <object_type>Server with NVIDIA RTX GPU (recommended: RTX 5090) with hardware-based ray tracing via NVIDIA OptiX framework — provided by AUEB-RC</object_type>
+    <object_type>Intel i9 processor with at least 32GB RAM</object_type>
+  </used_physical_object_of_type>
+  <has_functionality>
+    <functionality>Physically-based directional luminance and illuminance estimation using global illumination methods</functionality>
+    <functionality>Hardware-accelerated ray tracing via NVIDIA OptiX</functionality>
+    <functionality>Support for multiple virtual sensor types (point, disk, quadrilateral)</functionality>
+    <functionality>Photometric measurement readout compatible with physical sensor output</functionality>
+    <functionality>Scene management and illumination environment definition (sky luminance, luminaires)</functionality>
+    <functionality>Virtual experimentation and 'what-if' scenario analysis for lighting and exhibit placement</functionality>
+  </has_functionality>
+  <composed_of>
+    <sub_service>
+      <sub_service_title>Remote Rendering Service (AUEB-RC external RRS node)</sub_service_title>
+    </sub_service>
+  </composed_of>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>model/gltf-binary</format>
+    <format>model/obj</format>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>image/tiff</format>
+    <format>application/json</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

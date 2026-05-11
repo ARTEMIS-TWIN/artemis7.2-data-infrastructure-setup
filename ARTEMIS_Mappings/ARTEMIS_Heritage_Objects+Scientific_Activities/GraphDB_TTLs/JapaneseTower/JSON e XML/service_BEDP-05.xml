@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>BEDP-05</service_id>
+  <title>Hypertext Knowledge Base Service</title>
+  <service_type>Knowledge Discovery and Contextualisation</service_type>
+  <version/>
+  <description>A service providing context-specific suggestions based on a pilot-specific Knowledge Base (KB). The KB is constructed from pilot-specific datasets and can evolve through expert input, allowing users to contribute to and expand the knowledge over time. Given a defined context (e.g. a selected asset, keyword or annotation), the service offers related content or concepts to support user exploration, enrichment and research. The scope and quality of the KB depends directly on the availability, accessibility and semantic richness of the incorporated datasets. Accessible via a backend REST API integrated with a knowledge graph (e.g. graph database).</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>HOF</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods/>
+      <notes>Backend service accessible via REST API. Integration with a knowledge graph (e.g. graph database). Access to pilot datasets or endpoints for context generation.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Heritage professionals, researchers and curators requiring contextual discovery and exploration of related heritage information</audience>
+    <audience>RHDT pilot users seeking non-obvious connections between assets, annotations and knowledge entities</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: surfacing related heritage content and concepts to support expert users in building evidence-based conservation strategies and contextualising the Japanese Tower's materials and history within the RHDT knowledge base</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type/>
+  <has_functionality>
+    <functionality>Context-specific suggestions based on a pilot-specific KB</functionality>
+    <functionality>KB construction from pilot-specific datasets</functionality>
+    <functionality>Expert-driven KB evolution and expansion over time</functionality>
+    <functionality>Related content or concept surfacing given a defined context (selected asset, keyword, annotation)</functionality>
+    <functionality>Support for user exploration, enrichment and research</functionality>
+    <functionality>Cross-pilot asset and information visibility</functionality>
+  </has_functionality>
+  <composed_of/>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>application/json</format>
+    <format>application/ld+json</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

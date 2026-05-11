@@ -1,0 +1,48 @@
+{
+  "service_id": "BESS-07",
+  "title": "Predictive Indoor Climate AI Service",
+  "service_type": "Predictive Simulation / AI Forecasting",
+  "description": "An intelligent microservice providing backend infrastructure for forecasting future indoor climate conditions (temperature and relative humidity) of a specific heritage building or room. Operates in two stages: (1) Offline Model Training — a historical dataset correlating indoor IoCT time-series data with outdoor weather station data is used to train and validate a building-specific time-series forecasting model (e.g. LSTM networks, Gradient Boosting Machines or other regression models), producing a highly-tuned predictive model capturing the unique thermal inertia, air permeability and moisture buffering capacity of the asset; (2) Online Prediction (Inference) — once deployed, the service takes a future weather forecast (e.g. for the next 24–72 hours) as primary input, feeds it into the trained model and returns a time-series forecast of indoor climate for the same period. Called by the RHDT on a regular schedule via standardised REST endpoints. Training performed on a high-performance workstation or cloud instance with powerful CPU and preferably high-VRAM GPU. Inference deployed as a lightweight Python microservice (Flask or FastAPI) on a standard cloud CPU VM (8–16 GB RAM).",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "Royal Institute for Cultural Heritage (KIK-IRPA)"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "notes": "Python-based (Flask or FastAPI) or Node.js-based HTTP/HTTPS web server with JSON payload. Called by the RHDT on a regular schedule."
+    }
+  ],
+  "intended_for": [
+    "Heritage building managers requiring proactive early-warning climate management",
+    "Conservation scientists needing evidence-based forecasts of environmental risk for sensitive collections",
+    "RHDT systems requiring predicted indoor climate data as input to the Risk Assessment Service"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_02 — Predictive Indoor Climate Forecasting: generating 24-hour indoor temperature and RH forecasts for the Japanese Tower using real-time IoT data and external weather forecast data as inputs"
+    },
+    {
+      "activity_label": "operation_04 — Risk Assessment and Alerting: providing short-term indoor climate forecasts as one of the three input data streams processed by the Risk Assessment Service"
+    }
+  ],
+  "used_physical_object_of_type": [
+    "High-performance workstation or cloud instance with powerful CPU and high-VRAM GPU (e.g. NVIDIA RTX series) for offline model training",
+    "Standard cloud-based CPU virtual machine or container with 8–16 GB RAM for online inference deployment"
+  ],
+  "has_functionality": [
+    "Offline training of a building-specific time-series forecasting model (LSTM, Gradient Boosting Machines or other regression models)",
+    "Online 24–72 hour indoor climate forecasting (temperature and RH)",
+    "REST API-based forecast delivery to the RHDT on a regular schedule",
+    "Support for early warning triggering and automated environmental control",
+    "Virtual 'what-if' testing of climate control strategies without endangering the real asset"
+  ],
+  "format_consumed": [
+    "application/json",
+    "text/csv"
+  ],
+  "format_produced": [
+    "application/json",
+    "text/csv"
+  ]
+}

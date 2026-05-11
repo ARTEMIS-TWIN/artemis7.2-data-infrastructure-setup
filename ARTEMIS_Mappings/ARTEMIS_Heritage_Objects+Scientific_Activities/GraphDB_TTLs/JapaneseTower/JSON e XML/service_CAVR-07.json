@@ -1,0 +1,52 @@
+{
+  "service_id": "CAVR-07",
+  "title": "VR Collaborative Environment",
+  "service_type": "Immersive Collaborative Visualisation",
+  "description": "A collaborative VR environment developed in Unity and accessed via Meta Quest 3 headsets, in which all input JSON payloads for ARTEMIS simulation microservices are generated interactively. Allows expert trainers and learners (e.g. university students, professionals in training) to jointly select simulation parameters, define spatial and temporal contexts and visualise simulation outputs in real time. Supports immersive exploration of the RHDT, interactive scenario simulation, and collaborative annotation and discussion of 3D environments and data layers. Compatible with .glb 3D models. Hosted on a secure project cloud environment. No third-party commercial licences required for the simulation microservices.",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "Pixelated Realities"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "Other",
+      "notes": "Accessed via Meta Quest 3 VR headsets (standalone or tethered mode)."
+    },
+    {
+      "endpoint_type": "REST API",
+      "notes": "Integration with REST API-based simulation microservices hosted on secure project cloud infrastructure. Also accessible from standard workstations/PCs for 3D model interaction, dashboard access and simulation control."
+    }
+  ],
+  "intended_for": [
+    "Conservation scientists and heritage researchers requiring immersive collaborative review of 3D heritage models and multi-layer environmental data",
+    "Conservation engineers and architects using the VR environment as a virtual sandbox for prototyping environmental interventions",
+    "Heritage managers presenting evidence-based conservation cases to non-expert audiences",
+    "General public accessing immersive narrative experiences of the Japanese Tower"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: enabling collaborative multi-user VR sessions where users simultaneously visualise and annotate multiple data layers on the 3D model of the Japanese Tower; supporting narrative-driven public disclosure and expert scenario prototyping"
+    }
+  ],
+  "used_physical_object_of_type": [
+    "Meta Quest 3 VR headset (standalone or tethered mode)",
+    "Standard workstation or laptop with reliable internet connectivity",
+    "Secure project cloud infrastructure for hosting REST API simulation microservices, 3D models and simulation outputs"
+  ],
+  "has_functionality": [
+    "Immersive VR exploration of RHDT 3D environments via Meta Quest 3",
+    "Interactive collaborative selection of simulation parameters and spatial/temporal contexts",
+    "Real-time visualisation of simulation outputs within the VR environment",
+    "Multi-user collaborative sessions with simultaneous visualisation and annotation",
+    "Support for repeatable, controlled data streams for professional training and demonstration",
+    "Virtual testing and validation of adaptation strategies using realistic climate data",
+    "Guided narrative discovery for general public"
+  ],
+  "format_consumed": [
+    "model/gltf-binary",
+    "application/json"
+  ],
+  "format_produced": [
+    "application/json"
+  ]
+}

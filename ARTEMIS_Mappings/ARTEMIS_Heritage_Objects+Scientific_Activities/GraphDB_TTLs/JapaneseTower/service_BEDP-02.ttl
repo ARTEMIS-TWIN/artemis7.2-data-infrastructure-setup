@@ -1,0 +1,100 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:825ee220-601d-452d-ad5f-501392a431e7>
+        a                crm:E55_Type ;
+        rdfs:label       "REST API" ;
+        crm:P3_has_note  "GET" .
+
+<urn:uuid:d4eb7db2-099e-49ab-89cd-a10c6c2c5662>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:06a247b9-898d-4b2c-bf79-f69e3c89f85a>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Cross-pilot data interoperability support" .
+
+<urn:uuid:de86dd53-6794-42af-be60-0871c9f39a94>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT pilot users requiring structured contextual links between assets, annotations and metadata" .
+
+<urn:uuid:46e7d0ca-3ec4-42c5-bf1d-4c5dac297a58>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Structured context provision for user workflow and information discovery" .
+
+<urn:uuid:82735032-6537-489e-bf0f-53e9396cf214>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Machine-readable link representation for knowledge graph integration" .
+
+<urn:uuid:327a8cb9-32bd-4b54-be5a-d50c79677091>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:825ee220-601d-452d-ad5f-501392a431e7> ;
+        crm:P3_has_note  "Hosted on a Docker-compatible standard web server. Database backend (e.g. PostgreSQL). Optional OAuth2 authentication." .
+
+<urn:uuid:365900c7-413f-4ba0-85ed-70b5a302ba7e>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Knowledge Linking and Navigation" .
+
+<urn:uuid:4361a69f-9a4c-4e25-b768-622c08fb7846>
+        a           crm:E35_Title ;
+        rdfs:label  "Navigational Hypertext Service" .
+
+<urn:uuid:bf98e178-5060-482d-a3fc-f65d3d8f031f>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: linking unstructured heritage documentation and structured database entries to specific geometric locations on the 3D model of the Japanese Tower" .
+
+<https://artemis-twin.eu/entity/service//BEDP-02>
+        a                            rhdto:HC21_Digital_Service ;
+        rdfs:label                   "Navigational Hypertext Service" ;
+        rhdto:HP30_provided_by       <urn:uuid:2f5a03a5-a11a-4026-804b-648b5fbcbff2> ;
+        crm:P102_has_title           <urn:uuid:4361a69f-9a4c-4e25-b768-622c08fb7846> ;
+        crm:P103_was_intended_for    <urn:uuid:0284c6b9-52a5-4a48-b9c3-24961653ff81> , <urn:uuid:de86dd53-6794-42af-be60-0871c9f39a94> ;
+        crm:P16i_was_used_for        <urn:uuid:bf98e178-5060-482d-a3fc-f65d3d8f031f> ;
+        crm:P2_has_type              <urn:uuid:365900c7-413f-4ba0-85ed-70b5a302ba7e> ;
+        crm:P3_has_note              "A service for the creation and management of links between information entities within the ARTEMIS infrastructure. Unlike traditional binary hyperlinks, the service supports links of arbitrary arity, allowing complex relationships involving multiple entities (e.g. asset A and annotation B are related to metadata C in context D). All links are represented in machine-readable format suitable for integration into knowledge graphs. Links may be directional, supporting semantic navigation between entities. Hosted as a RESTful API on a Docker-compatible web server with a database backend (e.g. PostgreSQL) and optional OAuth2 authentication." ;
+        aocat:has_consumed_format    "application/json" ;
+        aocat:has_functionality      <urn:uuid:365900c7-413f-4ba0-85ed-70b5a302ba7e> , <urn:uuid:82735032-6537-489e-bf0f-53e9396cf214> , <urn:uuid:4e4ee47b-40ea-405a-a6c6-5395a22ac84f> , <urn:uuid:8f58bdac-55bd-41a2-b3e8-2f0f87d65c26> , <urn:uuid:46e7d0ca-3ec4-42c5-bf1d-4c5dac297a58> , <urn:uuid:06a247b9-898d-4b2c-bf79-f69e3c89f85a> ;
+        aocat:has_produced_format    "application/ld+json" , "application/json" ;
+        aocat:has_technical_support  <urn:uuid:d4eb7db2-099e-49ab-89cd-a10c6c2c5662> ;
+        aocat:is_accessible_at       <urn:uuid:1b9090b2-e78f-4d4f-bd72-0a2e9c8c05d7> .
+
+<urn:uuid:1b9090b2-e78f-4d4f-bd72-0a2e9c8c05d7>
+        a       rdfs:Literal .
+
+<urn:uuid:8f58bdac-55bd-41a2-b3e8-2f0f87d65c26>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Creation and management of multi-ary links between information entities" .
+
+<urn:uuid:0284c6b9-52a5-4a48-b9c3-24961653ff81>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage professionals and researchers who need to express and navigate relationships between heterogeneous information entities" .
+
+<urn:uuid:2f5a03a5-a11a-4026-804b-648b5fbcbff2>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "HOF" ;
+        aocat:has_name  "HOF" .
+
+<urn:uuid:4e4ee47b-40ea-405a-a6c6-5395a22ac84f>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Directional link support for semantic navigation" .

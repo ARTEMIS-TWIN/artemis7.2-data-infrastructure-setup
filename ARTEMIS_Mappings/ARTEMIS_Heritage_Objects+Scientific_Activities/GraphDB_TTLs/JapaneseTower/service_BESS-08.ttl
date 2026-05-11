@@ -1,0 +1,104 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:0a21c3a3-6d80-457c-86ea-b8c2ea6d4e08>
+        a           aocat:AO_Concept ;
+        rdfs:label  "User-defined risk profile and threshold configuration per location" .
+
+<urn:uuid:9bfbed4f-5d48-4930-a9cd-b2b97f887336>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT systems requiring structured risk output to drive alerting, dashboard displays and automated controls" .
+
+<urn:uuid:2b335b9b-8c65-49fe-b128-30b3fe2e9867>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Structured risk assessment output (risk level, risk type, triggering data)" .
+
+<urn:uuid:0f6f0c83-e942-4883-847a-18dbd2dfca02>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage building managers and conservators requiring actionable, evidence-based conservation risk decisions without needing data science expertise" .
+
+<urn:uuid:8a2cd810-5431-46f2-8d0d-bd9866f62066>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "Royal Institute for Cultural Heritage (KIK-IRPA)" ;
+        aocat:has_name  "Royal Institute for Cultural Heritage (KIK-IRPA)" .
+
+<urn:uuid:2c1745ef-5fbd-4862-8de5-bed17247f27d>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Integration and processing of real-time IoCT data, simulation outputs and AI forecasts" .
+
+<urn:uuid:680a8827-82e8-435c-b1a4-6ed3464d6e02>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:e10a6a04-1d11-4761-9fe0-0b25dac9fccc>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Conservation Risk Assessment" .
+
+<urn:uuid:e21cbaf2-d2e0-416f-a5fd-09ef5dbbbf27>
+        a           crm:E55_Type ;
+        rdfs:label  "REST API" .
+
+<urn:uuid:c34c75ce-dbab-4c50-aab9-3f82eaceafb2>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:e21cbaf2-d2e0-416f-a5fd-09ef5dbbbf27> ;
+        crm:P3_has_note  "Python-based (Flask or FastAPI) or Node.js-based HTTP/HTTPS web server with JSON payload." .
+
+<urn:uuid:5c7f0881-b314-496d-850b-fd170f02f954>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Context-aware and object-specific risk assessment" .
+
+<urn:uuid:e91fd7ae-e4e6-4c6d-9327-14961f2ee887>
+        a       rdfs:Literal .
+
+<urn:uuid:572385e9-92f8-4430-9728-26a569a30f3e>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Auditable risk management with formal evidence-based framework" .
+
+<urn:uuid:b70a7930-2dd4-4135-9206-cf197d2f4b90>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Configurable Risk Library with hygrothermal models (ASHRAE), light damage dose-response functions and mechanical stress models" .
+
+<urn:uuid:30ab8397-9e68-4438-a987-d6cde4d5f437>
+        a           crm:E35_Title ;
+        rdfs:label  "Risk Assessment Service" .
+
+<https://artemis-twin.eu/entity/service//BESS-08>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "Risk Assessment Service" ;
+        rhdto:HP30_provided_by        <urn:uuid:8a2cd810-5431-46f2-8d0d-bd9866f62066> ;
+        crm:P102_has_title            <urn:uuid:30ab8397-9e68-4438-a987-d6cde4d5f437> ;
+        crm:P103_was_intended_for     <urn:uuid:0f6f0c83-e942-4883-847a-18dbd2dfca02> , <urn:uuid:9bfbed4f-5d48-4930-a9cd-b2b97f887336> ;
+        crm:P125_used_object_of_type  "Configuration database (MongoDB or PostgreSQL) storing the Risk Library" , "Standard cloud-based CPU virtual machine or container with 8–16 GB RAM" ;
+        crm:P16i_was_used_for         <urn:uuid:98086638-c961-4f2b-8f7f-c0994c9f781e> ;
+        crm:P2_has_type               <urn:uuid:e10a6a04-1d11-4761-9fe0-0b25dac9fccc> ;
+        crm:P3_has_note               "A knowledge-based microservice acting as the central analytical engine of the RHDT, translating environmental data — both real-time and predictive — into context-aware conservation risk assessments. Integrates and processes data from three sources: real-time IoCT network data (temperature, RH, light, etc.), outputs from WDR and Facade Thermal simulation services, and forecasts from the Predictive Indoor Climate AI Service. Its core is a Configurable Risk Library containing predefined scientific models, boundary conditions and dose-response functions: Hygrothermal Models (ASHRAE classes, mold growth and frost damage models), Light Damage Models (cumulative lux-hours dose-response functions for fading and material degradation), and Mechanical Stress Models (rules for risks from rapid RH fluctuations in materials such as wood and canvas). Heritage managers and conservators can define specific risk profiles and thresholds per location via a dedicated RHDT interface. Returns a structured risk assessment including risk level (Low/Medium/High), risk type and triggering data. Implemented as a custom Python rules engine accessing a configuration database (MongoDB or PostgreSQL) storing the Risk Library. Standard cloud CPU VM or container with 8–16 GB RAM." ;
+        aocat:has_consumed_format     "application/json" ;
+        aocat:has_functionality       <urn:uuid:e10a6a04-1d11-4761-9fe0-0b25dac9fccc> , <urn:uuid:0a21c3a3-6d80-457c-86ea-b8c2ea6d4e08> , <urn:uuid:2b335b9b-8c65-49fe-b128-30b3fe2e9867> , <urn:uuid:b70a7930-2dd4-4135-9206-cf197d2f4b90> , <urn:uuid:5c7f0881-b314-496d-850b-fd170f02f954> , <urn:uuid:572385e9-92f8-4430-9728-26a569a30f3e> , <urn:uuid:2c1745ef-5fbd-4862-8de5-bed17247f27d> ;
+        aocat:has_produced_format     "application/json" ;
+        aocat:has_technical_support   <urn:uuid:680a8827-82e8-435c-b1a4-6ed3464d6e02> ;
+        aocat:is_accessible_at        <urn:uuid:e91fd7ae-e4e6-4c6d-9327-14961f2ee887> .
+
+<urn:uuid:98086638-c961-4f2b-8f7f-c0994c9f781e>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_04 — Risk Assessment and Alerting: processing real-time IoT data (operation_01), indoor climate forecasts (operation_02) and illumination simulation heatmaps (operation_03) to detect conservation risks, generate structured risk event records in the ARTEMIS KB and issue alerts when user-defined thresholds are breached" .

@@ -1,0 +1,915 @@
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:25a361f2-ea61-4b10-b5a3-210fb90ea88d>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Navigational Hypertext Service" .
+
+<urn:uuid:965763af-9c2f-4e5a-b407-a567db9085a6>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:5cf0645e-af8e-49a9-b7d1-2e00941c3d22> ;
+        crm:P1_is_identified_by      <urn:uuid:884b0c97-e85e-41c6-bd51-b3c2d3d569a0> , <urn:uuid:243ba4fb-8292-4a0b-88c1-64525bc66773> ;
+        crm:P2_has_type              <urn:uuid:1cf89ae3-6837-4261-8f2d-027830523064> ;
+        crm:P3_has_note              "Signals from indoor HC9 Sensor instances monitoring temperature, RH, light levels (visual, IR, UV), dust particles and CO2. Transmitted via MQTT." .
+
+<urn:uuid:727d3788-8620-4f1b-99d9-a57342de7e69>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:06b30edf-f760-415f-8a65-1199280503ab>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+artemis:BEDP-02  a  crm:E42_Identifier .
+
+<urn:uuid:83501f10-9b32-42bd-874f-7db056e332b8>
+        a           crm:E55_Type ;
+        rdfs:label  "Risk configuration" .
+
+<urn:uuid:9c2d3cc5-e2be-4b3b-88a3-22a814115c15>
+        a       crm:E62_String .
+
+<urn:uuid:16db777a-b1a4-4f59-8a01-7acc2a13fc5b>
+        a           crm:E41_Appellation ;
+        rdfs:label  "IoCT Services" .
+
+<https://artemis-twin.eu/entity/services/BESS-07>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Predictive Indoor Climate AI Service" ;
+        crm:P1_is_identified_by  artemis:BESS-07 , <urn:uuid:de28a456-24bc-456f-96fa-96c42c4234f6> .
+
+<urn:uuid:e5451777-a61c-46bf-84ee-0984accefd15>
+        a       crm:E42_Identifier .
+
+<urn:uuid:471bf150-fc4c-432c-b351-abd76c6e514e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time indoor and outdoor environmental time-series dataset" .
+
+<urn:uuid:cae11b64-fbdf-4bda-a404-a4014fc5d67f>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:a176f523-4a48-433a-a032-38bd6499a94a>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Cumulative light exposure heatmaps (historical and scenario-based)" .
+
+<urn:uuid:2d6cadc2-5c0a-4e72-9d29-7994adc898e4>
+        a       crm:E62_String .
+
+<urn:uuid:5b55eaf3-ccee-44c7-8319-de7972cf089d>
+        a           crm:E55_Type ;
+        rdfs:label  "Integrate and visualise all data layers — real-time IoT data, climate forecasts, illumination heatmaps, risk events and historical reconstructions — on the 3D model of the Japanese Tower within an interactive web-based, VR and AR environment for expert analysis and public storytelling." .
+
+<https://artemis-twin.eu/entity/pilot_14/operation_01>
+        a                             rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "pilot_14 operation_01 Real-time IoT Environmental Monitoring" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_007 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/BEDP-07> ;
+        crm:P16_used_specific_object  <urn:uuid:59a8bbb3-8cd9-4835-acad-21dfc0b39006> , <urn:uuid:171ae251-0f96-4ddf-b077-40bca973c8e7> ;
+        crm:P1_is_identified_by       <urn:uuid:9558892a-7e08-4f9d-ac6d-0bf91b2e8268> , <urn:uuid:8d654a44-b3bf-4db5-9dfc-2dc3b063187f> ;
+        crm:P21_had_general_purpose   <urn:uuid:d1a03c3f-02c8-4b8f-ba8b-c5201aad45cb> ;
+        crm:P2_has_type               <urn:uuid:3674704b-634f-4bc5-936d-37c5667d4df4> ;
+        crm:P3_has_note               "The IoCT sensor network continuously monitors indoor parameters (air temperature, surface temperatures, relative humidity, light levels in visual/infrared/ultraviolet, airborne dust particles, CO2 concentrations) and outdoor meteorological parameters (temperature, RH, rainfall, wind direction, wind speed, solar radiation) via an on-site weather station. Data is logged automatically at 10–15 minute intervals, stored locally in .csv or .txt and transmitted to the RHDT platform via MQTT. Each sensor node is registered as a unique asset in the ARTEMIS KB (NodeID, SensorID, LocationDesc, SensorType, DataTypes, DataUnits, DeploymentDate, Status, Interval, DatasetURL). System uptime target: >=90%. Data completeness target: >=95% of expected readings per day. Data transmission latency target: <5 seconds." ;
+        crm:P4_has_time-span          <urn:uuid:0017418e-4a75-43e2-80c6-2b9a66e0a324> ;
+        crmdig:L10_had_input          <urn:uuid:a2ab8f27-46ab-4c93-8047-0d9b891d6ee5> , <urn:uuid:965763af-9c2f-4e5a-b407-a567db9085a6> ;
+        crmdig:L11_had_output         <urn:uuid:7295e04c-e85e-4618-9798-69ab116b16db> ;
+        crmdig:L13_used_parameters    <urn:uuid:145412fe-494c-4d0c-8760-3c128543e5b8> .
+
+<https://artemis-twin.eu/entity/services/CAVR-07>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "VR collaborative environment" ;
+        crm:P1_is_identified_by  artemis:CAVR-07 , <urn:uuid:eabf1672-8ddc-4290-8721-49d74fefc108> .
+
+<urn:uuid:9c419a06-9538-441f-869b-a3488fe24b7e>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_04, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:8b431100-caf5-4464-a19b-bc1946c99898> ;
+        crm:P1_is_identified_by      <urn:uuid:fc895cba-b6ab-4a98-8f9d-6bac332365fc> , <urn:uuid:bd5d8daa-9a40-4f42-a763-cf4195e0f4af> ;
+        crm:P2_has_type              <urn:uuid:c8e73190-ff86-41d8-b75d-a5b8365c18b4> ;
+        crm:P3_has_note              "Output of operation_03. Also feeds into risk assessment as a third data source. continued_from operation_03 is the other upstream dependency alongside operation_02." .
+
+<urn:uuid:6cbc2a77-ecd0-4eec-a227-400d5c2133a5>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_02, parameter Indoor climate forecasting parameters" ;
+        crm:P1_is_identified_by  <urn:uuid:02d89aeb-a96b-4f3f-a1ad-f31232438230> , <urn:uuid:b64ad721-c438-4a17-89d1-bdfeee766412> ;
+        crm:P2_has_type          <urn:uuid:404b54d8-4c92-4789-81df-ce398e364367> .
+
+<urn:uuid:67dffe14-f954-4d5e-acdb-52d02656a538>
+        a           crm:E55_Type ;
+        rdfs:label  "HC6_Digital_Heritage_Document" .
+
+<urn:uuid:09e8b2c2-100e-4113-b49b-076b12f300ac>
+        a           crm:E55_Type ;
+        rdfs:label  "HC8_3D_Model" .
+
+<urn:uuid:67ae3134-bf80-469d-a7f9-0beaa942771b>
+        a       crm:E42_Identifier .
+
+<urn:uuid:4883c21e-8032-4ddb-8a44-5c9088e55d4e>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:9bfaa6bc-cc5b-411f-af66-2230e0c4e1bb> ;
+        crm:P1_is_identified_by      <urn:uuid:1da7a972-1629-4aea-9dd6-98e03d0d724e> , <urn:uuid:f88de9ea-924d-4b09-b5f5-f24da24761c3> ;
+        crm:P2_has_type              <urn:uuid:727d3788-8620-4f1b-99d9-a57342de7e69> ;
+        crm:P3_has_note              "Output of operation_02. Displayed as predictive overlays and temporal trend visualisations." .
+
+<urn:uuid:17c2b869-93cb-4a5f-88e2-600d2df81b31>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Interactive RHDT web-based platform with integrated data layers" .
+
+artemis:BESS-13  a  crm:E42_Identifier .
+
+<urn:uuid:504f207a-792f-4616-823f-3348fef5188c>
+        a       crm:E62_String .
+
+<urn:uuid:884b0c97-e85e-41c6-bd51-b3c2d3d569a0>
+        a       crm:E42_Identifier .
+
+<urn:uuid:c688b09e-572e-4ec0-8d48-c9ec0ef7aa22>
+        a           crm:E55_Type ;
+        rdfs:label  "Analysis Operation" .
+
+artemis:BEDP-05  a  crm:E42_Identifier .
+
+<urn:uuid:0017418e-4a75-43e2-80c6-2b9a66e0a324>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:658bcc73-31ac-40e8-b2af-ff7090e2c32d>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Phasma3D Viewer" .
+
+<urn:uuid:e46acdc0-c51a-4a15-8354-72b424af9103>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Risk event log and alert data" .
+
+<urn:uuid:489b8aaf-7d29-454d-9ef9-93907b0b5a4a>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_03, parameter Illumination simulation configuration" ;
+        crm:P1_is_identified_by  <urn:uuid:67ae3134-bf80-469d-a7f9-0beaa942771b> , <urn:uuid:5cae0bd3-0ceb-4bfc-83c8-ff04722a1a8e> ;
+        crm:P2_has_type          <urn:uuid:b344e347-c5c3-4d19-8185-6d1fc65356e0> .
+
+<https://artemis-twin.eu/entity/services/BEDP-03>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Annotation Service" ;
+        crm:P1_is_identified_by  artemis:BEDP-03 , <urn:uuid:c469e996-5cef-4031-ac5a-04cd85e6c8fe> .
+
+<urn:uuid:2af46899-2985-4622-8a0c-2d733b3e40f7>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Cumulative light exposure heatmaps" .
+
+<urn:uuid:3f11b0f2-35b1-4071-9cf7-d054bd13e541>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:dba8564c-614c-4d75-9ca4-02b6b78c6e01>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:30572d45-7f4d-44b6-b1aa-426b36ffef36>
+        a           crm:E55_Type ;
+        rdfs:label  "Node" .
+
+<urn:uuid:8321c30a-eb65-486a-9bf6-b8ee2dd45edc>
+        a           crm:E41_Appellation ;
+        rdfs:label  "3D models — 'as-is' and 'as-built' states" .
+
+<urn:uuid:db3a7b60-35e2-4e44-b8b0-431b14860d0a>
+        a       crm:E62_String .
+
+<urn:uuid:f3fd9074-2c89-4a3d-a884-74b2fd311d82>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_02, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:65e38d4e-6811-43ff-82c7-cbefa3acaccd> ;
+        crm:P1_is_identified_by      <urn:uuid:2b562cad-072c-4dd3-b78d-b8ec9d906b2b> , <urn:uuid:6cea7cdf-68b5-432e-9030-7ee67f9f7ef3> ;
+        crm:P2_has_type              <urn:uuid:06b30edf-f760-415f-8a65-1199280503ab> ;
+        crm:P3_has_note              "Output of operation_01. Used as real-time input to drive the AI forecasting model." .
+
+<urn:uuid:007f3909-91f0-4f59-b94a-62c7d0546185>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_04, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:7d00521b-b8d3-4118-a7d9-c8401c4c9b03> ;
+        crm:P1_is_identified_by      <urn:uuid:fe8184dd-6325-4388-a747-cb91475892e2> , <urn:uuid:8bb3a53f-e8fe-480d-b987-91d799a5b670> ;
+        crm:P2_has_type              <urn:uuid:67dffe14-f954-4d5e-acdb-52d02656a538> ;
+        crm:P3_has_note              "Structured KB records for each detected risk event: EventID, AssetID, LocationDesc, RiskType, RiskLevel, RiskBasis, RiskMetrics, EventTimestamp, CreationTimestamp, TriggeringSource, NotificationLog." .
+
+<urn:uuid:478a319f-5909-4009-a73c-62e46adbf67c>
+        a           crm:E41_Appellation ;
+        rdfs:label  "24-hour indoor climate forecast dataset" .
+
+<urn:uuid:744eb7ef-6c30-4144-aefd-69b718dc818a>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_04, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:f2ccd6be-2d8a-4bdd-8b2a-aa0046b9ae36> ;
+        crm:P1_is_identified_by      <urn:uuid:487c1360-0704-4e85-8d68-384555951cad> , <urn:uuid:1436a573-3e8f-4b54-b753-fa60163d9564> ;
+        crm:P2_has_type              <urn:uuid:3f11b0f2-35b1-4071-9cf7-d054bd13e541> ;
+        crm:P3_has_note              "Output of operation_01. Provides real-time measurements as one of the three data sources for risk detection." .
+
+<urn:uuid:48d257ba-92ee-4fd0-a2f9-7d98df3bb6cb>
+        a       crm:E42_Identifier .
+
+artemis:BESS-08  a  crm:E42_Identifier .
+
+<urn:uuid:cbfafad4-5dd8-433e-9bab-d788d010e57f>
+        a           crm:E55_Type ;
+        rdfs:label  "HC7_Digital_Visual_Object" .
+
+<urn:uuid:8a01b873-5145-4c96-bbe9-26afc9afa56d>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:f73f83d7-2da0-4171-b208-d6e8fe8c59f6>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:3e004f0d-128f-4881-a2ec-fb1a2fa91060> ;
+        crm:P1_is_identified_by      <urn:uuid:e6d6d828-e8a9-45a9-aae8-3de3835d7dc1> , <urn:uuid:2af46899-2985-4622-8a0c-2d733b3e40f7> ;
+        crm:P2_has_type              <urn:uuid:cbfafad4-5dd8-433e-9bab-d788d010e57f> ;
+        crm:P3_has_note              "Output of operation_03. Overlaid on the 3D model surfaces to show historical and scenario-based light dose distribution. Also continued_from operation_03 as a parallel upstream dependency alongside operation_04." .
+
+<urn:uuid:bd5d8daa-9a40-4f42-a763-cf4195e0f4af>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Cumulative light exposure heatmaps" .
+
+<urn:uuid:65e38d4e-6811-43ff-82c7-cbefa3acaccd>
+        a       crm:E62_String .
+
+<urn:uuid:12e693a6-02b1-4aa7-a890-44e0306336a2>
+        a       crm:E62_String .
+
+<https://artemis-twin.eu/entity/pilot_14/operation_04>
+        a                             rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "pilot_14 operation_04 Risk Assessment and Alerting" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_007 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/BESS-08> ;
+        crm:P134_continued            <https://artemis-twin.eu/entity/pilot_14/operation_02> ;
+        crm:P1_is_identified_by       <urn:uuid:4901735b-97c2-4b3f-8e7d-256f70bfa327> , <urn:uuid:6ff7d547-b83a-439b-b896-bc942d041fa5> ;
+        crm:P21_had_general_purpose   <urn:uuid:bfcc7269-3892-4198-91b1-1e4f81f46f9b> ;
+        crm:P2_has_type               <urn:uuid:c688b09e-572e-4ec0-8d48-c9ec0ef7aa22> ;
+        crm:P3_has_note               "The Risk Assessment Service continuously processes three categories of input: (1) real-time IoT measurements from operation_01, (2) 24-hour indoor climate forecasts from operation_02, and (3) illumination simulation heatmaps from operation_03. When any data source indicates that a condition will breach a user-defined threshold (e.g. RH >70%, excessive light dose), the service generates a Risk Event record logged in the ARTEMIS KB (EventID, AssetID, LocationDesc, RiskType, RiskLevel, RiskBasis, RiskMetrics, EventTimestamp, CreationTimestamp, TriggeringSource, NotificationLog) and issues notifications to relevant personnel. Risk assessment latency target: <1 second. KB synchronisation target: within 1 hour of the event." ;
+        crm:P4_has_time-span          <urn:uuid:36feae75-a700-4f54-b26a-da80aef4f64f> ;
+        crmdig:L10_had_input          <urn:uuid:744eb7ef-6c30-4144-aefd-69b718dc818a> , <urn:uuid:9c419a06-9538-441f-869b-a3488fe24b7e> , <urn:uuid:3d7a3502-9ef5-492e-b859-61828867acba> ;
+        crmdig:L11_had_output         <urn:uuid:007f3909-91f0-4f59-b94a-62c7d0546185> , <urn:uuid:f651adce-9c60-43d0-9e5e-a909c70c6f2a> ;
+        crmdig:L13_used_parameters    <urn:uuid:f8c78baf-edc0-42fe-aea5-f42ffde50908> .
+
+<urn:uuid:243ba4fb-8292-4a0b-88c1-64525bc66773>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Raw indoor environmental sensor readings" .
+
+<urn:uuid:6cea7cdf-68b5-432e-9030-7ee67f9f7ef3>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time indoor and outdoor environmental time-series dataset" .
+
+<urn:uuid:3131164b-502e-41b3-9176-0da1ce03f526>
+        a       crm:E62_String .
+
+<urn:uuid:bfbdeae9-9b8e-4fd5-a3b1-e5ff2ed65e6d>
+        a       crm:E62_String .
+
+<urn:uuid:16393ece-a293-440d-b057-3ae0fa0d2a6b>
+        a           crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<urn:uuid:f2ccd6be-2d8a-4bdd-8b2a-aa0046b9ae36>
+        a       crm:E62_String .
+
+<urn:uuid:796d39a8-411e-48bb-9062-936ce398afdb>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time indoor and outdoor environmental time-series dataset" .
+
+<urn:uuid:00c7c860-7ced-4e36-80ef-309d13477ebe>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:f728feaa-f089-4333-879c-627aee20a4fb> ;
+        crm:P1_is_identified_by      <urn:uuid:89bc4a6b-bd86-48d1-a42d-dd6282da0a07> , <urn:uuid:17c2b869-93cb-4a5f-88e2-600d2df81b31> ;
+        crm:P2_has_type              <urn:uuid:196cd4d3-4f9b-4b54-9185-e80ceba3bd27> ;
+        crm:P3_has_note              "Browser-accessible platform with live IoT overlays, simulation heatmaps, risk dashboards (colour-coded), temporal navigation between historical states and annotation tools. API response time: <2 seconds. Scene loading: <10 seconds." .
+
+artemis:CAW-01  a  crm:E42_Identifier .
+
+artemis:artemis_he_007
+        a       rhdto:HC3_Tangible_Entity .
+
+<urn:uuid:d856529f-057c-41c0-80c1-191c2f100b24>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Narrative-driven VR/AR immersive experience" .
+
+<urn:uuid:8903becd-8e2c-4f3c-8c7f-a604ae673c6e>
+        a       crm:E42_Identifier .
+
+<urn:uuid:0dbce79e-eda9-4188-947e-73114d5a8d4f>
+        a           crm:E41_Appellation ;
+        rdfs:label  "On-site outdoor weather station" .
+
+<urn:uuid:5cf0645e-af8e-49a9-b7d1-2e00941c3d22>
+        a       crm:E62_String .
+
+<urn:uuid:f9d3b444-f2e7-41ea-9bec-d252d3ee96f3>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Risk Assessment Service" .
+
+<urn:uuid:5e40b106-5e0b-414c-9d28-325a20f7a50f>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:23166975-e625-4e89-ad53-d8726503c5a6> ;
+        crm:P1_is_identified_by      <urn:uuid:4a3e8a37-dc19-4bbf-a6c7-3aeebefd1db1> , <urn:uuid:796d39a8-411e-48bb-9062-936ce398afdb> ;
+        crm:P2_has_type              <urn:uuid:aaf4adb8-b616-484a-ba12-8380be865c4c> ;
+        crm:P3_has_note              "Output of operation_01. Visualised as live data overlays on the 3D model." .
+
+<urn:uuid:77789808-9ae3-46cb-8ede-b94ab89898bc>
+        a       crm:E42_Identifier .
+
+<urn:uuid:8d68c0b8-cf48-45a4-91d0-4af5d497e290>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Historical and Predictive Illumination Simulation" .
+
+<urn:uuid:1da7a972-1629-4aea-9dd6-98e03d0d724e>
+        a       crm:E42_Identifier .
+
+<urn:uuid:0188625c-3da5-43c2-8252-5585115e81ac>
+        a       crm:E42_Identifier .
+
+<urn:uuid:814584a3-197d-4ea6-99de-012143656a84>
+        a       crm:E62_String .
+
+<urn:uuid:6ff7d547-b83a-439b-b896-bc942d041fa5>
+        a           crm:E42_Identifier ;
+        rdfs:label  "operation_04" .
+
+<urn:uuid:90305882-a431-42d8-94a6-cbcb36d1cc8a>
+        a       crm:E62_String .
+
+<urn:uuid:743ea62c-eb2c-453a-90fa-1ff942676578>
+        a       crm:E42_Identifier .
+
+<urn:uuid:99141d6c-8f61-4bf1-8709-ead5c835ed5f>
+        a       crm:E42_Identifier .
+
+<urn:uuid:ba6a1974-a513-4d82-9280-1cbcb698f01c>
+        a           crm:E55_Type ;
+        rdfs:label  "Sensor" .
+
+<https://artemis-twin.eu/entity/services/BESS-13>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Illumination Simulation Services" ;
+        crm:P1_is_identified_by  artemis:BESS-13 , <urn:uuid:1ec94537-b0f8-4e8c-9087-f6b73f2a1737> .
+
+<urn:uuid:090dcecf-7838-4a9c-af71-f53a8e88f917>
+        a       crm:E42_Identifier .
+
+<urn:uuid:6ac96a9b-7cd7-46ad-942c-b8e9edec5311>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Spatiotemporal Data Visualisation and VR/AR Experience" .
+
+<urn:uuid:f88de9ea-924d-4b09-b5f5-f24da24761c3>
+        a           crm:E41_Appellation ;
+        rdfs:label  "24-hour indoor climate forecast dataset" .
+
+<urn:uuid:5443d48b-fa75-4937-aadd-4b841fbac067>
+        a           crm:E55_Type ;
+        rdfs:label  "HC6_Digital_Heritage_Document" .
+
+<urn:uuid:a5f9ef0a-7dc6-4c32-a8c0-1911fc212c2e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Indoor IoCT sensor nodes (temperature, RH, light, dust, CO2)" .
+
+<urn:uuid:cb8a58ca-43e9-48f0-b1c0-f24811817329>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_02, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:02b4bd20-04e1-4467-95f6-980cd1be07a1> ;
+        crm:P1_is_identified_by      <urn:uuid:8903becd-8e2c-4f3c-8c7f-a604ae673c6e> , <urn:uuid:82179acc-b56b-43f1-93d2-2c5dcc606496> ;
+        crm:P2_has_type              <urn:uuid:fd9cc6be-bdb8-43b9-8ce5-cdfe45aa2eda> ;
+        crm:P3_has_note              "Retrieved from an external weather API (e.g. open-meteo.com). Specifies future outdoor climate conditions used as boundary conditions for the indoor forecast." .
+
+<urn:uuid:bd4bedf9-5bc6-4956-b9de-f02464fdcba1>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:9c2d3cc5-e2be-4b3b-88a3-22a814115c15> ;
+        crm:P1_is_identified_by      <urn:uuid:5b958f0f-c30f-41ac-9678-dff0be1eaabc> , <urn:uuid:e46acdc0-c51a-4a15-8354-72b424af9103> ;
+        crm:P2_has_type              <urn:uuid:5443d48b-fa75-4937-aadd-4b841fbac067> ;
+        crm:P3_has_note              "Output of operation_04. Displayed as overlays and dashboard indicators within the RHDT platform." .
+
+<urn:uuid:404b54d8-4c92-4789-81df-ce398e364367>
+        a           crm:E55_Type ;
+        rdfs:label  "AI model configuration" .
+
+<urn:uuid:60640a57-d8a2-471c-bf39-2167147b5200>
+        a           crm:E41_Appellation ;
+        rdfs:label  "The Living Past: A Digital Twin for Environmental Storytelling and Conservation" .
+
+<urn:uuid:5cae0bd3-0ceb-4bfc-83c8-ff04722a1a8e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Illumination simulation configuration" .
+
+<urn:uuid:8b431100-caf5-4464-a19b-bc1946c99898>
+        a       crm:E62_String .
+
+<urn:uuid:c469e996-5cef-4031-ac5a-04cd85e6c8fe>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Annotation Service" .
+
+<urn:uuid:f84cc69e-58f1-46ca-a01e-3c15415ed18c>
+        a           crm:E41_Appellation ;
+        rdfs:label  "3D model of the Japanese Tower ('as-built' and 'as-is' states)" .
+
+<urn:uuid:b64ad721-c438-4a17-89d1-bdfeee766412>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Indoor climate forecasting parameters" .
+
+artemis:BEDP-03  a  crm:E42_Identifier .
+
+<urn:uuid:02b4bd20-04e1-4467-95f6-980cd1be07a1>
+        a       crm:E62_String .
+
+<urn:uuid:8bb3a53f-e8fe-480d-b987-91d799a5b670>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Risk event log (ARTEMIS KB records)" .
+
+<https://artemis-twin.eu/entity/services/BESS-08>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Risk Assessment Service" ;
+        crm:P1_is_identified_by  artemis:BESS-08 , <urn:uuid:f9d3b444-f2e7-41ea-9bec-d252d3ee96f3> .
+
+<urn:uuid:dca0bd5f-f7ad-443d-9157-efd2b4559eec>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_02, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:db3a7b60-35e2-4e44-b8b0-431b14860d0a> ;
+        crm:P1_is_identified_by      <urn:uuid:71905b86-2fdc-47c9-baf6-e63ed9c36825> , <urn:uuid:478a319f-5909-4009-a73c-62e46adbf67c> ;
+        crm:P2_has_type              <urn:uuid:dba8564c-614c-4d75-9ca4-02b6b78c6e01> ;
+        crm:P3_has_note              "Forecasted indoor temperature and RH time-series for the next 24 hours. Registered in the ARTEMIS KB as a forecast record. Accessible via REST API (JSON/CSV). Used as input to operation_04." .
+
+<urn:uuid:89f7263d-14b5-427e-a85c-9b931c2d9cca>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:89bc4a6b-bd86-48d1-a42d-dd6282da0a07>
+        a       crm:E42_Identifier .
+
+<urn:uuid:2b562cad-072c-4dd3-b78d-b8ec9d906b2b>
+        a       crm:E42_Identifier .
+
+<urn:uuid:7d00521b-b8d3-4118-a7d9-c8401c4c9b03>
+        a       crm:E62_String .
+
+<urn:uuid:0f4f32fc-3dcc-4bb3-ad6a-3926c15a2a36>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:109b9e4e-2100-4e7e-ad3c-6b27424c9c22>
+        a           crm:E42_Identifier ;
+        rdfs:label  "pilot_14" .
+
+<https://artemis-twin.eu/entity/pilot_14/operation_02>
+        a                             rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "pilot_14 operation_02 Predictive Indoor Climate Forecasting" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_007 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/BESS-07> ;
+        crm:P134_continued            <https://artemis-twin.eu/entity/pilot_14/operation_01> ;
+        crm:P1_is_identified_by       <urn:uuid:81abceb9-d668-4440-bcc3-51595ab15080> , <urn:uuid:0348b961-d4d0-4a1b-a3a0-0107889907c0> ;
+        crm:P21_had_general_purpose   <urn:uuid:cb2462a9-918b-4af7-bda1-dd6c47a88b6a> ;
+        crm:P2_has_type               <urn:uuid:16393ece-a293-440d-b057-3ae0fa0d2a6b> ;
+        crm:P3_has_note               "The Predictive Indoor Climate AI Service (HC15 AI Component) uses the building-specific hygrothermal model — trained on at least one year of real IoT sensor data from the Japanese Tower — to generate 24-hour indoor climate forecasts. The model receives real-time IoT data from operation_01 and external weather forecast data as inputs. Each forecast run is registered in the ARTEMIS KB as a structured record (ForecastID, AssetID, ModelID, ForecastHorizon, InputClimateSource, InputDataURL, ForecastOutputURL, Curator, ForecastTimestamp). Forecast generation time target: <5 minutes. Accuracy targets: within ±1°C for temperature and ±5% RH." ;
+        crm:P4_has_time-span          <urn:uuid:2d69a2a6-9471-4b3b-92a2-a342987ad1d8> ;
+        crmdig:L10_had_input          <urn:uuid:f3fd9074-2c89-4a3d-a884-74b2fd311d82> , <urn:uuid:cb8a58ca-43e9-48f0-b1c0-f24811817329> ;
+        crmdig:L11_had_output         <urn:uuid:dca0bd5f-f7ad-443d-9157-efd2b4559eec> ;
+        crmdig:L13_used_parameters    <urn:uuid:6cbc2a77-ecd0-4eec-a227-400d5c2133a5> .
+
+<urn:uuid:02d89aeb-a96b-4f3f-a1ad-f31232438230>
+        a       crm:E42_Identifier .
+
+<urn:uuid:fd9cc6be-bdb8-43b9-8ce5-cdfe45aa2eda>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:7295e04c-e85e-4618-9798-69ab116b16db>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_01, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:632049ac-50ec-4ba6-8293-4616bf954b45> ;
+        crm:P1_is_identified_by      <urn:uuid:f9890283-2429-4089-a101-fdbd1a4e4b95> , <urn:uuid:471bf150-fc4c-432c-b351-abd76c6e514e> ;
+        crm:P2_has_type              <urn:uuid:cae11b64-fbdf-4bda-a404-a4014fc5d67f> ;
+        crm:P3_has_note              "Continuous multi-variable time-series data stream. Format: .csv / .txt locally; accessible via REST API (JSON or CSV). Logging interval: 10–15 minutes. Used as input to operation_02 and operation_04." .
+
+<urn:uuid:55334219-4211-4009-8a90-dae4308daa70>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:90305882-a431-42d8-94a6-cbcb36d1cc8a> ;
+        crm:P1_is_identified_by      <urn:uuid:48d257ba-92ee-4fd0-a2f9-7d98df3bb6cb> , <urn:uuid:8321c30a-eb65-486a-9bf6-b8ee2dd45edc> ;
+        crm:P2_has_type              <urn:uuid:39159e94-c634-40d3-a34f-8ad909ceac51> ;
+        crm:P3_has_note              "Polygon-optimised .glb models. Geometric canvas of the RHDT visualisation and VR/AR experience." .
+
+<urn:uuid:1436a573-3e8f-4b54-b753-fa60163d9564>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time indoor and outdoor environmental time-series dataset" .
+
+<urn:uuid:18f051e5-0aa1-4668-ab86-89f19c2c0810>
+        a       crm:E42_Identifier .
+
+<urn:uuid:4a3e8a37-dc19-4bbf-a6c7-3aeebefd1db1>
+        a       crm:E42_Identifier .
+
+<urn:uuid:e6d6d828-e8a9-45a9-aae8-3de3835d7dc1>
+        a       crm:E42_Identifier .
+
+<urn:uuid:2d69a2a6-9471-4b3b-92a2-a342987ad1d8>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:23166975-e625-4e89-ad53-d8726503c5a6>
+        a       crm:E62_String .
+
+<urn:uuid:632049ac-50ec-4ba6-8293-4616bf954b45>
+        a       crm:E62_String .
+
+<urn:uuid:f1fadbf1-12c8-4462-8f95-f02ed44a211f>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:814584a3-197d-4ea6-99de-012143656a84> ;
+        crm:P1_is_identified_by      <urn:uuid:a280663a-5931-46a5-9dae-71a2488459cb> , <urn:uuid:d856529f-057c-41c0-80c1-191c2f100b24> ;
+        crm:P2_has_type              <urn:uuid:98a26219-8719-472e-bcd5-025b2884830e> ;
+        crm:P3_has_note              "Immersive application for public and expert use. Supports collaborative multi-user VR (>=2 simultaneous users), museum kiosk, on-site AR (mobile) and web-based 3D viewer modes. Rendering: >=72 FPS on Meta Quest 3. Interaction latency: <0.5 seconds." .
+
+<urn:uuid:487c1360-0704-4e85-8d68-384555951cad>
+        a       crm:E42_Identifier .
+
+<urn:uuid:a2ab8f27-46ab-4c93-8047-0d9b891d6ee5>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_01, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:12e693a6-02b1-4aa7-a890-44e0306336a2> ;
+        crm:P1_is_identified_by      <urn:uuid:4c41bb28-8e12-4b68-8c7c-98b1fe301444> , <urn:uuid:3de7e2f6-0961-4fd9-b158-26b15c9acb63> ;
+        crm:P2_has_type              <urn:uuid:217cbe55-bece-492b-8cb2-1884a43307c2> ;
+        crm:P3_has_note              "Signals from the on-site weather station monitoring temperature, RH, rainfall, wind direction, wind speed and solar radiation. Transmitted via MQTT." .
+
+<urn:uuid:b1607f8b-6d84-44db-802b-063c1815455f>
+        a       crm:E42_Identifier .
+
+<urn:uuid:3d7a3502-9ef5-492e-b859-61828867acba>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_04, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:504f207a-792f-4616-823f-3348fef5188c> ;
+        crm:P1_is_identified_by      <urn:uuid:743ea62c-eb2c-453a-90fa-1ff942676578> , <urn:uuid:bef8b990-ffb6-411b-9357-791d7d440176> ;
+        crm:P2_has_type              <urn:uuid:e22d132d-56fa-463c-8cf2-bc1f15b201d3> ;
+        crm:P3_has_note              "Output of operation_02. Provides short-term predicted conditions as input to risk assessment." .
+
+<urn:uuid:80a0a9ad-b492-453d-a39c-c0fa39d5220b>
+        a           crm:E41_Appellation ;
+        rdfs:label  "IoT data acquisition configuration" .
+
+<urn:uuid:c8e73190-ff86-41d8-b75d-a5b8365c18b4>
+        a           crm:E55_Type ;
+        rdfs:label  "HC7_Digital_Visual_Object" .
+
+<urn:uuid:d654d217-eaa8-456e-8cf6-102ca9208ad0>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Future climate projection data or intervention parameters" .
+
+<urn:uuid:4901735b-97c2-4b3f-8e7d-256f70bfa327>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Risk Assessment and Alerting" .
+
+<urn:uuid:81abceb9-d668-4440-bcc3-51595ab15080>
+        a           crm:E42_Identifier ;
+        rdfs:label  "operation_02" .
+
+<urn:uuid:4c41bb28-8e12-4b68-8c7c-98b1fe301444>
+        a       crm:E42_Identifier .
+
+<https://artemis-twin.eu/entity/pilots/pilot_14>
+        a                        crm:E7_Activity ;
+        rdfs:label               "The Living Past: A Digital Twin for Environmental Storytelling and Conservation" ;
+        crm:P1_is_identified_by  <urn:uuid:60640a57-d8a2-471c-bf39-2167147b5200> , <urn:uuid:109b9e4e-2100-4e7e-ad3c-6b27424c9c22> ;
+        crm:P3_has_note          "This pilot creates a Heritage Digital Twin of the Japanese Tower in Laeken (Brussels) that reconstructs its historical interior and exterior and simulates the long-term environmental impact of natural light, temperature and humidity on its decorations. When operational, the system continuously acquires IoT sensor data, generates indoor climate forecasts, runs illumination simulations, assesses conservation risks and visualises all data layers on high-fidelity 3D/VR/AR models of the Tower. Pilot leader: KIK-IRPA. Partners: HOF, Pixelated Realities, PHASMATIC, PIN." ;
+        crm:P9_consists_of       <https://artemis-twin.eu/entity/pilot_14/operation_02> , <https://artemis-twin.eu/entity/pilot_14/operation_04> , <https://artemis-twin.eu/entity/pilot_14/operation_01> , <https://artemis-twin.eu/entity/pilot_14/operation_03> , <https://artemis-twin.eu/entity/pilot_14/operation_05> .
+
+<urn:uuid:217cbe55-bece-492b-8cb2-1884a43307c2>
+        a           crm:E55_Type ;
+        rdfs:label  "HC12_Signal" .
+
+<urn:uuid:bef8b990-ffb6-411b-9357-791d7d440176>
+        a           crm:E41_Appellation ;
+        rdfs:label  "24-hour indoor climate forecast dataset" .
+
+<urn:uuid:c32ba393-f302-4ba4-b7bf-663c5e62dd4e>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Visualisation and VR/AR performance targets" .
+
+<https://artemis-twin.eu/entity/pilot_14/operation_05>
+        a                             rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "pilot_14 operation_05 Spatiotemporal Data Visualisation and VR/AR Experience" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_007 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/BEDP-03> , <https://artemis-twin.eu/entity/services/BEDP-02> , <https://artemis-twin.eu/entity/services/BEDP-05> , <https://artemis-twin.eu/entity/services/CAW-01> , <https://artemis-twin.eu/entity/services/CAVR-07> ;
+        crm:P134_continued            <https://artemis-twin.eu/entity/pilot_14/operation_04> ;
+        crm:P1_is_identified_by       <urn:uuid:9bd8646c-3c9a-4021-a62f-a976eab9958e> , <urn:uuid:6ac96a9b-7cd7-46ad-942c-b8e9edec5311> ;
+        crm:P21_had_general_purpose   <urn:uuid:5b55eaf3-ccee-44c7-8319-de7972cf089d> ;
+        crm:P2_has_type               <urn:uuid:75f10443-da3e-4d60-9141-cb54f977db08> ;
+        crm:P3_has_note               "The RHDT visualisation layer fuses all upstream data streams onto the high-fidelity 3D models of the Japanese Tower, enabling users to navigate between the 'as-built' 1905 state and the current 'as-is' state, activate environmental simulation animations (historical sunlight time-lapses, fading visualisation) and query quantitative data on light exposure per surface. Expert users access a feature-rich desktop interface for in-depth analysis, creation of annotations and evidence-based conservation strategy development. The general public accesses a narrative-driven VR/AR experience via museum kiosk, on-site AR on mobile or web-based 3D viewer. Collaborative multi-user VR sessions support at least 2 simultaneous users with simultaneous visualisation and annotation of multiple data layers. The conservation engineer use case supports virtual prototyping of environmental interventions (e.g. shading solutions) by re-running operation_03 with modified parameters and comparing outputs. VR rendering performance target: >=72 FPS on Meta Quest 3. User interaction responsiveness target: <0.5 seconds. Scene loading time target: <10 seconds. API response time target: <2 seconds." ;
+        crm:P4_has_time-span          <urn:uuid:89f7263d-14b5-427e-a85c-9b931c2d9cca> ;
+        crmdig:L10_had_input          <urn:uuid:55334219-4211-4009-8a90-dae4308daa70> , <urn:uuid:f73f83d7-2da0-4171-b208-d6e8fe8c59f6> , <urn:uuid:bd4bedf9-5bc6-4956-b9de-f02464fdcba1> , <urn:uuid:5e40b106-5e0b-414c-9d28-325a20f7a50f> , <urn:uuid:4883c21e-8032-4ddb-8a44-5c9088e55d4e> ;
+        crmdig:L11_had_output         <urn:uuid:f1fadbf1-12c8-4462-8f95-f02ed44a211f> , <urn:uuid:00c7c860-7ced-4e36-80ef-309d13477ebe> ;
+        crmdig:L13_used_parameters    <urn:uuid:270efd75-86fa-422a-bff8-8a27ea12a54a> .
+
+<urn:uuid:fe8184dd-6325-4388-a747-cb91475892e2>
+        a       crm:E42_Identifier .
+
+<urn:uuid:85e975ca-f289-42de-a7bf-97ff241971e6>
+        a           crm:E55_Type ;
+        rdfs:label  "HC7_Digital_Visual_Object" .
+
+<urn:uuid:cb2462a9-918b-4af7-bda1-dd6c47a88b6a>
+        a           crm:E55_Type ;
+        rdfs:label  "Generate short-term forecasts of indoor temperature and relative humidity using the trained Predictive Indoor Climate AI model, fed with real-time IoT data and external weather forecast data." .
+
+<urn:uuid:b1008730-ede7-4aa7-9c6c-1619baca8462>
+        a       crm:E42_Identifier .
+
+<urn:uuid:de28a456-24bc-456f-96fa-96c42c4234f6>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Predictive Indoor Climate AI Service" .
+
+<urn:uuid:98a26219-8719-472e-bcd5-025b2884830e>
+        a           crm:E55_Type ;
+        rdfs:label  "HC7_Digital_Visual_Object" .
+
+<urn:uuid:f651adce-9c60-43d0-9e5e-a909c70c6f2a>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_04, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:3131164b-502e-41b3-9176-0da1ce03f526> ;
+        crm:P1_is_identified_by      <urn:uuid:77789808-9ae3-46cb-8ede-b94ab89898bc> , <urn:uuid:9aa43f49-06e0-4e1d-a531-347ce1dedd73> ;
+        crm:P2_has_type              <urn:uuid:80a0c004-d0bd-43b0-a5c0-e2e4fbbbd11f> ;
+        crm:P3_has_note              "Timely alerts issued to heritage managers and conservators via email, SMS or other channels when thresholds are breached." .
+
+<urn:uuid:1338b866-319b-4dcc-83b0-437a0d22239b>
+        a           crm:E55_Type ;
+        rdfs:label  "Data acquisition configuration" .
+
+<urn:uuid:3674704b-634f-4bc5-936d-37c5667d4df4>
+        a           crm:E55_Type ;
+        rdfs:label  "Monitoring" .
+
+<urn:uuid:5d41d964-ac13-4156-aabb-0f05e63cfb3d>
+        a           crm:E42_Identifier ;
+        rdfs:label  "operation_03" .
+
+<urn:uuid:e47e58b2-af74-45f5-b656-ecf6ea87cbac>
+        a           crm:E55_Type ;
+        rdfs:label  "Rendering and usability configuration" .
+
+<urn:uuid:75f10443-da3e-4d60-9141-cb54f977db08>
+        a           crm:E55_Type ;
+        rdfs:label  "Transformation Operation" .
+
+<urn:uuid:9aa43f49-06e0-4e1d-a531-347ce1dedd73>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Risk alert notifications" .
+
+<urn:uuid:fc895cba-b6ab-4a98-8f9d-6bac332365fc>
+        a       crm:E42_Identifier .
+
+<urn:uuid:39a493a8-3f08-42c9-a1f5-52c28df49d91>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:89d401ea-06cb-4095-8171-380883fa5a77> ;
+        crm:P1_is_identified_by      <urn:uuid:18f051e5-0aa1-4668-ab86-89f19c2c0810> , <urn:uuid:629e4da5-b86c-4e98-8bc7-3da4755a231f> ;
+        crm:P2_has_type              <urn:uuid:b43646fd-cdca-4297-983a-3142acfa238b> ;
+        crm:P3_has_note              "Available with varying levels of detail from 1905 onwards. Used as boundary conditions for the historical illumination simulation." .
+
+<https://artemis-twin.eu/entity/services/BEDP-07>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "IoCT Services" ;
+        crm:P1_is_identified_by  artemis:BEDP-07 , <urn:uuid:16db777a-b1a4-4f59-8a01-7acc2a13fc5b> .
+
+<urn:uuid:f28acd12-61b5-488b-b729-59f7d3072539>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Risk assessment thresholds and performance targets" .
+
+<urn:uuid:9558892a-7e08-4f9d-ac6d-0bf91b2e8268>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Real-time IoT Environmental Monitoring" .
+
+<https://artemis-twin.eu/entity/services/CAW-01>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Phasma3D Viewer" ;
+        crm:P1_is_identified_by  artemis:CAW-01 , <urn:uuid:658bcc73-31ac-40e8-b2af-ff7090e2c32d> .
+
+<urn:uuid:e22d132d-56fa-463c-8cf2-bc1f15b201d3>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:64a409f1-92e9-481a-96b2-0bd8bdffe9b0>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:2d6cadc2-5c0a-4e72-9d29-7994adc898e4> ;
+        crm:P1_is_identified_by      <urn:uuid:b1008730-ede7-4aa7-9c6c-1619baca8462> , <urn:uuid:f84cc69e-58f1-46ca-a01e-3c15415ed18c> ;
+        crm:P2_has_type              <urn:uuid:09e8b2c2-100e-4113-b49b-076b12f300ac> ;
+        crm:P3_has_note              "Clean watertight mesh geometry (.obj or .glb) with accurately mapped material surfaces. Serves as the spatial input for computing light dose per surface." .
+
+<urn:uuid:171ae251-0f96-4ddf-b077-40bca973c8e7>
+        a                        rhdto:HC25_Node ;
+        crm:P1_is_identified_by  <urn:uuid:e5451777-a61c-46bf-84ee-0984accefd15> , <urn:uuid:a5f9ef0a-7dc6-4c32-a8c0-1911fc212c2e> ;
+        crm:P2_has_type          <urn:uuid:30572d45-7f4d-44b6-b1aa-426b36ffef36> ;
+        crm:P3_has_note          "HC25 Node grouping multiple HC9 Sensor instances. Commercial off-the-shelf and custom-built sensors." .
+
+<urn:uuid:5b958f0f-c30f-41ac-9678-dff0be1eaabc>
+        a       crm:E42_Identifier .
+
+<urn:uuid:196cd4d3-4f9b-4b54-9185-e80ceba3bd27>
+        a           crm:E55_Type ;
+        rdfs:label  "HC5_Digital_Representation" .
+
+<urn:uuid:a280663a-5931-46a5-9dae-71a2488459cb>
+        a       crm:E42_Identifier .
+
+<urn:uuid:71905b86-2fdc-47c9-baf6-e63ed9c36825>
+        a       crm:E42_Identifier .
+
+<urn:uuid:fbefcfe5-14b1-4731-b060-36bdda286a13>
+        a           crm:E55_Type ;
+        rdfs:label  "Model historical solar paths and climate conditions to calculate the cumulative light dose on specific surfaces of the Japanese Tower, and simulate the impact of future climate scenarios or environmental control interventions." .
+
+<urn:uuid:3e40312c-1343-4fe7-905f-76fdecc6d671>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Hypertext Knowledge Base Service" .
+
+<urn:uuid:39159e94-c634-40d3-a34f-8ad909ceac51>
+        a           crm:E55_Type ;
+        rdfs:label  "HC8_3D_Model" .
+
+<urn:uuid:f728feaa-f089-4333-879c-627aee20a4fb>
+        a       crm:E62_String .
+
+<https://artemis-twin.eu/entity/services/BEDP-02>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Navigational Hypertext Service" ;
+        crm:P1_is_identified_by  artemis:BEDP-02 , <urn:uuid:25a361f2-ea61-4b10-b5a3-210fb90ea88d> .
+
+<urn:uuid:eabf1672-8ddc-4290-8721-49d74fefc108>
+        a           crm:E41_Appellation ;
+        rdfs:label  "VR collaborative environment" .
+
+<urn:uuid:3de7e2f6-0961-4fd9-b158-26b15c9acb63>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Raw outdoor meteorological sensor readings" .
+
+<urn:uuid:59a8bbb3-8cd9-4835-acad-21dfc0b39006>
+        a                        rhdto:HC9_Sensor ;
+        crm:P1_is_identified_by  <urn:uuid:99141d6c-8f61-4bf1-8709-ead5c835ed5f> , <urn:uuid:0dbce79e-eda9-4188-947e-73114d5a8d4f> ;
+        crm:P2_has_type          <urn:uuid:ba6a1974-a513-4d82-9280-1cbcb698f01c> ;
+        crm:P3_has_note          "HC9 Sensor monitoring outdoor meteorological parameters." .
+
+<urn:uuid:f9890283-2429-4089-a101-fdbd1a4e4b95>
+        a       crm:E42_Identifier .
+
+<urn:uuid:9bfaa6bc-cc5b-411f-af66-2230e0c4e1bb>
+        a       crm:E62_String .
+
+<urn:uuid:82179acc-b56b-43f1-93d2-2c5dcc606496>
+        a           crm:E41_Appellation ;
+        rdfs:label  "External weather forecast data" .
+
+artemis:BESS-07  a  crm:E42_Identifier .
+
+<urn:uuid:1ec94537-b0f8-4e8c-9087-f6b73f2a1737>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Illumination Simulation Services" .
+
+<urn:uuid:145412fe-494c-4d0c-8760-3c128543e5b8>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_01, parameter IoT data acquisition configuration" ;
+        crm:P1_is_identified_by  <urn:uuid:26b8a245-4067-4547-928a-7d8f85e08557> , <urn:uuid:80a0a9ad-b492-453d-a39c-c0fa39d5220b> ;
+        crm:P2_has_type          <urn:uuid:1338b866-319b-4dcc-83b0-437a0d22239b> .
+
+<urn:uuid:f8c78baf-edc0-42fe-aea5-f42ffde50908>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_04, parameter Risk assessment thresholds and performance targets" ;
+        crm:P1_is_identified_by  <urn:uuid:090dcecf-7838-4a9c-af71-f53a8e88f917> , <urn:uuid:f28acd12-61b5-488b-b729-59f7d3072539> ;
+        crm:P2_has_type          <urn:uuid:83501f10-9b32-42bd-874f-7db056e332b8> .
+
+<urn:uuid:581e00ad-71de-445d-b2a4-6a8bacb3e1c4>
+        a           crm:E55_Type ;
+        rdfs:label  "Simulation" .
+
+<urn:uuid:629e4da5-b86c-4e98-8bc7-3da4755a231f>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Historical outdoor climate data (1905–present)" .
+
+<https://artemis-twin.eu/entity/pilot_14/operation_03>
+        a                             rhdto:HC22_Digital_Operation ;
+        rdfs:label                    "pilot_14 operation_03 Historical and Predictive Illumination Simulation" ;
+        rhdto:HP27_concerns_heritage_entity
+                artemis:artemis_he_007 ;
+        rhdto:HP28_implemented_using  <https://artemis-twin.eu/entity/services/BESS-13> ;
+        crm:P1_is_identified_by       <urn:uuid:5d41d964-ac13-4156-aabb-0f05e63cfb3d> , <urn:uuid:8d68c0b8-cf48-45a4-91d0-4af5d497e290> ;
+        crm:P21_had_general_purpose   <urn:uuid:fbefcfe5-14b1-4731-b060-36bdda286a13> ;
+        crm:P2_has_type               <urn:uuid:581e00ad-71de-445d-b2a4-6a8bacb3e1c4> ;
+        crm:P3_has_note               "The Illumination Simulation Service computes the cumulative light exposure on accurately mapped material surfaces within the 3D model of the Japanese Tower, using historical outdoor climate data (available back to 1905) and solar path modelling. The simulation produces spatial raster outputs (heatmaps) in GeoTIFF or NetCDF format, visualising where and how much light each surface has received over time. The same engine is used to model future climate scenarios and to simulate the impact of proposed environmental control interventions (e.g. window shading, UV-filtering films) before any physical implementation. The 3D model used as spatial input requires clean watertight mesh geometry. This operation runs independently of the real-time IoT stream (operation_01) but its outputs feed into operation_04 and operation_05." ;
+        crm:P4_has_time-span          <urn:uuid:0f4f32fc-3dcc-4bb3-ad6a-3926c15a2a36> ;
+        crmdig:L10_had_input          <urn:uuid:64a409f1-92e9-481a-96b2-0bd8bdffe9b0> , <urn:uuid:0e1940e3-462b-4875-a068-f9cbfc0199c0> , <urn:uuid:39a493a8-3f08-42c9-a1f5-52c28df49d91> ;
+        crmdig:L11_had_output         <urn:uuid:00384fd3-84ec-4ad5-b148-e45acb98a998> ;
+        crmdig:L13_used_parameters    <urn:uuid:489b8aaf-7d29-454d-9ef9-93907b0b5a4a> .
+
+<urn:uuid:0e1940e3-462b-4875-a068-f9cbfc0199c0>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_03, input" ;
+        rhdto:HP24_has_access_point  <urn:uuid:bfbdeae9-9b8e-4fd5-a3b1-e5ff2ed65e6d> ;
+        crm:P1_is_identified_by      <urn:uuid:69a4dce4-838e-4ec4-9136-a3f9d4cf2859> , <urn:uuid:d654d217-eaa8-456e-8cf6-102ca9208ad0> ;
+        crm:P2_has_type              <urn:uuid:8a01b873-5145-4c96-bbe9-26afc9afa56d> ;
+        crm:P3_has_note              "Used for future scenario simulations or virtual prototyping of environmental control interventions (e.g. shading solutions). May be provided as external climate projections or as user-defined HC23 Parameter Set instances." .
+
+<urn:uuid:0348b961-d4d0-4a1b-a3a0-0107889907c0>
+        a           crm:E41_Appellation ;
+        rdfs:label  "Predictive Indoor Climate Forecasting" .
+
+<urn:uuid:1cf89ae3-6837-4261-8f2d-027830523064>
+        a           crm:E55_Type ;
+        rdfs:label  "HC12_Signal" .
+
+<urn:uuid:270efd75-86fa-422a-bff8-8a27ea12a54a>
+        a                        rhdto:HC23_Parameter_Set ;
+        rdfs:label               "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_05, parameter Visualisation and VR/AR performance targets" ;
+        crm:P1_is_identified_by  <urn:uuid:0188625c-3da5-43c2-8252-5585115e81ac> , <urn:uuid:c32ba393-f302-4ba4-b7bf-663c5e62dd4e> ;
+        crm:P2_has_type          <urn:uuid:e47e58b2-af74-45f5-b656-ecf6ea87cbac> .
+
+artemis:CAVR-07  a  crm:E42_Identifier .
+
+<urn:uuid:8d654a44-b3bf-4db5-9dfc-2dc3b063187f>
+        a           crm:E42_Identifier ;
+        rdfs:label  "operation_01" .
+
+<urn:uuid:80a0c004-d0bd-43b0-a5c0-e2e4fbbbd11f>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:aaf4adb8-b616-484a-ba12-8380be865c4c>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+<urn:uuid:b43646fd-cdca-4297-983a-3142acfa238b>
+        a           crm:E55_Type ;
+        rdfs:label  "HC24_Digital_Object" .
+
+artemis:BEDP-07  a  crm:E42_Identifier .
+
+<urn:uuid:6c6df640-7b83-4c14-aef8-c189570efd7b>
+        a       crm:E62_String .
+
+<urn:uuid:bfcc7269-3892-4198-91b1-1e4f81f46f9b>
+        a           crm:E55_Type ;
+        rdfs:label  "Analyse all integrated data streams — real-time IoT measurements, indoor climate forecasts and illumination simulation outputs — to detect conservation risks, generate alerts when user-defined thresholds are breached and log risk events in the ARTEMIS KB." .
+
+<https://artemis-twin.eu/entity/services/BEDP-05>
+        a                        rhdto:HC21_Digital_Service ;
+        rdfs:label               "Hypertext Knowledge Base Service" ;
+        crm:P1_is_identified_by  artemis:BEDP-05 , <urn:uuid:3e40312c-1343-4fe7-905f-76fdecc6d671> .
+
+<urn:uuid:d1a03c3f-02c8-4b8f-ba8b-c5201aad45cb>
+        a           crm:E55_Type ;
+        rdfs:label  "Continuously acquire indoor and outdoor environmental data from the IoCT sensor network deployed in the Japanese Tower and register the data in the ARTEMIS Knowledge Base." .
+
+<urn:uuid:3e004f0d-128f-4881-a2ec-fb1a2fa91060>
+        a       crm:E62_String .
+
+<urn:uuid:89d401ea-06cb-4095-8171-380883fa5a77>
+        a       crm:E62_String .
+
+<urn:uuid:36feae75-a700-4f54-b26a-da80aef4f64f>
+        a       crm:E52_Time-Span .
+
+<urn:uuid:69a4dce4-838e-4ec4-9136-a3f9d4cf2859>
+        a       crm:E42_Identifier .
+
+<urn:uuid:00384fd3-84ec-4ad5-b148-e45acb98a998>
+        a                            rhdto:HC24_Digital_Object ;
+        rdfs:label                   "The Living Past: A Digital Twin for Environmental Storytelling and Conservation, operation_03, output" ;
+        rhdto:HP24_has_access_point  <urn:uuid:6c6df640-7b83-4c14-aef8-c189570efd7b> ;
+        crm:P1_is_identified_by      <urn:uuid:b1607f8b-6d84-44db-802b-063c1815455f> , <urn:uuid:a176f523-4a48-433a-a032-38bd6499a94a> ;
+        crm:P2_has_type              <urn:uuid:85e975ca-f289-42de-a7bf-97ff241971e6> ;
+        crm:P3_has_note              "Spatial raster outputs showing cumulative light dose per surface. Format: GeoTIFF or NetCDF. Used as input to operation_04 and operation_05." .
+
+<urn:uuid:9bd8646c-3c9a-4021-a62f-a976eab9958e>
+        a           crm:E42_Identifier ;
+        rdfs:label  "operation_05" .
+
+<urn:uuid:26b8a245-4067-4547-928a-7d8f85e08557>
+        a       crm:E42_Identifier .
+
+<urn:uuid:b344e347-c5c3-4d19-8185-6d1fc65356e0>
+        a           crm:E55_Type ;
+        rdfs:label  "Simulation parameters" .

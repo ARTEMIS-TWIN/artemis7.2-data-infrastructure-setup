@@ -1,0 +1,121 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix nont:  <https://dlnarratives.eu/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<urn:uuid:91e22992-c105-4d31-b956-5a64d90bef18>
+        a                             aocat:AO_Spatial_Region , crm:E53_Place , aocat:AO_Spatial_Region_Point , aocat:AO_Spatial_Region_StdName ;
+        rdfs:label                    "Royal Castle Domain, Laeken, Brussels, Belgium" ;
+        crm:P168_place_is_defined_by  "50.892928, 4.361589" ;
+        aocat:has_country             geonames:2802361 ;
+        aocat:has_latitude            "50.892928" ;
+        aocat:has_longitude           "4.361589" ;
+        aocat:has_place_IRI           geonames:3174953 ;
+        aocat:has_place_name          "Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+aat:300005768
+        a               aocat:AO_Concept , skos:Concept , crm:E55_Type ;
+        rdfs:label      "pagodas" ;
+        skos:prefLabel  "pagodas" .
+
+<urn:uuid:158f72f8-8961-4d38-81f4-ffecb2f7913f>
+        a                              crm:E42_Identifier ;
+        rdfs:label                     "artemis_he_007" ;
+        crm:P190_has_symbolic_content  "artemis_he_007" .
+
+aat:300004829
+        a               aocat:AO_Concept , skos:Concept , crm:E55_Type ;
+        rdfs:label      "towers (buildings)" ;
+        skos:prefLabel  "towers (buildings)" .
+
+geonames:2802361  a     aocat:AO_Concept , skos:Concept ;
+        rdfs:label      "Belgium" ;
+        skos:prefLabel  "Belgium" .
+
+ulan:500085111
+        a                           aocat:AO_Person , crm:E21_Person ;
+        rdfs:label                  "Alexandre Marcel" ;
+        crm:P3_has_note             "French architect commissioned by King Leopold II to design the Japanese Tower" ;
+        owl:sameAs                  wd:Q723010 ;
+        aocat:has_agent_identifier  "Alexandre Marcel" ;
+        aocat:has_name              "Alexandre Marcel" .
+
+<https://commons.wikimedia.org/wiki/File:La_tour_japonaise_%C3%A0_Laeken.jpg>
+        a                rhdto:HC7_Digital_Visual_Object ;
+        crm:P3_has_note  "La tour japonaise à Laeken" .
+
+wd:Q2563491
+        a                           aocat:AO_Group , crm:E74_Group ;
+        rdfs:label                  "Royal Trust (Koninklijke Schenking / Donation Royale)" ;
+        crm:P3_has_note             "The tower is located within the Royal Castle Domain of Laeken, which is subject to stringent security requirements." ;
+        aocat:has_agent_identifier  "Royal Trust (Koninklijke Schenking / Donation Royale)" ;
+        aocat:has_name              "Royal Trust (Koninklijke Schenking / Donation Royale)" .
+
+<urn:uuid:c7d3e9f1-2b45-4a78-9c01-d2e3f4a5b6c7>
+        a                                  aocat:AO_Temporal_Region , crm:E52_Time-Span ;
+        rdfs:label                         "Construction period (1900–1904)" ;
+        crm:P79_beginning_is_qualified_by  "1900" ;
+        crm:P80_end_is_qualified_by        "1904" ;
+        aocat:from                         "1900" ;
+        aocat:until                        "1904" .
+
+artemis:artemis_he_007
+        a                             crmhs:HS6_Study_Object , rhdto:HC3_Tangible_Entity , aocat:AO_Object , owl:Thing ;
+        rdfs:label                    "Japanese Tower, Royal Castle Domain, Laeken, Brussels, Belgium" ;
+        rhdto:HP11_was_made_by        ulan:500085111 ;
+        rhdto:HP12_was_made_within    <urn:uuid:c7d3e9f1-2b45-4a78-9c01-d2e3f4a5b6c7> ;
+        rhdto:HP9_has_visual_representation
+                <https://commons.wikimedia.org/wiki/File:La_tour_japonaise_%C3%A0_Laeken.jpg> ;
+        crm:P129i_is_subject_of       <https://doi.org/10.1186/s40494-015-0040-7> , <https://doi.org/10.1080/00393630.2016.1227053> ;
+        crm:P1_is_identified_by       <urn:uuid:158f72f8-8961-4d38-81f4-ffecb2f7913f> , <urn:uuid:6660789c-697e-4eb2-8e27-533bf7fab1de> ;
+        crm:P2_has_type               aat:300005768 , aat:300004829 ;
+        crm:P3_has_note               "The Japanese Tower at the Royal Castle Domain in Laeken (Brussels) is a well-known landmark for Brussels and Belgium. It was commissioned by King Leopold II and officially opened in 1904. The Tower looks very Japanese in appearance, but is a monumental expression of how Japanese art overwhelmed Europe during the Fin de Siècle, a rare place where the best aesthetics of two worlds merge. The construction of the timberwork started in 1902. Even though Belgian craftsmen built the main part, the 35-metre high building was initially assembled without nails in accordance with traditional Japanese techniques. Inspired by the temples of Nikko, the architect Alexandre Marcel adapted the interior decoration by mixing Japanese and European techniques. This five-floored royal jewel was lavishly decorated with a variety of mixed materials, including polychromies, metal, paint, wallpaper, stained glass, linoleum, textile and — most prominently — exquisite Japanese lacquer panels. The lacquers of the Tower represent a broad selection of provenances, styles and colours, and include elements from the late Edo and Meiji periods. The building was officially inaugurated on 6 May 1905. On 26 March 1909, King Leopold II donated the tower to the Belgian state. It was closed in 1947 due to financial constraints. A first restoration campaign was undertaken in the early 1990s, focused on the entry hall and main staircase. The tower is currently closed to the public due to accessibility issues. Structurally, the building remains largely unaltered since its construction and even its original interior heating system has not been changed, making it an invaluable 'time capsule'. The Japanese Tower is a protected monument under the legislation of the Brussels-Capital Region. Its primary conservation challenge lies in the complex and fragile state of its unique interior and exterior decorations: after more than 100 years, most floors are still conserved untouched, but their conservation condition is very worrisome. A significant issue is the fading of the original vibrant colours due to cumulative light exposure. To mitigate further weather-induced damage, the exterior decorative panels have been carefully dismantled and are currently stored inside the tower's first floor, while the interior panels remain in situ."@en ;
+        crm:P52_has_current_owner     wd:Q2563491 ;
+        crm:P55_has_current_location  <urn:uuid:91e22992-c105-4d31-b956-5a64d90bef18> ;
+        owl:sameAs                    wd:Q56214383 .
+
+<urn:uuid:6660789c-697e-4eb2-8e27-533bf7fab1de>
+        a                              crm:E41_Appellation ;
+        rdfs:label                     "Japanese Tower, Laeken" ;
+        crm:P190_has_symbolic_content  "Japanese Tower, Laeken" .
+
+wd:Q56214383
+        a       owl:Thing .
+
+geonames:3174953  a     aocat:AO_Concept , skos:Concept ;
+        rdfs:label      "Royal Castle Domain, Laeken, Brussels, Belgium" ;
+        skos:prefLabel  "Royal Castle Domain, Laeken, Brussels, Belgium" .
+
+<https://doi.org/10.1186/s40494-015-0040-7>
+        a           crm:E89_Propositional_Object , aocat:AO_Resource ;
+        rdfs:label  "Vermeulen et al. (2015) — Identification of artificial orpiment in the interior decorations of the Japanese Tower in Laeken, Brussels, Belgium. Heritage Science, 3:9." .
+
+<https://doi.org/10.1080/00393630.2016.1227053>
+        a           crm:E89_Propositional_Object , aocat:AO_Resource ;
+        rdfs:label  "Mesmaeker (2016) — The Japanese Tower at the Royal Domain in Laeken: A remarkable application of Japanese lacquer techniques in Belgium. Studies in Conservation, 61(sup3), 109-116." .

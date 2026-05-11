@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <service_id>BEDP-07</service_id>
+  <title>IoCT Services</title>
+  <service_type>Environmental Monitoring and IoT Data Collection</service_type>
+  <version/>
+  <description>A hybrid IoT data collection service combining custom-developed low-power sensor nodes (developed by KIK-IRPA) with commercial off-the-shelf solutions. Custom nodes are based on the Seeedstudio Xiao ESP32-S3 and Arduino Nano RP2040 Connect platforms, integrated with sensors including DHT22 (temperature, humidity), Adafruit TSL2591 (light), Sensirion SCD30 (CO2), Sensirion SPS30 (particulate matter) and various rain gauges (DFRobot tipping bucket, Hydreon RG-15 optical). Nodes are powered by LiPo batteries with DFRobot Solar Power Manager and include on-board flash memory for local data backup. Wireless communication uses built-in WiFi/Bluetooth expanded with LoRa/LoRaWAN transceivers (Wio-SX1262 or RFM95W). Also integrates commercial sensors for temperature, humidity and moisture content in exterior walls and surrounding soil, and standard on-site meteorological weather stations. All data streams transmitted to a cloud-based platform via RESTful services (Artemis IoT Microservices) and MQTT protocol. Firmware developed in Arduino IDE by KIK-IRPA.</description>
+  <provided_by>
+    <agent_type>Group</agent_type>
+    <identifier/>
+    <name>Royal Institute for Cultural Heritage (KIK-IRPA)</name>
+    <email/>
+    <homepage/>
+  </provided_by>
+  <access_points>
+    <access_point>
+      <url/>
+      <endpoint_type>REST API</endpoint_type>
+      <endpoint_methods/>
+      <notes>Artemis IoT Microservices RESTful endpoints for data transmission to the cloud-based platform.</notes>
+    </access_point>
+    <access_point>
+      <url/>
+      <endpoint_type>Other</endpoint_type>
+      <endpoint_methods/>
+      <notes>MQTT protocol for efficient, low-latency publish-subscribe communication across all data sources.</notes>
+    </access_point>
+  </access_points>
+  <intended_for>
+    <audience>Heritage building managers and conservation scientists requiring real-time, high-fidelity environmental monitoring of heritage assets</audience>
+    <audience>RHDT systems requiring a continuous, multi-variable environmental data stream as input for predictive and simulation services</audience>
+  </intended_for>
+  <used_for>
+    <activity>
+      <activity_label>operation_01 — Real-time IoT Environmental Monitoring: continuously acquiring indoor environmental data (temperature, RH, light levels, dust particles, CO2) and outdoor meteorological data from the Japanese Tower</activity_label>
+    </activity>
+  </used_for>
+  <used_physical_object_of_type>
+    <object_type>Custom KIK-IRPA IoT nodes (Seeedstudio Xiao ESP32-S3 and Arduino Nano RP2040 Connect)</object_type>
+    <object_type>DHT22 temperature and humidity sensor</object_type>
+    <object_type>Adafruit TSL2591 light sensor</object_type>
+    <object_type>Sensirion SCD30 CO2 sensor</object_type>
+    <object_type>Sensirion SPS30 particulate matter sensor</object_type>
+    <object_type>DFRobot tipping bucket rain gauge</object_type>
+    <object_type>Hydreon RG-15 optical rain gauge</object_type>
+    <object_type>DFRobot Solar Power Manager</object_type>
+    <object_type>LiPo battery</object_type>
+    <object_type>LoRa/LoRaWAN transceiver (Wio-SX1262 or RFM95W)</object_type>
+    <object_type>Commercial off-the-shelf temperature and humidity sensors</object_type>
+    <object_type>Commercial sensors for moisture content in exterior walls and surrounding soil</object_type>
+    <object_type>On-site meteorological weather station</object_type>
+  </used_physical_object_of_type>
+  <has_functionality>
+    <functionality>Measurement of indoor air temperature and surface temperatures</functionality>
+    <functionality>Measurement of relative humidity (RH)</functionality>
+    <functionality>Measurement of light levels (visual, infrared, ultraviolet)</functionality>
+    <functionality>Measurement of airborne particulate matter</functionality>
+    <functionality>Measurement of CO2 concentrations</functionality>
+    <functionality>Measurement of wind-driven rain (WDR) on facades</functionality>
+    <functionality>Measurement of moisture content in exterior walls and surrounding soil</functionality>
+    <functionality>Standard meteorological data acquisition (temperature, RH, rainfall, wind direction, wind speed, solar radiation)</functionality>
+    <functionality>Local on-board data backup via flash memory</functionality>
+    <functionality>Low-power wireless data transmission via LoRa/LoRaWAN</functionality>
+    <functionality>Cloud data transmission via RESTful API and MQTT</functionality>
+  </has_functionality>
+  <composed_of/>
+  <supported_language/>
+  <media_type_consumed/>
+  <media_type_produced/>
+  <format_consumed>
+    <format>application/json</format>
+  </format_consumed>
+  <format_produced>
+    <format>text/csv</format>
+    <format>application/json</format>
+  </format_produced>
+  <support_contact/>
+  <documentation/>
+</service>

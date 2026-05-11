@@ -1,0 +1,43 @@
+{
+  "service_id": "BESS-08",
+  "title": "Risk Assessment Service",
+  "service_type": "Conservation Risk Assessment",
+  "description": "A knowledge-based microservice acting as the central analytical engine of the RHDT, translating environmental data — both real-time and predictive — into context-aware conservation risk assessments. Integrates and processes data from three sources: real-time IoCT network data (temperature, RH, light, etc.), outputs from WDR and Facade Thermal simulation services, and forecasts from the Predictive Indoor Climate AI Service. Its core is a Configurable Risk Library containing predefined scientific models, boundary conditions and dose-response functions: Hygrothermal Models (ASHRAE classes, mold growth and frost damage models), Light Damage Models (cumulative lux-hours dose-response functions for fading and material degradation), and Mechanical Stress Models (rules for risks from rapid RH fluctuations in materials such as wood and canvas). Heritage managers and conservators can define specific risk profiles and thresholds per location via a dedicated RHDT interface. Returns a structured risk assessment including risk level (Low/Medium/High), risk type and triggering data. Implemented as a custom Python rules engine accessing a configuration database (MongoDB or PostgreSQL) storing the Risk Library. Standard cloud CPU VM or container with 8–16 GB RAM.",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "Royal Institute for Cultural Heritage (KIK-IRPA)"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "notes": "Python-based (Flask or FastAPI) or Node.js-based HTTP/HTTPS web server with JSON payload."
+    }
+  ],
+  "intended_for": [
+    "Heritage building managers and conservators requiring actionable, evidence-based conservation risk decisions without needing data science expertise",
+    "RHDT systems requiring structured risk output to drive alerting, dashboard displays and automated controls"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_04 — Risk Assessment and Alerting: processing real-time IoT data (operation_01), indoor climate forecasts (operation_02) and illumination simulation heatmaps (operation_03) to detect conservation risks, generate structured risk event records in the ARTEMIS KB and issue alerts when user-defined thresholds are breached"
+    }
+  ],
+  "used_physical_object_of_type": [
+    "Standard cloud-based CPU virtual machine or container with 8–16 GB RAM",
+    "Configuration database (MongoDB or PostgreSQL) storing the Risk Library"
+  ],
+  "has_functionality": [
+    "Integration and processing of real-time IoCT data, simulation outputs and AI forecasts",
+    "Configurable Risk Library with hygrothermal models (ASHRAE), light damage dose-response functions and mechanical stress models",
+    "User-defined risk profile and threshold configuration per location",
+    "Structured risk assessment output (risk level, risk type, triggering data)",
+    "Context-aware and object-specific risk assessment",
+    "Auditable risk management with formal evidence-based framework"
+  ],
+  "format_consumed": [
+    "application/json"
+  ],
+  "format_produced": [
+    "application/json"
+  ]
+}

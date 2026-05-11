@@ -1,0 +1,108 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:c2e3b58c-d5a0-4c4c-a79d-ea1cd57be1f1>
+        a           crm:E55_Type ;
+        rdfs:label  "Heritage building managers requiring proactive early-warning climate management" .
+
+<urn:uuid:2996dbad-251b-4804-9cd3-d1703efc5546>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Virtual 'what-if' testing of climate control strategies without endangering the real asset" .
+
+<urn:uuid:5c9cb3e4-736c-4ba5-9ac0-3a9eb9931ea6>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:56e0721b-64fc-4cd1-8b52-257ae6b36fb5> ;
+        crm:P3_has_note  "Python-based (Flask or FastAPI) or Node.js-based HTTP/HTTPS web server with JSON payload. Called by the RHDT on a regular schedule." .
+
+<https://artemis-twin.eu/entity/service//BESS-07>
+        a                             rhdto:HC21_Digital_Service ;
+        rdfs:label                    "Predictive Indoor Climate AI Service" ;
+        rhdto:HP30_provided_by        <urn:uuid:148fcc75-5180-4952-9406-4f5b5b6e1622> ;
+        crm:P102_has_title            <urn:uuid:eef83d45-54c6-43e1-bd30-29652f59b697> ;
+        crm:P103_was_intended_for     <urn:uuid:688fae00-f1cb-4c2b-974f-861d012a599e> , <urn:uuid:0363de47-cace-4455-847b-1e191ff5596d> , <urn:uuid:c2e3b58c-d5a0-4c4c-a79d-ea1cd57be1f1> ;
+        crm:P125_used_object_of_type  "Standard cloud-based CPU virtual machine or container with 8–16 GB RAM for online inference deployment" , "High-performance workstation or cloud instance with powerful CPU and high-VRAM GPU (e.g. NVIDIA RTX series) for offline model training" ;
+        crm:P16i_was_used_for         <urn:uuid:88e73dce-18db-4291-9473-66c7c817408e> , <urn:uuid:bb005255-d76e-4f43-bcae-e505d3282270> ;
+        crm:P2_has_type               <urn:uuid:dae415e3-62f0-4d96-99cc-e0f053ed1c08> ;
+        crm:P3_has_note               "An intelligent microservice providing backend infrastructure for forecasting future indoor climate conditions (temperature and relative humidity) of a specific heritage building or room. Operates in two stages: (1) Offline Model Training — a historical dataset correlating indoor IoCT time-series data with outdoor weather station data is used to train and validate a building-specific time-series forecasting model (e.g. LSTM networks, Gradient Boosting Machines or other regression models), producing a highly-tuned predictive model capturing the unique thermal inertia, air permeability and moisture buffering capacity of the asset; (2) Online Prediction (Inference) — once deployed, the service takes a future weather forecast (e.g. for the next 24–72 hours) as primary input, feeds it into the trained model and returns a time-series forecast of indoor climate for the same period. Called by the RHDT on a regular schedule via standardised REST endpoints. Training performed on a high-performance workstation or cloud instance with powerful CPU and preferably high-VRAM GPU. Inference deployed as a lightweight Python microservice (Flask or FastAPI) on a standard cloud CPU VM (8–16 GB RAM)." ;
+        aocat:has_consumed_format     "text/csv" , "application/json" ;
+        aocat:has_functionality       <urn:uuid:1c70ce03-454e-45fe-aa49-5499fa29fa18> , <urn:uuid:824b7e2e-bef1-4a9f-b76b-81b42246beb9> , <urn:uuid:00af746f-2ba3-47e3-96fc-1cbd6fb6c7b6> , <urn:uuid:2996dbad-251b-4804-9cd3-d1703efc5546> , <urn:uuid:e226975d-3540-41e5-91f1-2b23f8a37eca> , <urn:uuid:dae415e3-62f0-4d96-99cc-e0f053ed1c08> ;
+        aocat:has_produced_format     "text/csv" , "application/json" ;
+        aocat:has_technical_support   <urn:uuid:6da4556c-2919-49a1-9fae-15a4f1f52bb0> ;
+        aocat:is_accessible_at        <urn:uuid:3a37daf5-7823-495b-8890-5550bbc5720b> .
+
+<urn:uuid:eef83d45-54c6-43e1-bd30-29652f59b697>
+        a           crm:E35_Title ;
+        rdfs:label  "Predictive Indoor Climate AI Service" .
+
+<urn:uuid:0363de47-cace-4455-847b-1e191ff5596d>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservation scientists needing evidence-based forecasts of environmental risk for sensitive collections" .
+
+<urn:uuid:148fcc75-5180-4952-9406-4f5b5b6e1622>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "Royal Institute for Cultural Heritage (KIK-IRPA)" ;
+        aocat:has_name  "Royal Institute for Cultural Heritage (KIK-IRPA)" .
+
+<urn:uuid:3a37daf5-7823-495b-8890-5550bbc5720b>
+        a       rdfs:Literal .
+
+<urn:uuid:bb005255-d76e-4f43-bcae-e505d3282270>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_04 — Risk Assessment and Alerting: providing short-term indoor climate forecasts as one of the three input data streams processed by the Risk Assessment Service" .
+
+<urn:uuid:88e73dce-18db-4291-9473-66c7c817408e>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_02 — Predictive Indoor Climate Forecasting: generating 24-hour indoor temperature and RH forecasts for the Japanese Tower using real-time IoT data and external weather forecast data as inputs" .
+
+<urn:uuid:824b7e2e-bef1-4a9f-b76b-81b42246beb9>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Online 24–72 hour indoor climate forecasting (temperature and RH)" .
+
+<urn:uuid:688fae00-f1cb-4c2b-974f-861d012a599e>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT systems requiring predicted indoor climate data as input to the Risk Assessment Service" .
+
+<urn:uuid:00af746f-2ba3-47e3-96fc-1cbd6fb6c7b6>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Support for early warning triggering and automated environmental control" .
+
+<urn:uuid:e226975d-3540-41e5-91f1-2b23f8a37eca>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Offline training of a building-specific time-series forecasting model (LSTM, Gradient Boosting Machines or other regression models)" .
+
+<urn:uuid:1c70ce03-454e-45fe-aa49-5499fa29fa18>
+        a           aocat:AO_Concept ;
+        rdfs:label  "REST API-based forecast delivery to the RHDT on a regular schedule" .
+
+<urn:uuid:dae415e3-62f0-4d96-99cc-e0f053ed1c08>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Predictive Simulation / AI Forecasting" .
+
+<urn:uuid:56e0721b-64fc-4cd1-8b52-257ae6b36fb5>
+        a           crm:E55_Type ;
+        rdfs:label  "REST API" .
+
+<urn:uuid:6da4556c-2919-49a1-9fae-15a4f1f52bb0>
+        a       crm:E39_Actor , aocat:AO_Agent .

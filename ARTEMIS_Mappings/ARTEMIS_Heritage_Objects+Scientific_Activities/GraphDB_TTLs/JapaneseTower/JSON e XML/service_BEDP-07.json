@@ -1,0 +1,64 @@
+{
+  "service_id": "BEDP-07",
+  "title": "IoCT Services",
+  "service_type": "Environmental Monitoring and IoT Data Collection",
+  "description": "A hybrid IoT data collection service combining custom-developed low-power sensor nodes (developed by KIK-IRPA) with commercial off-the-shelf solutions. Custom nodes are based on the Seeedstudio Xiao ESP32-S3 and Arduino Nano RP2040 Connect platforms, integrated with sensors including DHT22 (temperature, humidity), Adafruit TSL2591 (light), Sensirion SCD30 (CO2), Sensirion SPS30 (particulate matter) and various rain gauges (DFRobot tipping bucket, Hydreon RG-15 optical). Nodes are powered by LiPo batteries with DFRobot Solar Power Manager and include on-board flash memory for local data backup. Wireless communication uses built-in WiFi/Bluetooth expanded with LoRa/LoRaWAN transceivers (Wio-SX1262 or RFM95W). Also integrates commercial sensors for temperature, humidity and moisture content in exterior walls and surrounding soil, and standard on-site meteorological weather stations. All data streams transmitted to a cloud-based platform via RESTful services (Artemis IoT Microservices) and MQTT protocol. Firmware developed in Arduino IDE by KIK-IRPA.",
+  "provided_by": {
+    "agent_type": "Group",
+    "name": "Royal Institute for Cultural Heritage (KIK-IRPA)"
+  },
+  "access_points": [
+    {
+      "endpoint_type": "REST API",
+      "notes": "Artemis IoT Microservices RESTful endpoints for data transmission to the cloud-based platform."
+    },
+    {
+      "endpoint_type": "Other",
+      "notes": "MQTT protocol for efficient, low-latency publish-subscribe communication across all data sources."
+    }
+  ],
+  "intended_for": [
+    "Heritage building managers and conservation scientists requiring real-time, high-fidelity environmental monitoring of heritage assets",
+    "RHDT systems requiring a continuous, multi-variable environmental data stream as input for predictive and simulation services"
+  ],
+  "used_for": [
+    {
+      "activity_label": "operation_01 — Real-time IoT Environmental Monitoring: continuously acquiring indoor environmental data (temperature, RH, light levels, dust particles, CO2) and outdoor meteorological data from the Japanese Tower"
+    }
+  ],
+  "used_physical_object_of_type": [
+    "Custom KIK-IRPA IoT nodes (Seeedstudio Xiao ESP32-S3 and Arduino Nano RP2040 Connect)",
+    "DHT22 temperature and humidity sensor",
+    "Adafruit TSL2591 light sensor",
+    "Sensirion SCD30 CO2 sensor",
+    "Sensirion SPS30 particulate matter sensor",
+    "DFRobot tipping bucket rain gauge",
+    "Hydreon RG-15 optical rain gauge",
+    "DFRobot Solar Power Manager",
+    "LiPo battery",
+    "LoRa/LoRaWAN transceiver (Wio-SX1262 or RFM95W)",
+    "Commercial off-the-shelf temperature and humidity sensors",
+    "Commercial sensors for moisture content in exterior walls and surrounding soil",
+    "On-site meteorological weather station"
+  ],
+  "has_functionality": [
+    "Measurement of indoor air temperature and surface temperatures",
+    "Measurement of relative humidity (RH)",
+    "Measurement of light levels (visual, infrared, ultraviolet)",
+    "Measurement of airborne particulate matter",
+    "Measurement of CO2 concentrations",
+    "Measurement of wind-driven rain (WDR) on facades",
+    "Measurement of moisture content in exterior walls and surrounding soil",
+    "Standard meteorological data acquisition (temperature, RH, rainfall, wind direction, wind speed, solar radiation)",
+    "Local on-board data backup via flash memory",
+    "Low-power wireless data transmission via LoRa/LoRaWAN",
+    "Cloud data transmission via RESTful API and MQTT"
+  ],
+  "format_consumed": [
+    "application/json"
+  ],
+  "format_produced": [
+    "text/csv",
+    "application/json"
+  ]
+}

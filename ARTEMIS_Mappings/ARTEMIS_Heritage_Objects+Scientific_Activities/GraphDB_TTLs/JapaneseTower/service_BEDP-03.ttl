@@ -1,0 +1,104 @@
+@prefix crmhs: <http://vast-lab.org/crmhs/> .
+@prefix artemis: <https://artemis-twin.eu/entity/> .
+@prefix aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix geonames: <https://www.geonames.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ariadne: <https://ariadne-infrastructure.eu/aocat/Resource/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix crmsci: <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix ulan:  <http://vocab.getty.edu/ulan/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix aat:   <http://vocab.getty.edu/aat/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-2/> .
+@prefix perio: <http://n2t.net/ark:/99152/> .
+@prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe/> .
+@prefix rhdto: <http://vast-lab.org/rhdto/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://artemis-twin.eu/entity/service//BEDP-03>
+        a                            rhdto:HC21_Digital_Service ;
+        rdfs:label                   "Annotation Service" ;
+        rhdto:HP30_provided_by       <urn:uuid:3ffb7ebd-3bc3-4b33-8a3e-7c433aa82792> ;
+        crm:P102_has_title           <urn:uuid:115c9024-c10b-4f26-9ccb-0aafcd1e13d5> ;
+        crm:P103_was_intended_for    <urn:uuid:22f468ad-e88e-4ba9-aef6-a11a38ceb00a> , <urn:uuid:092d428b-2e5c-4d72-beb9-7ce60ebaa4ac> ;
+        crm:P16i_was_used_for        <urn:uuid:f12f3284-54f0-4022-abeb-2f5b69295b2b> ;
+        crm:P2_has_type              <urn:uuid:0c2ae10f-2a56-48ae-8cd5-e556563f5718> ;
+        crm:P3_has_note              "A service enabling users to add persistent, structured or free-text annotations to information entities such as digital assets, documents or metadata records. Annotations can include comments, tags or references and are stored in a format supporting reuse and semantic integration. The service supports collaborative work, allowing multiple users to annotate the same entity simultaneously. Hosted as a RESTful API on a Docker-compatible web server with a database backend (e.g. PostgreSQL) and optional OAuth2 authentication." ;
+        aocat:has_consumed_format    "application/json" ;
+        aocat:has_functionality      <urn:uuid:c32d3630-8c0a-4ab2-9b8a-2cd62c8a60f9> , <urn:uuid:0c2ae10f-2a56-48ae-8cd5-e556563f5718> , <urn:uuid:865e52ac-a598-4c8a-acff-50a1eeb47565> , <urn:uuid:74b453d6-41c6-4768-8695-909781afbbc8> , <urn:uuid:171df281-7d66-4434-af40-07671e68a5be> , <urn:uuid:ed9529fb-7312-4496-ab32-3cdc52dcc8de> , <urn:uuid:c5425b07-92cb-440d-9fa7-052db87cfebb> ;
+        aocat:has_produced_format    "application/json" , "application/ld+json" ;
+        aocat:has_technical_support  <urn:uuid:a69b654f-348f-4877-a7e3-35c6a290dda6> ;
+        aocat:is_accessible_at       <urn:uuid:a3efa994-cb45-401d-be12-b5429dde6d73> .
+
+<urn:uuid:115c9024-c10b-4f26-9ccb-0aafcd1e13d5>
+        a           crm:E35_Title ;
+        rdfs:label  "Annotation Service" .
+
+<urn:uuid:e6c1661e-f671-4fbd-a93b-118da38b558d>
+        a                crm:E62_String ;
+        crm:P2_has_type  <urn:uuid:ac5f8659-4ab8-48a3-9a93-831e6b97d916> ;
+        crm:P3_has_note  "RESTful API on a standard Docker-compatible web server. Database backend (e.g. PostgreSQL). Optional OAuth2 authentication." .
+
+<urn:uuid:0c2ae10f-2a56-48ae-8cd5-e556563f5718>
+        a           aocat:AO_Concept , crm:E55_Type ;
+        rdfs:label  "Collaborative Annotation" .
+
+<urn:uuid:f12f3284-54f0-4022-abeb-2f5b69295b2b>
+        a           crm:E7_Activity ;
+        rdfs:label  "operation_05 — Spatiotemporal Data Visualisation and VR/AR Experience: enabling expert users to create persistent annotations on the 3D model of the Japanese Tower, linking heritage documentation and analytical evidence to specific spatial locations" .
+
+<urn:uuid:ed9529fb-7312-4496-ab32-3cdc52dcc8de>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Addition of persistent structured or free-text annotations to digital assets, documents and metadata" .
+
+<urn:uuid:a3efa994-cb45-401d-be12-b5429dde6d73>
+        a       rdfs:Literal .
+
+<urn:uuid:865e52ac-a598-4c8a-acff-50a1eeb47565>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Collaborative multi-user annotation of the same entity" .
+
+<urn:uuid:3ffb7ebd-3bc3-4b33-8a3e-7c433aa82792>
+        a               aocat:AO_Agent , crm:E39_Actor ;
+        rdfs:label      "HOF" ;
+        aocat:has_name  "HOF" .
+
+<urn:uuid:74b453d6-41c6-4768-8695-909781afbbc8>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Cross-pilot knowledge sharing" .
+
+<urn:uuid:171df281-7d66-4434-af40-07671e68a5be>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Semantic storage format supporting reuse and knowledge graph integration" .
+
+<urn:uuid:ac5f8659-4ab8-48a3-9a93-831e6b97d916>
+        a                crm:E55_Type ;
+        rdfs:label       "REST API" ;
+        crm:P3_has_note  "GET" .
+
+<urn:uuid:22f468ad-e88e-4ba9-aef6-a11a38ceb00a>
+        a           crm:E55_Type ;
+        rdfs:label  "Conservation scientists, heritage professionals and researchers requiring collaborative knowledge capture on digital content" .
+
+<urn:uuid:a69b654f-348f-4877-a7e3-35c6a290dda6>
+        a       crm:E39_Actor , aocat:AO_Agent .
+
+<urn:uuid:c32d3630-8c0a-4ab2-9b8a-2cd62c8a60f9>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Transparency, traceability and long-term knowledge preservation" .
+
+<urn:uuid:092d428b-2e5c-4d72-beb9-7ce60ebaa4ac>
+        a           crm:E55_Type ;
+        rdfs:label  "RHDT pilot users performing structured annotation of 3D models, documents and datasets" .
+
+<urn:uuid:c5425b07-92cb-440d-9fa7-052db87cfebb>
+        a           aocat:AO_Concept ;
+        rdfs:label  "Support for comments, tags and references as annotation types" .
