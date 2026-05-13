@@ -1,0 +1,354 @@
+# ============================================================
+# ARTEMIS SHACL — Modulo 4: Digital Operations (Pilots)
+# JSON source: VICKY_artemis_pilots_data_collection_schema.json
+# X3ML source: ARTEMIS_Digital_Operations_08-05-26.x3ml
+# ============================================================
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig:  <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix rhdto:   <http://vast-lab.org/rhdto/> .
+@prefix aocat:   <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix artemis: <https://artemis-twin.eu/shape/> .
+
+# ── rhdto:HC22_Digital_Operation ─────────────────────────
+# JSON required per operation: operation_id, operation_title,
+#                              operation_type, inputs, outputs
+
+artemis:HC22_Digital_OperationShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC22_Digital_Operation ;
+
+    # operation_id → P1_is_identified_by (REQUIRED)
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:message "L'operazione digitale non ha un identificatore (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # operation_type → P2_has_type (REQUIRED)
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:minCount 1 ;
+        sh:message "L'operazione digitale deve avere un tipo (P2)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # inputs → L10_had_input (REQUIRED; minItems 1 per JSON)
+    sh:property [
+        sh:path crmdig:L10_had_input ;
+        sh:class rhdto:HC24_Digital_Object ;
+        sh:minCount 1 ;
+        sh:message "L'operazione digitale deve avere almeno un input (L10)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # outputs → L11_had_output (REQUIRED; minItems 1 per JSON)
+    sh:property [
+        sh:path crmdig:L11_had_output ;
+        sh:class rhdto:HC24_Digital_Object ;
+        sh:minCount 1 ;
+        sh:message "L'operazione digitale deve avere almeno un output (L11)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # general_purpose → P21_had_general_purpose (OPTIONAL)
+    sh:property [
+        sh:path crm:P21_had_general_purpose ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # description → P3_has_note (OPTIONAL)
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # concerns_heritage_entity → HP27_concerns_heritage_entity (OPTIONAL; entity_id REQUIRED if present)
+    sh:property [
+        sh:path rhdto:HP27_concerns_heritage_entity ;
+        sh:class rhdto:HC3_Tangible_Entity ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # time_span → P4_has_time-span
+    # JSON: begin/end sono format date-time; label è stringa libera
+    sh:property [
+        sh:path crm:P4_has_time-span ;
+        sh:or ( [ sh:class crm:E52_Time-Span ]
+                [ sh:datatype xsd:dateTime ]
+                [ sh:datatype xsd:date ]
+                [ sh:datatype xsd:gYear ]
+                [ sh:nodeKind sh:Literal ;
+                  sh:pattern "^[0-9]{4}(-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?)?$" ] ) ;
+        sh:message "Il time-span deve essere una data ISO 8601, datetime o anno."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_software → L23_used_software_or_firmware (OPTIONAL; software_title REQUIRED per item)
+    sh:property [
+        sh:path crmdig:L23_used_software_or_firmware ;
+        sh:class crmdig:D14_Software ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # implemented_using → HP28_implemented_using (OPTIONAL; service_identifier REQUIRED per item)
+    sh:property [
+        sh:path rhdto:HP28_implemented_using ;
+        sh:class rhdto:HC21_Digital_Service ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_parameters → L13_used_parameters (OPTIONAL; parameter_set_label REQUIRED per item)
+    sh:property [
+        sh:path crmdig:L13_used_parameters ;
+        sh:class rhdto:HC23_Parameter_Set ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_devices → P16_used_specific_object (OPTIONAL; device_label REQUIRED per item)
+    sh:property [
+        sh:path crm:P16_used_specific_object ;
+        sh:or ( [ sh:class crmdig:D8_Digital_Device ]
+                [ sh:class rhdto:HC25_Node ]
+                [ sh:class rhdto:HC9_Sensor ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # continued_from → P134_continued (OPTIONAL)
+    sh:property [
+        sh:path crm:P134_continued ;
+        sh:class rhdto:HC22_Digital_Operation ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── rhdto:HC24_Digital_Object ─────────────────────────────
+# JSON inputs/outputs: object_label + object_class REQUIRED
+# access_point: format uri
+
+artemis:HC24_Digital_ObjectShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC24_Digital_Object ;
+
+    # object_label → P1_is_identified_by (REQUIRED)
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:message "L'oggetto digitale non ha un'etichetta/identificatore (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_class → P2_has_type (REQUIRED)
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:minCount 1 ;
+        sh:message "L'oggetto digitale deve avere un tipo/classe (P2)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # notes → P3_has_note (OPTIONAL)
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # access_point → HP24_has_access_point (format uri)
+    sh:property [
+        sh:path rhdto:HP24_has_access_point ;
+        sh:class crm:E62_String ;
+        sh:message "Il punto di accesso dell'oggetto digitale deve essere un URI valido."@it ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── rhdto:HC23_Parameter_Set ──────────────────────────────
+# JSON: parameter_set_label REQUIRED; access_point: format uri
+
+artemis:HC23_Parameter_SetShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC23_Parameter_Set ;
+
+    # parameter_set_label → P1_is_identified_by (REQUIRED)
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:message "Il parameter set non ha un'etichetta/identificatore (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # parameter_type → P2_has_type (OPTIONAL)
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # values → P43_has_dimension (OPTIONAL)
+    sh:property [
+        sh:path crm:P43_has_dimension ;
+        sh:class crm:E54_Dimension ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmdig:D14_Software ───────────────────────────────────
+# JSON: software_title REQUIRED; access_point: format uri
+
+artemis:D14_SoftwareShape
+    a sh:NodeShape ;
+    sh:targetClass crmdig:D14_Software ;
+
+    # software_title → P1_is_identified_by (REQUIRED)
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:message "Il software non ha un titolo/identificatore (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # access_point → HP24_has_access_point (format uri)
+    sh:property [
+        sh:path rhdto:HP24_has_access_point ;
+        sh:class crm:E62_String ;
+        sh:message "Il punto di accesso del software deve essere un URI valido."@it ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmdig:D8_Digital_Device ──────────────────────────────
+# JSON: device_label REQUIRED; device_type OPTIONAL
+
+artemis:D8_Digital_DeviceShape
+    a sh:NodeShape ;
+    sh:targetClass crmdig:D8_Digital_Device ;
+
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:message "Il device digitale non ha un'etichetta (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── rhdto:HC25_Node ───────────────────────────────────────
+artemis:HC25_NodeShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC25_Node ;
+
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── rhdto:HC9_Sensor ──────────────────────────────────────
+# JSON: device_type "Sensor" per questo tipo
+
+artemis:HC9_SensorShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC9_Sensor ;
+
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crm:E7_Activity ───────────────────────────────────────
+# JSON: activity_label REQUIRED (used_for items)
+
+artemis:E7_ActivityShape
+    a sh:NodeShape ;
+    sh:targetClass crm:E7_Activity ;
+
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P9_consists_of ;
+        sh:class rhdto:HC22_Digital_Operation ;
+        sh:severity sh:Warning ;
+    ] .

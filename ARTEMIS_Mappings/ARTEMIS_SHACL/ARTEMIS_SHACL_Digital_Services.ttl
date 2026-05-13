@@ -1,0 +1,241 @@
+# ============================================================
+# ARTEMIS SHACL — Modulo 3: Digital Services
+# JSON source: ARTEMIS_Services_schema_v2.json
+# X3ML source: ARTEMIS_Services_mapping_v2.x3ml
+# ============================================================
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aocat:   <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix rhdto:   <http://vast-lab.org/rhdto/> .
+@prefix artemis: <https://artemis-twin.eu/shape/> .
+
+# ── rhdto:HC21_Digital_Service ───────────────────────────
+# JSON required: service_id, title, service_type, provided_by
+# access_points: url REQUIRED and format uri
+# support_contact: support_agent_type + support_agent_name REQUIRED
+# provided_by: agent_type + name REQUIRED; email: format email; homepage: format uri
+
+artemis:HC21_Digital_ServiceShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC21_Digital_Service ;
+
+    # service_id → P1_is_identified_by (REQUIRED)
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ] ) ;
+        sh:message "Il servizio digitale non ha un identificatore (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # title → P102_has_title (REQUIRED)
+    sh:property [
+        sh:path crm:P102_has_title ;
+        sh:class crm:E35_Title ;
+        sh:minCount 1 ;
+        sh:message "Il servizio digitale deve avere un titolo (P102)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # service_type → P2_has_type (REQUIRED)
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:minCount 1 ;
+        sh:message "Il servizio digitale deve avere un tipo (P2)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # provided_by → HP30_provided_by (REQUIRED; name REQUIRED per JSON)
+    sh:property [
+        sh:path rhdto:HP30_provided_by ;
+        sh:or ( [ sh:class crm:E39_Actor ]
+                [ sh:class aocat:AO_Agent ] ) ;
+        sh:minCount 1 ;
+        sh:message "Il servizio digitale deve indicare chi lo fornisce (HP30)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # description → P3_has_note (OPTIONAL)
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # version → HP29_has_version (OPTIONAL)
+    sh:property [
+        sh:path rhdto:HP29_has_version ;
+        sh:class crm:E62_String ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # access_points.url → HP24_has_access_point (REQUIRED if access_points given; format uri)
+    sh:property [
+        sh:path rhdto:HP24_has_access_point ;
+        sh:class crm:E62_String ;
+        sh:message "Il punto di accesso deve essere presente (HP24)."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # intended_for → P103_was_intended_for (OPTIONAL)
+    sh:property [
+        sh:path crm:P103_was_intended_for ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_for → P16i_was_used_for (OPTIONAL; activity_label REQUIRED per JSON)
+    sh:property [
+        sh:path crm:P16i_was_used_for ;
+        sh:class crm:E7_Activity ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_physical_object_of_type → P125_used_object_of_type (OPTIONAL)
+    sh:property [
+        sh:path crm:P125_used_object_of_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # has_functionality → aocat:has_functionality (OPTIONAL)
+    sh:property [
+        sh:path aocat:has_functionality ;
+        sh:class aocat:AO_Concept ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # composed_of → P106_is_composed_of (sub_service_title REQUIRED; sub_service_uri: format uri)
+    sh:property [
+        sh:path crm:P106_is_composed_of ;
+        sh:class rhdto:HC21_Digital_Service ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # supported_language → aocat:has_supported_language (OPTIONAL)
+    sh:property [
+        sh:path aocat:has_supported_language ;
+        sh:class aocat:AO_Concept ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # media_type_consumed → aocat:has_consumed_media (OPTIONAL)
+    sh:property [
+        sh:path aocat:has_consumed_media ;
+        sh:class aocat:AO_Concept ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # media_type_produced → aocat:has_produced_media (OPTIONAL)
+    sh:property [
+        sh:path aocat:has_produced_media ;
+        sh:class aocat:AO_Concept ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # format_consumed → aocat:has_consumed_format (OPTIONAL)
+    sh:property [
+        sh:path aocat:has_consumed_format ;
+        sh:class aocat:AO_Concept ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # format_produced → aocat:has_produced_format (OPTIONAL)
+    sh:property [
+        sh:path aocat:has_produced_format ;
+        sh:class aocat:AO_Concept ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # support_contact → aocat:has_technical_support
+    # JSON: support_agent_type + support_agent_name REQUIRED
+    # support_agent_email: format email; support_agent_homepage: format uri
+    sh:property [
+        sh:path aocat:has_technical_support ;
+        sh:or ( [ sh:class crm:E39_Actor ]
+                [ sh:class aocat:AO_Agent ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # documentation → P70i_is_documented_in (doc_description REQUIRED; doc_url: format uri)
+    sh:property [
+        sh:path crm:P70i_is_documented_in ;
+        sh:or ( [ sh:class crm:E31_Document ]
+                [ sh:class crm:E55_Type ] ) ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── Actor shapes ──────────────────────────────────────────
+# JSON provided_by / support_contact: name REQUIRED; email: format email; homepage: format uri
+
+artemis:AO_AgentShape
+    a sh:NodeShape ;
+    sh:targetClass aocat:AO_Agent ;
+
+    sh:property [
+        sh:path aocat:has_name ;
+        sh:nodeKind sh:Literal ;
+        sh:message "L'agente non ha un nome — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_email ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^[\\w.+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}$" ;
+        sh:message "L'email non è in formato valido."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_homepage ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:message "La homepage deve essere un URI valido."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_agent_identifier ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:message "L'identificatore dell'agente deve essere un URI (es. ORCID, ROR)."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P107i_is_current_or_former_member_of ;
+        sh:or ( [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Group ] ) ;
+        sh:severity sh:Warning ;
+    ] .
+
+artemis:E39_ActorShape
+    a sh:NodeShape ;
+    sh:targetClass crm:E39_Actor ;
+
+    sh:property [
+        sh:path aocat:has_name ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_email ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^[\\w.+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}$" ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_homepage ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:severity sh:Warning ;
+    ] .

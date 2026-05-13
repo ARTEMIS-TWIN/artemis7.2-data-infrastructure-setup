@@ -1,0 +1,430 @@
+# ============================================================
+# ARTEMIS SHACL — Modulo 2: Heritage Science Analysis
+# JSON source: ARTEMIS_HS_analysis-only_schema_v6.json
+# X3ML source: analysis_28-4-26.x3ml
+# ============================================================
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig:  <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix crmhs:   <http://vast-lab.org/crmhs/> .
+@prefix aocat:   <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix rhdto:   <http://vast-lab.org/rhdto/> .
+@prefix artemis: <https://artemis-twin.eu/shape/> .
+
+# ── crmhs:HS3_Analysis ────────────────────────────────────
+# JSON required: heritage_object_artemis_id (→ HSP2_was_performed_on)
+# carried_out_by: agent_type + name REQUIRED per item
+artemis:HS3_AnalysisShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS3_Analysis ;
+
+    # heritage_object_artemis_id → HSP2_was_performed_on (REQUIRED, format uri)
+    sh:property [
+        sh:path crmhs:HSP2_was_performed_on ;
+        sh:or ( [ sh:class crmhs:HS6_Study_Object ]
+                [ sh:class crmhs:HS7_Study_Object_Portion ]
+                [ sh:class crmhs:HS8_Study_Object_Area ]
+                [ sh:class crmhs:HS9_Study_Object_Sample ]
+                [ sh:class aocat:AO_Object ]
+                [ sh:class rhdto:HC3_Tangible_Entity ] ) ;
+        sh:minCount 1 ;
+        sh:message "L'analisi deve riferirsi ad almeno un oggetto su cui è stata eseguita (HSP2)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # analysis_title → HSP1_has_activity_title (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP1_has_activity_title ;
+        sh:class crm:E35_Title ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # analysis_type → P2_has_type (OPTIONAL)
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # notes → P3_has_note (OPTIONAL)
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # time_span → P4_has_time-span
+    # JSON: from/until sono string con pattern "YYYY" o "YYYY-MM-DD"
+    sh:property [
+        sh:path crm:P4_has_time-span ;
+        sh:or ( [ sh:class crm:E52_Time-Span ]
+                [ sh:datatype xsd:date ]
+                [ sh:datatype xsd:gYear ]
+                [ sh:datatype xsd:dateTime ]
+                [ sh:nodeKind sh:Literal ;
+                  sh:pattern "^[0-9]{4}(-[0-9]{2}-[0-9]{2})?$" ] ) ;
+        sh:message "Il time-span deve essere una data ISO 8601 (es. 2020-05-01) o un anno (es. 2020)."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # took_place_at → P7_took_place_at (place_uri: format uri)
+    sh:property [
+        sh:path crm:P7_took_place_at ;
+        sh:or ( [ sh:class crm:E53_Place ]
+                [ sh:class aocat:AO_Spatial_Region ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # carried_out_by → P14_carried_out_by
+    # JSON: agent_type + name REQUIRED per item; email: format email; homepage: format uri
+    sh:property [
+        sh:path crm:P14_carried_out_by ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # had_participant → P11_had_participant
+    # JSON: agent_type + name REQUIRED per item
+    sh:property [
+        sh:path crm:P11_had_participant ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_method → HSP6_used_method (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP6_used_method ;
+        sh:or ( [ sh:class crmhs:HS4_Method ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_protocol → HSP7_used_protocol (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP7_used_protocol ;
+        sh:or ( [ sh:class crmhs:HS5_Protocol ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_device → HSP8_used_device (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP8_used_device ;
+        sh:class crmhs:HS11_Scientific_Device ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_components → HSP9_used_component (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP9_used_component ;
+        sh:class crmhs:HS12_Device_Component ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_software → HSP10_used_software (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP10_used_software ;
+        sh:class crmdig:D14_Software ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_dataset → HSP12_used_dataset
+    # JSON: dataset_url: format uri
+    sh:property [
+        sh:path crmhs:HSP12_used_dataset ;
+        sh:or ( [ sh:class crmhs:HS13_Scientific_Dataset ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # used_settings → HSP13_used_settings (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP13_used_settings ;
+        sh:class crmhs:HS14_Analysis_Settings ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # produced_dataset → HSP16_produced_dataset
+    # JSON: dataset_url: format uri
+    sh:property [
+        sh:path crmhs:HSP16_produced_dataset ;
+        sh:class crmhs:HS13_Scientific_Dataset ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object/area/sample_analysed → HSP4_analysed (OPTIONAL)
+    sh:property [
+        sh:path crmhs:HSP4_analysed ;
+        sh:or ( [ sh:class crmhs:HS6_Study_Object ]
+                [ sh:class crmhs:HS7_Study_Object_Portion ]
+                [ sh:class crmhs:HS8_Study_Object_Area ]
+                [ sh:class crmhs:HS9_Study_Object_Sample ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # sub_activities → HSP3_has_sub-activity
+    # JSON: sub_activity_uri: format uri
+    sh:property [
+        sh:path crmhs:HSP3_has_sub-activity ;
+        sh:or ( [ sh:class crmhs:HS3_Analysis ]
+                [ sh:class crmhs:HS10_Sample_Preparation ]
+                [ sh:class crmhs:HS1_Scientific_Activity ] ) ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS11_Scientific_Device ─────────────────────────
+# JSON: device_name OPTIONAL; maker.identifier: format uri
+artemis:HS11_Scientific_DeviceShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS11_Scientific_Device ;
+
+    sh:property [
+        sh:path crmhs:HSP22_has_maker ;
+        sh:or ( [ sh:class crm:E39_Actor ]
+                [ sh:class aocat:AO_Agent ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP23_has_model ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P52_has_current_owner ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS12_Device_Component ──────────────────────────
+artemis:HS12_Device_ComponentShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS12_Device_Component ;
+
+    sh:property [
+        sh:path crmhs:HSP22_has_maker ;
+        sh:or ( [ sh:class crm:E39_Actor ]
+                [ sh:class aocat:AO_Agent ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP23_has_model ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS13_Scientific_Dataset ────────────────────────
+# JSON: dataset_url: format uri; created_using_software_uri: format uri
+artemis:HS13_Scientific_DatasetShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS13_Scientific_Dataset ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:class crm:E55_Type ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP11_was_created_using_software ;
+        sh:class crmdig:D14_Software ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS14_Analysis_Settings ─────────────────────────
+# JSON: specified_in: format uri
+artemis:HS14_Analysis_SettingsShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS14_Analysis_Settings ;
+
+    sh:property [
+        sh:path crmhs:HSP14_has_settings_values ;
+        sh:class crm:E54_Dimension ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP15_is_specified_in ;
+        sh:class crmhs:HS13_Scientific_Dataset ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS10_Sample_Preparation ────────────────────────
+artemis:HS10_Sample_PreparationShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS10_Sample_Preparation ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP6_used_method ;
+        sh:class crmhs:HS4_Method ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP7_used_protocol ;
+        sh:class crmhs:HS5_Protocol ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS7_Study_Object_Portion ───────────────────────
+# JSON: forms_part_of_uri / is_located_within_uri: format uri
+artemis:HS7_Study_Object_PortionShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS7_Study_Object_Portion ;
+
+    sh:property [
+        sh:path crmhs:HSP18_is_located_within ;
+        sh:class crmhs:HS8_Study_Object_Area ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS8_Study_Object_Area ──────────────────────────
+# JSON: area_of_interest_on_uri: format uri
+artemis:HS8_Study_Object_AreaShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS8_Study_Object_Area ;
+
+    sh:property [
+        sh:path crmhs:HSP17i_is_area_of_interest_of ;
+        sh:class crmhs:HS6_Study_Object ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP21_has_object_surface_coordinates ;
+        sh:class crm:E94_Space_Primitive ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS9_Study_Object_Sample ────────────────────────
+# JSON: taken_from_uri / taken_from_area_uri: format uri
+artemis:HS9_Study_Object_SampleShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS9_Study_Object_Sample ;
+
+    sh:property [
+        sh:path crmhs:HSP19_was_taken_from ;
+        sh:class crmhs:HS6_Study_Object ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP20_was_taken_from_area ;
+        sh:class crmhs:HS8_Study_Object_Area ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crmhs:HSP5i_was_prepared_by ;
+        sh:class crmhs:HS10_Sample_Preparation ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── Actor shapes (Person / Group) ─────────────────────────
+# JSON: email: format email; homepage: format uri
+# identifier: format uri; name: REQUIRED in carried_out_by / had_participant
+
+artemis:E21_PersonShape
+    a sh:NodeShape ;
+    sh:targetClass crm:E21_Person ;
+
+    sh:property [
+        sh:path aocat:has_name ;
+        sh:nodeKind sh:Literal ;
+        sh:message "La persona non ha un nome — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_email ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^[\\w.+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}$" ;
+        sh:message "L'email non è in formato valido."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_homepage ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:message "La homepage deve essere un URI valido."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_agent_identifier ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:message "L'identificatore dell'agente deve essere un URI (es. ORCID, ROR)."@it ;
+        sh:severity sh:Warning ;
+    ] .
+
+artemis:E74_GroupShape
+    a sh:NodeShape ;
+    sh:targetClass crm:E74_Group ;
+
+    sh:property [
+        sh:path aocat:has_name ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_email ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^[\\w.+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}$" ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_homepage ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path aocat:has_agent_identifier ;
+        sh:nodeKind sh:Literal ;
+        sh:pattern "^https?://.+" ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P107i_is_current_or_former_member_of ;
+        sh:or ( [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Group ] ) ;
+        sh:severity sh:Warning ;
+    ] .

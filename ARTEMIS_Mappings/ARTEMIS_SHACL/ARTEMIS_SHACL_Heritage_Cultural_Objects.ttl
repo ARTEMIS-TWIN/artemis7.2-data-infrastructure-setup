@@ -1,0 +1,325 @@
+# ============================================================
+# ARTEMIS SHACL — Modulo 1: Cultural Objects
+# JSON source: artemis_cultural_object_data_collection_schema.json
+# X3ML source: ARTEMIS_cultural_objects_7-5-26.x3ml
+# ============================================================
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aocat:   <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/> .
+@prefix rhdto:   <http://vast-lab.org/rhdto/> .
+@prefix crmhs:   <http://vast-lab.org/crmhs/> .
+@prefix crmsci:  <http://www.cidoc-crm.org/extensions/crmsci/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix artemis: <https://artemis-twin.eu/shape/> .
+
+# ── rhdto:HC3_Tangible_Entity ─────────────────────────────
+# JSON required: object_id, object_label, object_name,
+#                object_description, object_types
+artemis:HC3_Tangible_EntityShape
+    a sh:NodeShape ;
+    sh:targetClass rhdto:HC3_Tangible_Entity ;
+
+    # object_id → P1_is_identified_by (REQUIRED)
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:message "L'oggetto tangibile non ha un identificatore (P1) — raccomandato."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_types → P2_has_type (REQUIRED, type_uri: format uri)
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:or ( [ sh:class crm:E55_Type ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ] ) ;
+        sh:minCount 1 ;
+        sh:message "L'oggetto tangibile deve avere almeno un tipo (P2)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # object_description → P3_has_note (REQUIRED)
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:minCount 1 ;
+        sh:message "L'oggetto tangibile deve avere una descrizione (P3)."@it ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # object_materials → P45_consists_of (OPTIONAL)
+    sh:property [
+        sh:path crm:P45_consists_of ;
+        sh:or ( [ sh:class crm:E57_Material ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_current_owners → P52_has_current_owner
+    # JSON: owner_name + owner_type REQUIRED if present; owner_email: format email
+    sh:property [
+        sh:path crm:P52_has_current_owner ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_current_location → P55_has_current_location (OPTIONAL)
+    sh:property [
+        sh:path crm:P55_has_current_location ;
+        sh:or ( [ sh:class crm:E53_Place ]
+                [ sh:class aocat:AO_Spatial_Region ]
+                [ sh:class aocat:AO_Spatial_Region_Point ]
+                [ sh:class aocat:AO_Spatial_Region_StdName ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_images → HP9_has_visual_representation
+    # JSON: image_url REQUIRED and format uri
+    sh:property [
+        sh:path rhdto:HP9_has_visual_representation ;
+        sh:or ( [ sh:class rhdto:HC7_Digital_Visual_Object ]
+                [ sh:nodeKind sh:Literal ;
+                  sh:pattern "^https?://.+" ] ) ;
+        sh:message "La rappresentazione visiva deve essere un URI valido (http:// o https://)."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_makers → HP11_was_made_by
+    # JSON: maker_name + maker_type REQUIRED if present; maker_email: format email
+    sh:property [
+        sh:path rhdto:HP11_was_made_by ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_production_periods → HP12_was_made_within
+    # JSON: period_label REQUIRED if present; period_o_uri: format uri
+    sh:property [
+        sh:path rhdto:HP12_was_made_within ;
+        sh:or ( [ sh:class crm:E52_Time-Span ]
+                [ sh:class aocat:AO_Temporal_Region ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # object_datasets → P129i_is_subject_of
+    # JSON: dataset_uri REQUIRED and format uri
+    sh:property [
+        sh:path crm:P129i_is_subject_of ;
+        sh:or ( [ sh:class aocat:AO_Resource ]
+                [ sh:class crm:E89_Propositional_Object ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # owl:sameAs → object_external_uri (format uri)
+    sh:property [
+        sh:path owl:sameAs ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https?://.+" ;
+        sh:message "owl:sameAs deve essere un URI valido."@it ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # crmsci:O19i (provenance encounter)
+    sh:property [
+        sh:path crmsci:O19i_was_object_encountered_through ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── aocat:AO_Object ───────────────────────────────────────
+# Allineata a HC3; stesse regole (è co-istanziata nel mapping)
+artemis:AO_ObjectShape
+    a sh:NodeShape ;
+    sh:targetClass aocat:AO_Object ;
+
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:or ( [ sh:class crm:E55_Type ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ] ) ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P45_consists_of ;
+        sh:or ( [ sh:class crm:E57_Material ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P52_has_current_owner ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P55_has_current_location ;
+        sh:or ( [ sh:class crm:E53_Place ]
+                [ sh:class aocat:AO_Spatial_Region ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path rhdto:HP9_has_visual_representation ;
+        sh:or ( [ sh:class rhdto:HC7_Digital_Visual_Object ]
+                [ sh:nodeKind sh:Literal ; sh:pattern "^https?://.+" ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path rhdto:HP11_was_made_by ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path rhdto:HP12_was_made_within ;
+        sh:or ( [ sh:class crm:E52_Time-Span ]
+                [ sh:class aocat:AO_Temporal_Region ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# ── crmhs:HS6_Study_Object ────────────────────────────────
+artemis:HS6_Study_ObjectShape
+    a sh:NodeShape ;
+    sh:targetClass crmhs:HS6_Study_Object ;
+
+    sh:property [
+        sh:path crm:P1_is_identified_by ;
+        sh:or ( [ sh:class crm:E42_Identifier ]
+                [ sh:class crm:E41_Appellation ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P2_has_type ;
+        sh:or ( [ sh:class crm:E55_Type ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P3_has_note ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P45_consists_of ;
+        sh:or ( [ sh:class crm:E57_Material ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P52_has_current_owner ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P55_has_current_location ;
+        sh:or ( [ sh:class crm:E53_Place ]
+                [ sh:class aocat:AO_Spatial_Region ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path rhdto:HP9_has_visual_representation ;
+        sh:or ( [ sh:class rhdto:HC7_Digital_Visual_Object ]
+                [ sh:nodeKind sh:Literal ; sh:pattern "^https?://.+" ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path rhdto:HP11_was_made_by ;
+        sh:or ( [ sh:class crm:E21_Person ]
+                [ sh:class crm:E74_Group ]
+                [ sh:class aocat:AO_Person ]
+                [ sh:class aocat:AO_Group ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path rhdto:HP12_was_made_within ;
+        sh:or ( [ sh:class crm:E52_Time-Span ]
+                [ sh:class aocat:AO_Temporal_Region ]
+                [ sh:class aocat:AO_Concept ]
+                [ sh:class skos:Concept ]
+                [ sh:nodeKind sh:Literal ] ) ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    sh:property [
+        sh:path crm:P129i_is_subject_of ;
+        sh:or ( [ sh:class aocat:AO_Resource ]
+                [ sh:class crm:E89_Propositional_Object ] ) ;
+        sh:severity sh:Warning ;
+    ] .
